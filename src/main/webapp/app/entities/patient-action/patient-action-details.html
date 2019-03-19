@@ -1,0 +1,66 @@
+<section>
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;
+        </button>
+        <h4 class="modal-title" id="myPatientMedicationLabel">Details Patient Action</h4>
+    </div>
+    <div class="modal-body">
+
+        <section class="content">
+            <jhi-alert-error></jhi-alert-error>
+
+            <div class="row"><strong>{{vm.patientActionPre.action}}{{vm.patientActionPre.hours?(', every ' + vm.patientActionPre.hours + ' hours'):''}} </strong></div>
+
+          {{vm.mm}}
+            <div class="row">Duration: Start date - {{vm.CoreService.parseToDateTime(vm.patientActionPre.staringDate)}} End date - {{vm.CoreService.parseToDateTime(vm.patientActionPre.endDate)}}
+            </div>
+            <div class="row">
+                <div class="table table-responsive" style="border: 1px black!important;">
+                    <table class="table table-bordered table-hover">
+                        <thead class="table-bordered" style="border: 1px black!important;">
+                        <tr>
+                            <th>Action</th>
+                            <th>Frequency</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th>{{vm.patientActionPre.action}}</th>
+                            <td>{{vm.patientActionPre.hours?vm.patientActionPre.hours:'AsNeeded'}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+
+            <hr>
+            <div class="row"><p>Ordered by {{vm.patientAction.signedBy.firstName + ' ' + vm.patientAction.signedBy.lastName}}, NPI: {{vm.patientAction.signedBy.npiNumber}}, DEA:
+                {{vm.patientAction.signedBy.deaNumber}}</p>
+            </div>
+
+            <div class="row"><p>Entered by {{vm.patientAction.employee.firstName + ' ' + vm.patientAction.employee.lastName}}, {{
+                vm.CoreService.parseToDateTime(vm.patientActionPre.createdDate)}}, via "{{vm.patientAction.via.name}}", read
+                back and
+                verified.</p>
+            </div>
+
+            <div class="row"><p><strong> {{vm.patientAction.actionStatus}}</strong></p></div>
+
+        </section>
+
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving || !vm.canSign()"
+                ng-click="vm.sign(vm.patientAction)" class="btn btn-success">
+            <span class="glyphicon glyphicon-edit"></span>&nbsp;<span>Sign</span>
+        </button>
+
+    </div>
+</section>

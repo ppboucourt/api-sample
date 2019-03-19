@@ -1,0 +1,78 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "typePatientProcess",
+            "otherEntityName": "typePatientProcess",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "typeEvaluation",
+            "otherEntityName": "typeEvaluation",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "evaluationContent",
+            "otherEntityName": "evaluationContent",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "chart",
+            "otherEntityName": "chart",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "enabled",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "billable",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "jsonTemplate",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "onlyOne",
+            "fieldType": "Boolean",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "evaluationTemplateId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "EvaluationStatus",
+            "fieldValues": "Pending,InProcess,Finalized"
+        },
+        {
+            "fieldName": "jsonData",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "rolesSign",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "rolesReview",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170104212419",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "evaluation",
+    "pagination": "no"
+}

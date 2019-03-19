@@ -1,0 +1,58 @@
+<div class="col-xs-12">
+    <div class="row block-mb5">
+        <div class="col-lg-12">
+            <div class="pull-left">
+                <b> Results: <span
+                    class="label label-default">{{data.accessionNumber}}</span></b>
+            </div>
+            <div class="pull-right">
+                <div class="navbar-form navbar-right search-control">
+                    <div class="text-right">
+                        <div class="has-feedback input-group-sm">
+                            <input type="text" class="form-control" ng-model="searchQuery" size="50"
+                                   placeholder="Query" ng-change="vm.search()">
+                            <i class="fa fa-search form-control-feedback"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<hr style="margin-top: 10px !important; margin-bottom: 10px !important;">-->
+    </div>
+    <!--<div class="col-lg-6" ng-repeat="resultDet in data.resultDets">-->
+    <!--<span>{{resultDet.testName + ': ' + resultDet.result}}</span>-->
+    <!--</div>-->
+    <div class="row">
+        <div class="col-lg-12" style="overflow-y: scroll; max-height: 500px;">
+            <table class="table table-condensed table-striped table-bordered table-responsive">
+                <thead>
+                <tr>
+                    <th class="col-sm-2"><span>Test Name</span></th>
+                    <th class="col-sm-1"><span>Test Code</span></th>
+                    <th class="col-sm-3">Result</th>
+                    <th class="col-sm-1">Status</th>
+                    <th class="col-sm-5">Comments</th>
+                </tr>
+                </thead>
+
+                <tr ng-repeat="resultDet in data.patientResultDets | filter: filterResult">
+                    <td><span>{{resultDet.testName}}</span></td>
+                    <td><span>{{resultDet.testCode}}</span></td>
+                    <td><span class="label "
+                              ng-class="{'label-success': resultDet.status === 'N', 'label-default': resultDet.status !== 'N'}">{{resultDet.result}}</span>
+                    </td>
+                    <td><span class="label "
+                              ng-class="{'label-success': resultDet.status === 'N',
+                      'label-warning': (['H', 'L'].indexOf(resultDet.status) >= 0),
+                       'label-error': (['HH', 'LL'].indexOf(resultDet.status) >= 0)
+                      }">{{resultDet.status}}</span>
+                    </td>
+                    <td><span>{{resultDet.comments}}</span></td>
+
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+</div>

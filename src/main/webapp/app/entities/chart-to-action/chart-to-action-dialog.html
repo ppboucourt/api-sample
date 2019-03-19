@@ -1,0 +1,72 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myChartToActionLabel">Create or edit a Chart To Action</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.chartToAction.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.chartToAction.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_status">Status</label>
+            <input type="text" class="form-control" name="status" id="field_status"
+                    ng-model="vm.chartToAction.status"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_notes">Notes</label>
+            <input type="text" class="form-control" name="notes" id="field_notes"
+                    ng-model="vm.chartToAction.notes"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_archived">Archived</label>
+            <input type="text" class="form-control" name="archived" id="field_archived"
+                    ng-model="vm.chartToAction.archived"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.chartToAction.date_prescription" for="field_date_prescription">Date Prescription</label>
+                <div class="input-group">
+                    <input id="field_date_prescription" type="text" class="form-control" name="date_prescription" datetime-picker="{{dateformat}}" ng-model="vm.chartToAction.date_prescription" is-open="vm.datePickerOpenStatus.date_prescription"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('date_prescription')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_taken">Taken</label>
+            <input type="text" class="form-control" name="taken" id="field_taken"
+                    ng-model="vm.chartToAction.taken"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label for="field_chart">Chart</label>
+            <select class="form-control" id="field_chart" name="chart" ng-model="vm.chartToAction.chart" ng-options="chart as chart.mr_no for chart in vm.charts track by chart.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="field_actions">Actions</label>
+            <select class="form-control" id="field_actions" name="actions" ng-model="vm.chartToAction.actions" ng-options="actions as actions.action for actions in vm.actions track by actions.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

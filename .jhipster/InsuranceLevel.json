@@ -1,0 +1,31 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "insurance",
+            "otherEntityName": "insurance",
+            "otherEntityRelationshipName": "insuranceLevel"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "corporation",
+            "otherEntityName": "corporation",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20161206223627",
+    "entityTableName": "insurance_level",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl"
+}

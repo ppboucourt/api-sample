@@ -1,0 +1,59 @@
+
+<div>
+    <h2><span>Employee</span> {{vm.employee.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Email</span></dt>
+        <dd>
+            <span>{{vm.employee.email}}</span>
+        </dd>
+        <dt><span>Mobile</span></dt>
+        <dd>
+            <span>{{vm.employee.mobile}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.employee.npi_num">Npi Num</span></dt>
+        <dd>
+            <span>{{vm.employee.npi_num}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.employee.dea_num">Dea Num</span></dt>
+        <dd>
+            <span>{{vm.employee.dea_num}}</span>
+        </dd>
+        <dt><span>Status</span></dt>
+        <dd>
+            <span>{{vm.employee.status}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.employee.first_name">First Name</span></dt>
+        <dd>
+            <span>{{vm.employee.first_name}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.employee.last_name">Last Name</span></dt>
+        <dd>
+            <span>{{vm.employee.last_name}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.employee.typeEmployee.name">Type Employee</span></dt>
+        <dd>
+            <span>{{vm.employee.typeEmployee.name}}</span>
+        </dd>
+        <dt><span>User</span></dt>
+        <dd>
+            {{vm.employee.user.id}}
+        </dd>
+        <dt><span>Corporation</span></dt>
+        <dd>
+            <a ui-sref="corporation-detail({id:vm.employee.corporation.id})">{{vm.employee.corporation.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="employee-detail.edit({id:vm.employee.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

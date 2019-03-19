@@ -1,0 +1,56 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "room",
+            "otherEntityName": "room",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [],
+            "otherEntityField": "room_name"
+        },
+        {
+            "relationshipName": "facility",
+            "otherEntityName": "facility",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "facility_name"
+        },
+        {
+            "relationshipName": "chart",
+            "otherEntityName": "chart",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "bed"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "status",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "3"
+        },
+        {
+            "fieldName": "actualChart",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "notes",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "800"
+        }
+    ],
+    "changelogDate": "20160825140822",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "bed",
+    "pagination": "no",
+    "enableEntityAudit": true
+}

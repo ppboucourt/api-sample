@@ -1,0 +1,38 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "employee",
+            "otherEntityName": "employee",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "typeEmployee"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "800"
+        },
+        {
+            "relationshipName": "authority",
+            "otherEntityName": "authority",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "name",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "typeEmployee"
+        }
+    ],
+    "changelogDate": "20170120143311",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "type_employee",
+    "pagination": "no"
+}

@@ -1,0 +1,31 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "chart",
+            "otherEntityName": "chart",
+            "relationshipType": "many-to-many",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "drugs"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "800"
+        }
+    ],
+    "changelogDate": "20170131213306",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "drugs",
+    "pagination": "no"
+}

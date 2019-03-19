@@ -1,0 +1,17 @@
+echo ""
+echo "Now is needed install gdrive for backup"
+wget -O gdrive "https://docs.google.com/uc?id=0B3X9GlR6EmbnWksyTEtCM0VfaFE&export=download" 
+chmod +x gdrive
+sudo install gdrive /usr/local/bin/gdrive
+
+echo ""
+echo "Now, we will configure gdrive first time, copy and paste the URL, copy de token generated and paste it"
+gdrive list
+
+echo ""
+echo ""
+
+echo "Autoconfiguring crontab now"
+crontab -u tmunited /home/tmunited/bluebook-deploy/crontab 
+
+echo "Env is ok"

@@ -1,0 +1,42 @@
+@charset 'utf-8';
+
+@import 'partials/variables';
+
+@import 'partials/custom-css';
+
+
+/* Widget User Overrides */
+@import 'partials/widget-user';
+/* / Widget User Overrides */
+
+/* Custom Pagination */
+@import 'partials/custom-pagination';
+/* / Custom Pagination */
+
+/* Top Options */
+@import 'partials/top-options';
+/* /Top Options*/
+
+/* Dashboard */
+@import 'partials/dashboard';
+@import 'partials/dashboard-charts';
+/* /Dashboard*/
+
+/* Patient Details */
+@import 'partials/patient-details';
+@import 'partials/patient-dashboard';
+@import 'partials/basic-info';
+@import 'partials/issues-list';
+@import 'partials/diagnoses';
+@import 'partials/care-team';
+@import 'partials/allergies';
+@import 'partials/diet';
+@import 'partials/patient-insurance';
+@import 'partials/patient-contacts';
+@import 'partials/concurrent-review';
+@import 'partials/patient-orders';
+/* /Patient Details */
+
+/* App Patches */
+@import 'partials/patches';
+/* /App Patches */

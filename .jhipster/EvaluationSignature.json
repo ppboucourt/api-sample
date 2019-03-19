@@ -1,0 +1,39 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "evaluation",
+            "otherEntityName": "evaluation",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "employee",
+            "otherEntityName": "employee",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "signature",
+            "otherEntityName": "signature",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "role",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "signType",
+            "fieldType": "SignTypeValues",
+            "fieldValues": "Approved,Reviewed"
+        }
+    ],
+    "changelogDate": "20170414173942",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "evaluation_signature",
+    "pagination": "no"
+}

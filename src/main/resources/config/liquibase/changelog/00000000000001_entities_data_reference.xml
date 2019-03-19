@@ -1,0 +1,111 @@
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="20161128210610-21" author="jhipster">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/facility.csv"
+                  separator=";"
+                  tableName="facility">
+        </loadData>
+    </changeSet>
+    <changeSet id="20161128210610-22" author="jhipster">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/contacts_facility.csv"
+                  separator=";"
+                  tableName="contacts_facility">
+        </loadData>
+    </changeSet>
+    <changeSet id="20161128210610-29" author="jhipster">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/type_patient_process.csv"
+                  separator=";"
+                  tableName="type_patient_process">
+        </loadData>
+    </changeSet>
+    <changeSet id="20161128210610-24" author="jhipster">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/employee.csv"
+                  separator=";"
+                  tableName="employee">
+        </loadData>
+    </changeSet>
+    <changeSet id="20161128210610-30" author="jhipster">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/laboratories.csv"
+                  separator=";"
+                  tableName="laboratories">
+        </loadData>
+    </changeSet>
+    <changeSet id="20161128210610-32" author="jhipster">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/forms.csv"
+                  separator=";"
+                  tableName="forms">
+        </loadData>
+    </changeSet>
+    <changeSet id="20161128210610-47" author="jhipster">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/building.csv"
+                  separator=";"
+                  tableName="building">
+        </loadData>
+    </changeSet>
+    <changeSet id="20161128210610-48" author="jhipster">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/room.csv"
+                  separator=";"
+                  tableName="room">
+        </loadData>
+    </changeSet>
+    <changeSet id="20161128210610-49" author="jhipster">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/bed.csv"
+                  separator=";"
+                  tableName="bed">
+        </loadData>
+    </changeSet>
+    <changeSet id="20161128210610-50" author="jhipster">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/patient.csv"
+                  separator=";"
+                  tableName="patient">
+        </loadData>
+    </changeSet>
+    <changeSet id="20161128210610-51" author="jhipster">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/medications.csv"
+                  separator=";"
+                  tableName="medications">
+        </loadData>
+    </changeSet>
+    <changeSet id="20171128210610-90" author="jhipster">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/evaluation_content.csv"
+                  separator=";"
+                  tableName="evaluation_content">
+        </loadData>
+    </changeSet>
+    <changeSet id="20171128210610-91" author="jhipster">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/evaluation_template.csv"
+                  separator=";"
+                  tableName="evaluation_template">
+        </loadData>
+    </changeSet>
+    <changeSet id="20171128210610-92" author="jhipster">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/evaluation.csv"
+                  separator=";"
+                  tableName="evaluation">
+        </loadData>
+    </changeSet>
+    <changeSet id="20171128210610-94" author="jhipster">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/evaluation_items.csv"
+                  separator=";"
+                  tableName="evaluation_items">
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

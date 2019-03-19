@@ -1,0 +1,98 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myPatientOrderItemLabel">Create or edit a Patient Order Item</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.patientOrderItem.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.patientOrderItem.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_groupNumberId">Group Number Id</label>
+            <input type="text" class="form-control" name="groupNumberId" id="field_groupNumberId"
+                    ng-model="vm.patientOrderItem.groupNumberId"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_collected">Collected</label>
+            <input type="checkbox" class="form-control" name="collected" id="field_collected"
+                    ng-model="vm.patientOrderItem.collected"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_collectedDate">Collected Date</label>
+                <div class="input-group">
+                    <input id="field_collectedDate" type="text" class="form-control" name="collectedDate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.patientOrderItem.collectedDate" is-open="vm.datePickerOpenStatus.collectedDate"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('collectedDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_scheduleDate">Schedule Date</label>
+                <div class="input-group">
+                    <input id="field_scheduleDate" type="text" class="form-control" name="scheduleDate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.patientOrderItem.scheduleDate" is-open="vm.datePickerOpenStatus.scheduleDate"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('scheduleDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_sent">Sent</label>
+            <input type="checkbox" class="form-control" name="sent" id="field_sent"
+                    ng-model="vm.patientOrderItem.sent"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_sentDate">Sent Date</label>
+                <div class="input-group">
+                    <input id="field_sentDate" type="text" class="form-control" name="sentDate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.patientOrderItem.sentDate" is-open="vm.datePickerOpenStatus.sentDate"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('sentDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_readyStatus">Ready Status</label>
+            <input type="checkbox" class="form-control" name="readyStatus" id="field_readyStatus"
+                    ng-model="vm.patientOrderItem.readyStatus"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_canceled">Canceled</label>
+            <input type="checkbox" class="form-control" name="canceled" id="field_canceled"
+                    ng-model="vm.patientOrderItem.canceled"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_icd10Codes">Icd 10 Codes</label>
+            <input type="text" class="form-control" name="icd10Codes" id="field_icd10Codes"
+                    ng-model="vm.patientOrderItem.icd10Codes"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label for="field_patientOrderTest">Patient Order Test</label>
+            <select class="form-control" id="field_patientOrderTest" name="patientOrderTest" ng-model="vm.patientOrderItem.patientOrderTest" ng-options="patientOrderTest as patientOrderTest.id for patientOrderTest in vm.patientordertests track by patientOrderTest.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

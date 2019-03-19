@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity PatientActionPre.
+    -->
+    <changeSet id="20170406202715-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="patient_action_id"
+                                 baseTableName="patient_action_pre"
+                                 constraintName="fk_patient_action_pre_patient_action_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="patient_action"/>
+
+    </changeSet>
+</databaseChangeLog>

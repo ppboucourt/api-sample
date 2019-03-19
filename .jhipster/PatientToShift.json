@@ -1,0 +1,33 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "shifts",
+            "otherEntityName": "shifts",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "description"
+        },
+        {
+            "relationshipName": "chart",
+            "otherEntityName": "chart",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "mr_no"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "status",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "3"
+        }
+    ],
+    "changelogDate": "20160829195026",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "patient_to_shift",
+    "pagination": "no",
+    "enableEntityAudit": true
+}

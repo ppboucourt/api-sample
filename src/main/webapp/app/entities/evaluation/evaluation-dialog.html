@@ -1,0 +1,130 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myEvaluationLabel">Create or edit a Evaluation</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.evaluation.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.evaluation.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="vm.evaluation.name"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_enabled">Enabled</label>
+            <input type="checkbox" class="form-control" name="enabled" id="field_enabled"
+                    ng-model="vm.evaluation.enabled"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.evaluation.alow_tech" for="field_alow_tech">Alow Tech</label>
+            <input type="checkbox" class="form-control" name="alow_tech" id="field_alow_tech"
+                    ng-model="vm.evaluation.alow_tech"
+                     />
+        </div>
+        <div class="form-group" ngf-drop ngf-change="vm.setPatient_signature($file, vm.evaluation)" ngf-pattern="'image/*'">
+            <label class="control-label" data-translate="bluebookApp.evaluation.patient_signature" for="field_patient_signature">Patient Signature</label>
+            <div>
+                <img data-ng-src="{{'data:' + vm.evaluation.patient_signatureContentType + ';base64,' + vm.evaluation.patient_signature}}" style="max-height: 100px;" ng-if="vm.evaluation.patient_signature"/>
+                <div ng-if="vm.evaluation.patient_signature" class="help-block clearfix">
+                    <span class="pull-left">{{vm.evaluation.patient_signatureContentType}}, {{vm.byteSize(vm.evaluation.patient_signature)}}</span>
+                    <button type="button" ng-click="vm.evaluation.patient_signature=null;vm.evaluation.patient_signatureContentType=null;"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="button" ngf-select class="btn btn-default btn-block"
+                        ngf-change="vm.setPatient_signature($file, vm.evaluation)" accept="image/*">
+                    Add image
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="patient_signature" id="field_patient_signature"
+                    ng-model="vm.evaluation.patient_signature"
+                     />
+            <input type="hidden" class="form-control" name="patient_signatureContentType" id="field_patient_signatureContentType"
+                    ng-model="vm.evaluation.patient_signatureContentType" />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.evaluation.one_perpatient" for="field_one_perpatient">One Perpatient</label>
+            <input type="checkbox" class="form-control" name="one_perpatient" id="field_one_perpatient"
+                    ng-model="vm.evaluation.one_perpatient"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_billable">Billable</label>
+            <input type="checkbox" class="form-control" name="billable" id="field_billable"
+                    ng-model="vm.evaluation.billable"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_recurring">Recurring</label>
+            <input type="checkbox" class="form-control" name="recurring" id="field_recurring"
+                    ng-model="vm.evaluation.recurring"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.evaluation.daily_start_time" for="field_daily_start_time">Daily Start Time</label>
+                <div class="input-group">
+                    <input id="field_daily_start_time" type="text" class="form-control" name="daily_start_time" datetime-picker="{{dateformat}}" ng-model="vm.evaluation.daily_start_time" is-open="vm.datePickerOpenStatus.daily_start_time"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('daily_start_time')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_interval">Interval</label>
+            <input type="number" class="form-control" name="interval" id="field_interval"
+                    ng-model="vm.evaluation.interval"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.evaluation.show_daily" for="field_show_daily">Show Daily</label>
+            <input type="checkbox" class="form-control" name="show_daily" id="field_show_daily"
+                    ng-model="vm.evaluation.show_daily"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.evaluation.force_signature" for="field_force_signature">Force Signature</label>
+            <input type="checkbox" class="form-control" name="force_signature" id="field_force_signature"
+                    ng-model="vm.evaluation.force_signature"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label for="field_typePatientProcess">Type Patient Process</label>
+            <select class="form-control" id="field_typePatientProcess" name="typePatientProcess" ng-model="vm.evaluation.typePatientProcess" ng-options="typePatientProcess as typePatientProcess.id for typePatientProcess in vm.typepatientprocesses track by typePatientProcess.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="field_typeEvaluation">Type Evaluation</label>
+            <select class="form-control" id="field_typeEvaluation" name="typeEvaluation" ng-model="vm.evaluation.typeEvaluation" ng-options="typeEvaluation as typeEvaluation.id for typeEvaluation in vm.typeevaluations track by typeEvaluation.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="field_evaluationContent">Evaluation Content</label>
+            <select class="form-control" id="field_evaluationContent" name="evaluationContent" ng-model="vm.evaluation.evaluationContent" ng-options="evaluationContent as evaluationContent.id for evaluationContent in vm.evaluationcontents track by evaluationContent.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

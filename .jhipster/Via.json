@@ -1,0 +1,23 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "patientOrder",
+            "otherEntityName": "patientOrder",
+            "otherEntityRelationshipName": "via"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170110202718",
+    "entityTableName": "via",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "enableEntityAudit": true
+}

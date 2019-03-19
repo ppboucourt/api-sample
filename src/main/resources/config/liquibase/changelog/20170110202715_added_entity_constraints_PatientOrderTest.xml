@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity PatientOrderTest.
+    -->
+    <changeSet id="20170110202715-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="lab_compendium_id"
+                                 baseTableName="patient_order_test"
+                                 constraintName="fk_patient_order_test_lab_compendium_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="lab_compendium"/>
+
+        <addForeignKeyConstraint baseColumnNames="patient_order_id"
+                                 baseTableName="patient_order_test"
+                                 constraintName="fk_patient_order_test_patient_order_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="patient_order"/>
+
+        <addForeignKeyConstraint baseColumnNames="order_frequency_id"
+                                 baseTableName="patient_order_test"
+                                 constraintName="fk_patient_order_test_order_frequency_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="order_frequency"/>
+
+    </changeSet>
+</databaseChangeLog>

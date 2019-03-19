@@ -1,0 +1,66 @@
+<form name="cancelForm" ng-submit="vm.confirmCancel(vm.patientOrder.id)">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title">Confirm Discount Order</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="row">
+            <div class="col-md-6 col-lg-6">
+                <div class="form-group">
+                    <label for="field_employee">Physician</label>
+                    <select class="form-control" id="field_employee" name="employee" ng-model="vm.patientOrder.discountBy"
+                            required
+                            ng-options="employee as employee.firstName + ' ' + employee.lastName for employee in vm.physicians track by employee.id">
+                        <!--option value=""></option-->
+                    </select>
+                    <div ng-show="cancelForm.employee.$invalid">
+                        <p class="help-block"
+                           ng-show="cancelForm.employee.$error.required">
+                            This field is required.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-6">
+                <div class="form-group">
+                    <label for="field_via">Informed</label>
+                    <select class="form-control" id="field_via" name="via" ng-model="vm.patientOrder.discountVia" required
+                            ng-options="via as via.name for via in vm.vias track by via.id">
+                        <!--option value=""></option-->
+                    </select>
+                    <div ng-show="cancelForm.via.$invalid">
+                        <p class="help-block"
+                           ng-show="cancelForm.via.$error.required">
+                            This field is required.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+                <div class="form-group">
+                    <label>Cause</label>
+                    <textarea type="text" class="form-control" rows="4" cols="20"
+                              ng-model="vm.patientOrder.discountCause"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <p>Are you sure you want to discontinue this Patient Order?</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Dismiss</span>
+        </button>
+        <button type="submit" ng-disabled="cancelForm.$invalid" class="btn btn-danger">
+            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span>Discontinue Order</span>
+        </button>
+    </div>
+</form>

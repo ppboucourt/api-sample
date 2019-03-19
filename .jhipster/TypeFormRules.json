@@ -1,0 +1,24 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "3"
+        }
+    ],
+    "changelogDate": "20161122170418",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "type_form_rules",
+    "pagination": "no",
+    "enableEntityAudit": true
+}

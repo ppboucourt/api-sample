@@ -1,0 +1,101 @@
+id;name;enabled;prn;indication;duration_days;note;status;type_dosage_id;facility_id;created_by;created_date;last_modified_by;last_modified_date;del_status
+1;Exercise;true;true;O41103;37;Right-sized;ACT;3;3;error: Field 'admin' not found;8/20/2016;;6/24/2016;false
+2;Relax;true;true;S83421D;32;portal;ACT;2;10;error: Field 'admin' not found;10/30/2016;;10/25/2016;false
+3;Exercise;false;true;S061X6A;23;interface;ACT;3;1;error: Field 'admin' not found;9/28/2016;;5/18/2016;false
+4;Relax;false;true;S42474G;31;Front-line;ACT;2;2;error: Field 'admin' not found;11/17/2016;;4/11/2016;false
+5;Yoga;false;false;V8621XS;30;24/7;ACT;2;2;error: Field 'admin' not found;8/25/2016;;1/14/2016;false
+6;Run;true;false;M84752;18;alliance;ACT;2;1;error: Field 'admin' not found;12/12/2016;;11/9/2016;false
+7;Meditation;false;true;S86011D;39;Graphical User Interface;ACT;3;6;error: Field 'admin' not found;4/18/2016;;1/4/2016;false
+8;Meditation;false;true;T22669;41;heuristic;ACT;3;8;error: Field 'admin' not found;10/10/2016;;5/15/2016;false
+9;Meditation;true;false;T454X6D;57;extranet;ACT;2;2;error: Field 'admin' not found;10/1/2016;;3/11/2016;false
+10;Confrontation;false;true;S83529S;16;impactful;ACT;1;7;error: Field 'admin' not found;2/20/2016;;11/4/2016;false
+11;Exercise;false;false;L89212;13;Multi-tiered;ACT;2;8;error: Field 'admin' not found;2/19/2016;;12/22/2016;false
+12;Exercise;false;true;C4372;46;Synergistic;ACT;1;5;error: Field 'admin' not found;4/17/2016;;5/25/2016;false
+13;Yoga;false;false;T83190D;58;encompassing;ACT;1;10;error: Field 'admin' not found;12/3/2016;;10/17/2016;false
+14;Exercise;true;false;S56329A;35;Synchronised;ACT;1;4;error: Field 'admin' not found;4/5/2016;;1/14/2016;false
+15;Yoga;true;true;S054;46;real-time;ACT;1;9;error: Field 'admin' not found;11/18/2016;;2/15/2016;false
+16;Run;false;true;B833;44;focus group;ACT;2;9;error: Field 'admin' not found;4/9/2016;;9/29/2016;false
+17;Confrontation;true;false;S79192D;45;Vision-oriented;ACT;1;4;error: Field 'admin' not found;6/7/2016;;9/12/2016;false
+18;Confrontation;true;true;S93135D;39;even-keeled;ACT;1;1;error: Field 'admin' not found;7/13/2016;;8/25/2016;false
+19;Exercise;false;false;S32452K;26;Grass-roots;ACT;3;5;error: Field 'admin' not found;5/18/2016;;10/11/2016;false
+20;Run;true;false;M7153;5;asynchronous;ACT;2;4;error: Field 'admin' not found;9/7/2016;;8/3/2016;false
+21;Meditation;false;false;S60511D;42;implementation;ACT;2;5;error: Field 'admin' not found;2/19/2016;;11/23/2016;false
+22;Exercise;true;false;S48922;38;middleware;ACT;1;9;error: Field 'admin' not found;1/5/2016;;4/10/2016;false
+23;Run;false;false;T65894A;56;Cloned;ACT;2;4;error: Field 'admin' not found;1/13/2016;;8/2/2016;false
+24;Run;false;false;H0100;44;Synergized;ACT;3;10;error: Field 'admin' not found;3/26/2016;;9/15/2016;false
+25;Run;false;true;T381X;58;info-mediaries;ACT;2;10;error: Field 'admin' not found;5/19/2016;;3/17/2016;false
+26;Confrontation;true;false;O368921;29;actuating;ACT;3;5;error: Field 'admin' not found;4/2/2016;;4/3/2016;false
+27;Confrontation;false;false;T6194XD;5;multi-state;ACT;3;9;error: Field 'admin' not found;9/6/2016;;9/3/2016;false
+28;Confrontation;true;false;S60467D;44;Virtual;ACT;2;3;error: Field 'admin' not found;4/11/2016;;7/23/2016;false
+29;Confrontation;true;true;Y36320;53;directional;ACT;2;5;error: Field 'admin' not found;5/5/2016;;5/6/2016;false
+30;Confrontation;false;true;Y35212S;32;bottom-line;ACT;1;4;error: Field 'admin' not found;3/5/2016;;11/7/2016;false
+31;Meditation;true;false;T451X1S;24;leverage;ACT;2;7;error: Field 'admin' not found;10/26/2016;;7/18/2016;false
+32;Yoga;true;true;J0380;18;composite;ACT;1;2;error: Field 'admin' not found;10/18/2016;;9/28/2016;false
+33;Exercise;false;false;M2417;24;superstructure;ACT;2;1;error: Field 'admin' not found;8/4/2016;;3/25/2016;false
+34;Yoga;true;true;M11861;35;attitude;ACT;3;9;error: Field 'admin' not found;9/16/2016;;12/18/2016;false
+35;Exercise;false;false;I83013;7;Self-enabling;ACT;3;9;error: Field 'admin' not found;11/18/2016;;10/7/2016;false
+36;Run;false;true;M10159;13;Optimized;ACT;1;4;error: Field 'admin' not found;4/25/2016;;4/28/2016;false
+37;Yoga;true;true;S7235;5;Distributed;ACT;2;10;error: Field 'admin' not found;1/25/2016;;10/7/2016;false
+38;Confrontation;false;false;V8623;20;pricing structure;ACT;3;6;error: Field 'admin' not found;12/21/2016;;2/18/2016;false
+39;Meditation;false;false;L89120;36;zero tolerance;ACT;1;6;error: Field 'admin' not found;11/24/2016;;6/12/2016;false
+40;Relax;false;true;S30845A;50;high-level;ACT;3;2;error: Field 'admin' not found;2/14/2016;;3/26/2016;false
+41;Yoga;true;true;T48206A;34;Cross-platform;ACT;2;6;error: Field 'admin' not found;1/31/2016;;12/10/2016;false
+42;Run;true;true;S75912A;16;foreground;ACT;1;2;error: Field 'admin' not found;1/5/2016;;2/1/2016;false
+43;Yoga;false;false;S82434F;6;orchestration;ACT;1;7;error: Field 'admin' not found;1/23/2016;;4/22/2016;false
+44;Exercise;false;true;S61009A;49;emulation;ACT;2;7;error: Field 'admin' not found;1/10/2016;;4/16/2016;false
+45;Run;true;true;Y383X2S;54;Realigned;ACT;2;1;error: Field 'admin' not found;10/26/2016;;8/24/2016;false
+46;Run;false;false;L038;34;modular;ACT;1;9;error: Field 'admin' not found;12/31/2015;;2/23/2016;false
+47;Exercise;true;false;M02222;48;Graphic Interface;ACT;3;6;error: Field 'admin' not found;7/17/2016;;12/10/2016;false
+48;Yoga;false;false;B417;47;flexibility;ACT;2;10;error: Field 'admin' not found;5/17/2016;;2/16/2016;false
+49;Relax;true;true;T23142;20;open system;ACT;2;9;error: Field 'admin' not found;2/27/2016;;1/22/2016;false
+50;Yoga;true;true;S21112D;44;global;ACT;3;8;error: Field 'admin' not found;2/20/2016;;5/12/2016;false
+51;Run;true;true;B87;17;national;ACT;2;7;error: Field 'admin' not found;1/12/2016;;10/7/2016;false
+52;Meditation;true;false;V888XXD;44;Open-architected;ACT;3;7;error: Field 'admin' not found;8/12/2016;;11/21/2016;false
+53;Meditation;true;true;M61321;25;discrete;ACT;3;10;error: Field 'admin' not found;8/24/2016;;7/21/2016;false
+54;Yoga;true;false;S52399P;42;Adaptive;ACT;2;1;error: Field 'admin' not found;4/26/2016;;7/4/2016;false
+55;Confrontation;true;true;S63414;59;methodical;ACT;1;8;error: Field 'admin' not found;7/30/2016;;1/23/2016;false
+56;Yoga;true;false;S53113D;36;methodology;ACT;2;6;error: Field 'admin' not found;2/15/2016;;6/27/2016;false
+57;Confrontation;false;false;S940;52;value-added;ACT;1;1;error: Field 'admin' not found;4/18/2016;;4/26/2016;false
+58;Exercise;true;true;Y9349;49;Streamlined;ACT;2;5;error: Field 'admin' not found;12/31/2015;;12/22/2016;false
+59;Yoga;true;true;S79102G;55;migration;ACT;1;7;error: Field 'admin' not found;5/17/2016;;5/18/2016;false
+60;Run;true;true;B351;22;interface;ACT;2;10;error: Field 'admin' not found;11/8/2016;;10/10/2016;false
+61;Exercise;false;false;M2650;34;encoding;ACT;2;10;error: Field 'admin' not found;8/18/2016;;8/7/2016;false
+62;Exercise;true;false;T690;52;website;ACT;2;10;error: Field 'admin' not found;9/13/2016;;7/20/2016;false
+63;Meditation;true;false;S79122G;11;Cross-group;ACT;2;1;error: Field 'admin' not found;4/10/2016;;7/2/2016;false
+64;Yoga;true;false;Y37250D;18;standardization;ACT;3;10;error: Field 'admin' not found;2/5/2016;;1/8/2016;false
+65;Meditation;false;false;S06891;30;Enterprise-wide;ACT;2;1;error: Field 'admin' not found;6/4/2016;;1/22/2016;false
+66;Meditation;false;false;V74;53;bi-directional;ACT;2;7;error: Field 'admin' not found;11/19/2016;;10/5/2016;false
+67;Exercise;false;false;G90522;50;actuating;ACT;3;6;error: Field 'admin' not found;11/13/2016;;12/14/2016;false
+68;Meditation;true;false;S66829A;33;Robust;ACT;1;9;error: Field 'admin' not found;2/25/2016;;11/28/2016;false
+69;Exercise;true;false;O365113;39;system-worthy;ACT;2;5;error: Field 'admin' not found;3/30/2016;;11/20/2016;false
+70;Yoga;true;false;S27819;47;Triple-buffered;ACT;2;6;error: Field 'admin' not found;1/24/2016;;7/16/2016;false
+71;Exercise;false;true;T45624S;39;multi-tasking;ACT;2;6;error: Field 'admin' not found;7/3/2016;;2/28/2016;false
+72;Relax;true;true;M24121;47;model;ACT;2;5;error: Field 'admin' not found;2/14/2016;;1/5/2016;false
+73;Meditation;true;false;T368X6A;29;architecture;ACT;3;5;error: Field 'admin' not found;5/23/2016;;3/25/2016;false
+74;Run;true;false;S72445R;43;client-driven;ACT;3;10;error: Field 'admin' not found;10/20/2016;;7/4/2016;false
+75;Confrontation;true;false;S62369;17;analyzer;ACT;2;8;error: Field 'admin' not found;4/30/2016;;4/8/2016;false
+76;Meditation;true;true;W16121D;14;even-keeled;ACT;1;4;error: Field 'admin' not found;5/13/2016;;12/1/2016;false
+77;Confrontation;true;false;S72064R;49;ability;ACT;2;3;error: Field 'admin' not found;8/18/2016;;5/9/2016;false
+78;Run;true;false;W16722;27;directional;ACT;2;10;error: Field 'admin' not found;7/22/2016;;1/1/2016;false
+79;Meditation;false;true;S86221D;22;groupware;ACT;1;9;error: Field 'admin' not found;10/6/2016;;12/28/2015;false
+80;Run;true;true;S52256Q;55;Inverse;ACT;3;1;error: Field 'admin' not found;9/10/2016;;5/25/2016;false
+81;Relax;false;true;S62522A;10;Automated;ACT;2;10;error: Field 'admin' not found;7/15/2016;;6/20/2016;false
+82;Confrontation;false;true;T25132;56;Enhanced;ACT;2;4;error: Field 'admin' not found;3/8/2016;;10/14/2016;false
+83;Yoga;false;false;S63269;35;explicit;ACT;2;9;error: Field 'admin' not found;3/30/2016;;3/16/2016;false
+84;Confrontation;true;false;S00441A;41;actuating;ACT;2;10;error: Field 'admin' not found;11/24/2016;;7/22/2016;false
+85;Meditation;true;true;M84411D;41;5th generation;ACT;2;3;error: Field 'admin' not found;12/10/2016;;10/15/2016;false
+86;Exercise;true;true;T3360XD;56;neural-net;ACT;1;9;error: Field 'admin' not found;7/22/2016;;9/27/2016;false
+87;Relax;false;false;H5351;55;utilisation;ACT;1;9;error: Field 'admin' not found;2/28/2016;;1/10/2016;false
+88;Relax;false;false;S82871G;41;value-added;ACT;2;8;error: Field 'admin' not found;12/4/2016;;11/12/2016;false
+89;Yoga;false;false;S99822A;21;content-based;ACT;3;7;error: Field 'admin' not found;11/18/2016;;1/6/2016;false
+90;Yoga;true;false;X830;10;Virtual;ACT;1;9;error: Field 'admin' not found;10/26/2016;;7/9/2016;false
+91;Exercise;false;true;S2317;22;Up-sized;ACT;3;7;error: Field 'admin' not found;10/5/2016;;10/13/2016;false
+92;Relax;true;false;O401XX5;30;Exclusive;ACT;3;3;error: Field 'admin' not found;1/21/2016;;5/6/2016;false
+93;Meditation;true;false;M99;32;Fundamental;ACT;3;9;error: Field 'admin' not found;4/12/2016;;5/7/2016;false
+94;Run;true;true;S671;10;superstructure;ACT;1;1;error: Field 'admin' not found;5/21/2016;;4/16/2016;false
+95;Relax;true;true;S52351J;43;process improvement;ACT;3;7;error: Field 'admin' not found;8/19/2016;;2/14/2016;false
+96;Run;false;false;S31815D;5;conglomeration;ACT;1;10;error: Field 'admin' not found;3/21/2016;;1/2/2016;false
+97;Relax;true;true;S31812A;56;tertiary;ACT;1;4;error: Field 'admin' not found;11/25/2016;;2/28/2016;false
+98;Run;true;false;S62362A;20;Team-oriented;ACT;3;2;error: Field 'admin' not found;5/5/2016;;8/17/2016;false
+99;Yoga;false;true;M63871;6;dedicated;ACT;3;4;error: Field 'admin' not found;8/18/2016;;9/6/2016;false
+100;Confrontation;false;true;T2032;50;actuating;ACT;3;1;error: Field 'admin' not found;7/7/2016;;3/6/2016;false

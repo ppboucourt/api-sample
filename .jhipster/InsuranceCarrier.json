@@ -1,0 +1,64 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "insurance",
+            "otherEntityName": "insurance",
+            "otherEntityRelationshipName": "insuranceCarrier"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "acctno",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "address",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "address2",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "city",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "state",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "zip",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "iType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "etin",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20161206223625",
+    "entityTableName": "insurance_carrier",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl"
+}

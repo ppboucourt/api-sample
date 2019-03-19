@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Diet.
+    -->
+    <changeSet id="20161019214158-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="chart_id"
+                                 baseTableName="diet"
+                                 constraintName="fk_diet_chart_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="chart"/>
+
+        <addForeignKeyConstraint baseColumnNames="type_food_diets_id"
+                                 baseTableName="diet"
+                                 constraintName="fk_diet_type_food_diets_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="type_food_diets"/>
+
+    </changeSet>
+</databaseChangeLog>

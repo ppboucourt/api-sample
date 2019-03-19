@@ -1,0 +1,125 @@
+<section class="content-header">
+    <h1>Details Contact Facility</h1>
+    <div ncy-breadcrumb class="breadcrumb"></div>
+</section>
+<section class="invoice">
+    <div class="row">
+        <div class="col-lg-12">
+            <fieldset>
+                <form name="contactsFacilityForm" role="form" data-toggle="validator">
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="contactName">Contact Name(Full Name)  *</label>
+                                    <input type="text" class="form-control" name="contactName" id="contactName"
+                                           ng-model="vm.contactsFacility.name" required/>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="contactType">Contact Type *</label>
+                                    <select class="form-control" ng-model="vm.contactsFacility.typeContactFacilityType"
+                                            ng-options="item as item.name for item in vm.contactTypes track by item.name"
+                                            id="contactType" name="contactType" required>
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="street">Street *</label>
+                                    <input type="text" class="form-control" id="street"
+                                           ng-model="vm.contactsFacility.street" name="street" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="streetTwo">Street Two</label>
+                                    <input type="text" class="form-control" ng-model="vm.contactsFacility.streetTwo"
+                                           id="streetTwo" name="streetTwo">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="city">City *</label>
+                                    <input type="text" class="form-control" ng-model="vm.contactsFacility.city"
+                                           id="city" name="city" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="state">State *</label>
+                                    <select class="form-control" ng-model="vm.contactsFacility.countryState"
+                                            ng-options="item as item.stateCode for item in vm.countryStates track by item.stateCode"
+                                            id="state" name="state" required>
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="zip">Zip *</label>
+                                    <input type="text" class="form-control" ng-model="vm.contactsFacility.zip"
+                                           id="zip" name="zip" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="phone">Phone *</label>
+                                    <input type="text" class="form-control" ng-model="vm.contactsFacility.phone"
+                                           id="phone" name="phone" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="form-group" for="fax">Fax *</label>
+                                    <input type="text" class="form-control" ng-model="vm.contactsFacility.fax"
+                                           id="fax" name="fax" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="form-group" for="website">Website</label>
+                                    <input type="text" class="form-control" ng-model="vm.contactsFacility.website"
+                                           id="website" name="website">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="form-group" for="email">Email *</label>
+                                    <input type="text" class="form-control" ng-model="vm.contactsFacility.email"
+                                           id="email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="form-group" for="cellphone">Cellphone *</label>
+                                    <input type="text" class="form-control" ng-model="vm.contactsFacility.cellphone"
+                                           id="cellphone" name="cellphone" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="form-group" for="notes">Notes</label>
+                                    <textarea class="form-control" ng-model="vm.contactsFacility.notes"
+                                              id="notes" name="notes"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pull-right">
+                        <div class="col-lg-12">
+                            <!--<div class="margin" ng-show="vm.editing">-->
+                                <button type="button" class="btn btn-danger" ng-click="vm.back()">Cancel</button>
+                                <button type="button" class="btn btn-success" ng-click="vm.save()"
+                                        ng-disabled="contactsFacilityForm.$invalid">Save Information</button>
+                            <!--</div>-->
+                            <!--<button type="button" class="btn btn-info" ng-click="vm.changeEditingState()" ng-show="!vm.editing">Update Information</button>-->
+                        </div>
+                    </div>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+</section>

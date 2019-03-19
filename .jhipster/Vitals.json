@@ -1,0 +1,55 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "chart",
+            "otherEntityName": "chart",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "mr_no"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "date",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "time",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "bp_systolic",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "bp_diastolic",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "temperature",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "pulse",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "respiration",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "o2_saturation",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160830151020",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "vitals",
+    "pagination": "no",
+    "enableEntityAudit": true
+}

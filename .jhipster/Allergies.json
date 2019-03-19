@@ -1,0 +1,39 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "chart",
+            "otherEntityName": "chart",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "mr_no"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "allergen",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "allergen_type",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "reaction",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "treatment",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20161019214102",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "allergies",
+    "pagination": "no",
+    "enableEntityAudit": true
+}

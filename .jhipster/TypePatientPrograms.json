@@ -1,0 +1,33 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "charts",
+            "otherEntityName": "chart",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "typePatientPrograms"
+        },
+        {
+            "relationshipName": "facility",
+            "otherEntityName": "facility",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160830185459",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "type_patient_programs",
+    "pagination": "no",
+    "enableEntityAudit": true
+}

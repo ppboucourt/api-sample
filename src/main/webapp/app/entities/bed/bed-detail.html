@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span>Bed</span> {{vm.bed.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="bluebookApp.bed.bed_name">Bed Name</span></dt>
+        <dd>
+            <span>{{vm.bed.bed_name}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.bed.bed_notes">Bed Notes</span></dt>
+        <dd>
+            <span>{{vm.bed.bed_notes}}</span>
+        </dd>
+        <dt><span>Status</span></dt>
+        <dd>
+            <span>{{vm.bed.status}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.bed.actual_chart">Actual Chart</span></dt>
+        <dd>
+            <span>{{vm.bed.actualChart}}</span>
+        </dd>
+        <dt><span>Room</span></dt>
+        <dd>
+            <a ui-sref="room-detail({id:vm.bed.room.id})">{{vm.bed.room.room_name}}</a>
+        </dd>
+        <dt><span>Facility</span></dt>
+        <dd>
+            <a ui-sref="facility-detail({id:vm.bed.facility.id})">{{vm.bed.facility.facility_name}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="bed-detail.edit({id:vm.bed.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

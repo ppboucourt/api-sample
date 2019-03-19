@@ -1,0 +1,199 @@
+
+<form name="vm.form" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myFacilityLabel">Create or edit a Facility</h4>
+    </div>
+    <div class="modal-body">
+
+        <div class="row">
+            <jhi-alert-error></jhi-alert-error>
+        </div>
+
+        <div class="row">
+           <div class="col-lg-4">
+               <div class="form-group" ng-show="vm.facility.id">
+                   <input type="hidden" class="form-control" id="id" name="id"
+                          ng-model="vm.facility.id" readonly />
+               </div>
+               <div class="form-group">
+                   <label class="control-label" data-translate="bluebookApp.facility.name" for="name">Name</label>
+                   <input type="text" class="form-control" name="name" id="name"
+                          ng-model="vm.facility.name" required/>
+                   <div ng-show="vm.form.name.$invalid">
+                       <p class="help-block"
+                          ng-show="vm.form.name.$error.required">
+                           This field is required.
+                       </p>
+                   </div>
+               </div>
+           </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="control-label" data-translate="bluebookApp.facility.street" for="field_street">Street</label>
+                    <input type="text" class="form-control" name="street" id="field_street"
+                           ng-model="vm.facility.street" required/>
+                </div>
+                <div ng-show="vm.form.street.$invalid">
+                    <p class="help-block"
+                       ng-show="vm.form.street.$error.required">
+                        This field is required.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="control-label" data-translate="bluebookApp.facility.street_two" for="field_street_two">Street Two</label>
+                    <input type="text" class="form-control" name="street_two" id="field_street_two"
+                           ng-model="vm.facility.street_two"
+                    />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="control-label" data-translate="bluebookApp.facility.city" for="field_city">City</label>
+                    <input type="text" class="form-control" name="city" id="field_city"
+                           ng-model="vm.facility.city" required/>
+                    <div ng-show="vm.form.city.$invalid">
+                        <p class="help-block"
+                           ng-show="vm.form.city.$error.required">
+                            This field is required.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="control-label" data-translate="bluebookApp.facility.state" for="field_state">State</label>
+                    <!--input type="text" class="form-control" name="state" id="field_state"
+                           ng-model="vm.facility.state" required/-->
+
+                    <select class="form-control" ng-model="vm.facility.state"
+                            ng-options="item.stateCode as item.state for item in vm.states track by item.stateCode"
+                            id="field_state" name="state" required>
+                        <option value="">{{vm.facility.state}}</option>
+                    </select>
+                    <div ng-show="vm.form.state.$invalid">
+                        <p class="help-block"
+                           ng-show="vm.form.state.$error.required">
+                            This field is required.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="control-label" data-translate="bluebookApp.facility.zip" for="field_zip">Zip</label>
+                    <input type="text" class="form-control" name="zip" id="field_zip"
+                           ng-model="vm.facility.zip" required/>
+                    <div ng-show="vm.form.zip.$invalid">
+                        <p class="help-block"
+                           ng-show="vm.form.zip.$error.required">
+                            This field is required.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="control-label" data-translate="bluebookApp.facility.county" for="field_county">County</label>
+                    <input type="text" class="form-control" name="county" id="field_county"
+                           ng-model="vm.facility.county"/>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="control-label" data-translate="bluebookApp.facility.phone" for="field_phone">Phone</label>
+                    <input type="text" class="form-control" name="phone" id="field_phone"
+                           ng-model="vm.facility.phone"/>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="control-label" data-translate="bluebookApp.facility.fax" for="field_fax">Fax</label>
+                    <input type="text" class="form-control" name="fax" id="field_fax"
+                           ng-model="vm.facility.fax"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="control-label" data-translate="bluebookApp.facility.website" for="field_website">Website</label>
+                    <input type="text" class="form-control" name="website" id="field_website"
+                           ng-model="vm.facility.website"/>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="control-label" data-translate="bluebookApp.facility.account" for="field_account">Account</label>
+                    <input type="text" class="form-control" name="account" id="field_account"
+                           ng-model="vm.facility.account"/>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group" ngf-drop ngf-change="vm.setLogo($file, vm.facility)" ngf-pattern="'image/*'">
+                    <label class="control-label" data-translate="bluebookApp.facility.logo" for="field_logo">Logo</label>
+                    <div>
+                        <img data-ng-src="{{'data:' + vm.facility.logoContentType + ';base64,' + vm.facility.logo}}"
+                             style="max-height: 100px;" ng-if="vm.facility.logo"/>
+                        <div ng-if="vm.facility.logo" class="help-block clearfix">
+                            <span class="pull-left">{{vm.facility.logoContentType}}, {{vm.byteSize(vm.facility.logo)}}</span>
+                            <button type="button" ng-click="vm.facility.logo=null;vm.facility.logoContentType=null;"
+                                    class="btn btn-default btn-xs pull-right">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </div>
+                        <button type="button" ngf-select class="btn btn-default btn-block"
+                                ngf-change="vm.setLogo($file, vm.facility)" accept="image/*">
+                            Add image
+                        </button>
+                    </div>
+                    <input type="hidden" class="form-control" name="logo" id="field_logo"
+                           ng-model="vm.facility.logo"
+                    />
+                    <input type="hidden" class="form-control" name="logoContentType" id="field_logoContentType"
+                           ng-model="vm.facility.logoContentType" />
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <!--<div class="form-group">-->
+            <!--<label class="control-label" for="field_status">Status</label>-->
+            <!--<input type="text" class="form-control" name="status" id="field_status"-->
+                    <!--ng-model="vm.facility.status"-->
+                     <!--/>-->
+        <!--</div>-->
+
+        <!--<div class="form-group">-->
+            <!--<label for="field_corporation">Corporation</label>-->
+            <!--<select class="form-control" id="field_corporation" name="corporation" ng-model="vm.facility.corporation" ng-options="corporation as corporation.id for corporation in vm.corporations track by corporation.id">-->
+                <!--<option value=""></option>-->
+            <!--</select>-->
+        <!--</div>-->
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,75 @@
+
+<div>
+    <h2><span>Contacts</span> {{vm.contacts.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="bluebookApp.contacts.full_name">Full Name</span></dt>
+        <dd>
+            <span>{{vm.contacts.full_name}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.contacts.contact_type">Contact Type</span></dt>
+        <dd>
+            <span>{{vm.contacts.contact_type}}</span>
+        </dd>
+        <dt><span>Relationship</span></dt>
+        <dd>
+            <span>{{vm.contacts.relationship}}</span>
+        </dd>
+        <dt><span>Phone</span></dt>
+        <dd>
+            <span>{{vm.contacts.phone}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.contacts.alt_phone">Alt Phone</span></dt>
+        <dd>
+            <span>{{vm.contacts.alt_phone}}</span>
+        </dd>
+        <dt><span>Email</span></dt>
+        <dd>
+            <span>{{vm.contacts.email}}</span>
+        </dd>
+        <dt><span>Address</span></dt>
+        <dd>
+            <span>{{vm.contacts.address}}</span>
+        </dd>
+        <dt><span>Notes</span></dt>
+        <dd>
+            <span>{{vm.contacts.notes}}</span>
+        </dd>
+        <dt><span>Status</span></dt>
+        <dd>
+            <span>{{vm.contacts.status}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.contacts.address_two">Address Two</span></dt>
+        <dd>
+            <span>{{vm.contacts.address_two}}</span>
+        </dd>
+        <dt><span>City</span></dt>
+        <dd>
+            <span>{{vm.contacts.city}}</span>
+        </dd>
+        <dt><span>State</span></dt>
+        <dd>
+            <span>{{vm.contacts.state}}</span>
+        </dd>
+        <dt><span>Zip</span></dt>
+        <dd>
+            <span>{{vm.contacts.zip}}</span>
+        </dd>
+        <dt><span>Chart</span></dt>
+        <dd>
+            <a ui-sref="chart-detail({id:vm.contacts.chart.id})">{{vm.contacts.chart.mr_no}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="contacts-detail.edit({id:vm.contacts.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

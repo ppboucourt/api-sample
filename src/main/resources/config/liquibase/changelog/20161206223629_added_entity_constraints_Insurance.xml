@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Insurance.
+    -->
+    <changeSet id="20161206223629-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="insurance_carrier_id"
+                                 baseTableName="insurance"
+                                 constraintName="fk_insurance_insurance_carrier_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="insurance_carrier"/>
+
+        <addForeignKeyConstraint baseColumnNames="insurance_type_id"
+                                 baseTableName="insurance"
+                                 constraintName="fk_insurance_insurance_type_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="insurance_type"/>
+
+        <addForeignKeyConstraint baseColumnNames="insurance_level_id"
+                                 baseTableName="insurance"
+                                 constraintName="fk_insurance_insurance_level_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="insurance_level"/>
+
+        <addForeignKeyConstraint baseColumnNames="insurance_relation_id"
+                                 baseTableName="insurance"
+                                 constraintName="fk_insurance_insurance_relation_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="insurance_relation"/>
+
+        <addForeignKeyConstraint baseColumnNames="country_state_id"
+                                 baseTableName="insurance"
+                                 constraintName="fk_insurance_country_state_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="country_state"/>
+
+        <addForeignKeyConstraint baseColumnNames="chart_id"
+                                 baseTableName="insurance"
+                                 constraintName="fk_insurance_chart_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="chart"/>
+
+    </changeSet>
+</databaseChangeLog>

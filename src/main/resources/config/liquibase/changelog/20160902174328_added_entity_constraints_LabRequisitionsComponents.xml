@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity LabRequisitionsComponents.
+    -->
+    <changeSet id="20160902174328-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="lab_requisition_id"
+                                 baseTableName="lab_requisitions_components"
+                                 constraintName="fk_lab_requisitions_components_lab_requisition_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="lab_requisition"/>
+
+        <addForeignKeyConstraint baseColumnNames="lab_compendium_id"
+                                 baseTableName="lab_requisitions_components"
+                                 constraintName="fk_lab_requisitions_components_lab_compendium_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="lab_compendium"/>
+
+    </changeSet>
+</databaseChangeLog>

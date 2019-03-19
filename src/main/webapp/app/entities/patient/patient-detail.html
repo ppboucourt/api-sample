@@ -1,0 +1,54 @@
+<section>
+    <div class="row">
+        <div class="col-md-12">
+            <uib-tabset class="nav-tabs-custom" active="vm.activeTab">
+                <uib-tab index="0" select="vm.keepActiveTab(0)" heading="Information">
+                    <uib-tab-heading>
+                        <i class="fa fa-info-circle"></i> Information
+                    </uib-tab-heading>
+                    <fieldset>
+                        <ng-include src="'app/entities/patient/tpl/general-information-tpl.html'"></ng-include>
+                    </fieldset>
+                </uib-tab>
+                <uib-tab index="8" select="vm.keepActiveTab(8)" heading="Urgent Issues" ng-show="!vm.chart.waitingRoom">
+                    <uib-tab-heading>
+                        <i class="fa fa-ambulance"></i> Urgent Issues &nbsp;&nbsp;
+                        <span class="label label-warning" ng-show="unknowledgeIssues">{{unknowledgeIssues}}</span>
+                    </uib-tab-heading>
+                    <div ui-view="urgent-issues"></div>
+                </uib-tab>
+                <uib-tab index="10" select="vm.keepActiveTab(10)" heading="Urgent Issues">
+                    <uib-tab-heading>
+                        <i class="fa fa-vcard-o"></i> Forms
+                    </uib-tab-heading>
+                    <div ui-view="patient-forms"></div>
+                </uib-tab>
+                <uib-tab index="17" select="vm.keepActiveTab(17)" heading="Orders">
+                    <uib-tab-heading>
+                        <i class="fa fa-flask"></i> Orders
+                    </uib-tab-heading>
+                    <div ui-view="orders"></div>
+                </uib-tab>
+                <uib-tab index="16" select="vm.keepActiveTab(16)" heading="">
+                    <uib-tab-heading>
+                        <i class="fa fa-heartbeat"></i> Mars
+                    </uib-tab-heading>
+                    <div ui-view="patient-mars"></div>
+                </uib-tab>
+                <uib-tab index="15" select="vm.keepActiveTab(15)" heading="">
+                    <uib-tab-heading>
+                        <i class="fa fa-group"></i> Group Sessions
+                    </uib-tab-heading>
+                    <div ui-view="group-session-details-chart"></div>
+                </uib-tab>
+                <uib-tab index="18" select="vm.keepActiveTab(18)" heading="">
+                    <uib-tab-heading>
+                        <i class="fa fa-flask"></i> eLabs
+                    </uib-tab-heading>
+                    <div ui-view="lab-results"></div>
+                </uib-tab>
+            </uib-tabset>
+
+        </div>
+    </div>
+</section>

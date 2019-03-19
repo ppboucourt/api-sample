@@ -1,0 +1,121 @@
+.dash-chart {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: calc(25% - 22px);
+    padding: 10px 15px;
+    background-color: $white;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba($black, 0.1);
+    @media (max-width: 1360px) {
+        width: calc(50% - 15px);
+    }
+    @media (max-width: 560px) {
+        width: 100%;
+    }
+    @media (max-width: 560px) {
+        &:not(:first-child) {
+            margin-top: 110px;
+        }
+    }
+    &:nth-child(3),
+    &:last-child {
+        @media (max-width: 1360px) {
+            margin-top: 110px;
+        }
+    }
+}
+
+.chart-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: -110px;
+    .nvd3.nv-pie {
+        path {
+            fill-opacity: 1;
+        }
+    }
+}
+
+.chart-icon {
+    width: 100%;
+    .fa {
+        font-size: 42px;
+    }
+}
+
+.chart-data {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    .beds {
+        width: 50%;
+        padding: 5px 10px 20px;
+        &.male {
+            border-right: 1px solid rgba($black, 0.1);
+        }
+        &-count {
+            font-size: 46px;
+        }
+        .icon {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .fa {
+            color: $light-gray;
+            font-size: 24px;
+        }
+    }
+    h5 {
+        margin-bottom: 20px;
+        width: 100%;
+        font-size: 24px;
+        font-weight: lighter;
+    }
+}
+
+.chart-footer {
+    width: 100%;
+    margin-top: auto;
+    border-top: 1px solid rgba($black, 0.1);
+    > a {
+        display: block;
+        width: 100%;
+        padding: 10px 0 0;
+        text-align: center;
+        font-size: 16px;
+        color: $gray;
+        transition: all linear 0.2s;
+        &:hover {
+            color: $light-gray;
+        }
+    }
+}
+
+.levels,
+.payments {
+    width: 100%;
+    .table {
+        margin-bottom: 0;
+    }
+}
+
+.patients-total,
+.patients-missing {
+    width: 50%;
+    padding: 5px 10px 20px;
+    .icon {
+        margin-bottom: 15px;
+        .fa {
+            color: $light-gray;
+            font-size: 24px;
+        }
+    }
+    .count {
+        font-size: 46px;
+    }
+}
+
+.patients-total {
+    border-right: 1px solid rgba($black, 0.1);
+}

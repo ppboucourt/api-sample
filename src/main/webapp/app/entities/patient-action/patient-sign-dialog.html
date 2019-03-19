@@ -1,0 +1,23 @@
+<form name="signForm" ng-submit="vm.confirmSign()">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title">{{vm.title}}</h4>
+    </div>
+    <div class="modal-body">
+
+        <p>Please, enter your personal PIN?</p>
+
+        <!--label for="pin" >Enter PIN</el-->
+        <input type="password" style="width: 100%" maxlength="4"  minlength="4" id="pin"    name="pin" ng-model="vm.employee.pin" placeholder="PIN"/>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="signForm.$invalid || vm.isSaving" class="btn btn-success">
+            <span class="glyphicon glyphicon-ok-sign"></span>&nbsp;<span>Sign</span>
+        </button>
+    </div>
+</form>

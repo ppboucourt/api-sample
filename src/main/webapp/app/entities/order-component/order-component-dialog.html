@@ -1,0 +1,100 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myOrderComponentLabel">Create or edit a Order Component</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.orderComponent.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.orderComponent.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_days">Days</label>
+            <input type="number" class="form-control" name="days" id="field_days"
+                    ng-model="vm.orderComponent.days"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_medication">Medication</label>
+            <input type="text" class="form-control" name="medication" id="field_medication"
+                    ng-model="vm.orderComponent.medication"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.orderComponent.dosage_form" for="field_dosage_form">Dosage Form</label>
+            <input type="text" class="form-control" name="dosage_form" id="field_dosage_form"
+                    ng-model="vm.orderComponent.dosage_form"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_dose">Dose</label>
+            <input type="text" class="form-control" name="dose" id="field_dose"
+                    ng-model="vm.orderComponent.dose"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.orderComponent.administration_time" for="field_administration_time">Administration Time</label>
+                <div class="input-group">
+                    <input id="field_administration_time" type="text" class="form-control" name="administration_time" datetime-picker="{{dateformat}}" ng-model="vm.orderComponent.administration_time" is-open="vm.datePickerOpenStatus.administration_time"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('administration_time')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_status">Status</label>
+            <input type="text" class="form-control" name="status" id="field_status"
+                    ng-model="vm.orderComponent.status"
+                    required ng-maxlength="3" />
+            <div ng-show="editForm.status.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.status.$error.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.status.$error.maxlength">
+                    This field cannot be longer than 3 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_frequency">Frequency</label>
+            <select class="form-control" name="frequency" ng-model="vm.orderComponent.frequency" id="field_frequency">
+                <option value="Daily">Daily</option>
+                <option value="Seldom">Seldom</option>
+                <option value="Once">Once</option>
+                <option value="Monthly">Monthly</option>
+                <option value="Yearly">Yearly</option>
+                <option value="Never">Never</option>
+                <option value="Weekly">Weekly</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="field_allOrders">All Orders</label>
+            <select class="form-control" id="field_allOrders" name="allOrders" ng-model="vm.orderComponent.allOrders" ng-options="allOrders as allOrders.name for allOrders in vm.allorders track by allOrders.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="field_routes">Routes</label>
+            <select class="form-control" id="field_routes" name="routes" ng-model="vm.orderComponent.routes" ng-options="routes as routes.name for routes in vm.routes track by routes.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

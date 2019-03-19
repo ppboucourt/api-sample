@@ -1,0 +1,55 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "icd10",
+            "otherEntityName": "icd10",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "patientOrderTest"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "patientOrderItem",
+            "otherEntityName": "patientOrderItem",
+            "otherEntityRelationshipName": "patientOrderTest"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "labCompendium",
+            "otherEntityName": "labCompendium",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "patientOrder",
+            "otherEntityName": "patientOrder",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "orderFrequency",
+            "otherEntityName": "orderFrequency",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "staringDate",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "endDate",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "changelogDate": "20170110202715",
+    "entityTableName": "patient_order_test",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "enableEntityAudit": true
+}

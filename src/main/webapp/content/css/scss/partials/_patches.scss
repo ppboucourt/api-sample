@@ -1,0 +1,14 @@
+/* evaluations libraries */
+#target-form {
+    .flex-patch {
+        display: flex;
+        align-items: stretch;
+    }
+    .fg-edit-palette {
+        max-height: 570px;
+        background: $white;
+        z-index: 10;
+        overflow-y: auto;
+    }
+}
+/* /evaluations libraries */

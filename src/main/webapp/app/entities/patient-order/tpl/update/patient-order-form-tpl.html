@@ -1,0 +1,52 @@
+<form name="vm.form.order" role="form" show-validation>
+    <div class="box-body">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label>Patient Name</label>
+                    <input type="text" class="form-control" readonly
+                           value="{{vm.patientOrder.chart.patient.firstName + ' ' +
+                           (vm.patientOrder.chart.patient.middleName ? vm.patientOrder.chart.patient.middleInitial : '') + ' ' +
+                           vm.patientOrder.chart.patient.lastName}}">
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label for="field_via">Obtained</label>
+                    <select class="form-control" id="field_via" name="via" ng-model="vm.patientOrder.via" required ng-disabled="true"
+                            ng-options="via as via.name for via in vm.vias track by via.id">
+                        <option value=""></option>
+                    </select>
+                    <div ng-show="vm.form.order.via.$invalid">
+                        <p class="help-block"
+                           ng-show="vm.form.order.via.$error.required">
+                            This field is required.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label for="field_employee">Physician</label>
+                    <select class="form-control" id="field_employee" name="employee" ng-model="vm.patientOrder.signedBy" required ng-disabled="true"
+                            ng-options="employee as employee.name + ' ' + employee.lastName for employee in vm.employees track by employee.id">
+                        <option value=""></option>
+                    </select>
+                    <div ng-show="vm.form.order.employee.$invalid">
+                        <p class="help-block"
+                           ng-show="vm.form.order.employee.$error.required">
+                            This field is required.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pull-left" ng-show="vm.patientOrder.ordStatus == 'SCHEDULED' && vm.canCancel">
+            <button type="button" class="btn btn-warning" ui-sref="patient-orders-update.cancel({oid: vm.patientOrder.id})">Discontinue Order</button>
+        </div>
+        <div class="pull-right">
+            <button type="button" ng-show="vm.canSign" class="btn btn-warning" ng-click="vm.signIn()">
+                <span class="glyphicon glyphicon-pencil"></span> <span>Sign Order</span></button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,311 @@
+<form name="vm.form.insurance_form" role="form" show-validation>
+    <div class="box-body">
+        <fieldset ng-disabled="!vm.editInsurance">
+            <div ng-repeat="insurance in vm.chart.insurances">
+                <div class="box-header with-border">
+                    <h3 ng-if="$even" class="box-title">Primary Insurance</h3>
+                    <h3 ng-if="$odd" class="box-title">Scondary Insurance</h3>
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" ng-show="$even && vm.chart.insurances.length > 1" ng-click="vm.swapInsurances()"><i class="fa fa-refresh fa-spin fa-fw"></i></button>
+                        <button type="button" class="btn btn-box-tool" ng-show="$even && vm.chart.insurances.length > 1" ng-click="vm.deletePrimaryInsurance()"><i class="fa fa-times"></i></button>
+                        <button type="button" class="btn btn-box-tool" ng-show="$odd" ng-click="vm.deleteSecondaryInsurance()"><i class="fa fa-times"></i></button>
+                    </div>
+                </div>
+                <div class="box-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="control-label">Insurance Carrier</label>
+                                <ui-select ng-model="insurance.insuranceCarrier" name="insurance{{$index}}_carrier"
+                                           id="field_insurance{{$index}}_carrier" reset-search-input="false" required
+                                           title="Insurance Carrier" append-to-body="true">
+                                    <ui-select-match placeholder="Enter an insurance carrier...">{{$select.selected.name}}</ui-select-match>
+                                    <ui-select-choices repeat="carrier in vm.carriers"
+                                                       refresh="vm.getInsuranceCarrierLoaded($select.search)"
+                                                       refresh-delay="0">
+                                        <div ng-bind-html="carrier.name | highlight: $select.search"></div>
+                                    </ui-select-choices>
+                                </ui-select>
+                                <div ng-show="vm.form.insurance_form.insurance{{$index}}_carrier.$invalid">
+                                    <p class="help-block"
+                                       ng-show="vm.form.insurance_form.insurance{{$index}}_carrier.$error.required">
+                                        This field is required.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label class="control-label" for="field_insurance{{$index}}_policyNumber">Policy Number</label>
+                                <input type="text" class="form-control" name="insurance{{$index}}_policyNumber" id="field_insurance{{$index}}_policyNumber"
+                                       ng-model="insurance.policyNumber" required/>
+                                <div ng-show="vm.form.insurance_form.insurance{{$index}}_policyNumber.$invalid">
+                                    <p class="help-block"
+                                       ng-show="vm.form.insurance_form.insurance{{$index}}_policyNumber.$error.required">
+                                        This field is required.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label class="control-label" for="field_insurance{{$index}}_planNumber">Plan Number</label>
+                                <input type="text" class="form-control" name="planNumber" id="field_insurance{{$index}}_planNumber"
+                                       ng-model="insurance.planNumber"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label class="control-label" for="field_insurance{{$index}}_lastName">Subscriber Last Name</label>
+                                <input type="text" class="form-control" name="insurance{{$index}}_lastName" id="field_insurance{{$index}}_lastName"
+                                       ng-model="insurance.lastName" required/>
+                                <div ng-show="vm.form.insurance_form.insurance{{$index}}_lastName.$invalid">
+                                    <p class="help-block"
+                                       ng-show="vm.form.insurance_form.insurance{{$index}}_lastName.$error.required">
+                                        This field is required.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label class="control-label" for="field_insurance{{$index}}_firstName">Subscriber First Name</label>
+                                <input type="text" class="form-control" name="insurance{{$index}}_firstName" id="field_insurance{{$index}}_firstName"
+                                       ng-model="insurance.firstName" required/>
+                                <div ng-show="vm.form.insurance_form.insurance{{$index}}_firstName.$invalid">
+                                    <p class="help-block"
+                                       ng-show="vm.form.insurance_form.insurance{{$index}}_firstName.$error.required">
+                                        This field is required.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="form-group">
+                                <label class="control-label" for="field_middleInitial">Subscriber Middle Initial</label>
+                                <input type="text" class="form-control" name="insurance{{$index}}_middleInitial"
+                                       id="field_insurance{{$index}}_middleInitial" ng-model="insurance.middleInitial"
+                                       ng-maxlength="1"/>
+                                <div ng-show="vm.form.insurance_form.middleInitial.$invalid">
+                                    <p class="help-block"
+                                       ng-show="vm.form.insurance_form.middleInitial.$error.maxlength">
+                                        This field cannot be longer than 1 characters.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-1">
+                            <div class="form-group">
+                                <label class="control-label" for="field_insurance{{$index}}_gender">Subscriber Gender</label>
+                                <select class="form-control" name="gender" ng-model="insurance.gender" id="field_insurance{{$index}}_gender">
+                                    <option value="M">MALE</option>
+                                    <option value="F">FEMALE</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label class="control-label" for="field_insurance{{$index}}_dob">Subscriber Birth Date</label>
+                                <div class="input-group">
+                                    <input id="field_insurance{{$index}}_dob" type="text" class="form-control" name="insurance{{$index}}_dob"
+                                           uib-datepicker-popup="MM/dd/yyyy" required
+                                           ng-model="insurance.dob" is-open="vm.datePickerOpenStatus.insuranceDob[$index]"/>
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default" ng-click="vm.openInsuranceCalendar($index)">
+                                            <i class="glyphicon glyphicon-calendar"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                                <div ng-show="vm.form.insurance_form.insurance{{$index}}_dob.$invalid">
+                                    <p class="help-block"
+                                       ng-show="vm.form.insurance_form.insurance{{$index}}_dob.$error.required">
+                                        This field is required.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="control-label" for="field_insurance{{$index}}_address">Subscriber Address</label>
+                                <input type="text" class="form-control" name="insurance{{$index}}_address" id="field_insurance{{$index}}_address"
+                                       ng-model="insurance.address" required />
+                                <div ng-show="vm.form.insurance_form.insurance{{$index}}_address.$invalid">
+                                    <p class="help-block"
+                                       ng-show="vm.form.insurance_form.insurance{{$index}}_address.$error.required">
+                                        This field is required.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label class="control-label">Subscriber Address 2</label>
+                                <input type="text" class="form-control" name="insurance{{$index}}_address2" id="field_insurance{{$index}}_address2"
+                                       ng-model="insurance.address2" />
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label class="control-label" for="field_insurance{{$index}}_phone">Subscriber Phone</label>
+                                <input type="text" class="form-control" max="10" min="10" name="insurance{{$index}}_phone"
+                                       id="field_insurance{{$index}}_phone"
+                                       ng-model="insurance.phone" required ui-mask="(999) 999-9999" required ui-mask="(999) 999-9999" required/>
+                                <div ng-show="vm.form.insurance_form.insurance{{$index}}_phone.$invalid">
+                                    <p class="help-block"
+                                       ng-show="vm.form.insurance_form.insurance{{$index}}_phone.$error.required">
+                                        This field is required.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label for="field_insurance{{$index}}_city">Subscriber City</label>
+                                <input type="text" class="form-control" id="field_insurance{{$index}}_city"
+                                       name="insurance{{$index}}_city" ng-model="insurance.city" required>
+                                </input>
+                                <div ng-show="vm.form.insurance_form.insurance{{$index}}_city.$invalid">
+                                    <p class="help-block"
+                                       ng-show="vm.form.insurance_form.insurance{{$index}}_city.$error.required">
+                                        This field is required.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label class="control-label">Subscriber State</label>
+                                <select class="form-control" id="field_insurance{{$index}}_state"
+                                        name="insurance{{$index}}_state" ng-model="insurance.countryState"
+                                        ng-options="state as state.state for state in vm.states track by state.id" required>
+                                    <option value=""></option>
+                                </select>
+                                <div ng-show="vm.form.insurance_form.insurance{{$index}}_state.$invalid">
+                                    <p class="help-block"
+                                       ng-show="vm.form.insurance_form.insurance{{$index}}_state.$error.required">
+                                        This field is required.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label class="control-label" for="field_insurance{{$index}}_zipCode">Subscriber Zip Code</label>
+                                <input type="text" class="form-control" name="insurance{{$index}}_zipCode" id="field_insurance{{$index}}_zipCode"
+                                       ng-model="insurance.zipCode" ui-mask="99999" required />
+                                <div ng-show="vm.form.insurance_form.insurance{{$index}}_zipCode.$invalid">
+                                    <p class="help-block"
+                                       ng-show="vm.form.insurance_form.insurance{{$index}}_zipCode.$error.required">
+                                        This field is required.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label for="field_insurance{{$index}}_insuranceType">Insurance Type</label>
+                                <select class="form-control" id="field_insurance{{$index}}_insuranceType" name="insurance{{$index}}_insuranceType"
+                                        ng-model="insurance.insuranceType" required
+                                        ng-options="insuranceType as insuranceType.name for insuranceType in vm.insuranceType track by insuranceType.id">
+                                    <option value=""></option>
+                                </select>
+                                <div ng-show="vm.form.insurance_form.insurance{{$index}}_insuranceType.$invalid">
+                                    <p class="help-block"
+                                       ng-show="vm.form.insurance_form.insurance{{$index}}_insuranceType.$error.required">
+                                        This field is required.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="field_insurance{{$index}}_insuranceLevel">Insurance Level</label>
+                                <select class="form-control" id="field_insurance{{$index}}_insuranceLevel"
+                                        name="insurance{{$index}}_insuranceLevel" ng-model="insurance.insuranceLevel"
+                                        ng-options="insuranceLevel as insuranceLevel.name for insuranceLevel in vm.insuranceLevels track by insuranceLevel.id">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="field_insurance{{$index}}_insuranceRelation">Relationship</label>
+                                <select class="form-control" id="field_insurance{{$index}}_insuranceRelation" name="insurance{{$index}}_insuranceRelation"
+                                        ng-model="insurance.insuranceRelation" required
+                                        ng-options="insuranceRelation as insuranceRelation.name for insuranceRelation in vm.insuranceRelations track by insuranceRelation.id">
+                                    <option value=""></option>
+                                </select>
+                                <div ng-show="vm.form.insurance_form.insurance{{$index}}_insuranceRelation.$invalid">
+                                    <p class="help-block"
+                                       ng-show="vm.form.insurance_form.insurance{{$index}}_insuranceRelation.$error.required">
+                                        This field is required.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label class="control-label" for="field_insurance{{$index}}_employer">Employer</label>
+                                <input type="text" class="form-control" name="employer" id="field_insurance{{$index}}_employer"
+                                       ng-model="insurance.employer"/>
+                            </div>
+                        </div>
+                        <div class="col-md-3"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label class="control-label" for="field_insurance{{$index}}_groupNumber">Group Number</label>
+                                <input type="text" class="form-control" name="insurance{{$index}}_groupNumber" id="field_insurance{{$index}}_groupNumber"
+                                       ng-model="insurance.groupNumber" required/>
+                                <div ng-show="vm.form.insurance_form.insurance{{$index}}_groupNumber.$invalid">
+                                    <p class="help-block"
+                                       ng-show="vm.form.insurance_form.insurance{{$index}}_groupNumber.$error.required">
+                                        This field is required.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label class="control-label" for="field_insurance{{$index}}_groupName">Group Name</label>
+                                <input type="text" class="form-control" name="insurance{{$index}}_groupName" id="field_insurance{{$index}}_groupName"
+                                       ng-model="insurance.groupName" required/>
+                                <div ng-show="vm.form.insurance_form.insurance{{$index}}_groupName.$invalid">
+                                    <p class="help-block"
+                                       ng-show="vm.form.insurance_form.insurance{{$index}}_groupName.$error.required">
+                                        This field is required.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-footer" ng-show="vm.chart.insurances[1] == null" ng-disabled = false>
+                    <button type="button" class="btn btn-info" ng-click="vm.addSecondaryInsurance()"
+                            ng-show="vm.chart.insurances[1] == null">Add Secondary Insurance</button>
+                </div>
+            </div>
+        </fieldset>
+        <div class="pull-right">
+            <div class="col-lg-12">
+                <div ng-show="vm.updating">
+                    <button type="button" class="btn btn-danger" ng-click="vm.cancel()">Cancel</button>
+                    <button type="button" class="btn btn-success" ng-disabled="vm.form.insurance_form.$invalid"
+                            ng-click="vm.save()">Save</button>
+                </div>
+                <button type="button" class="btn btn-info" ng-click="vm.updateForm()"
+                        ng-show="!vm.updating">Update Information</button>
+            </div>
+        </div>
+    </div>
+</form>

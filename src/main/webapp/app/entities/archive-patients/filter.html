@@ -1,0 +1,99 @@
+<script type="text/ng-template" id="archive-patient-filter.html">
+    <form name="editForm" role="form" novalidate="true" ng-submit="vm.filter()" show-validation="false">
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control input-sm" name="lastName" id="field_lastName"
+                               ng-model="vm.chart.last_name" placeholder="Last Name"/>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control input-sm" name="firstName" id="field_firstName"
+                               ng-model="vm.chart.first_name" placeholder="First Name"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control input-sm" name="lastName" id="field_mrNo"
+                               ng-model="vm.chart.mr_no" placeholder="Mr No."/>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <select class="form-control" ng-model="vm.chart.typePatientProgram"
+                                id="field_typePatientProgram" name="typePatientProgram" required>
+                            <option ng-repeat="item in vm.typePatientProgram" value="{{item.name}}">
+                                {{item.name}}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12" align="center">
+                    <span class="description-text">Discharge Date Range</span>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <input id="field_dischargeDateFrom" type="text" min-date="today" class="form-control input-sm" name="dischargeDateFrom"
+                               uib-datepicker-popup="{{dateformat}}" placeholder="From"
+                               ng-model="vm.chart.dischargeDateFrom" is-open="vm.datePickerOpenStatus.dischargeDateFrom"/>
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default btn-sm" ng-click="vm.openCalendar('dischargeDateFrom')"><i
+                                class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <input id="field_dischargeDateTo" type="text" class="form-control input-sm" name="dischargeDateTo"
+                               uib-datepicker-popup="{{dateformat}}" placeholder="To"
+                               ng-model="vm.chart.dischargeDateTo" is-open="vm.datePickerOpenStatus.dischargeDateTo"/>
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default btn-sm" ng-click="vm.openCalendar('dischargeDateTo')"><i
+                                class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12" align="center">
+                    <span class="description-text">Admission Date Range</span>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <input id="field_admissionDateFrom" type="text" class="form-control input-sm" name="admissionDateFrom"
+                               uib-datepicker-popup="{{dateformat}}" placeholder="From"
+                               ng-model="vm.chart.admissionDateFrom" is-open="vm.datePickerOpenStatus.admissionDateFrom"/>
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default btn-sm" ng-click="vm.openCalendar('admissionDateFrom')"><i
+                                class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <input id="field_admissionDateTo" type="text" class="form-control input-sm" name="admissionDateTo"
+                               uib-datepicker-popup="{{dateformat}}" placeholder="To"
+                               ng-model="vm.chart.admissionDateTo" is-open="vm.datePickerOpenStatus.admissionDateTo"/>
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default btn-sm" ng-click="vm.openCalendar('admissionDateTo')"><i
+                                class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" ng-click="vm.clear()">
+                <span class="glyphicon glyphicon-trash"></span>&nbsp;<span>Clear</span>
+            </button>
+            <button type="submit" class="btn btn-primary" ng-click="vm.changeEditState()">
+                <span class="glyphicon glyphicon-search"></span>&nbsp;<span>Search</span>
+            </button>
+        </div>
+    </form>
+</script>

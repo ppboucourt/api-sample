@@ -1,0 +1,92 @@
+
+<div>
+    <h2><span>Contacts Facility</span> {{vm.contactsFacility.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="bluebookApp.contactsFacility.contact_name">Contact Name</span></dt>
+        <dd>
+            <span>{{vm.contactsFacility.contact_name}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.contactsFacility.contact_short_code">Contact Short Code</span></dt>
+        <dd>
+            <span>{{vm.contactsFacility.contact_short_code}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.contactsFacility.contact_street">Contact Street</span></dt>
+        <dd>
+            <span>{{vm.contactsFacility.contact_street}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.contactsFacility.contact_street_two">Contact Street Two</span></dt>
+        <dd>
+            <span>{{vm.contactsFacility.contact_street_two}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.contactsFacility.contact_city">Contact City</span></dt>
+        <dd>
+            <span>{{vm.contactsFacility.contact_city}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.contactsFacility.contact_zip">Contact Zip</span></dt>
+        <dd>
+            <span>{{vm.contactsFacility.contact_zip}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.contactsFacility.contact_phone">Contact Phone</span></dt>
+        <dd>
+            <span>{{vm.contactsFacility.contact_phone}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.contactsFacility.contact_fax">Contact Fax</span></dt>
+        <dd>
+            <span>{{vm.contactsFacility.contact_fax}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.contactsFacility.contact_website">Contact Website</span></dt>
+        <dd>
+            <span>{{vm.contactsFacility.contact_website}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.contactsFacility.contact_notes">Contact Notes</span></dt>
+        <dd>
+            <span>{{vm.contactsFacility.contact_notes}}</span>
+        </dd>
+        <dt><span>Status</span></dt>
+        <dd>
+            <span>{{vm.contactsFacility.status}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.contactsFacility.contact_email">Contact Email</span></dt>
+        <dd>
+            <span>{{vm.contactsFacility.contact_email}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.contactsFacility.contact_cellphone">Contact Cellphone</span></dt>
+        <dd>
+            <span>{{vm.contactsFacility.contact_cellphone}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.contactsFacility.contact_picture">Contact Picture</span></dt>
+        <dd>
+            <div ng-if="vm.contactsFacility.contact_picture">
+                <a ng-click="vm.openFile(vm.contactsFacility.contact_pictureContentType, vm.contactsFacility.contact_picture)">
+                    <img data-ng-src="{{'data:' + vm.contactsFacility.contact_pictureContentType + ';base64,' + vm.contactsFacility.contact_picture}}" style="max-width: 100%;"/>
+                </a>
+                {{vm.contactsFacility.contact_pictureContentType}}, {{vm.byteSize(vm.contactsFacility.contact_picture)}}
+            </div>
+        </dd>
+        <dt><span>Facility</span></dt>
+        <dd>
+            <a ui-sref="facility-detail({id:vm.contactsFacility.facility.id})">{{vm.contactsFacility.facility.facility_name}}</a>
+        </dd>
+        <dt><span>Type Contact Facility Type</span></dt>
+        <dd>
+            <a ui-sref="type-contact-facility-type-detail({id:vm.contactsFacility.typeContactFacilityType.id})">{{vm.contactsFacility.typeContactFacilityType.id}}</a>
+        </dd>
+        <dt><span>Country State</span></dt>
+        <dd>
+            <a ui-sref="country-state-detail({id:vm.contactsFacility.countryState.id})">{{vm.contactsFacility.countryState.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="contacts-facility-detail.edit({id:vm.contactsFacility.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,45 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "chartToActions",
+            "otherEntityName": "chartToAction",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "actions"
+        },
+        {
+            "relationshipName": "orders",
+            "otherEntityName": "orders",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "action"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "action",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "show_in_mars",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "prn",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "3"
+        }
+    ],
+    "changelogDate": "20160826212901",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "actions",
+    "pagination": "no",
+    "enableEntityAudit": true
+}

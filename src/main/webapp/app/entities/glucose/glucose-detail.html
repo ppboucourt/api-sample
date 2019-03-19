@@ -1,0 +1,61 @@
+
+<div>
+    <h2><span>Glucose</span> {{vm.glucose.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Date</span></dt>
+        <dd>
+            <span>{{vm.glucose.date | date:'medium'}}</span>
+        </dd>
+        <dt><span>Time</span></dt>
+        <dd>
+            <span>{{vm.glucose.time | date:'medium'}}</span>
+        </dd>
+        <dt><span>Reading</span></dt>
+        <dd>
+            <span>{{vm.glucose.reading}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.glucose.type_check">Type Check</span></dt>
+        <dd>
+            <span>{{vm.glucose.type_check}}</span>
+        </dd>
+        <dt><span>Intervention</span></dt>
+        <dd>
+            <span>{{vm.glucose.intervention}}</span>
+        </dd>
+        <dt><span>Notes</span></dt>
+        <dd>
+            <span>{{vm.glucose.notes}}</span>
+        </dd>
+        <dt><span>Status</span></dt>
+        <dd>
+            <span>{{vm.glucose.status}}</span>
+        </dd>
+        <dt><span>Type Of Check</span></dt>
+        <dd>
+            <span>{{vm.glucose.typeOfCheck}}</span>
+        </dd>
+        <dt><span>Chart</span></dt>
+        <dd>
+            <a ui-sref="chart-detail({id:vm.glucose.chart.id})">{{vm.glucose.chart.mr_no}}</a>
+        </dd>
+        <dt><span>Glucose Intervention</span></dt>
+        <dd>
+            <span ng-repeat="glucoseIntervention in vm.glucose.glucoseInterventions">
+                <a ui-sref="glucose-intervention-detail({id: glucoseIntervention.id})">{{glucoseIntervention.name}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="glucose-detail.edit({id:vm.glucose.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

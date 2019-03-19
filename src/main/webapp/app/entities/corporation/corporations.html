@@ -1,0 +1,31 @@
+<ng-include src="'app/entities/tpl/list-header-tpl.html'"></ng-include>
+<section class="content">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box">
+          <div class="box-header">
+              <div class="navbar-form navbar-left" style="margin-left: -15px;" ng-show="!vm.corporations.length">
+                  <button class="btn btn-primary" ui-sref="{{vm.entityStateName}}.new">
+                      <span class="glyphicon glyphicon-plus"></span><span>New {{vm.entityClassHumanized}}</span>
+                  </button>
+              </div>
+              <div class="navbar-form navbar-right">
+                  <div class="text-right">
+                      <div class="has-feedback input-group-sm">
+                          <input type="text" class="form-control" ng-model="vm.searchQuery" size="80"
+                                 id="searchQueryroom" placeholder="Query" ng-change="vm.search()">
+                          <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        <div class="box-body">
+          <table datatable="" dt-options="vm.dtOptions" dt-columns="vm.dtColumns"
+                 dt-instance="vm.dtInstance"
+                 class="table table-striped table-bordered table-condensed">
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

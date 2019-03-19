@@ -1,0 +1,52 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "report_name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "template",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sort_direction",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "date_range",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "start_date",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "end_date",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "criteria",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "selection",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "3"
+        }
+    ],
+    "changelogDate": "20160829201800",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "reports",
+    "pagination": "no",
+    "enableEntityAudit": true
+}

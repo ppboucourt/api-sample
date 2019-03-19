@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity PatientOrder.
+    -->
+    <changeSet id="20170102183219-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="via_id"
+                                 baseTableName="patient_order"
+                                 constraintName="fk_patient_order_via_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="via"/>
+
+        <addForeignKeyConstraint baseColumnNames="chart_id"
+                                 baseTableName="patient_order"
+                                 constraintName="fk_patient_order_chart_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="chart"/>
+
+        <addForeignKeyConstraint baseColumnNames="employee_id"
+                                 baseTableName="patient_order"
+                                 constraintName="fk_patient_order_employee_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="employee"/>
+
+        <addForeignKeyConstraint baseColumnNames="signed_by_id"
+                                 baseTableName="patient_order"
+                                 constraintName="fk_patient_order_signed_by_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="employee"/>
+
+    </changeSet>
+</databaseChangeLog>

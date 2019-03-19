@@ -1,0 +1,150 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myContactsFacilityLabel">Create or edit a Contacts Facility</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.contactsFacility.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.contactsFacility.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.contactsFacility.name" for="field_name">Contact Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="vm.contactsFacility.name"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.contactsFacility.short_code" for="field_short_code">Contact Short Code</label>
+            <input type="text" class="form-control" name="short_code" id="field_short_code"
+                    ng-model="vm.contactsFacility.short_code"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.contactsFacility.street" for="field_street">Contact Street</label>
+            <input type="text" class="form-control" name="street" id="field_street"
+                    ng-model="vm.contactsFacility.street"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.contactsFacility.streetTwo" for="field_streetTwo">Contact Street Two</label>
+            <input type="text" class="form-control" name="streetTwo" id="field_streetTwo"
+                    ng-model="vm.contactsFacility.streetTwo"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.contactsFacility.city" for="field_city">Contact City</label>
+            <input type="text" class="form-control" name="city" id="field_city"
+                    ng-model="vm.contactsFacility.city"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.contactsFacility.zip" for="field_zip">Contact Zip</label>
+            <input type="text" class="form-control" name="zip" id="field_zip"
+                    ng-model="vm.contactsFacility.zip"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.contactsFacility.phone" for="field_phone">Contact Phone</label>
+            <input type="text" class="form-control" name="phone" id="field_phone"
+                    ng-model="vm.contactsFacility.phone"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.contactsFacility.fax" for="field_fax">Contact Fax</label>
+            <input type="text" class="form-control" name="fax" id="field_fax"
+                    ng-model="vm.contactsFacility.fax"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.contactsFacility.website" for="field_website">Contact Website</label>
+            <input type="text" class="form-control" name="website" id="field_website"
+                    ng-model="vm.contactsFacility.website"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.contactsFacility.notes" for="field_notes">Contact Notes</label>
+            <input type="text" class="form-control" name="notes" id="field_notes"
+                    ng-model="vm.contactsFacility.notes"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_status">Status</label>
+            <input type="text" class="form-control" name="status" id="field_status"
+                    ng-model="vm.contactsFacility.status"
+                    ng-maxlength="3" />
+            <div ng-show="editForm.status.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.status.$error.maxlength">
+                    This field cannot be longer than 3 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.contactsFacility.email" for="field_email">Contact Email</label>
+            <input type="text" class="form-control" name="email" id="field_email"
+                    ng-model="vm.contactsFacility.email"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.contactsFacility.cellphone" for="field_cellphone">Contact Cellphone</label>
+            <input type="text" class="form-control" name="cellphone" id="field_cellphone"
+                    ng-model="vm.contactsFacility.cellphone"
+                     />
+        </div>
+        <div class="form-group" ngf-drop ngf-change="vm.setContact_picture($file, vm.contactsFacility)" ngf-pattern="'image/*'">
+            <label class="control-label" data-translate="bluebookApp.contactsFacility.picture" for="field_picture">Contact Picture</label>
+            <div>
+                <img data-ng-src="{{'data:' + vm.contactsFacility.pictureContentType + ';base64,' + vm.contactsFacility.picture}}" style="max-height: 100px;" ng-if="vm.contactsFacility.picture"/>
+                <div ng-if="vm.contactsFacility.picture" class="help-block clearfix">
+                    <span class="pull-left">{{vm.contactsFacility.pictureContentType}}, {{vm.byteSize(vm.contactsFacility.picture)}}</span>
+                    <button type="button" ng-click="vm.contactsFacility.picture=null;vm.contactsFacility.pictureContentType=null;"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="button" ngf-select class="btn btn-default btn-block"
+                        ngf-change="vm.setContact_picture($file, vm.contactsFacility)" accept="image/*">
+                    Add image
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="picture" id="field_picture"
+                    ng-model="vm.contactsFacility.picture"
+                     />
+            <input type="hidden" class="form-control" name="pictureContentType" id="field_pictureContentType"
+                    ng-model="vm.contactsFacility.pictureContentType" />
+        </div>
+
+        <div class="form-group">
+            <label for="field_facility">Facility</label>
+            <select class="form-control" id="field_facility" name="facility" ng-model="vm.contactsFacility.facility" ng-options="facility as facility.facility_name for facility in vm.facilities track by facility.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="field_typeContactFacilityType">Type Contact Facility Type</label>
+            <select class="form-control" id="field_typeContactFacilityType" name="typeContactFacilityType" ng-model="vm.contactsFacility.typeContactFacilityType" ng-options="typeContactFacilityType as typeContactFacilityType.id for typeContactFacilityType in vm.typecontactfacilitytypes track by typeContactFacilityType.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="field_countryState">Country State</label>
+            <select class="form-control" id="field_countryState" name="countryState" ng-model="vm.contactsFacility.countryState" ng-options="countryState as countryState.id for countryState in vm.countrystates track by countryState.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

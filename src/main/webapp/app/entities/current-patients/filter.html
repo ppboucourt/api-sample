@@ -1,0 +1,129 @@
+<script type="text/ng-template" id="current-patient-filter.html">
+    <form name="editForm" role="form" novalidate="true" ng-submit="vm.filter()" show-validation="false">
+        <div class="modal-body">
+            <div class="row">
+
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control input-sm" name="lastName" id="field_lastName"
+                               ng-model="vm.filters.lastName" placeholder="Last Name"/>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control input-sm" name="firstName" id="field_firstName"
+                               ng-model="vm.filters.firstName" placeholder="First Name"/>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control input-sm" name="lastName" id="field_mrNo"
+                               ng-model="vm.filters.mrNo" placeholder="Mr No."/>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group">
+                        <select class="form-control input-sm" ng-model="vm.filters.typePatientProgram"
+                                id="field_typePatientProgram" name="typePatientProgram" required>
+                            <option ng-repeat="item in vm.typePatientProgram" value="{{item.name}}">
+                                {{item.name}}
+                            </option>
+                            <option value="">--Substance--</option>
+                        </select>
+                    </div>
+                </div>
+            </div> <!-- /row -->
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input id="field_dischargeDateFrom" type="text" min-date="today"
+                                   class="form-control input-sm" name="dischargeDateFrom"
+                                   uib-datepicker-popup="{{dateformat}}" placeholder="Discharge Date From"
+                                   ng-model="vm.filters.dischargeDateFrom"
+                                   is-open="vm.datePickerOpenStatus.dischargeDateFrom"/>
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default btn-sm"
+                                        ng-click="vm.openCalendar('dischargeDateFrom')">
+                                    <i class="fa fa-calendar"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input id="field_dischargeDateTo" type="text" class="form-control input-sm"
+                                   name="dischargeDateTo"
+                                   uib-datepicker-popup="{{dateformat}}" placeholder="Discharge Date To"
+                                   ng-model="vm.filters.dischargeDateTo"
+                                   is-open="vm.datePickerOpenStatus.dischargeDateTo"/>
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default btn-sm"
+                                        ng-click="vm.openCalendar('dischargeDateTo')">
+                                    <i class="fa fa-calendar"></i></button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input id="field_admissionDateFrom" type="text" class="form-control input-sm"
+                                   name="admissionDateFrom"
+                                   uib-datepicker-popup="{{dateformat}}" placeholder="Admission Date From"
+                                   ng-model="vm.filters.admissionDateFrom"
+                                   is-open="vm.datePickerOpenStatus.admissionDateFrom"/>
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default btn-sm"
+                                        ng-click="vm.openCalendar('admissionDateFrom')">
+                                    <i class="fa fa-calendar"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input id="field_admissionDateTo" type="text" class="form-control input-sm"
+                                   name="admissionDateTo"
+                                   uib-datepicker-popup="{{dateformat}}" placeholder="Admission Date To"
+                                   ng-model="vm.filters.admissionDateTo"
+                                   is-open="vm.datePickerOpenStatus.admissionDateTo"/>
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default btn-sm"
+                                        ng-click="vm.openCalendar('admissionDateTo')">
+                                    <i class="fa fa-calendar"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- /row -->
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger pull-left"
+                    ng-click="vm.popoverFilterEnable();">
+                <i class="fa fa-times" aria-hidden="true"></i> Close
+            </button>
+            <button type="button" class="btn btn-default"
+                    ng-click="vm.clear(); vm.loadAll();">
+                <i class="fa fa-trash-o" aria-hidden="true"></i> Clear
+            </button>
+            <button type="button" class="btn btn-primary"
+                    ng-click="vm.filter()">
+                <i class="fa fa-search" aria-hidden="true"></i> Search
+            </button>
+        </div>
+    </form>
+</script>

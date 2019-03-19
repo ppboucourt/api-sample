@@ -1,0 +1,197 @@
+<form name="CRForm" role="form" novalidate>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;
+        </button>
+        <h4 class="modal-title" id="myConcurrentReviewsLabel">Create or edit a Concurrent Reviews</h4>
+    </div>
+
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="col-lg-3">
+                    <div class="form-group">
+                        <label class="control-label" data-translate="bluebookApp.concurrentReviews.insuranceCompany"
+                               for="field_insuranceCompany">Insurance Company <code>*</code></label>
+                        <input type="text" class="form-control" name="insuranceCompany" id="field_insuranceCompany"
+                               required
+                               ng-model="vm.concurrentReviews.insuranceCompany" validator="required"
+                        />
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="form-group">
+                        <label class="control-label" data-translate="bluebookApp.concurrentReviews.authorizationDate"
+                               for="field_authorizationDate">Authorization Date</label>
+                        <div class="input-group">
+                            <input id="field_authorizationDate"
+                                   type="text"
+                                   class="form-control"
+                                   name="authorizationDate"
+                                   uib-datepicker-popup="{{dateformat}}"
+                                   ng-model="vm.concurrentReviews.authorizationDate"
+                                   is-open="vm.datePickerOpenStatus.authorizationDate" />
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="vm.openCalendar('authorizationDate')"><i
+                                    class="glyphicon glyphicon-calendar"></i></button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="form-group">
+                        <label class="control-label" data-translate="bluebookApp.concurrentReviews.startDate"
+                               for="field_startDate">Start Date </label>
+                        <div class="input-group">
+                            <input id="field_startDate" type="text" class="form-control" name="startDate"
+                                   uib-datepicker-popup="{{dateformat}}" ng-model="vm.concurrentReviews.startDate"
+                                   is-open="vm.datePickerOpenStatus.startDate"
+                            />
+                            <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('startDate')"><i
+                            class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="form-group">
+                        <label class="control-label" data-translate="bluebookApp.concurrentReviews.endDate"
+                               for="field_endDate">End Date</label>
+                        <div class="input-group">
+                            <input id="field_endDate" type="text" class="form-control" name="endDate"
+                                   uib-datepicker-popup="{{dateformat}}" ng-model="vm.concurrentReviews.endDate"
+                                   is-open="vm.datePickerOpenStatus.endDate"
+                            />
+                            <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('endDate')"><i
+                            class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="col-lg-3">
+                    <div class="form-group">
+                        <label class="control-label" data-translate="bluebookApp.concurrentReviews.authorizationNumber"
+                               for="field_authorizationNumber">Authorization Number </label>
+                        <input type="text" class="form-control" name="authorizationNumber"
+                               id="field_authorizationNumber"
+                               ng-model="vm.concurrentReviews.authorizationNumber"/>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <label class="control-label" for="field_typeLevelCare">Level of Care </label><br>
+                    <div class="form-group">
+                        <select class="form-control" ng-model="vm.concurrentReviews.typeLevelCare"
+                                ng-options="item as item.name for item in vm.typeLevelCares track by item.name"
+                                id="field_typeLevelCare" name="typeLevelCare">
+                            <option value=""></option>
+                        </select>
+                        <div ng-show="vm.form.basicInfo_form.typeLevelCare.$invalid">
+                            <p class="help-block"
+                               ng-show="vm.form.basicInfo_form.typeLevelCare.$error.required">
+                                This field is required.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="form-group">
+                        <label class="control-label" data-translate="bluebookApp.concurrentReviews.nextReviewDate"
+                               for="field_nextReviewDate">Next Review Date </label>
+                        <div class="input-group">
+                            <input id="field_nextReviewDate" type="text" class="form-control" name="nextReviewDate"
+                                   uib-datepicker-popup="{{dateformat}}" ng-model="vm.concurrentReviews.nextReviewDate"
+                                   is-open="vm.datePickerOpenStatus.nextReviewDate"
+                            />
+                            <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('nextReviewDate')"><i
+                            class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3">
+                    <div class="form-group">
+                        <label class="control-label" data-translate="bluebookApp.concurrentReviews.lastCoverageDate"
+                               for="field_lastCoverageDate">Last Coverage Date</label>
+                        <div class="input-group">
+                            <input id="field_lastCoverageDate" type="text" class="form-control" name="lastCoverageDate"
+                                   uib-datepicker-popup="{{dateformat}}" ng-model="vm.concurrentReviews.lastCoverageDate"
+                                   is-open="vm.datePickerOpenStatus.lastCoverageDate"
+                            />
+                            <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('lastCoverageDate')"><i
+                            class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="col-lg-3">
+                    <div class="form-group">
+                        <label class="control-label" data-translate="bluebookApp.concurrentReviews.numberDates"
+                               for="field_numberDates">Number Dates</label>
+                        <input type="number" class="form-control" name="numberDates" id="field_numberDates"
+                               ng-model="vm.concurrentReviews.numberDates"
+                        />
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <!--div class="form-group">
+                        <label class="control-label" for="field_frequency">Frequency</label>
+                        <input type="text" class="form-control" name="frequency" id="field_frequency"
+                               ng-model="vm.concurrentReviews.frequency"
+                        />
+                    </div-->
+                    <div class="form-group" ng-class="{'has-error': editForm.employee_type.$invalid}">
+                        <label for="frecuency">Frequency</label>
+                        <select class="form-control" id="frecuency" name="frecuency"
+                                ng-model="vm.concurrentReviews.frequency"
+                                ng-options="frequency as frequency.name for frequency in vm.Frequencies track by frequency.id"
+
+                                ng-change="">
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label class="control-label" for="field_notes">Notes</label>
+                        <textarea type="text" class="form-control" name="notes" id="field_notes"
+                                  ng-model="vm.concurrentReviews.notes">
+                    </textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" validation-submit="CRForm" class="btn btn-primary btn-success"
+                ng-click="vm.save()">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

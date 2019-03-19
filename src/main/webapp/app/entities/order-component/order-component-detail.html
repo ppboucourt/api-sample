@@ -1,0 +1,55 @@
+
+<div>
+    <h2><span>Order Component</span> {{vm.orderComponent.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Days</span></dt>
+        <dd>
+            <span>{{vm.orderComponent.days}}</span>
+        </dd>
+        <dt><span>Medication</span></dt>
+        <dd>
+            <span>{{vm.orderComponent.medication}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.orderComponent.dosage_form">Dosage Form</span></dt>
+        <dd>
+            <span>{{vm.orderComponent.dosage_form}}</span>
+        </dd>
+        <dt><span>Dose</span></dt>
+        <dd>
+            <span>{{vm.orderComponent.dose}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.orderComponent.administration_time">Administration Time</span></dt>
+        <dd>
+            <span>{{vm.orderComponent.administration_time | date:'medium'}}</span>
+        </dd>
+        <dt><span>Status</span></dt>
+        <dd>
+            <span>{{vm.orderComponent.status}}</span>
+        </dd>
+        <dt><span>Frequency</span></dt>
+        <dd>
+            <span>{{vm.orderComponent.frequency}}</span>
+        </dd>
+        <dt><span>All Orders</span></dt>
+        <dd>
+            <a ui-sref="all-orders-detail({id:vm.orderComponent.allOrders.id})">{{vm.orderComponent.allOrders.name}}</a>
+        </dd>
+        <dt><span>Routes</span></dt>
+        <dd>
+            <a ui-sref="routes-detail({id:vm.orderComponent.routes.id})">{{vm.orderComponent.routes.name}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="order-component-detail.edit({id:vm.orderComponent.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

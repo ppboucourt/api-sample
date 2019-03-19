@@ -1,0 +1,110 @@
+<!--Form Consent Section-->
+<section class="invoice" style="margin: 0px;" id="formData" ng-init="vm.loadCheck()">
+    <div class="col-md-12" ng-if="vm.revoked">
+        <img src="content/images/revoked-stamp.png"
+             style="position: absolute;width: 60%;">
+    </div>
+    <div ng-if="vm.chartToForm.guarantorSignatureRequired && !vm.chartToForm.signatureGuarantor"
+         class="bg-yellow no-print"
+         style="padding: 20px 30px; z-index: 999999; font-size: 16px; font-weight: 600" aria-hidden="false">
+        <div class="row">
+            <span
+                style="color: rgba(255, 255, 255, 0.901961); display: inline-block; margin-right: 10px; text-decoration: none">
+                This consent need the signature of the Guarantor.
+            </span>
+        </div>
+    </div>
+    <div class="row no-print">
+        <!--<div class="col-sm-12">-->
+        <div class="col-sm-12">
+            <h2 class="page-header">
+                <i class="fa fa-globe"></i> Consent Forms: {{vm.chartToForm.name}}
+            </h2>
+        </div>
+        <div c lass="row no-print">
+            <div class="modal-footer">
+                <div class=" btn-group">
+                    <button class="btn btn-flat btn-default pagination-forms" ng-disabled="currentPage == 0"
+                            ng-click="vm.previous()">
+                        Previous
+                    </button>
+                    <button class="active btn btn-flat pagination-forms" disabled>
+                        {{currentPage+1}}
+                    </button>
+                    <button class="btn btn-flat btn-default pagination-forms"
+                            ng-disabled="currentPage >= numberOfPages-1" ng-click="vm.next()">
+                        Next
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="col-md-8 col-sm-12">
+                <address>
+                    <strong>{{vm.facility.name}}</strong><br>
+                    {{vm.facility.address1}}<br>
+                    {{vm.facility.address2}}<br>
+                    Phone: {{vm.facility.phone?vm.facility.phone:'No Phone Number'}}<br>
+                    Web Site: {{vm.facility.website?vm.facility.website:'No Web Site'}}
+                </address>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <address>
+                    <strong>{{vm.patient.fullName}}</strong><br>
+                    DOB: {{vm.patient.dateBirth | date:'MM/dd/yyyy'}}<br>
+                    Mr. No: {{vm.chart.mrNo}}
+                </address>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12" id="consentData">
+            <div id="formTemplate" ng-bind-html="vm.formTemplate"></div>
+            <div class="row" style="padding-left: 15px;" ng-repeat="item in vm.signatories">
+                <!--Electronically signed by  on 'date time' from 'ip address'-->
+                <span ng-if="item.signType=='approve'" style="font-size: 16px;">Electronically signed by <strong>{{item.fullName}}</strong>, date time
+                    <strong>{{item.date | date: 'MM/dd/yyyy hh:mm:ss a'}}</strong>
+                    from <strong>{{item.ip}}</strong>
+                </span>
+                <span ng-if="item.signType=='revoke'" style="font-size: 16px;">Electronically revoked by <strong>{{item.fullName}}</strong>, date time
+                    <strong>{{item.date | date: 'MM/dd/yyyy hh:mm:ss a'}}</strong>
+                    from <strong>{{item.ip}}</strong>
+                </span>
+
+            </div>
+        </div>
+    </div>
+    <div class="row no-print" ng-if="vm.chartToForm.allowAttachment">
+        <udt-attach form-id="{{vm.chartToForm.id}}" is-signed="vm.signatories.length?true:false"
+                    attach="vm.attachFile" delete="vm.deleteFile" redirect="false"></udt-attach>
+    </div>
+    <div class="row no-print">
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" ng-click="vm.sign('approve')" ng-if="vm.approve">
+                Sign
+            </button>
+            <button type="button" class="btn btn-primary" ng-click="vm.sign('revoke')" ng-if="vm.revoke">
+                Revoke
+            </button>
+            <button type="button" class="btn btn-default" ng-click="vm.print()">
+                <i class="fa fa-print"></i> Print
+            </button>
+            <!--<div class="col-md-2 dataTables_paginate paging_full_numbers">-->
+            <ul class="pagination btn-group">
+                <button class="btn btn-flat btn-default pagination-forms" ng-disabled="currentPage == 0"
+                        ng-click="vm.previous()">
+                    Previous
+                </button>
+                <button class="active btn btn-flat pagination-forms" disabled>
+                    {{currentPage+1}}
+                </button>
+                <button class="btn btn-flat btn-default pagination-forms" ng-disabled="currentPage >= numberOfPages-1"
+                        ng-click="vm.next()">
+                    Next
+                </button>
+            </ul>
+        </div>
+    </div>
+</section>

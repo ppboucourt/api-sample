@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-us" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title>Under Construction page</title>
+    <meta name="description" content="The description should optimally be between 150-160 characters.">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="author" content="ThemeHelite">
+    <link rel="stylesheet" href="http://cdn.themehelite.com/themeforest/404oops/css/style.min.css"> </head>
+
+<body class="bubble">
+
+
+    <script>
+		setTimeout(function(){
+			window.location = "http://DOMAIN_NAME";
+		}, 5000); 
+	</script>
+
+    <canvas id="canvasbg"></canvas>
+    <!--canvas id="canvas"></canvas-->
+    <!--a href="#" class="logo-link" title="back home"> <img src="img/logo.png" class="logo" alt="Company's logo"> </a-->
+    <div class="content">
+        <div class="content-box">
+            <div class="big-content">
+                <div class="list-square"> <span class="square"></span> <span class="square"></span> <span class="square"></span> </div>
+                <div class="list-line"> <span class="line"></span> <span class="line"></span> <span class="line"></span> <span class="line"></span> <span class="line"></span> <span class="line"></span> </div> <i class="fa fa-search color" aria-hidden="true"></i>
+                <div class="clear"></div>
+            </div>
+            <h1>WE ARE CURRENTLY UPGRADING SYSTEM</h1>
+            <p>Will be back in seconds.</p>
+        </div>
+    </div>
+    <footer class="light">
+        <ul>
+            <li><a href="#">BlueBook</a></li>
+            
+        </ul>
+    </footer>
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="http://cdn.themehelite.com/themeforest/404oops/js/bubble.js"></script>
+    <script>
+        ! function(e, a, t, n, c, o, s) {
+            e.GoogleAnalyticsObject = c, e[c] = e[c] || function() {
+                (e[c].q = e[c].q || []).push(arguments)
+            }, e[c].l = 1 * new Date, o = a.createElement(t), s = a.getElementsByTagName(t)[0], o.async = 1, o.src = n, s.parentNode.insertBefore(o, s)
+        }(window, document, "script", "//www.google-analytics.com/analytics.js", "ga"), ga("create", "UA-60503361-1", "auto"), ga("send", "pageview")
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity ChartToIcd10.
+    -->
+    <changeSet id="20160830220601-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="chart_id"
+                                 baseTableName="chart_to_icd_10"
+                                 constraintName="fk_chart_to_icd10_chart_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="chart"/>
+
+        <addForeignKeyConstraint baseColumnNames="icd10_id"
+                                 baseTableName="chart_to_icd_10"
+                                 constraintName="fk_chart_to_icd10_icd10_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="icd_10"/>
+
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,47 @@
+
+<div>
+    <h2><span>Patient Action Take</span> {{vm.patientActionTake.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Collected</span></dt>
+        <dd>
+            <span>{{vm.patientActionTake.collected}}</span>
+        </dd>
+        <dt><span>Collected Date</span></dt>
+        <dd>
+            <span>{{vm.patientActionTake.collectedDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span>Schedule Date</span></dt>
+        <dd>
+            <span>{{vm.patientActionTake.scheduleDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span>Sent</span></dt>
+        <dd>
+            <span>{{vm.patientActionTake.sent}}</span>
+        </dd>
+        <dt><span>Sent Date</span></dt>
+        <dd>
+            <span>{{vm.patientActionTake.sentDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span>Canceled</span></dt>
+        <dd>
+            <span>{{vm.patientActionTake.canceled}}</span>
+        </dd>
+        <dt><span>Patient Action Pres</span></dt>
+        <dd>
+            <a ui-sref="patient-action-pres-detail({id:vm.patientActionTake.patientActionPres.id})">{{vm.patientActionTake.patientActionPres.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="patient-action-take-detail.edit({id:vm.patientActionTake.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

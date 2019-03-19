@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span>Chart To Medications</span> {{vm.chartToMedications.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Notes</span></dt>
+        <dd>
+            <span>{{vm.chartToMedications.notes}}</span>
+        </dd>
+        <dt><span>Status</span></dt>
+        <dd>
+            <span>{{vm.chartToMedications.status}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.chartToMedications.date_prescription">Date Prescription</span></dt>
+        <dd>
+            <span>{{vm.chartToMedications.date_prescription | date:'medium'}}</span>
+        </dd>
+        <dt><span>Taken</span></dt>
+        <dd>
+            <span>{{vm.chartToMedications.taken}}</span>
+        </dd>
+        <dt><span>Chart</span></dt>
+        <dd>
+            <a ui-sref="chart-detail({id:vm.chartToMedications.chart.id})">{{vm.chartToMedications.chart.mr_no}}</a>
+        </dd>
+        <dt><span>Medication</span></dt>
+        <dd>
+            <a ui-sref="medications-detail({id:vm.chartToMedications.medication.id})">{{vm.chartToMedications.medication.medication}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="chart-to-medications-detail.edit({id:vm.chartToMedications.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

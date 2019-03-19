@@ -1,0 +1,55 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "patientOrderTest",
+            "otherEntityName": "patientOrderTest",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "groupNumberId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "collected",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "collectedDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "scheduleDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "sent",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "sentDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "readyStatus",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "canceled",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "icd10Codes",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170110202716",
+    "entityTableName": "patient_order_item",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "enableEntityAudit": true
+}

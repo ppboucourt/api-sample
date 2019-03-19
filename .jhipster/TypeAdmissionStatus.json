@@ -1,0 +1,33 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "chart",
+            "otherEntityName": "chart",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "typeAdmissionStatus"
+        },
+        {
+            "relationshipName": "facility",
+            "otherEntityName": "facility",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20161101025420",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "type_admission_status",
+    "pagination": "no",
+    "enableEntityAudit": true
+}

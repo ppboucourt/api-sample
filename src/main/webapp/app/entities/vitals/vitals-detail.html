@@ -1,0 +1,59 @@
+
+<div>
+    <h2><span>Vitals</span> {{vm.vitals.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Date</span></dt>
+        <dd>
+            <span>{{vm.vitals.date | date:'medium'}}</span>
+        </dd>
+        <dt><span>Time</span></dt>
+        <dd>
+            <span>{{vm.vitals.time | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.vitals.bp_systolic">Bp Systolic</span></dt>
+        <dd>
+            <span>{{vm.vitals.bp_systolic}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.vitals.bp_diastolic">Bp Diastolic</span></dt>
+        <dd>
+            <span>{{vm.vitals.bp_diastolic}}</span>
+        </dd>
+        <dt><span>Temperature</span></dt>
+        <dd>
+            <span>{{vm.vitals.temperature}}</span>
+        </dd>
+        <dt><span>Pulse</span></dt>
+        <dd>
+            <span>{{vm.vitals.pulse}}</span>
+        </dd>
+        <dt><span>Respiration</span></dt>
+        <dd>
+            <span>{{vm.vitals.respiration}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.vitals.o2_saturation">O 2 Saturation</span></dt>
+        <dd>
+            <span>{{vm.vitals.o2_saturation}}</span>
+        </dd>
+        <dt><span>Status</span></dt>
+        <dd>
+            <span>{{vm.vitals.status}}</span>
+        </dd>
+        <dt><span>Chart</span></dt>
+        <dd>
+            <a ui-sref="chart-detail({id:vm.vitals.chart.id})">{{vm.vitals.chart.mr_no}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="vitals-detail.edit({id:vm.vitals.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

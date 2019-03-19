@@ -1,0 +1,75 @@
+<section class="content-header">
+    <h1>Edit Shift Report</h1>
+    <div ncy-breadcrumb class="breadcrumb"></div>
+</section>
+<section class="invoice">
+    <div class="row">
+
+        <div class="col-lg-12 border-line-form">
+            <fieldset>
+                <form name="vm.form.shifts" role="form" data-toggle="validator">
+                    <div class="box-body">
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <!--<label class="control-label" for="field_Description">Report *</label>-->
+                                <textarea ckeditor="vm.options" id="field_Description" ng-model="vm.shifts.description"
+                                          required></textarea>
+                            </div>
+                        </div>
+                        <div class="row no-print">
+                            <div class="col-lg-12">
+                                <udt-attach form-id="{{vm.shifts.id}}" is-signed="false"
+                                            attach="vm.attachFile" delete="vm.deleteFile" redirect="false"></udt-attach>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </fieldset>
+        </div>
+        <hr>
+        <div class="pull-right">
+            <div class="col-lg-12">
+                <div class="margin">
+                    <!--<button type="button" class="btn btn-danger" ng-click="vm.changeEditingState()">Cancel</button>-->
+                    <button type="button" class="btn btn-success" ng-click="vm.save()"
+                            ng-disabled="vm.form.shifts.$invalid">Save
+                    </button>
+                </div>
+                <!--<button type="button" class="btn btn-info" ng-click="vm.changeEditingState()" ng-show="!vm.editing">Update Information</button>-->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--<div>-->
+<!--<h2><span>Shifts</span> {{vm.shifts.id}}</h2>-->
+<!--<hr>-->
+<!--<jhi-alert-error></jhi-alert-error>-->
+<!--<dl class="dl-horizontal jh-entity-details">-->
+<!--<dt><span>Description</span></dt>-->
+<!--<dd>-->
+<!--<span>{{vm.shifts.description}}</span>-->
+<!--</dd>-->
+<!--<dt><span>Status</span></dt>-->
+<!--<dd>-->
+<!--<span>{{vm.shifts.status}}</span>-->
+<!--</dd>-->
+<!--<dt><span>Employee</span></dt>-->
+<!--<dd>-->
+<!--<a ui-sref="employee-detail({id:vm.shifts.employee.id})">{{vm.shifts.employee.id}}</a>-->
+<!--</dd>-->
+<!--</dl>-->
+
+<!--<button type="submit"-->
+<!--ui-sref="{{ vm.previousState }}"-->
+<!--class="btn btn-info">-->
+<!--<span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>-->
+<!--</button>-->
+
+<!--<button type="button" ui-sref="shifts-detail.edit({id:vm.shifts.id})" class="btn btn-primary">-->
+<!--<span class="glyphicon glyphicon-pencil"></span>-->
+<!--<span class="hidden-xs hidden-sm"> Edit</span>-->
+<!--</button>-->
+<!--</div>-->

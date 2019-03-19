@@ -1,0 +1,40 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "chart",
+            "otherEntityName": "chart",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "mr_no"
+        },
+        {
+            "relationshipName": "medication",
+            "otherEntityName": "medications",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "medication"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "notes",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "taken",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "datePrescription",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "changelogDate": "20160831141737",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "chart_to_medications",
+    "pagination": "no"
+}

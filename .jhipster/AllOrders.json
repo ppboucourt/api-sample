@@ -1,0 +1,64 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "typeDosage",
+            "otherEntityName": "typeDosage",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipName": "facility",
+            "otherEntityName": "facility",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "facility_name"
+        },
+        {
+            "relationshipName": "orderComponent",
+            "otherEntityName": "orderComponent",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "allOrders"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "enabled",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "prn",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "indication",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "duration_days",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "note",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "3"
+        }
+    ],
+    "changelogDate": "20161128165303",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "all_orders",
+    "pagination": "no",
+    "enableEntityAudit": true
+}

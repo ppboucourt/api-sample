@@ -1,0 +1,38 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "chart",
+            "otherEntityName": "chart",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "date",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "primaryTherapist",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "howHear",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "coordinator",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170125210133",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "treatment_history",
+    "pagination": "no"
+}

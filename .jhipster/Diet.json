@@ -1,0 +1,33 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "chart",
+            "otherEntityName": "chart",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "mr_no"
+        },
+        {
+            "relationshipName": "typeFoodDiets",
+            "otherEntityName": "typeFoodDiets",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20161019214158",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "diet",
+    "pagination": "no",
+    "enableEntityAudit": true
+}

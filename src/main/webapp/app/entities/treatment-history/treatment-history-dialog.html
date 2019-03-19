@@ -1,0 +1,81 @@
+
+<form name="vm.form" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myTreatmentHistoryLabel">Create or edit a Treatment History</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label" for="field_name">Name</label>
+                    <input type="text" class="form-control" name="name" id="field_name"
+                           ng-model="vm.treatmentHistory.name" required/>
+                    <div ng-show="vm.form.name.$invalid">
+                        <p class="help-block"
+                           ng-show="vm.form.name.$error.required">
+                            This field is required.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label" for="field_date">Date</label>
+                    <div class="input-group">
+                        <input id="field_date" type="text" class="form-control" name="date" required
+                               uib-datepicker-popup="MM/dd/yyyy" ng-model="vm.treatmentHistory.date"
+                               is-open="vm.datePickerOpenStatus.date"/>
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="vm.openCalendar('date')">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                            </button>
+                        </span>
+                    </div>
+                    <div ng-show="vm.form.date.$invalid">
+                        <p class="help-block"
+                           ng-show="vm.form.date.$error.required">
+                            This field is required.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label" for="field_primaryTherapist">Primary Therapist</label>
+                    <input type="text" class="form-control" name="primaryTherapist" id="field_primaryTherapist"
+                           ng-model="vm.treatmentHistory.primaryTherapist"/>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label" for="field_coordinator">Coordinator</label>
+                    <input type="text" class="form-control" name="coordinator" id="field_coordinator"
+                           ng-model="vm.treatmentHistory.coordinator"/>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="control-label" for="field_howHear">How did they hear about {{vm.facility.name}} Facility</label>
+                    <input type="text-area" class="form-control" name="howHear" id="field_howHear"
+                           ng-model="vm.treatmentHistory.howHear"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="vm.form.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

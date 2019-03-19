@@ -1,0 +1,87 @@
+<div>
+    <h2>Patient Medication Takes</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="patient-medication-take.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs" >
+                        Create new Patient Medication Take
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="Query">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span>ID</span></th>
+                    <th><span>Collected</span></th>
+                    <th><span>Collected Date</span></th>
+                    <th><span>Schedule Date</span></th>
+                    <th><span>Sent</span></th>
+                    <th><span>Sent Date</span></th>
+                    <th><span>Canceled</span></th>
+                    <th><span>Patient Medication Pres</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="patientMedicationTake in vm.patientMedicationTakes track by patientMedicationTake.id">
+                    <td><a ui-sref="patient-medication-take-detail({id:patientMedicationTake.id})">{{patientMedicationTake.id}}</a></td>
+                    <td>{{patientMedicationTake.collected}}</td>
+                        <td>{{patientMedicationTake.collectedDate | date:'mediumDate'}}</td>
+                        <td>{{patientMedicationTake.scheduleDate | date:'mediumDate'}}</td>
+                    <td>{{patientMedicationTake.sent}}</td>
+                        <td>{{patientMedicationTake.sentDate | date:'mediumDate'}}</td>
+                    <td>{{patientMedicationTake.canceled}}</td>
+                    <td>
+                        <a ui-sref="patient-medication-pres-detail({id:patientMedicationTake.patientMedicationPres.id})">{{patientMedicationTake.patientMedicationPres.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="patient-medication-take-detail({id:patientMedicationTake.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="patient-medication-take.edit({id:patientMedicationTake.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="patient-medication-take.delete({id:patientMedicationTake.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

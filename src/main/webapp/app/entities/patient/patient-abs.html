@@ -1,0 +1,158 @@
+<div ng-if="(vm.chart.waitingRoom && vm.chart.dischargeDate && vm.chart.typeLevelCare)"
+     style="padding: 20px 30px; background: rgb(52, 168, 83); z-index: 999999; font-size: 16px; font-weight: 600"
+     aria-hidden="false">
+    <div class="row">
+        <span
+            style="color: rgba(255, 255, 255, 0.901961); display: inline-block; margin-right: 10px; text-decoration: none">
+            Patient waiting admission.
+        </span>
+        <div class="pull-right">
+            <button type="button" class="btn btn-warning-waiting" ng-click="vm.updateWaitingChart()">Convert Chart
+            </button>
+            <!--<button type="button" class="btn btn-warning-waiting" ng-click="vm.updateWaitingChartAndPreloadForms()">-->
+                <!--Convert Chart and Preload Forms-->
+            <!--</button>-->
+        </div>
+    </div>
+</div>
+<div ng-if="vm.chart.waitingRoom && (!vm.chart.dischargeDate || !vm.chart.typeLevelCare)" class="bg-yellow"
+     style="padding: 20px 30px; z-index: 999999; font-size: 16px; font-weight: 600" aria-hidden="false">
+    <div class="row">
+        <span
+            style="color: rgba(255, 255, 255, 0.901961); display: inline-block; margin-right: 10px; text-decoration: none">
+            Patient need a Discharge Date or a Level of Care.
+        </span>
+    </div>
+</div>
+<section class="content-header">
+    <h1 ng-if="vm.chart.patient.id">Patient Details
+        <small> | {{vm.chart.patient.firstName + ' ' + (vm.chart.patient.middleName ? vm.chart.patient.middleName: '') + ' ' + vm.chart.patient.lastName}}
+        </small>
+    </h1>
+    <div ncy-breadcrumb class="breadcrumb"></div>
+</section>
+
+<section class="content">
+    <!--<div class="callout callout-warning" ng-show="vm.chart.waitingRoom">-->
+    <!--<div class="row pull-right">-->
+    <!--<button type="button" class="btn btn-warning-waiting" ng-click="vm.updateWaitingChart()">To Current </button>-->
+    <!--</div>-->
+    <!--&lt;!&ndash;<h4>Warning!</h4>&ndash;&gt;-->
+    <!--<h3>Patient waiting admission.</h3>-->
+    <!--</div>-->
+    <div class="row">
+        <div class="col-md-3 no-print">
+            <!-- Profile Image -->
+            <div class="box box-primary">
+                <div class="box-body box-profile">
+                    <udt-image ng-model="vm.chart" class="img-circle" size="sm" service="'Chart'"
+                               image="vm.chart.pictureRef.picture"
+                               type-image="vm.chart.pictureRef.pictureContentType"></udt-image>
+
+
+                    <h3 class="profile-username text-center">{{vm.chart.patient.firstName + ' ' +
+                        vm.chart.patient.lastName}}</h3>
+
+                    <p class="text-muted text-center">{{vm.chart.mrNo}}</p>
+
+                    <ul class="list-group list-group-unbordered">
+                        <li class="list-group-item">
+                            <b>Admission Date</b>
+                            <p class="pull-right">{{ vm.chart.admissionDate | date:'MM/dd/yyyy'}}
+                                <sup><span class="badge label-info">{{vm.chart.daysInFacility | number}} Day(s)</span></sup></p>
+                        </li>
+                        <li class="list-group-item">
+                            <b uib-tooltip="Birthday">DOB</b>
+                            <p class="pull-right">{{vm.chart.patient.dateBirth | date:'MM/dd/yyyy'}}
+                                <sup><span class="badge label-info">{{vm.chart.patient.age | number}} Years Old</span></sup></p>
+                        </li>
+                        <!--<li class="list-group-item" ng-show="!vm.chart.waitingRoom">-->
+                            <!--<b>LOC</b>-->
+                            <!--<p class="pull-right" ng-show="vm.chart.typeLevelCare">{{vm.chart.loc.typeLevelCare +-->
+                                <!--'(' + vm.chart.loc.daysLoc }} Day(s))</p>-->
+                            <!--<p class="pull-right" ng-show="!vm.chart.loc">Empty...</p>-->
+                        <!--</li>-->
+
+
+                        <div style="margin-top: 10px;">
+                            <div class="col-lg-12" style="padding-bottom: 10px">
+                                <strong><i class="fa fa-medkit margin-r-5"></i> Allergies</strong>
+                            </div>
+                            <div class="col-xs-12">
+
+                                <!--<button class="btn btn-default" ng-click="vm.generatePDF(60)">PDF</button>-->
+                                <ul class="list-unstyled">
+                                    <li ng-repeat="item in vm.chart.allergies">
+                                        <p>
+                                        <span class="label label-danger label-danger-profile">
+                                            {{item.allergen.split(' ')[0]}}
+                                        </span>
+                                        </p>
+                                    </li>
+                                </ul>
+                                <p ng-show="!vm.chart.allergies.length">No Allergies...</p>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="box box-primary" ng-show="vm.chart.insurances && vm.chart.insurances.length >0 ">
+                <div class="box-header with-border">
+                    <i class="fa fa-file-text-o margin-r-5"></i>
+                    <h3 class="box-title">Primary Insurance</h3>
+                </div>
+                <div class="box-body" style="padding-top: 0px">
+
+                    <ul class="list-group list-group-unbordered">
+
+                        <li class="list-group-item">
+                            <b>Name:</b>
+                            <p class="pull-right" uib-tooltip="{{vm.chart.insurances[0].insuranceCarrier.name}}">
+                                {{vm.chart.insurances[0].insuranceCarrier.name | limitTo : 20 : 0}}</p>
+
+                        </li>
+                        <li class="list-group-item">
+                            <b>Policy Number :</b>
+                            <p class="pull-right"> {{vm.chart.insurances[0].policyNumber}}</p>
+
+                        </li>
+
+                        <li class="list-group-item">
+                            <b>Pre-Cert Number:</b>
+                            <p class="pull-right"> {{(vm.chart.insurances) ? vm.chart.insurances[0].preCertPhone :
+                                ''}}</p>
+                        </li>
+
+
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <i class="fa fa-file-text-o margin-r-5"></i>
+                    <h3 class="box-title">Diagnoses</h3>
+                </div>
+                <div class="box-body" style="padding-top: 0px">
+                    <ul class="list-group list-group-unbordered">
+                        <li class="list-group-item list-items-profile">
+                            <div class="row" ng-repeat="item in vm.chart.icd10S">
+                                <div class="col-lg-3">
+                                    <span class="label label-success label-danger-profile">{{item.code}}</span>
+                                </div>
+                                <div class="col-lg-9 no-padding-left">
+                                    <p>{{item.description}}</p>
+                                </div>
+                            </div>
+                            <p ng-show="!vm.chart.icd10S.length">No Diagnostics...</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9" ui-view="content">
+        </div>
+    </div> <!-- /row -->
+</section>

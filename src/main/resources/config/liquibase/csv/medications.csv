@@ -1,0 +1,1001 @@
+id;medication;route;dose;dosage_form;frequency;duration_in_days;prn;continue_on_discharge;status;created_by;created_date;last_modified_by;last_modified_date;del_status
+1;Licorice;Intravenous;Medium;aliquet;Monthly;10;false;true;ACT;system;2016-09-14 13:07:32;;2016-03-19 10:20:52;false
+2;Betadine;Intramuscular;Medium;velit nec;Seldom;5;false;false;ACT;system;2016-01-01 17:42:43;;2016-08-17 18:55:47;false
+3;Niaspan;Oral;Medium;ipsum;Seldom;12;false;false;ACT;system;2016-08-12 18:47:20;;2016-02-19 16:26:49;false
+4;Vitafol;Intravenous;Minimum;curabitur convallis;Once;10;true;false;ACT;system;2016-10-04 14:36:25;;2016-06-24 20:27:21;false
+5;ROBAFEN COUGH FORMULA;Intramuscular;Minimum;pede lobortis;Monthly;9;true;false;ACT;system;2016-12-22 00:20:48;;2016-03-18 02:10:27;false
+6;Stool Softener;Oral;Medium;eu felis;Once;2;true;false;ACT;system;2016-09-29 12:56:49;;2016-08-02 17:35:21;false
+7;Lorazepam;Intravenous;Minimum;pellentesque;Daily;5;false;false;ACT;system;2016-02-18 01:03:44;;2016-01-06 21:24:40;false
+8;COMPLERA;Intramuscular;Maximum;rhoncus sed;Daily;4;false;false;ACT;system;2016-04-07 20:43:25;;2016-06-29 02:35:06;false
+9;Real Time Pain Relief;Oral;Minimum;nulla;Weekly;1;false;true;ACT;system;2016-11-09 08:49:47;;2016-06-22 06:10:16;false
+10;Aminophylline;Intravenous;Maximum;interdum eu;Never;1;true;true;ACT;system;2016-08-07 08:57:03;;2016-08-30 07:09:19;false
+11;Male Stimulant;Intramuscular;Medium;fusce congue;Seldom;7;false;false;ACT;system;2016-12-23 03:39:29;;2016-10-21 03:34:05;false
+12;Venlafaxine Hydrochloride;Oral;Minimum;molestie sed;Yearly;14;false;false;ACT;system;2016-05-14 08:03:45;;2016-02-17 06:19:04;false
+13;Aluminum Hydroxide;Intravenous;Medium;dis;Often;14;true;true;ACT;system;2016-08-28 12:18:10;;2016-07-07 06:43:45;false
+14;RUMEX ACETOSELLA POLLEN;Intramuscular;Medium;aliquam sit;Seldom;11;true;false;ACT;system;2016-04-05 15:46:38;;2016-03-26 11:15:57;false
+15;Regular Strength Aspirin EC;Oral;Medium;lobortis est;Monthly;14;true;true;ACT;system;2016-08-17 20:33:08;;2016-07-18 08:02:49;false
+16;Nasal Ease Allergy Reliever;Intravenous;Medium;ipsum;Often;4;false;true;ACT;system;2016-09-05 07:35:04;;2016-10-08 13:32:30;false
+17;ORAVIG;Intramuscular;Medium;ultrices;Seldom;9;true;true;ACT;system;2016-08-11 17:35:47;;2016-12-09 11:10:30;false
+18;CD CAPTURE TOTALE Triple Correcting Serum Foundation Wrinkles-Dark Spots-Radiance with sunscreen Broad Spectrum SPF 25 030;Oral;Maximum;nulla nunc;Never;11;true;false;ACT;system;2016-04-04 11:20:13;;2015-12-30 23:08:23;false
+19;Captopril;Intravenous;Medium;cursus urna;Never;13;false;true;ACT;system;2016-02-22 04:04:45;;2016-01-05 14:41:55;false
+20;Klor-Con;Intramuscular;Maximum;praesent blandit;Seldom;10;true;false;ACT;system;2016-12-20 03:20:00;;2016-09-16 13:43:11;false
+21;LIPITOR;Oral;Medium;scelerisque mauris;Never;3;false;true;ACT;system;2016-01-02 22:46:38;;2016-01-11 16:32:20;false
+22;Magnesium Citrate;Intravenous;Medium;platea;Often;11;false;true;ACT;system;2016-02-18 01:35:00;;2016-12-27 10:14:38;false
+23;Magnesium Sulfate;Intramuscular;Maximum;morbi;Weekly;9;false;true;ACT;system;2016-03-08 09:53:29;;2016-12-28 04:37:57;false
+24;Ampicillin;Oral;Maximum;amet;Never;5;true;false;ACT;system;2016-05-12 20:24:28;;2016-08-20 22:15:08;false
+25;INCONTINENCE VOMITING;Intravenous;Maximum;ac;Yearly;8;false;true;ACT;system;2016-02-17 20:19:00;;2016-04-17 07:15:29;false
+26;Sunmark Nicotine;Intramuscular;Medium;nulla;Daily;11;true;false;ACT;system;2016-09-29 20:57:44;;2016-01-17 10:55:00;false
+27;DR.G PRIMER BB PROTECTOR;Oral;Minimum;vestibulum sit;Daily;13;false;true;ACT;system;2016-11-07 21:24:38;;2016-08-07 22:17:56;false
+28;Molds, Rusts and Smuts, Botrytis cinerea;Intravenous;Minimum;maecenas ut;Seldom;13;true;true;ACT;system;2016-12-27 19:58:32;;2016-07-14 05:24:40;false
+29;Equate NiteTime DayTime;Intramuscular;Medium;sit;Weekly;1;true;false;ACT;system;2016-10-24 04:36:47;;2016-10-25 13:42:56;false
+30;Premarin;Oral;Medium;ligula vehicula;Seldom;8;false;true;ACT;system;2016-09-23 08:10:35;;2016-11-28 15:54:09;false
+31;VERELAN PM;Intravenous;Medium;sit amet;Often;2;false;false;ACT;system;2016-10-07 10:30:06;;2016-02-25 20:37:15;false
+32;Methimazole;Intramuscular;Minimum;massa id;Monthly;1;false;false;ACT;system;2016-08-24 00:58:08;;2016-03-31 03:13:48;false
+33;OXYGEN;Oral;Medium;duis;Daily;2;true;false;ACT;system;2016-11-03 10:57:16;;2016-08-10 22:03:56;false
+34;Sodium Chloride;Intravenous;Medium;phasellus;Seldom;8;false;true;ACT;system;2016-07-31 22:54:27;;2016-07-15 19:17:11;false
+35;Balahist;Intramuscular;Medium;at;Once;5;true;true;ACT;system;2016-07-08 08:36:07;;2016-08-22 13:31:54;false
+36;Ivarest;Oral;Medium;luctus tincidunt;Often;6;true;false;ACT;system;2016-12-21 19:10:58;;2016-12-22 00:03:20;false
+37;Lofibra;Intravenous;Minimum;elementum;Daily;2;false;true;ACT;system;2016-03-30 11:28:49;;2016-08-26 11:14:00;false
+38;Perikabiven;Intramuscular;Maximum;curae duis;Seldom;2;false;true;ACT;system;2016-01-17 06:43:47;;2016-08-15 11:36:50;false
+39;Theophylline;Oral;Medium;eget;Weekly;3;false;false;ACT;system;2016-01-27 00:52:31;;2016-12-05 11:21:48;false
+40;Degree;Intravenous;Medium;tellus;Seldom;6;true;false;ACT;system;2016-10-21 04:58:33;;2016-07-21 05:41:36;false
+41;MAMACHI MOMS STRETCH MARK CREAM;Intramuscular;Maximum;mattis;Yearly;15;true;false;ACT;system;2016-09-11 10:12:33;;2016-04-29 12:48:32;false
+42;Iclusig;Oral;Maximum;orci pede;Seldom;13;true;true;ACT;system;2016-04-02 08:44:17;;2016-04-13 06:24:25;false
+43;Valsartan and Hydrochlorothiazide;Intravenous;Medium;et ultrices;Often;6;false;true;ACT;system;2016-04-23 13:21:07;;2016-11-22 14:40:49;false
+44;Levitra;Intramuscular;Minimum;non;Never;1;false;false;ACT;system;2016-05-20 13:37:39;;2016-06-26 04:48:53;false
+45;Extra Strength Pain Relief;Oral;Minimum;velit vivamus;Seldom;13;false;true;ACT;system;2016-09-10 15:20:58;;2016-03-27 10:37:27;false
+46;LEVETIRACETAM;Intravenous;Minimum;proin leo;Yearly;14;false;true;ACT;system;2016-11-30 00:23:56;;2016-05-22 23:02:57;false
+47;Dextroamphetamine Saccharate, Amphetamine Aspartate, Dextroamphetamine Sulfate, and Amphetamine Sulfate;Intramuscular;Maximum;vel;Often;7;false;true;ACT;system;2016-07-12 23:03:53;;2016-03-24 04:57:09;false
+48;SHISEIDO UV PROTECTIVE COMPACT (REFILL);Oral;Medium;mauris;Never;3;false;false;ACT;system;2016-06-16 20:39:02;;2016-05-07 04:04:00;false
+49;allergy relief;Intravenous;Medium;feugiat et;Monthly;15;true;false;ACT;system;2016-01-28 03:31:20;;2016-04-24 05:49:55;false
+50;Marcaine with Epinephrine;Intramuscular;Minimum;duis faucibus;Weekly;8;false;false;ACT;system;2016-11-28 22:27:51;;2016-08-10 16:04:49;false
+51;Allerpoll;Oral;Minimum;quis;Seldom;2;true;true;ACT;system;2016-12-23 19:37:46;;2016-12-06 22:17:28;false
+52;Divalproex Sodium;Intravenous;Maximum;non;Seldom;12;true;true;ACT;system;2016-12-18 00:16:17;;2016-12-22 02:41:36;false
+53;Sunflower Seed;Intramuscular;Maximum;justo sit;Weekly;11;false;false;ACT;system;2016-09-10 21:04:11;;2016-06-15 21:12:05;false
+54;Paricalcitol;Oral;Maximum;vestibulum;Often;10;true;true;ACT;system;2016-09-24 07:34:16;;2016-11-02 03:47:40;false
+55;Fexofenadine HCl and Pseudoephedrine HCl;Intravenous;Maximum;penatibus et;Once;10;true;true;ACT;system;2016-02-14 05:12:18;;2016-09-26 10:20:47;false
+56;Carbidopa, Levodopa, and Entacapone;Intramuscular;Maximum;primis;Seldom;10;false;false;ACT;system;2016-10-04 05:40:09;;2016-11-04 10:08:55;false
+57;Erythromycin;Oral;Maximum;et;Daily;5;false;true;ACT;system;2016-01-19 15:27:19;;2016-07-16 02:23:06;false
+58;Saline Laxative;Intravenous;Medium;ut;Yearly;7;false;false;ACT;system;2016-02-17 20:27:49;;2016-10-18 21:47:01;false
+59;Dexilant;Intramuscular;Maximum;placerat;Yearly;10;false;false;ACT;system;2016-12-14 18:19:53;;2016-08-01 02:47:21;false
+60;ropinirole hydrochloride;Oral;Minimum;metus arcu;Yearly;2;true;true;ACT;system;2016-10-17 21:19:06;;2016-02-01 16:13:19;false
+61;Terazosin;Intravenous;Minimum;vehicula condimentum;Once;4;false;false;ACT;system;2016-11-25 20:19:26;;2016-04-15 01:06:58;false
+62;Desloratadine;Intramuscular;Medium;ligula sit;Yearly;13;false;true;ACT;system;2016-05-23 11:07:47;;2016-01-20 13:55:33;false
+63;FACE IT 4D PERFECTION ROLLER FOUNDATION 23;Oral;Minimum;etiam faucibus;Once;15;true;false;ACT;system;2016-10-14 16:21:13;;2016-07-14 21:29:39;false
+64;Topiramate;Intravenous;Medium;molestie;Weekly;12;false;false;ACT;system;2016-04-16 04:47:48;;2016-06-01 17:53:15;false
+65;sumatriptan succinate;Intramuscular;Maximum;erat nulla;Weekly;7;true;false;ACT;system;2016-12-01 07:07:57;;2016-09-09 01:08:13;false
+66;Gabapentin;Oral;Maximum;natoque;Once;3;true;true;ACT;system;2016-09-05 05:56:40;;2016-10-13 05:12:56;false
+67;ibuprofen;Intravenous;Minimum;praesent;Yearly;9;true;false;ACT;system;2016-06-02 00:03:37;;2016-02-08 23:56:08;false
+68;ALLIUM CEPA;Intramuscular;Maximum;non;Daily;10;true;false;ACT;system;2016-11-07 17:37:04;;2016-10-13 21:57:41;false
+69;Justice;Oral;Minimum;metus sapien;Once;12;false;false;ACT;system;2016-01-16 16:34:38;;2016-09-23 00:17:27;false
+70;Skin Perfecting Acne and Blemish Wash;Intravenous;Maximum;pede morbi;Yearly;4;true;true;ACT;system;2016-09-19 23:13:48;;2016-12-25 19:40:13;false
+71;CRESTOR;Intramuscular;Medium;vitae;Often;7;false;false;ACT;system;2016-02-15 05:48:30;;2016-01-31 09:46:17;false
+72;Number Fourteen Grass Mixture;Oral;Maximum;ligula in;Monthly;11;false;false;ACT;system;2016-05-23 11:17:04;;2016-05-23 18:06:51;false
+73;topcare miconazole 1;Intravenous;Medium;odio in;Once;10;true;false;ACT;system;2016-11-20 09:30:55;;2016-03-19 04:59:52;false
+74;OXYGEN;Intramuscular;Medium;augue vel;Daily;6;true;true;ACT;system;2016-03-16 03:51:17;;2016-08-03 19:10:09;false
+75;Hydroquinone;Oral;Medium;aliquet;Often;14;false;false;ACT;system;2016-06-06 00:43:44;;2016-07-01 23:09:48;false
+76;Hydrocodone Bitartrate and Acetaminophen;Intravenous;Minimum;dis parturient;Yearly;8;true;true;ACT;system;2016-10-06 21:32:42;;2016-12-22 09:32:09;false
+77;Levothyroxine Sodium;Intramuscular;Medium;vestibulum ante;Often;5;true;true;ACT;system;2016-02-25 17:00:48;;2016-02-18 00:53:30;false
+78;Oxymorphone Hydrochloride;Oral;Medium;nunc viverra;Yearly;13;true;false;ACT;system;2016-10-28 22:30:09;;2016-12-14 00:56:56;false
+79;infants acetaminophen;Intravenous;Minimum;arcu sed;Yearly;4;false;true;ACT;system;2016-02-02 02:23:16;;2016-01-09 20:05:03;false
+80;Propranolol Hydrochloride;Intramuscular;Maximum;et;Monthly;13;true;false;ACT;system;2016-04-24 21:48:51;;2016-12-20 11:48:50;false
+81;Delsym;Oral;Maximum;amet;Seldom;2;false;true;ACT;system;2016-01-11 03:59:08;;2016-02-21 08:30:45;false
+82;STERILUBE OINTMENT;Intravenous;Maximum;convallis morbi;Weekly;12;false;true;ACT;system;2016-04-30 14:06:07;;2016-09-14 14:28:03;false
+83;Glipizide;Intramuscular;Medium;in sagittis;Seldom;15;false;false;ACT;system;2016-02-02 16:27:21;;2016-12-10 16:47:48;false
+84;A-Med brand First Aid Eye and Skin-Rinse;Oral;Medium;ut mauris;Weekly;13;false;false;ACT;system;2016-01-08 01:39:00;;2016-01-01 01:01:56;false
+85;Treatment Set TS329905;Intravenous;Minimum;ipsum primis;Weekly;3;true;false;ACT;system;2016-09-27 04:19:58;;2016-02-10 08:43:29;false
+86;Oxaprozin;Intramuscular;Minimum;mauris;Daily;11;true;false;ACT;system;2016-06-17 12:54:14;;2016-06-27 13:28:33;false
+87;JUNIOR STRENGTH ADVIL;Oral;Minimum;condimentum;Monthly;9;false;false;ACT;system;2016-04-30 04:42:25;;2016-12-02 09:21:03;false
+88;Ceftriaxone Sodium;Intravenous;Medium;lobortis sapien;Seldom;13;false;false;ACT;system;2016-04-13 23:09:09;;2016-10-13 17:33:08;false
+89;Gabapentin;Intramuscular;Minimum;morbi odio;Seldom;9;true;false;ACT;system;2016-02-03 12:28:04;;2016-02-11 10:58:39;false
+90;Ribavirin;Oral;Maximum;vehicula condimentum;Once;8;false;true;ACT;system;2016-08-07 14:57:11;;2016-02-22 20:51:18;false
+91;telmisartan and hydrochlorothiazide;Intravenous;Maximum;aliquam;Monthly;9;false;false;ACT;system;2016-05-25 11:01:58;;2016-01-10 12:48:50;false
+92;Amlodipine Besylate;Intramuscular;Maximum;neque sapien;Yearly;6;true;false;ACT;system;2016-02-12 18:25:36;;2016-06-12 15:32:35;false
+93;MEIJER CAPSAICIN;Oral;Minimum;dui;Weekly;6;false;false;ACT;system;2016-02-18 12:45:58;;2016-05-21 12:13:35;false
+94;Salt Grass;Intravenous;Medium;massa donec;Monthly;6;false;true;ACT;system;2016-12-25 17:07:13;;2016-09-04 18:56:05;false
+95;SPF 50 UVA/UVB;Intramuscular;Medium;sem;Never;5;false;true;ACT;system;2016-11-29 01:30:09;;2016-05-15 21:56:51;false
+96;Bupropion Hydrochloride;Oral;Medium;volutpat;Weekly;5;true;true;ACT;system;2016-01-26 22:01:20;;2016-11-06 08:20:58;false
+97;Burkhart;Intravenous;Minimum;sollicitudin;Never;7;true;false;ACT;system;2016-04-05 04:01:58;;2016-11-02 11:49:44;false
+98;Equaline All Day Allergy D;Intramuscular;Maximum;est lacinia;Often;14;false;true;ACT;system;2016-09-28 15:36:30;;2016-02-15 11:20:37;false
+99;Valacyclovir;Oral;Medium;ut;Once;5;true;true;ACT;system;2016-04-03 07:02:29;;2016-02-05 09:05:14;false
+100;Oxycodone Hydrochloride and Acetaminophen;Intravenous;Medium;pede malesuada;Monthly;5;false;true;ACT;system;2016-04-08 10:52:50;;2016-08-28 01:50:56;false
+101;PCXX ONE MINTE GEL STRAWBERRY BLAST;Intramuscular;Minimum;at;Never;13;false;true;ACT;system;2016-06-07 07:30:46;;2016-10-12 22:00:59;false
+102;Dr. Jart Shimmering Beauty Balm 01 Light - Medium;Oral;Maximum;in;Yearly;11;true;true;ACT;system;2016-02-20 05:17:42;;2016-07-08 02:03:22;false
+103;Softlips Coconut;Intravenous;Medium;pede;Seldom;14;true;true;ACT;system;2016-09-29 14:31:17;;2016-02-25 00:04:03;false
+104;Venus White;Intramuscular;Minimum;lacinia;Yearly;4;true;false;ACT;system;2016-06-05 19:07:12;;2016-03-17 07:37:54;false
+105;povidine iodine;Oral;Maximum;duis mattis;Once;5;false;false;ACT;system;2016-03-04 23:45:43;;2016-09-04 06:17:30;false
+106;Deep Tan Perfecting Makeup Broad Spectrum SPF 25;Intravenous;Medium;platea;Once;15;true;false;ACT;system;2016-10-23 18:39:47;;2016-09-23 21:53:11;false
+107;Hand Sanitizer;Intramuscular;Maximum;morbi;Daily;12;true;true;ACT;system;2016-02-17 16:19:30;;2016-06-09 09:55:27;false
+108;Rizatriptan Benzoate;Oral;Minimum;at diam;Monthly;11;true;false;ACT;system;2016-04-29 04:26:13;;2016-06-17 14:20:01;false
+109;Topiramate;Intravenous;Minimum;massa id;Once;10;false;false;ACT;system;2016-04-07 17:56:24;;2016-06-12 01:13:28;false
+110;Lorazepam;Intramuscular;Minimum;sociis;Never;9;true;true;ACT;system;2016-03-17 10:04:47;;2016-03-27 21:37:40;false
+111;Degree;Oral;Medium;sit amet;Weekly;10;true;false;ACT;system;2016-07-18 16:24:40;;2016-06-03 10:01:39;false
+112;SOLIE ESSENCE;Intravenous;Maximum;sit;Daily;13;false;true;ACT;system;2016-10-22 04:48:03;;2016-02-24 17:59:49;false
+113;Dipyridamole;Intramuscular;Minimum;id;Monthly;7;true;true;ACT;system;2016-09-19 10:28:35;;2016-08-07 14:41:30;false
+114;Gas Relief Ultra Strength;Oral;Minimum;proin eu;Yearly;12;true;false;ACT;system;2016-09-23 00:53:16;;2016-08-23 04:03:24;false
+115;LANEIGE BB Cushion Dark;Intravenous;Medium;vitae;Daily;2;false;true;ACT;system;2016-04-05 14:35:46;;2016-12-20 15:42:13;false
+116;Hog Hair;Intramuscular;Maximum;curabitur;Often;3;true;true;ACT;system;2016-02-26 11:40:07;;2016-12-09 20:44:07;false
+117;CYZONE;Oral;Maximum;ornare imperdiet;Never;2;false;true;ACT;system;2016-10-23 23:58:26;;2016-04-06 23:00:35;false
+118;Night-Time Cherry;Intravenous;Maximum;nunc viverra;Monthly;12;false;true;ACT;system;2016-04-06 23:40:17;;2016-03-19 17:42:23;false
+119;risperidone;Intramuscular;Maximum;risus;Yearly;8;false;false;ACT;system;2016-09-17 07:01:42;;2016-04-04 21:25:10;false
+120;Nora BE;Oral;Minimum;at vulputate;Once;12;true;true;ACT;system;2016-04-17 19:44:45;;2016-02-18 02:50:00;false
+121;Cellular Day Defense Firming SPF 25;Intravenous;Medium;at dolor;Once;5;false;false;ACT;system;2016-11-11 17:27:04;;2016-10-04 00:11:01;false
+122;Nitrogen;Intramuscular;Medium;ligula;Never;13;false;true;ACT;system;2016-06-08 08:52:42;;2016-05-02 00:28:32;false
+123;SHISEIDO PERFECT REFINING FOUNDATION;Oral;Minimum;non pretium;Weekly;5;true;true;ACT;system;2016-04-09 14:08:06;;2016-05-30 00:24:20;false
+124;OXYGEN;Intravenous;Maximum;mauris;Weekly;14;true;false;ACT;system;2016-12-27 15:58:07;;2016-03-11 20:35:19;false
+125;Tizanidine;Intramuscular;Maximum;neque;Often;12;false;false;ACT;system;2016-04-10 19:21:45;;2016-10-23 22:08:26;false
+126;Head and Shoulders 2in1;Oral;Maximum;pede justo;Often;8;true;true;ACT;system;2016-06-16 11:44:31;;2016-12-06 19:38:54;false
+127;NovaClenz Instant Hand Sanitizer;Intravenous;Medium;nisl;Seldom;13;true;false;ACT;system;2016-11-13 03:25:32;;2016-07-09 12:06:37;false
+128;Ibuprofen;Intramuscular;Medium;consequat dui;Once;13;false;true;ACT;system;2016-11-11 03:16:53;;2016-08-02 20:16:23;false
+129;HAMSOA DR ATOBY;Oral;Minimum;odio;Never;9;false;true;ACT;system;2016-02-16 18:04:27;;2016-03-19 22:51:05;false
+130;Nivea A Kiss of Flavor Strawberry Tinted Lip Care;Intravenous;Medium;aliquam augue;Daily;5;true;false;ACT;system;2016-06-06 22:25:41;;2016-08-19 03:53:57;false
+131;Risperidone;Intramuscular;Maximum;magnis dis;Never;6;false;false;ACT;system;2016-09-30 05:16:32;;2016-04-27 01:02:39;false
+132;Olanzapine;Oral;Minimum;in lectus;Weekly;14;true;true;ACT;system;2016-05-06 23:39:59;;2016-02-29 03:00:13;false
+133;Enablex;Intravenous;Minimum;ultrices enim;Seldom;15;false;true;ACT;system;2016-05-20 18:55:19;;2016-11-04 14:35:02;false
+134;Aspirin;Intramuscular;Maximum;vel lectus;Daily;5;false;false;ACT;system;2016-05-11 20:17:25;;2016-02-16 06:34:46;false
+135;dg health flu and severe cold and cough;Oral;Maximum;mi in;Once;8;false;false;ACT;system;2016-10-28 15:59:39;;2016-12-26 04:59:49;false
+136;NEURO PAIN HP;Intravenous;Medium;erat;Yearly;3;false;true;ACT;system;2016-04-09 11:22:42;;2016-10-13 21:10:24;false
+137;Infectistat;Intramuscular;Maximum;et;Daily;2;false;false;ACT;system;2016-06-14 02:39:09;;2016-09-08 15:16:40;false
+138;SHISEIDO WHITE LUCENT BRIGHTENING PROTECTIVE W;Oral;Minimum;sem;Often;9;true;false;ACT;system;2016-04-14 11:43:34;;2016-08-04 21:22:25;false
+139;Leader Oral Pain Relief;Intravenous;Minimum;aliquet massa;Yearly;2;false;false;ACT;system;2016-01-21 18:30:00;;2016-04-02 04:44:51;false
+140;Furosemide;Intramuscular;Maximum;nisl aenean;Often;9;true;true;ACT;system;2016-06-28 11:33:11;;2016-12-14 02:11:02;false
+141;smart sense nighttime;Oral;Medium;magna at;Weekly;4;true;false;ACT;system;2016-09-03 00:08:37;;2016-09-11 22:40:07;false
+142;Famotidine;Intravenous;Minimum;suspendisse potenti;Never;6;true;true;ACT;system;2016-03-11 22:38:45;;2016-08-18 15:51:31;false
+143;Cephalexin;Intramuscular;Maximum;donec;Weekly;3;false;true;ACT;system;2016-10-01 15:30:55;;2016-08-04 19:34:18;false
+144;RYMED;Oral;Maximum;morbi;Weekly;13;false;true;ACT;system;2016-04-02 22:40:09;;2016-08-21 00:07:37;false
+145;Childrens Ibuprofen;Intravenous;Minimum;tincidunt in;Daily;6;false;true;ACT;system;2016-10-09 11:36:06;;2016-09-14 17:02:31;false
+146;Hydromarine;Intramuscular;Medium;in magna;Never;11;true;true;ACT;system;2016-02-19 21:27:19;;2016-07-03 11:01:06;false
+147;UV Capture Sebum Control Sun Cream;Oral;Minimum;libero;Seldom;7;true;false;ACT;system;2016-02-07 04:23:00;;2016-01-30 03:24:13;false
+148;LABORATOIRE REMEDE TRANSLUCENT UV COAT TINT 0;Intravenous;Medium;amet;Monthly;1;true;true;ACT;system;2016-07-17 10:53:55;;2016-04-27 10:52:47;false
+149;Solum Aesculus Sensitivity;Intramuscular;Minimum;lacus at;Often;13;true;false;ACT;system;2016-09-21 07:40:05;;2016-02-27 17:35:22;false
+150;ISENTRESS;Oral;Medium;est congue;Never;12;true;false;ACT;system;2016-04-11 23:06:34;;2016-10-06 09:33:20;false
+151;Trileptal;Intravenous;Medium;ipsum primis;Weekly;9;false;false;ACT;system;2016-06-01 12:17:17;;2016-03-16 01:26:00;false
+152;Rescue;Intramuscular;Minimum;amet;Seldom;6;false;false;ACT;system;2016-07-04 13:17:09;;2016-10-08 21:08:40;false
+153;Lisinopril;Oral;Maximum;diam neque;Seldom;14;true;true;ACT;system;2016-06-05 05:56:19;;2016-04-01 09:17:03;false
+154;Morphine sulfate;Intravenous;Medium;sapien cursus;Seldom;10;true;true;ACT;system;2016-11-12 18:38:45;;2016-10-22 01:30:34;false
+155;Escitalopram Oxalate;Intramuscular;Medium;ut;Daily;6;true;true;ACT;system;2016-08-24 10:21:43;;2016-05-02 11:41:46;false
+156;FoamFresh Healthcare Hand Wash;Oral;Minimum;lobortis;Often;12;true;false;ACT;system;2016-03-27 21:27:58;;2016-06-19 17:02:07;false
+157;Natroba;Intravenous;Maximum;eget;Seldom;1;true;true;ACT;system;2016-12-23 08:04:11;;2016-11-28 15:07:52;false
+158;Epi-Clenz Plus Instant Hand Antiseptic;Intramuscular;Minimum;maecenas;Often;15;true;false;ACT;system;2016-11-11 23:03:28;;2016-08-15 10:13:28;false
+159;Live Better;Oral;Maximum;felis eu;Never;13;true;true;ACT;system;2016-02-21 15:33:07;;2016-02-17 15:52:03;false
+160;PredniSONE;Intravenous;Medium;sapien;Once;1;false;true;ACT;system;2016-06-07 15:20:13;;2016-02-29 06:51:14;false
+161;Yes To Grapefruit Moisturizer with SPF15;Intramuscular;Minimum;erat;Often;2;true;true;ACT;system;2016-02-16 06:18:59;;2016-10-17 16:19:48;false
+162;THE FLOWER UV INTENSE PACT;Oral;Medium;suspendisse;Yearly;10;false;false;ACT;system;2016-06-04 05:41:13;;2016-10-23 08:42:02;false
+163;Mentholatum Natural Chest Rub;Intravenous;Maximum;mattis;Never;1;true;true;ACT;system;2016-05-10 15:57:11;;2016-01-12 02:15:45;false
+164;Metronidazole;Intramuscular;Maximum;nibh;Daily;15;false;false;ACT;system;2016-07-03 23:42:58;;2016-09-23 17:49:05;false
+165;Pristiq;Oral;Medium;turpis integer;Monthly;14;false;true;ACT;system;2016-07-02 07:43:07;;2016-12-10 03:00:57;false
+166;XtraCare Foam Antibacterial Hand Wash;Intravenous;Medium;proin;Often;7;true;false;ACT;system;2016-09-17 00:01:30;;2016-10-29 05:34:47;false
+167;BABY DIAPER;Intramuscular;Maximum;erat;Weekly;14;true;false;ACT;system;2016-06-26 23:55:14;;2016-08-05 19:46:13;false
+168;Diclofenac Sodium;Oral;Minimum;sapien arcu;Monthly;8;false;true;ACT;system;2016-03-26 05:47:17;;2016-06-13 22:32:07;false
+169;FLUTICASONE PROPIONATE;Intravenous;Maximum;pede;Monthly;9;false;false;ACT;system;2016-01-08 21:32:50;;2016-06-16 18:21:57;false
+170;9 Spleen Pancreas;Intramuscular;Medium;primis;Daily;5;false;false;ACT;system;2016-10-12 04:57:31;;2016-02-27 23:36:35;false
+171;smart sense anti itch;Oral;Minimum;leo;Often;14;true;false;ACT;system;2016-02-13 13:17:26;;2016-11-21 06:37:10;false
+172;Remedy with Phytoplex Z-Guard;Intravenous;Maximum;aliquet massa;Monthly;1;true;false;ACT;system;2016-09-02 15:22:53;;2016-11-26 21:34:05;false
+173;perfect truth cc eye broad spectrum SPF 15;Intramuscular;Medium;viverra;Monthly;15;true;false;ACT;system;2016-11-30 00:51:17;;2016-10-08 06:21:46;false
+174;Hypericum Bryophyllum;Oral;Maximum;nec dui;Once;3;false;false;ACT;system;2016-08-02 02:32:04;;2016-04-20 17:36:01;false
+175;VENLAFAXINE HYDROCHLORIDE;Intravenous;Minimum;nulla;Monthly;8;false;false;ACT;system;2016-08-22 02:38:09;;2016-08-14 01:43:55;false
+176;Thyrolar;Intramuscular;Maximum;nulla;Daily;1;false;false;ACT;system;2016-01-16 13:41:17;;2016-01-26 11:11:17;false
+177;Nata Komplete;Oral;Minimum;ac;Daily;12;false;true;ACT;system;2016-03-27 22:43:46;;2016-05-24 13:02:04;false
+178;SENSORCAINE;Intravenous;Minimum;lacinia erat;Weekly;8;false;true;ACT;system;2016-10-17 15:59:27;;2016-07-11 22:00:26;false
+179;Metronidazole;Intramuscular;Minimum;accumsan felis;Yearly;12;false;false;ACT;system;2016-10-17 05:54:14;;2016-11-16 06:35:15;false
+180;XOLIDO;Oral;Medium;cursus;Once;11;true;true;ACT;system;2016-06-09 10:57:32;;2016-08-07 00:12:39;false
+181;Lorazepam;Intravenous;Medium;pede;Monthly;7;false;true;ACT;system;2016-08-15 23:32:24;;2016-08-29 14:38:07;false
+182;ORFADIN;Intramuscular;Medium;vestibulum quam;Never;7;true;true;ACT;system;2016-06-13 03:32:03;;2016-10-06 00:10:59;false
+183;GlipizideER;Oral;Medium;libero rutrum;Weekly;7;true;false;ACT;system;2016-10-15 19:54:36;;2016-09-24 19:30:57;false
+184;Alprazolam;Intravenous;Medium;nisi;Weekly;12;false;true;ACT;system;2016-06-25 04:48:49;;2016-02-03 08:38:03;false
+185;Sorbet APF;Intramuscular;Maximum;sed tristique;Weekly;14;true;true;ACT;system;2016-06-23 06:13:53;;2016-08-29 05:15:32;false
+186;Amiloride Hydrochloride;Oral;Maximum;consectetuer adipiscing;Yearly;10;false;false;ACT;system;2016-02-11 08:30:45;;2016-05-04 05:59:56;false
+187;HARMONY DYNAMICS FACIAL BOOSTING;Intravenous;Maximum;lectus vestibulum;Seldom;12;true;false;ACT;system;2016-11-19 07:58:14;;2016-04-28 14:59:51;false
+188;Jason Pure Natural Sun Kids Natural Sunscren Broad Spectrum SPF45;Intramuscular;Maximum;dui;Daily;13;false;true;ACT;system;2016-08-17 02:09:03;;2016-06-04 04:59:40;false
+189;Aspirin;Oral;Maximum;metus arcu;Seldom;12;false;true;ACT;system;2016-10-02 10:50:22;;2016-04-24 00:45:39;false
+190;Carvedilol;Intravenous;Medium;non;Often;3;true;true;ACT;system;2016-11-27 09:59:44;;2016-10-05 04:56:12;false
+191;Honey Bee hymenoptera venom Venomil Diagnostic;Intramuscular;Maximum;quam turpis;Once;13;true;true;ACT;system;2016-11-18 11:48:43;;2016-05-01 18:48:31;false
+192;Acetaminophen;Oral;Maximum;orci;Seldom;15;false;true;ACT;system;2016-03-02 16:10:41;;2016-03-22 07:38:12;false
+193;Oxygen;Intravenous;Minimum;nunc commodo;Weekly;6;false;false;ACT;system;2016-06-08 16:33:53;;2016-11-14 21:57:41;false
+194;Papularia;Intramuscular;Medium;ut;Yearly;15;true;false;ACT;system;2016-06-28 23:43:19;;2016-04-25 22:13:12;false
+195;Sodium Sulfacetamide;Oral;Minimum;volutpat;Yearly;6;true;true;ACT;system;2016-03-17 10:52:44;;2016-01-05 07:40:31;false
+196;FLUTICASONE PROPIONATE;Intravenous;Minimum;in purus;Daily;11;true;false;ACT;system;2016-04-25 04:53:08;;2016-11-12 13:32:50;false
+197;Alka-Seltzer Plus;Intramuscular;Maximum;leo;Once;10;false;false;ACT;system;2016-07-18 20:54:42;;2016-09-06 15:27:17;false
+198;equaline enema;Oral;Medium;nulla tellus;Weekly;11;false;true;ACT;system;2016-08-02 22:05:06;;2016-07-03 10:15:18;false
+199;Humco Dewees Carminative;Intravenous;Minimum;vestibulum sagittis;Monthly;9;true;false;ACT;system;2016-01-28 18:23:33;;2016-11-04 09:42:57;false
+200;Midazolam Hydrochloride;Intramuscular;Maximum;tellus in;Often;13;true;true;ACT;system;2016-06-21 16:47:22;;2016-10-16 04:32:10;false
+201;Revlimid;Oral;Minimum;justo etiam;Never;14;true;false;ACT;system;2016-04-19 19:16:02;;2016-10-12 04:14:46;false
+202;CETIRIZINE HYDROLORIDE Allergy;Intravenous;Maximum;pede ac;Seldom;8;true;false;ACT;system;2016-06-13 15:02:26;;2016-05-07 03:06:26;false
+203;KPP Triple Action;Intramuscular;Maximum;sit amet;Seldom;3;true;true;ACT;system;2016-12-28 14:55:43;;2016-09-16 07:53:16;false
+204;Treatment Set TS333246;Oral;Maximum;sapien dignissim;Once;5;false;true;ACT;system;2016-03-28 06:35:05;;2016-05-15 12:05:10;false
+205;Absolute Total BB SPF37 PA 3Plus;Intravenous;Medium;iaculis diam;Yearly;1;true;false;ACT;system;2016-03-10 12:16:50;;2016-10-15 23:03:09;false
+206;Zovia 1/50E-28;Intramuscular;Medium;turpis a;Yearly;2;true;true;ACT;system;2016-12-13 20:31:34;;2016-09-06 18:08:43;false
+207;CD DiorSnow UV Protection BB Eye Sunscreen Creme 020;Oral;Minimum;integer ac;Weekly;9;false;false;ACT;system;2016-05-16 18:43:33;;2016-03-21 17:18:52;false
+208;Lisinopril;Intravenous;Minimum;condimentum neque;Monthly;15;true;false;ACT;system;2015-12-29 05:49:26;;2016-01-16 12:43:22;false
+209;Vicks DayQuil;Intramuscular;Minimum;sed accumsan;Weekly;12;true;true;ACT;system;2016-05-23 03:10:32;;2016-02-15 21:23:33;false
+210;Paclitaxel;Oral;Minimum;at vulputate;Monthly;4;true;false;ACT;system;2016-01-18 16:26:45;;2016-10-16 06:42:14;false
+211;Promethazine Hydrochloride;Intravenous;Medium;ut;Yearly;10;false;false;ACT;system;2016-01-06 08:53:46;;2016-09-08 15:56:46;false
+212;Octocaine 50;Intramuscular;Maximum;sapien in;Never;7;true;true;ACT;system;2016-10-06 18:08:33;;2016-06-18 23:53:31;false
+213;White Poplar;Oral;Maximum;arcu;Daily;8;false;true;ACT;system;2016-11-18 07:27:23;;2016-07-31 01:50:05;false
+214;Doxorubicin Hydrochloride;Intravenous;Minimum;ligula;Often;2;true;false;ACT;system;2016-09-07 07:58:06;;2016-11-06 14:05:33;false
+215;Sore Throat Inflammation;Intramuscular;Minimum;erat;Weekly;3;false;false;ACT;system;2016-11-24 07:11:20;;2016-06-21 01:02:27;false
+216;Cold Sore Relief;Oral;Minimum;neque libero;Seldom;4;false;false;ACT;system;2016-03-09 08:52:58;;2016-02-26 15:13:57;false
+217;VALSARTAN;Intravenous;Maximum;scelerisque quam;Yearly;3;false;false;ACT;system;2016-05-10 03:57:26;;2016-10-08 12:40:26;false
+218;GAS;Intramuscular;Maximum;adipiscing;Seldom;11;true;false;ACT;system;2016-01-09 00:05:39;;2016-02-27 10:09:45;false
+219;kirkland signature anti diarrheal;Oral;Medium;hac habitasse;Yearly;15;false;true;ACT;system;2016-12-06 22:26:39;;2016-08-16 10:35:38;false
+220;Medi-First Plus Sterile Alcohol Pads;Intravenous;Maximum;porttitor lorem;Once;13;true;false;ACT;system;2016-04-14 08:27:57;;2016-11-15 08:06:41;false
+221;OXYCODONE AND ACETAMINOPHEN;Intramuscular;Minimum;cubilia;Daily;5;false;false;ACT;system;2016-05-15 16:24:12;;2016-09-24 15:32:37;false
+222;Ipratropium Bromide;Oral;Medium;condimentum neque;Seldom;9;false;false;ACT;system;2016-10-12 04:37:00;;2016-05-25 09:22:36;false
+223;mark. Help Wanted;Intravenous;Maximum;dictumst maecenas;Monthly;10;false;false;ACT;system;2016-08-11 07:11:31;;2016-08-17 19:55:14;false
+224;Eczema Headache;Intramuscular;Minimum;sit;Once;10;true;false;ACT;system;2016-09-15 04:38:42;;2016-10-31 18:14:30;false
+225;Fluocinolone Acetonide;Oral;Maximum;tempus vel;Never;12;false;true;ACT;system;2016-09-06 09:44:08;;2016-04-14 15:46:10;false
+226;Ear Care;Intravenous;Maximum;praesent;Daily;9;false;true;ACT;system;2016-11-09 10:05:42;;2016-05-04 15:53:47;false
+227;Wormwood;Intramuscular;Medium;ultrices posuere;Never;14;false;false;ACT;system;2016-09-15 01:38:37;;2016-10-24 21:54:24;false
+228;SHISEIDO SHEER MATIFYING COMPACT (REFILL);Oral;Medium;justo;Weekly;1;false;false;ACT;system;2016-08-22 06:31:17;;2016-09-07 09:25:17;false
+229;Rose Quartz Skin Protection;Intravenous;Medium;ipsum ac;Daily;7;true;true;ACT;system;2016-07-23 22:19:18;;2016-06-17 22:02:52;false
+230;BECONASE;Intramuscular;Medium;duis mattis;Daily;15;true;true;ACT;system;2016-11-13 01:53:04;;2016-11-05 05:31:57;false
+231;Niacor;Oral;Maximum;nulla;Yearly;8;false;true;ACT;system;2016-03-26 10:53:10;;2016-11-17 20:00:13;false
+232;Ultrasol;Intravenous;Medium;vel;Never;14;false;true;ACT;system;2016-08-01 07:52:38;;2016-05-10 23:56:29;false
+233;Reef Safe SPF 40;Intramuscular;Maximum;etiam vel;Weekly;1;false;false;ACT;system;2016-04-12 01:23:09;;2016-10-22 06:04:32;false
+234;Premarin;Oral;Minimum;imperdiet nullam;Never;15;false;false;ACT;system;2016-07-14 02:19:20;;2016-04-14 18:30:40;false
+235;HOT FLASH RESCUE;Intravenous;Minimum;duis;Monthly;9;false;true;ACT;system;2016-02-15 14:47:09;;2016-08-24 00:56:33;false
+236;Signature Antibacterial Foaming Hand;Intramuscular;Maximum;dui;Yearly;6;true;false;ACT;system;2016-07-20 19:18:32;;2016-10-08 00:46:42;false
+237;Didanosine;Oral;Minimum;quis;Never;3;true;true;ACT;system;2016-08-20 07:24:54;;2016-08-10 05:57:59;false
+238;pain relief;Intravenous;Minimum;hendrerit;Monthly;3;false;false;ACT;system;2016-02-12 20:55:14;;2016-06-14 13:03:26;false
+239;BladderWell;Intramuscular;Medium;vel;Often;3;true;false;ACT;system;2016-10-14 05:55:01;;2016-12-02 23:50:44;false
+240;Ropivacaine Hydrochloride;Oral;Maximum;sit;Never;1;true;true;ACT;system;2016-07-31 20:34:23;;2016-10-09 08:26:21;false
+241;Miconazole nitrate;Intravenous;Maximum;erat nulla;Weekly;14;false;false;ACT;system;2016-06-09 08:23:00;;2016-06-05 07:25:28;false
+242;Vistide;Intramuscular;Maximum;purus;Once;13;false;true;ACT;system;2016-10-18 21:07:25;;2016-01-25 16:42:29;false
+243;North Burn Relief;Oral;Minimum;venenatis tristique;Yearly;3;true;false;ACT;system;2016-08-20 07:26:08;;2016-05-11 16:08:00;false
+244;NICOTINE;Intravenous;Maximum;auctor sed;Once;14;true;true;ACT;system;2015-12-30 11:01:58;;2016-04-18 12:34:01;false
+245;Little Fevers Childrens Fever Pain Reliever;Intramuscular;Maximum;orci pede;Often;5;true;false;ACT;system;2016-09-13 16:43:35;;2016-10-24 21:47:46;false
+246;PURELL Advanced Hand Sanitizer Holiday Spice;Oral;Maximum;sit amet;Never;8;true;true;ACT;system;2016-04-14 10:42:44;;2016-10-16 23:21:41;false
+247;Methocarbamol;Intravenous;Maximum;molestie;Monthly;10;false;true;ACT;system;2016-04-05 23:52:47;;2016-10-06 10:35:19;false
+248;On Guard Hand Sanitizing Wipe;Intramuscular;Maximum;massa;Yearly;1;true;false;ACT;system;2016-01-06 05:15:33;;2016-05-14 13:49:56;false
+249;Ultra Tuss DM;Oral;Medium;morbi;Weekly;14;true;true;ACT;system;2016-08-17 23:34:39;;2016-06-04 21:04:41;false
+250;Phentermine hydrochloride;Intravenous;Medium;volutpat erat;Monthly;4;true;false;ACT;system;2016-05-31 06:06:04;;2016-10-21 05:12:14;false
+251;DRONABINOL;Intramuscular;Minimum;in consequat;Once;7;false;false;ACT;system;2016-04-29 03:22:30;;2016-09-20 16:25:20;false
+252;Maple Pollen Mixture;Oral;Maximum;nulla nisl;Often;11;false;true;ACT;system;2016-05-30 00:58:35;;2016-04-16 10:47:02;false
+253;ThatZit Acne Treatment;Intravenous;Medium;cubilia curae;Never;10;false;true;ACT;system;2016-04-20 07:15:26;;2016-05-04 01:08:40;false
+254;Lidocaine;Intramuscular;Maximum;ullamcorper;Once;12;true;true;ACT;system;2016-04-04 00:03:33;;2016-11-15 19:03:52;false
+255;miconazole 1;Oral;Medium;in congue;Monthly;5;true;true;ACT;system;2016-11-17 13:27:14;;2016-05-18 10:02:36;false
+256;Risperidone;Intravenous;Maximum;praesent;Once;15;false;true;ACT;system;2016-01-31 05:05:39;;2016-01-08 13:44:47;false
+257;Piperacillin and Tazobactam;Intramuscular;Medium;id;Often;6;false;false;ACT;system;2016-05-26 01:59:09;;2016-02-17 19:56:50;false
+258;Luxury Cell Performance Eye;Oral;Medium;in libero;Monthly;5;true;true;ACT;system;2016-06-16 07:01:13;;2016-08-22 02:16:48;false
+259;Fosphenytoin Sodium;Intravenous;Maximum;sit;Monthly;4;true;false;ACT;system;2016-01-11 17:23:17;;2016-08-11 10:10:52;false
+260;Carvedilol;Intramuscular;Maximum;et;Yearly;4;true;true;ACT;system;2016-10-27 19:26:42;;2016-08-11 19:37:53;false
+261;Charm-Tex;Oral;Maximum;duis at;Once;1;false;true;ACT;system;2016-08-28 04:11:35;;2016-03-23 12:28:48;false
+262;REPREXAIN;Intravenous;Maximum;felis;Daily;6;false;false;ACT;system;2016-10-02 21:47:38;;2016-09-13 01:59:19;false
+263;Healthy Accents Ranitidine;Intramuscular;Minimum;nunc;Yearly;8;true;true;ACT;system;2016-12-19 19:20:05;;2016-08-23 07:31:23;false
+264;Metformin Hydrochloride;Oral;Maximum;justo;Often;11;false;true;ACT;system;2016-09-12 15:51:23;;2016-08-28 23:08:08;false
+265;Gehwol Fusskraft Nail and Skin Protection;Intravenous;Medium;eget;Monthly;9;false;false;ACT;system;2016-12-20 22:15:31;;2016-07-24 05:37:16;false
+266;Good Neighbor Pharmacy Night Time Severe;Intramuscular;Maximum;morbi;Once;5;true;false;ACT;system;2016-02-28 03:54:22;;2016-11-27 16:36:42;false
+267;Ampicillin;Oral;Maximum;praesent;Never;12;true;false;ACT;system;2016-01-27 03:31:11;;2016-10-05 21:58:47;false
+268;All Day Allergy Relief;Intravenous;Minimum;praesent blandit;Often;13;true;true;ACT;system;2016-06-07 21:54:39;;2016-12-25 19:04:02;false
+269;California Black Oak;Intramuscular;Minimum;vitae;Often;5;false;false;ACT;system;2016-10-31 12:30:07;;2016-06-15 14:49:44;false
+270;ARTEMISIA ANNUA POLLEN;Oral;Minimum;eros viverra;Seldom;9;false;true;ACT;system;2016-02-01 15:49:43;;2016-12-16 14:42:19;false
+271;Sof Skin Baby Petroleum;Intravenous;Medium;velit nec;Daily;1;false;true;ACT;system;2016-06-24 01:33:58;;2016-12-02 11:27:49;false
+272;magix;Intramuscular;Minimum;convallis;Once;9;false;false;ACT;system;2016-01-22 14:52:35;;2016-08-16 04:25:55;false
+273;Amoxicillin;Oral;Minimum;id;Seldom;2;true;true;ACT;system;2016-11-17 05:58:53;;2016-01-14 06:25:28;false
+274;Sofskin Petroleum;Intravenous;Minimum;turpis adipiscing;Once;5;true;false;ACT;system;2016-03-30 14:27:50;;2016-05-31 22:56:31;false
+275;Morphine Sulfate;Intramuscular;Maximum;duis;Never;2;true;false;ACT;system;2016-12-14 04:16:08;;2016-04-29 01:22:42;false
+276;Childrens Pain and Fever;Oral;Medium;sit amet;Monthly;14;false;false;ACT;system;2016-03-28 18:55:16;;2016-04-22 04:10:18;false
+277;Sword Fish;Intravenous;Maximum;sollicitudin mi;Monthly;8;true;false;ACT;system;2016-10-31 12:28:20;;2016-02-02 21:31:52;false
+278;Isopropyl Alcohol;Intramuscular;Maximum;quisque id;Seldom;12;false;true;ACT;system;2016-12-15 09:42:24;;2016-06-26 23:14:20;false
+279;Leader nite time;Oral;Maximum;a;Once;13;true;false;ACT;system;2016-05-01 15:44:16;;2016-12-10 05:06:40;false
+280;GBGF;Intravenous;Medium;natoque penatibus;Weekly;6;true;false;ACT;system;2016-03-29 05:57:31;;2016-03-31 10:21:51;false
+281;Lithium Carbonate;Intramuscular;Medium;mauris;Often;4;false;true;ACT;system;2016-08-15 10:53:05;;2016-03-25 15:13:38;false
+282;LEADER ADVANCED FORMULA;Oral;Maximum;vel;Weekly;7;false;true;ACT;system;2016-05-17 01:16:22;;2016-05-24 00:09:40;false
+283;Divalproex Sodium;Intravenous;Maximum;amet sapien;Daily;2;true;true;ACT;system;2015-12-29 15:07:31;;2016-05-18 12:56:09;false
+284;TRISEPTIN;Intramuscular;Maximum;lectus;Seldom;13;true;true;ACT;system;2016-08-13 01:28:08;;2016-08-06 23:14:46;false
+285;Simethicone;Oral;Minimum;ligula sit;Often;13;true;true;ACT;system;2016-06-05 21:31:52;;2016-12-18 05:54:15;false
+286;Clean and Clear;Intravenous;Minimum;sapien iaculis;Never;6;false;false;ACT;system;2016-05-15 16:41:22;;2016-08-24 06:36:40;false
+287;Undecylenic Acid Liquid;Intramuscular;Minimum;vel;Once;12;false;true;ACT;system;2016-04-27 04:37:38;;2016-03-22 09:31:44;false
+288;Anti-Itch Maximum Strength;Oral;Minimum;lacus at;Seldom;10;false;true;ACT;system;2016-09-13 15:05:51;;2016-12-25 02:36:35;false
+289;Levetiracetam;Intravenous;Maximum;congue;Weekly;3;true;false;ACT;system;2016-02-23 19:58:09;;2016-03-17 06:50:29;false
+290;Cleocin Phosphate;Intramuscular;Medium;ut;Often;10;true;false;ACT;system;2016-03-04 03:28:35;;2016-06-18 10:41:32;false
+291;equaline heartburn prevention;Oral;Maximum;natoque;Yearly;11;false;false;ACT;system;2016-05-11 14:57:08;;2016-06-13 05:27:55;false
+292;hcgPLUS;Intravenous;Medium;dapibus;Never;14;false;true;ACT;system;2016-07-21 12:49:32;;2016-08-09 10:35:44;false
+293;Amantadine Hydrochloride;Intramuscular;Minimum;posuere nonummy;Seldom;6;true;false;ACT;system;2016-05-31 01:38:45;;2016-03-13 17:03:25;false
+294;KHUSKIA ORYZAE;Oral;Medium;mauris laoreet;Weekly;13;true;true;ACT;system;2016-07-12 15:13:09;;2016-06-24 11:28:14;false
+295;Sinus and Allergy Releif PE;Intravenous;Medium;augue;Monthly;11;false;true;ACT;system;2016-03-02 15:03:33;;2016-08-21 22:45:46;false
+296;Omeprazole;Intramuscular;Medium;montes nascetur;Seldom;11;false;true;ACT;system;2016-07-30 15:31:58;;2016-06-05 08:28:30;false
+297;Promethazine Hydrochloride;Oral;Medium;pretium;Yearly;3;true;false;ACT;system;2016-04-03 08:50:09;;2016-07-06 08:19:44;false
+298;Fluoxetine;Intravenous;Maximum;id;Daily;10;true;true;ACT;system;2016-12-09 01:52:19;;2016-10-26 11:55:40;false
+299;Megestrol Acetate;Intramuscular;Medium;lacinia;Once;13;false;false;ACT;system;2016-04-13 22:52:34;;2016-10-29 01:12:44;false
+300;Red Cross Oral Pain Relief;Oral;Medium;eleifend donec;Daily;2;false;false;ACT;system;2016-01-20 08:33:32;;2016-04-16 23:51:04;false
+301;PAXIL;Intravenous;Minimum;sit;Once;10;true;false;ACT;system;2016-08-21 13:21:50;;2016-08-13 01:32:42;false
+302;PATANASE;Intramuscular;Minimum;rhoncus;Often;5;false;true;ACT;system;2016-02-21 17:52:51;;2016-08-29 09:28:42;false
+303;OXYGEN;Oral;Maximum;suscipit a;Once;13;true;false;ACT;system;2016-03-12 02:25:16;;2016-12-12 06:47:57;false
+304;Furosemide;Intravenous;Maximum;pretium quis;Never;7;false;false;ACT;system;2016-09-06 05:49:01;;2016-01-07 01:52:42;false
+305;Soybean;Intramuscular;Medium;convallis nunc;Weekly;8;true;false;ACT;system;2016-07-08 09:13:15;;2016-06-20 15:06:33;false
+306;Vitamin A D;Oral;Medium;ut;Daily;1;false;false;ACT;system;2016-08-21 10:41:56;;2016-12-05 18:10:40;false
+307;Pantoprazole Sodium;Intravenous;Medium;pede posuere;Monthly;13;false;false;ACT;system;2016-09-26 11:56:34;;2016-05-17 17:22:13;false
+308;topiramate;Intramuscular;Medium;posuere;Daily;14;false;true;ACT;system;2016-01-24 20:59:31;;2016-05-22 08:44:05;false
+309;Fikes Northwest Non-Alcohol Foaming Instant Hand Sanitizer;Oral;Minimum;eu orci;Never;3;true;true;ACT;system;2016-08-04 06:35:44;;2016-10-19 09:56:13;false
+310;Amoxicillin and Clavulanate Potassium;Intravenous;Maximum;ante ipsum;Once;8;false;false;ACT;system;2016-07-21 20:34:08;;2016-07-05 01:25:13;false
+311;Headache;Intramuscular;Maximum;amet;Weekly;3;false;false;ACT;system;2016-04-28 11:38:19;;2016-09-13 21:31:53;false
+312;Levothyroxine Sodium;Oral;Medium;tincidunt;Once;12;false;false;ACT;system;2016-03-09 01:56:11;;2016-06-29 19:37:30;false
+313;Brome Grass;Intravenous;Medium;ligula;Monthly;6;true;true;ACT;system;2016-07-24 19:49:11;;2016-02-03 11:03:35;false
+314;Standardized Sweet Vernal Grass Pollen;Intramuscular;Minimum;mattis;Weekly;12;true;false;ACT;system;2016-05-16 16:52:13;;2016-01-08 03:19:15;false
+315;Urban Defense;Oral;Maximum;rhoncus;Once;8;true;false;ACT;system;2016-11-25 02:08:13;;2016-03-12 02:22:37;false
+316;Adipex-P;Intravenous;Medium;in;Seldom;14;false;true;ACT;system;2016-07-26 10:37:43;;2016-03-25 09:20:16;false
+317;JANUMET;Intramuscular;Medium;lacus;Often;9;true;false;ACT;system;2016-05-30 16:51:03;;2016-01-18 02:48:16;false
+318;AMLODIPINE BESYLATE;Oral;Medium;erat eros;Monthly;8;true;false;ACT;system;2016-07-18 06:50:55;;2016-08-15 22:40:36;false
+319;Pulsatilla Tormentilla;Intravenous;Maximum;sollicitudin;Monthly;7;true;false;ACT;system;2016-11-09 00:01:57;;2016-04-13 21:14:51;false
+320;Finasteride;Intramuscular;Minimum;turpis elementum;Seldom;3;false;false;ACT;system;2016-09-09 08:31:59;;2016-05-29 08:19:15;false
+321;Lisinopril;Oral;Maximum;felis donec;Weekly;7;true;false;ACT;system;2016-07-05 18:37:31;;2016-09-11 09:12:45;false
+322;METFORMIN HYDROCHLORIDE;Intravenous;Medium;dui;Daily;10;false;false;ACT;system;2016-03-29 17:38:43;;2016-10-11 23:27:39;false
+323;Tendon Rescue;Intramuscular;Medium;sapien sapien;Weekly;9;true;true;ACT;system;2016-11-23 17:57:00;;2016-05-17 06:17:40;false
+324;BOBBI BROWN BRIGHTENING PROTECTIVE FACE BASE;Oral;Maximum;diam;Seldom;14;false;true;ACT;system;2016-04-26 19:53:32;;2016-05-08 20:33:34;false
+325;STELARA;Intravenous;Minimum;habitasse;Weekly;7;true;false;ACT;system;2016-10-02 14:50:32;;2016-04-28 14:30:52;false
+326;LABETALOL HYDROCHLORIDE;Intramuscular;Medium;eget nunc;Once;9;true;false;ACT;system;2016-09-04 10:32:09;;2016-02-27 20:04:38;false
+327;Articaine Hydrochloride and Epinephrine Bitartrate;Oral;Maximum;nonummy;Yearly;4;true;true;ACT;system;2016-01-24 17:01:07;;2016-09-28 18:57:00;false
+328;Klor-Con M;Intravenous;Maximum;felis ut;Yearly;4;true;true;ACT;system;2016-08-07 22:46:22;;2016-12-23 05:39:41;false
+329;DUKAL STING RELIEF PAD;Intramuscular;Medium;nulla;Never;2;false;true;ACT;system;2016-12-02 16:38:17;;2016-06-22 17:23:56;false
+330;Daytime Nighttime Sinus Relief;Oral;Minimum;nulla;Weekly;11;true;false;ACT;system;2016-01-21 20:04:01;;2016-04-08 20:07:40;false
+331;Oral Dent;Intravenous;Maximum;quam;Yearly;11;false;true;ACT;system;2016-12-24 19:40:44;;2016-11-25 07:34:42;false
+332;Antibacterial;Intramuscular;Maximum;integer;Yearly;10;true;true;ACT;system;2016-11-02 13:04:59;;2016-02-08 09:57:21;false
+333;Loperamide Hydrochloride;Oral;Medium;diam neque;Weekly;6;false;true;ACT;system;2016-11-01 05:32:38;;2016-07-27 18:56:36;false
+334;Nitrofurantoin (monohydrate/macrocrystals);Intravenous;Medium;nunc;Often;13;true;false;ACT;system;2016-01-13 23:05:06;;2016-07-26 11:42:02;false
+335;Ready Foundation;Intramuscular;Medium;justo sollicitudin;Never;1;true;false;ACT;system;2016-06-09 22:23:40;;2016-07-16 04:33:45;false
+336;all day pain relief;Oral;Medium;aenean fermentum;Never;13;false;true;ACT;system;2016-12-05 11:58:25;;2016-01-19 19:55:56;false
+337;Wheat Stem Rust;Intravenous;Maximum;platea;Once;6;true;false;ACT;system;2016-01-11 11:38:06;;2016-04-16 07:25:18;false
+338;CAREONE;Intramuscular;Maximum;odio justo;Never;12;false;false;ACT;system;2016-05-12 22:43:25;;2016-07-24 08:51:58;false
+339;Date;Oral;Maximum;augue;Often;2;true;false;ACT;system;2016-07-30 13:24:46;;2016-04-23 23:52:16;false
+340;Montelukast Sodium;Intravenous;Medium;nascetur;Monthly;12;true;true;ACT;system;2016-04-04 02:00:35;;2016-05-16 11:38:04;false
+341;Hydrogen Peroxide;Intramuscular;Medium;rutrum;Yearly;11;true;false;ACT;system;2016-01-03 06:23:14;;2016-04-10 12:32:01;false
+342;Lamotrigine;Oral;Medium;etiam;Often;9;true;true;ACT;system;2016-09-23 05:12:54;;2016-01-27 19:04:04;false
+343;COLLAGEN HD MAKE UP BASE;Intravenous;Medium;ligula;Weekly;6;false;true;ACT;system;2016-03-05 23:44:12;;2016-10-06 03:48:21;false
+344;Minitran;Intramuscular;Medium;morbi ut;Weekly;9;true;false;ACT;system;2016-05-14 00:41:20;;2016-02-13 06:58:32;false
+345;Acid Reducer;Oral;Minimum;tincidunt lacus;Seldom;11;true;true;ACT;system;2016-11-18 04:32:28;;2016-04-16 18:46:11;false
+346;Sun Shades Lip Balm;Intravenous;Minimum;proin;Weekly;2;true;false;ACT;system;2016-02-18 20:03:36;;2016-04-22 13:41:54;false
+347;HYDROMORPHONE HYDROCHLORIDE;Intramuscular;Maximum;dapibus;Never;5;false;false;ACT;system;2016-09-17 01:40:05;;2016-12-20 10:17:11;false
+348;Nutri-Tab OB;Oral;Minimum;dui proin;Monthly;9;true;false;ACT;system;2016-05-30 13:36:28;;2016-01-23 05:57:57;false
+349;Antibacterial Hand Arctic Blast;Intravenous;Medium;lectus pellentesque;Weekly;14;false;true;ACT;system;2016-02-26 12:08:35;;2016-08-28 03:31:03;false
+350;Reprexain;Intramuscular;Medium;tellus;Monthly;11;false;false;ACT;system;2016-04-02 12:25:28;;2016-06-26 17:48:07;false
+351;Susan Winget Berries and Cream Hand Sanitizer;Oral;Medium;nulla;Weekly;15;false;false;ACT;system;2016-12-24 20:52:07;;2016-12-22 01:19:21;false
+352;Loperamide Hydrochloride;Intravenous;Medium;mi;Monthly;12;false;false;ACT;system;2016-01-19 03:59:09;;2016-03-09 23:52:59;false
+353;LBEL EFFET PARFAIT Spots Reducing Effect Foundation SPF 18 - MEDIUM 6B;Intramuscular;Medium;augue;Monthly;2;false;false;ACT;system;2016-11-02 14:26:10;;2016-06-23 10:12:34;false
+354;Tekturna HCT;Oral;Maximum;mauris enim;Seldom;13;false;true;ACT;system;2016-03-28 23:27:11;;2016-02-14 02:31:57;false
+355;MIDAZOLAM Hydrochloride;Intravenous;Maximum;ac;Monthly;2;true;false;ACT;system;2016-11-18 07:34:35;;2016-01-12 17:08:00;false
+356;SENSAI FLUID FINISH FF204.5;Intramuscular;Medium;donec;Seldom;6;false;true;ACT;system;2016-10-28 13:53:18;;2016-09-15 07:23:57;false
+357;PROCRIT;Oral;Medium;nunc vestibulum;Seldom;1;false;false;ACT;system;2016-07-13 19:17:54;;2016-07-03 12:04:16;false
+358;Ceftriaxone Sodium;Intravenous;Medium;eleifend;Yearly;14;false;false;ACT;system;2016-04-06 00:00:46;;2016-03-10 19:58:10;false
+359;FELODIPINEEXTENDED-RELEASE TABLETS;Intramuscular;Minimum;ut;Never;8;true;false;ACT;system;2016-05-14 22:14:58;;2016-05-18 16:59:33;false
+360;Exuviance Sheer Refining Fluid SPF 35;Oral;Maximum;ut erat;Daily;11;false;true;ACT;system;2016-02-06 14:41:25;;2016-05-30 11:15:36;false
+361;Galantamine;Intravenous;Maximum;rhoncus;Yearly;13;true;true;ACT;system;2016-08-17 22:07:47;;2016-08-09 21:22:24;false
+362;smart sense omeprazole;Intramuscular;Maximum;at lorem;Monthly;6;false;false;ACT;system;2016-01-08 18:48:37;;2016-08-11 15:31:39;false
+363;Ondansetron;Oral;Minimum;magna vulputate;Once;12;true;true;ACT;system;2016-01-23 02:02:35;;2016-11-01 16:04:06;false
+364;Lornamead;Intravenous;Minimum;platea dictumst;Often;12;false;false;ACT;system;2016-01-03 03:21:11;;2016-09-14 21:55:50;false
+365;Gemcitabine;Intramuscular;Medium;nunc vestibulum;Never;5;true;true;ACT;system;2016-05-29 18:42:17;;2016-06-27 12:08:18;false
+366;PrismaSol;Oral;Minimum;in hac;Yearly;14;true;false;ACT;system;2016-10-11 08:08:54;;2016-06-02 14:20:56;false
+367;METRONIDAZOLE;Intravenous;Minimum;faucibus;Never;6;false;true;ACT;system;2016-07-25 07:51:16;;2016-05-09 01:51:45;false
+368;Vitamin A D;Intramuscular;Medium;lorem;Once;15;false;false;ACT;system;2016-11-15 01:07:06;;2016-05-30 14:11:41;false
+369;Orfadin;Oral;Medium;bibendum;Monthly;4;true;false;ACT;system;2016-03-27 13:13:36;;2016-09-26 15:17:32;false
+370;Galantamine;Intravenous;Maximum;velit;Never;14;true;false;ACT;system;2016-11-01 05:32:26;;2015-12-31 04:19:07;false
+371;NiteTime Sinus;Intramuscular;Maximum;odio condimentum;Once;1;false;true;ACT;system;2016-02-16 15:11:39;;2016-03-31 19:32:06;false
+372;Acyclovir;Oral;Maximum;ipsum praesent;Never;10;false;false;ACT;system;2016-12-13 11:53:45;;2016-07-14 04:34:02;false
+373;Colgate;Intravenous;Minimum;at turpis;Often;11;false;true;ACT;system;2016-11-10 15:26:10;;2016-05-30 06:52:47;false
+374;Macrodantin;Intramuscular;Medium;nisi venenatis;Once;9;false;true;ACT;system;2016-03-07 23:49:10;;2016-06-03 21:29:56;false
+375;urocit-k;Oral;Maximum;nulla ut;Monthly;10;true;true;ACT;system;2016-09-24 18:53:17;;2016-03-25 08:48:50;false
+376;ERY-TAB;Intravenous;Minimum;sapien;Seldom;6;true;true;ACT;system;2016-06-30 07:39:40;;2016-05-10 00:35:12;false
+377;Sterile Diluent for Allergenic Extract;Intramuscular;Maximum;blandit nam;Yearly;12;false;true;ACT;system;2016-02-01 12:07:07;;2016-01-06 21:50:58;false
+378;Anti-Bacterial Hand;Oral;Maximum;vestibulum vestibulum;Monthly;10;false;true;ACT;system;2016-11-27 17:45:45;;2016-11-23 22:20:42;false
+379;Eye Irritation;Intravenous;Medium;at velit;Yearly;2;true;true;ACT;system;2016-02-25 10:24:48;;2016-03-20 18:58:44;false
+380;Juicy Orange Antibacterial Foaming Hand Wash;Intramuscular;Minimum;ante vel;Daily;8;false;true;ACT;system;2016-06-25 16:06:55;;2016-10-07 21:08:36;false
+381;Coppertone SPORT PRO SERIES;Oral;Minimum;convallis;Monthly;6;false;false;ACT;system;2016-04-22 18:38:11;;2016-09-17 12:45:16;false
+382;mapap arthritis pain;Intravenous;Maximum;vestibulum vestibulum;Daily;2;true;true;ACT;system;2016-11-12 14:32:33;;2016-06-07 08:13:51;false
+383;ZOLPIDEM TARTRATE;Intramuscular;Maximum;justo;Seldom;14;true;false;ACT;system;2016-10-08 03:37:06;;2016-09-05 17:09:12;false
+384;Mesna;Oral;Maximum;ut;Seldom;1;false;false;ACT;system;2016-10-13 08:12:32;;2016-10-07 13:12:53;false
+385;Degree;Intravenous;Minimum;lacus at;Never;9;false;true;ACT;system;2016-05-15 21:10:12;;2016-08-06 23:26:04;false
+386;equate daytime nitetime;Intramuscular;Minimum;nibh;Weekly;9;false;false;ACT;system;2016-03-28 07:18:04;;2016-04-25 12:44:38;false
+387;Leader Moisture SPF 15 Lip Balm;Oral;Maximum;justo sit;Once;9;false;false;ACT;system;2016-02-15 06:50:15;;2016-05-15 12:43:04;false
+388;Brome Grass;Intravenous;Maximum;risus;Often;7;false;false;ACT;system;2016-06-16 11:26:11;;2016-11-30 14:09:08;false
+389;Nivea A Kiss of Natural Volume Glossy Lip Care;Intramuscular;Minimum;pellentesque ultrices;Never;13;false;false;ACT;system;2016-04-25 14:36:11;;2016-06-16 01:02:57;false
+390;Quetiapine Fumarate;Oral;Maximum;sed;Often;8;false;true;ACT;system;2016-10-13 00:45:03;;2016-07-03 15:17:01;false
+391;Diazepam;Intravenous;Maximum;dictumst;Daily;11;true;true;ACT;system;2016-11-17 04:28:16;;2016-02-01 11:48:07;false
+392;Misoprostol;Intramuscular;Medium;nulla;Yearly;9;false;true;ACT;system;2016-09-19 21:00:49;;2016-08-10 06:36:54;false
+393;CMC Lubricant Eye Drops;Oral;Maximum;hac habitasse;Once;11;false;false;ACT;system;2016-11-19 07:18:17;;2016-12-14 00:20:09;false
+394;Retin-A;Intravenous;Maximum;nec;Seldom;13;true;true;ACT;system;2016-03-25 18:17:51;;2016-06-17 08:16:23;false
+395;Quinapril Hydrochloride and Hydrochlorothiazide;Intramuscular;Maximum;rutrum nulla;Seldom;5;false;false;ACT;system;2016-06-30 18:03:46;;2016-08-06 09:24:05;false
+396;Oral-B Fluorinse Mint;Oral;Minimum;ipsum;Never;15;false;false;ACT;system;2016-04-06 07:28:51;;2016-01-18 05:24:11;false
+397;Irbesartan and Hydrochlorothiazide;Intravenous;Medium;vivamus;Once;10;true;false;ACT;system;2016-05-25 13:50:29;;2016-06-21 00:24:44;false
+398;Thyrotox;Intramuscular;Medium;rhoncus;Often;2;false;true;ACT;system;2016-08-14 21:58:21;;2016-12-23 21:53:13;false
+399;Meloxicam;Oral;Minimum;venenatis;Seldom;12;false;true;ACT;system;2016-01-03 00:50:06;;2016-04-21 09:11:37;false
+400;THE BAMBOO OF DAMYANG MOISTURE;Intravenous;Minimum;nulla facilisi;Yearly;4;false;false;ACT;system;2016-12-10 18:08:56;;2016-01-09 22:34:44;false
+401;Mexiletine Hydrochloride;Intramuscular;Minimum;duis;Weekly;15;false;false;ACT;system;2016-06-25 07:48:38;;2016-02-23 08:55:04;false
+402;ReCreate Foundation;Oral;Medium;nulla;Weekly;5;true;true;ACT;system;2016-08-11 12:25:56;;2016-07-24 06:38:01;false
+403;ATORVASTATIN CALCIUM;Intravenous;Medium;pede;Weekly;10;true;false;ACT;system;2016-03-09 20:15:21;;2016-08-12 01:11:04;false
+404;Thyroid;Intramuscular;Maximum;nunc viverra;Never;10;true;true;ACT;system;2016-11-06 11:05:29;;2016-09-15 10:33:49;false
+405;LOreal Paris Sublime Sun 30 Crystal Clear Sunscreen Mist Broad Spectrum SPF 30 Water Resistant;Oral;Maximum;sit;Seldom;7;true;true;ACT;system;2016-09-09 09:49:48;;2016-04-05 02:45:51;false
+406;nasal;Intravenous;Maximum;viverra;Yearly;9;true;true;ACT;system;2016-01-02 09:24:22;;2016-03-03 10:11:08;false
+407;Maximum Strength Wart Remover Strips;Intramuscular;Minimum;at nibh;Never;11;true;true;ACT;system;2016-11-13 16:58:36;;2016-03-13 17:40:27;false
+408;POVIDONE-IODINE;Oral;Maximum;dui;Daily;5;false;false;ACT;system;2016-01-30 03:02:46;;2016-03-09 02:39:30;false
+409;Baby Dust;Intravenous;Minimum;quisque;Daily;11;true;false;ACT;system;2016-04-25 19:02:30;;2016-11-30 03:52:05;false
+410;shing-Releev;Intramuscular;Minimum;aliquam;Never;15;true;true;ACT;system;2016-11-17 20:08:38;;2016-08-19 15:24:20;false
+411;Smart San Healthcare Personnel Handwash;Oral;Minimum;sem duis;Monthly;7;false;true;ACT;system;2016-02-29 08:50:29;;2016-06-09 05:26:34;false
+412;HayFever Fighter;Intravenous;Medium;lorem;Yearly;12;false;true;ACT;system;2016-11-04 15:47:08;;2016-11-05 01:53:17;false
+413;ZERIT;Intramuscular;Minimum;congue diam;Monthly;15;true;false;ACT;system;2016-06-11 16:57:53;;2016-06-20 05:52:29;false
+414;METOPROLOL SUCCINATE;Oral;Maximum;convallis nunc;Yearly;10;false;false;ACT;system;2016-08-03 11:09:34;;2016-01-22 09:50:00;false
+415;Chenodiol;Intravenous;Maximum;nullam;Seldom;15;false;true;ACT;system;2016-11-20 04:37:51;;2016-08-11 11:23:12;false
+416;CPDA-1;Intramuscular;Medium;varius;Yearly;3;false;true;ACT;system;2016-11-27 05:08:24;;2016-11-17 02:04:52;false
+417;Oral Analgesic;Oral;Medium;lectus;Daily;4;true;false;ACT;system;2016-04-23 06:21:16;;2016-07-02 13:10:19;false
+418;Arthritis;Intravenous;Minimum;donec;Often;11;false;true;ACT;system;2016-12-27 23:19:08;;2016-08-04 13:25:39;false
+419;Equate Pain Relieving;Intramuscular;Maximum;venenatis;Daily;4;false;false;ACT;system;2016-08-30 18:40:53;;2016-03-14 14:58:53;false
+420;NATURAL HONEY HERB COUGH SUPPRESSANT THROAT DROPS;Oral;Medium;massa volutpat;Never;1;true;true;ACT;system;2016-12-08 09:02:16;;2016-05-24 20:01:25;false
+421;Baclofen;Intravenous;Minimum;sit;Monthly;6;true;false;ACT;system;2016-04-18 08:12:14;;2016-04-09 00:53:21;false
+422;Terbinafine Hydrochloride;Intramuscular;Medium;id lobortis;Daily;10;false;true;ACT;system;2016-08-21 19:42:51;;2016-05-05 01:23:06;false
+423;SHISEIDO URBAN ENVIRONMENT TINTED UV PROTECTOR;Oral;Minimum;adipiscing;Never;14;false;true;ACT;system;2016-07-02 15:14:57;;2016-11-25 08:24:39;false
+424;VENLAFAXINE HYDROCHLORIDE;Intravenous;Minimum;maecenas rhoncus;Monthly;7;false;true;ACT;system;2016-10-31 10:40:53;;2016-12-20 09:42:47;false
+425;Codituss DM;Intramuscular;Maximum;faucibus cursus;Daily;1;false;true;ACT;system;2016-01-08 23:10:09;;2015-12-29 07:03:15;false
+426;Flexible;Oral;Minimum;non sodales;Daily;2;true;true;ACT;system;2016-05-13 20:38:37;;2016-03-06 17:26:44;false
+427;DELFLEX;Intravenous;Minimum;sit amet;Once;12;false;true;ACT;system;2016-12-10 05:49:50;;2016-09-06 23:22:36;false
+428;Benzonatate;Intramuscular;Minimum;in leo;Yearly;4;true;true;ACT;system;2016-07-18 23:18:40;;2016-06-17 20:20:33;false
+429;Benzoyl Peroxide;Oral;Maximum;nec;Once;6;true;true;ACT;system;2016-08-23 23:38:33;;2016-12-26 01:21:56;false
+430;Good Neighbor Pharmacy Sinus and Cold D;Intravenous;Medium;sed;Monthly;4;true;false;ACT;system;2016-12-15 21:38:00;;2016-08-17 02:25:10;false
+431;Neo-Synephrine Cold and Sinus;Intramuscular;Maximum;ullamcorper purus;Weekly;9;false;true;ACT;system;2016-01-29 22:25:14;;2016-08-25 00:54:54;false
+432;Olay Total Effects Tone Correcting;Oral;Medium;ut at;Yearly;1;false;false;ACT;system;2016-09-21 09:51:17;;2016-10-03 14:01:01;false
+433;Ibuprofen;Intravenous;Medium;viverra eget;Yearly;1;true;true;ACT;system;2016-08-15 16:40:40;;2016-05-17 03:36:42;false
+434;ACNE;Intramuscular;Maximum;enim in;Often;2;false;false;ACT;system;2016-12-25 04:23:38;;2016-01-23 07:02:00;false
+435;TOBRAMYCIN;Oral;Medium;id;Weekly;3;false;true;ACT;system;2016-08-24 12:16:50;;2016-01-15 06:22:46;false
+436;EZ Nite Sleep;Intravenous;Minimum;nisl nunc;Once;14;false;false;ACT;system;2016-01-27 11:14:26;;2016-05-23 18:54:50;false
+437;Tramadol Hydrochloride and Acetaminophen;Intramuscular;Minimum;ac;Weekly;6;false;true;ACT;system;2016-08-02 16:35:03;;2016-10-23 09:06:13;false
+438;Triamcinolone Acetonide;Oral;Medium;sit;Monthly;4;true;true;ACT;system;2016-06-09 13:30:49;;2016-09-11 13:30:49;false
+439;NEXT CHOICE;Intravenous;Medium;malesuada;Often;15;true;true;ACT;system;2016-11-12 18:13:30;;2016-06-02 12:26:17;false
+440;Clozapine;Intramuscular;Medium;mattis pulvinar;Weekly;6;false;true;ACT;system;2016-03-24 06:30:50;;2016-02-21 02:03:39;false
+441;Fenofibrate;Oral;Maximum;consectetuer;Monthly;9;false;true;ACT;system;2016-04-04 16:24:33;;2016-01-01 10:50:26;false
+442;daytime nitetime cold and flu;Intravenous;Minimum;non sodales;Often;7;false;false;ACT;system;2016-07-14 06:36:49;;2016-02-06 02:58:50;false
+443;Meteoric Iron Prunus;Intramuscular;Maximum;non;Yearly;13;false;false;ACT;system;2016-12-21 20:35:06;;2016-05-28 06:27:04;false
+444;good sense nasal;Oral;Maximum;in faucibus;Weekly;13;true;true;ACT;system;2016-08-29 13:11:31;;2016-05-27 14:21:14;false
+445;Meijer;Intravenous;Medium;donec semper;Once;10;false;true;ACT;system;2016-05-04 00:16:19;;2016-12-19 17:41:18;false
+446;allergy relief;Intramuscular;Medium;molestie hendrerit;Yearly;2;false;false;ACT;system;2016-08-26 16:51:50;;2016-05-26 19:24:33;false
+447;Dove Men plus Care;Oral;Medium;etiam faucibus;Daily;7;true;true;ACT;system;2016-01-18 08:35:32;;2016-11-11 15:21:29;false
+448;Tiger Balm Red;Intravenous;Maximum;mauris laoreet;Often;4;true;true;ACT;system;2016-05-25 20:42:08;;2016-12-21 01:26:52;false
+449;Cetirizine Hydrochloride;Intramuscular;Medium;augue aliquam;Daily;9;true;false;ACT;system;2016-11-09 06:19:45;;2016-08-10 13:53:47;false
+450;Tums;Oral;Minimum;erat;Often;10;false;false;ACT;system;2016-04-10 16:26:53;;2016-09-25 09:23:49;false
+451;OSENI;Intravenous;Maximum;pede;Once;10;false;true;ACT;system;2016-07-01 17:32:19;;2016-10-11 02:54:23;false
+452;meloxicam;Intramuscular;Maximum;odio donec;Never;1;false;false;ACT;system;2016-07-09 09:45:26;;2016-02-05 12:25:26;false
+453;Hand Cleanse;Oral;Medium;mauris morbi;Once;4;true;false;ACT;system;2016-05-08 03:09:22;;2016-11-23 02:37:46;false
+454;Hot Ice Soothing Analgesic Gel;Intravenous;Minimum;id luctus;Never;10;false;false;ACT;system;2016-06-24 12:34:10;;2016-06-23 22:33:50;false
+455;DIVALPROEX SODIUM;Intramuscular;Medium;eu tincidunt;Weekly;14;false;true;ACT;system;2016-03-01 14:35:40;;2015-12-30 17:00:20;false
+456;Childrens Delsym;Oral;Maximum;dui;Weekly;8;false;true;ACT;system;2016-08-21 02:09:36;;2015-12-29 15:16:03;false
+457;Tetanus and Diphtheria Toxoids Adsorbed;Intravenous;Maximum;nullam sit;Yearly;1;true;false;ACT;system;2016-12-01 15:28:16;;2016-06-09 11:57:03;false
+458;NasalAsalt;Intramuscular;Minimum;ut;Daily;8;true;false;ACT;system;2016-02-21 21:10:58;;2016-12-15 05:21:47;false
+459;White Mulberry;Oral;Medium;bibendum;Yearly;14;true;true;ACT;system;2016-10-14 22:50:32;;2016-01-20 17:27:59;false
+460;Pain Relief;Intravenous;Medium;nisi vulputate;Yearly;9;true;false;ACT;system;2016-12-10 06:36:10;;2016-12-11 00:43:12;false
+461;PROMETHAZINE HYDROCHLORIDE;Intramuscular;Maximum;sed accumsan;Once;6;false;false;ACT;system;2016-09-30 05:01:54;;2016-06-17 01:25:15;false
+462;Bio Chem Detox;Oral;Minimum;orci;Once;12;true;true;ACT;system;2016-12-24 23:54:27;;2016-06-05 16:05:43;false
+463;Non Drowsy Day Time;Intravenous;Minimum;semper;Once;9;false;false;ACT;system;2016-08-10 10:52:40;;2016-05-05 10:07:40;false
+464;Indapamide;Intramuscular;Minimum;libero nam;Never;10;false;true;ACT;system;2016-09-01 22:29:09;;2016-09-09 19:27:28;false
+465;Extra Strength Non-Aspirin;Oral;Maximum;sit;Once;7;false;false;ACT;system;2016-10-19 14:53:15;;2016-02-18 17:47:47;false
+466;dextroamphetamine sulfate;Intravenous;Minimum;est;Often;7;false;true;ACT;system;2016-06-16 02:40:50;;2016-09-13 20:47:00;false
+467;Effexor;Intramuscular;Medium;libero;Once;5;false;false;ACT;system;2016-10-03 18:29:00;;2016-10-02 21:58:04;false
+468;HAND SANITIZING;Oral;Medium;platea dictumst;Daily;3;false;true;ACT;system;2016-08-14 07:44:54;;2016-06-06 03:25:21;false
+469;Stool Softener;Intravenous;Minimum;viverra dapibus;Monthly;6;true;true;ACT;system;2015-12-29 03:35:28;;2016-10-01 00:08:59;false
+470;Smooth Brome;Intramuscular;Minimum;proin risus;Weekly;13;false;true;ACT;system;2016-01-17 19:37:08;;2016-04-21 06:41:35;false
+471;Depo-Testosterone;Oral;Maximum;congue risus;Once;11;false;true;ACT;system;2016-03-04 23:36:38;;2016-03-06 20:54:42;false
+472;Loratadine ODT;Intravenous;Medium;id;Never;9;false;true;ACT;system;2016-11-12 04:22:16;;2016-02-04 08:31:06;false
+473;Gabapentin;Intramuscular;Maximum;nec;Never;3;false;true;ACT;system;2016-09-27 09:58:49;;2016-06-29 15:21:44;false
+474;PredniSONE;Oral;Maximum;mattis odio;Seldom;4;true;false;ACT;system;2016-09-01 23:44:56;;2016-10-08 12:09:06;false
+475;Bonogen Activator;Intravenous;Maximum;lorem quisque;Often;5;false;true;ACT;system;2016-04-25 08:04:14;;2016-01-12 04:50:45;false
+476;PredniSONE;Intramuscular;Medium;tempus;Yearly;12;false;false;ACT;system;2016-04-07 10:09:52;;2016-10-01 17:07:59;false
+477;Lorazepam;Oral;Maximum;molestie;Weekly;4;false;false;ACT;system;2016-02-23 00:07:59;;2016-02-20 20:36:56;false
+478;Clotrimazole;Intravenous;Minimum;justo lacinia;Yearly;12;true;true;ACT;system;2016-02-03 07:55:49;;2016-08-15 00:58:03;false
+479;First Aid Original Bacitraycin Plus;Intramuscular;Maximum;mattis pulvinar;Monthly;5;true;true;ACT;system;2016-02-06 17:45:09;;2016-04-11 15:01:34;false
+480;Up and Up Nicotine;Oral;Minimum;felis;Yearly;7;false;false;ACT;system;2016-03-27 14:16:01;;2016-07-02 04:05:24;false
+481;GO TIME;Intravenous;Medium;rhoncus sed;Daily;6;true;false;ACT;system;2016-07-20 11:52:21;;2016-08-06 22:48:18;false
+482;Lab1796 Detox Escort;Intramuscular;Maximum;turpis;Once;2;true;false;ACT;system;2016-08-11 17:35:19;;2016-02-02 07:00:35;false
+483;GABAPENTIN;Oral;Maximum;ante ipsum;Seldom;14;true;false;ACT;system;2016-09-30 22:44:13;;2016-11-24 08:59:27;false
+484;Donepezil Hydrochloride;Intravenous;Maximum;ut mauris;Yearly;2;false;true;ACT;system;2016-12-25 16:22:52;;2016-02-12 23:46:16;false
+485;Atenolol;Intramuscular;Medium;platea;Seldom;8;true;false;ACT;system;2015-12-31 05:14:43;;2016-03-20 11:29:48;false
+486;Mydfrin;Oral;Medium;et;Weekly;4;false;false;ACT;system;2016-04-12 06:25:15;;2016-10-27 03:23:01;false
+487;Swimmers Support;Intravenous;Medium;faucibus orci;Seldom;2;true;false;ACT;system;2016-07-15 04:52:57;;2016-05-07 19:54:58;false
+488;Coppertone UltraGuard;Intramuscular;Medium;sapien arcu;Daily;14;true;false;ACT;system;2016-05-19 16:48:23;;2016-08-24 13:34:13;false
+489;SE-DONNA PB HYOS;Oral;Minimum;odio;Once;7;false;true;ACT;system;2016-02-18 13:21:17;;2016-11-04 09:53:14;false
+490;Ciprofloxacin;Intravenous;Maximum;velit;Yearly;7;true;false;ACT;system;2016-04-05 06:49:02;;2016-07-09 22:50:44;false
+491;Nitrous Oxide;Intramuscular;Minimum;suspendisse accumsan;Monthly;4;false;true;ACT;system;2016-02-23 16:40:33;;2016-03-18 14:29:38;false
+492;Lisinopril;Oral;Maximum;in eleifend;Once;12;false;true;ACT;system;2016-03-31 00:01:36;;2016-02-02 02:29:30;false
+493;Dry Scalp Care;Intravenous;Minimum;justo nec;Daily;3;true;false;ACT;system;2016-07-30 14:16:22;;2016-06-02 23:42:32;false
+494;Pindolol;Intramuscular;Minimum;ipsum;Seldom;8;true;true;ACT;system;2016-06-14 02:22:17;;2016-12-12 06:34:18;false
+495;Ultra Balm;Oral;Maximum;lectus;Yearly;7;true;false;ACT;system;2016-02-23 04:35:55;;2016-05-29 11:03:20;false
+496;Allergy and congestion relief;Intravenous;Medium;lobortis;Often;1;true;false;ACT;system;2016-06-19 16:57:32;;2016-05-19 21:40:11;false
+497;Mineral Wear Talc-Free Correcting Primer;Intramuscular;Maximum;interdum eu;Never;15;false;true;ACT;system;2016-07-05 21:50:38;;2016-07-10 04:53:40;false
+498;Nicotine;Oral;Medium;sapien;Weekly;11;true;true;ACT;system;2016-11-12 09:09:05;;2016-09-07 00:27:02;false
+499;Brevibloc;Intravenous;Maximum;mauris;Once;7;true;true;ACT;system;2016-02-29 09:38:32;;2016-01-05 09:26:29;false
+500;Head and Shoulders;Intramuscular;Minimum;nascetur ridiculus;Weekly;2;true;false;ACT;system;2016-04-19 14:43:52;;2016-11-07 19:22:33;false
+501;AcneFree Severe Maximum Strength Repair Lotion;Oral;Maximum;nulla ultrices;Daily;2;false;false;ACT;system;2016-10-01 01:51:19;;2016-05-25 01:15:13;false
+502;CANIS LUPUS FAMILIARIS SKIN;Intravenous;Medium;consequat;Yearly;7;true;true;ACT;system;2016-07-27 05:25:09;;2016-09-05 21:53:03;false
+503;VICTRELIS;Intramuscular;Maximum;mi nulla;Often;4;false;false;ACT;system;2016-04-01 02:15:58;;2016-04-26 07:14:18;false
+504;Mixture of Standardized and Non-Standardized Inland Grasses;Oral;Maximum;morbi;Monthly;4;false;true;ACT;system;2016-09-02 06:20:50;;2016-01-22 20:39:29;false
+505;FEMCON Fe;Intravenous;Maximum;vivamus tortor;Never;1;true;false;ACT;system;2016-09-07 00:44:29;;2016-11-25 00:37:01;false
+506;Headache;Intramuscular;Minimum;erat volutpat;Monthly;15;true;true;ACT;system;2016-03-21 20:24:55;;2016-11-26 13:44:38;false
+507;Morphine Sulfate;Oral;Medium;urna pretium;Seldom;12;false;true;ACT;system;2016-11-10 11:58:05;;2016-09-05 12:00:23;false
+508;naproxen sodium;Intravenous;Maximum;dolor morbi;Seldom;15;true;true;ACT;system;2016-11-05 12:57:43;;2016-12-08 04:28:01;false
+509;Nostalgia;Intramuscular;Maximum;est lacinia;Once;12;true;false;ACT;system;2016-07-24 03:18:44;;2016-03-07 01:06:00;false
+510;EMEND;Oral;Maximum;at;Yearly;14;false;false;ACT;system;2016-02-02 07:42:14;;2016-12-03 21:21:42;false
+511;freshnails;Intravenous;Minimum;morbi quis;Seldom;8;true;true;ACT;system;2016-04-16 17:55:03;;2016-12-14 22:27:08;false
+512;Nitrogen;Intramuscular;Medium;at;Never;1;true;true;ACT;system;2016-04-07 05:41:00;;2016-04-07 00:23:35;false
+513;Topiramate;Oral;Medium;nibh;Daily;1;false;true;ACT;system;2016-05-19 03:01:01;;2016-09-15 17:47:53;false
+514;Potassium Chloride;Intravenous;Medium;vestibulum ante;Once;8;true;true;ACT;system;2016-09-24 18:48:59;;2016-09-03 00:54:05;false
+515;Liver Tonic;Intramuscular;Minimum;a nibh;Often;6;false;true;ACT;system;2016-05-06 00:37:52;;2016-03-03 02:48:54;false
+516;AHAVA ACTIVE DEADSEA MINERALS;Oral;Medium;accumsan odio;Seldom;13;true;true;ACT;system;2016-06-21 13:33:53;;2016-10-27 21:23:29;false
+517;Western Juniper;Intravenous;Minimum;porta volutpat;Once;12;true;false;ACT;system;2016-11-11 06:10:23;;2016-07-13 09:44:19;false
+518;Triazolam;Intramuscular;Minimum;purus;Monthly;3;false;false;ACT;system;2016-12-16 09:25:24;;2016-03-14 01:57:49;false
+519;Medroxyprogesterone Acetate;Oral;Maximum;duis ac;Once;14;true;false;ACT;system;2016-07-25 10:54:58;;2016-12-04 04:36:36;false
+520;Simvastatin;Intravenous;Maximum;vulputate luctus;Once;6;true;true;ACT;system;2016-09-02 01:53:43;;2016-04-09 03:38:24;false
+521;Botrytis;Intramuscular;Medium;ac;Never;10;true;false;ACT;system;2016-06-24 10:29:40;;2016-11-11 12:39:13;false
+522;LidoPatch;Oral;Maximum;luctus;Often;3;true;false;ACT;system;2016-10-03 06:42:29;;2016-03-18 14:02:14;false
+523;good neighbor pharmacy sinus;Intravenous;Minimum;non interdum;Often;11;true;false;ACT;system;2016-11-19 10:26:31;;2016-02-07 01:25:12;false
+524;Clindamycin Hydrochloride;Intramuscular;Maximum;posuere cubilia;Daily;1;true;true;ACT;system;2016-07-12 20:33:44;;2016-03-12 03:58:37;false
+525;AQUA COLLAGEN SOLUTION EYE TREATMENT MASK;Oral;Maximum;leo maecenas;Never;8;false;true;ACT;system;2016-12-06 11:25:41;;2016-12-15 01:42:08;false
+526;Fentanyl;Intravenous;Maximum;risus;Monthly;14;false;true;ACT;system;2016-06-10 03:59:42;;2016-09-23 02:13:41;false
+527;Lisinopril and Hydrochlorothiazide;Intramuscular;Minimum;ligula pellentesque;Never;5;false;true;ACT;system;2016-04-04 11:52:47;;2016-09-26 03:35:48;false
+528;azithromycin;Oral;Maximum;suspendisse ornare;Never;15;false;false;ACT;system;2016-03-28 10:06:19;;2016-10-25 11:31:17;false
+529;Promethazine Hydrochloride;Intravenous;Medium;sit;Seldom;6;false;false;ACT;system;2016-08-14 15:35:18;;2016-06-24 09:48:47;false
+530;Isopropyl Rubbing Alcohol;Intramuscular;Medium;platea dictumst;Yearly;1;false;false;ACT;system;2016-07-17 11:32:39;;2016-03-29 21:33:04;false
+531;KHEDEZLA;Oral;Minimum;varius ut;Weekly;11;false;false;ACT;system;2016-08-27 17:09:22;;2016-05-31 08:35:22;false
+532;Lidodextrapine;Intravenous;Maximum;turpis donec;Never;10;true;true;ACT;system;2016-02-01 20:02:26;;2016-05-04 23:43:41;false
+533;PIMENTO;Intramuscular;Medium;velit id;Monthly;2;true;false;ACT;system;2016-01-23 14:20:10;;2016-09-11 10:29:02;false
+534;Sulwhasoo Lumitouch Foundation;Oral;Medium;maecenas leo;Daily;13;false;false;ACT;system;2016-02-19 21:59:06;;2016-09-11 18:33:01;false
+535;Barely Beige Oil Controlling Makeup Broad Spectrum SPF 15;Intravenous;Medium;velit vivamus;Daily;12;false;false;ACT;system;2016-08-12 12:55:46;;2016-11-05 15:08:09;false
+536;Venlafaxine Hydrochloride;Intramuscular;Maximum;ridiculus mus;Monthly;4;false;false;ACT;system;2016-11-03 14:02:52;;2016-02-11 02:49:45;false
+537;lice killing;Oral;Medium;vestibulum ante;Monthly;7;false;true;ACT;system;2016-08-24 06:10:32;;2016-02-11 11:20:23;false
+538;Flumazenil;Intravenous;Medium;duis bibendum;Often;11;true;false;ACT;system;2016-08-10 23:17:59;;2016-10-12 01:55:50;false
+539;Gold Antibacterial Hand;Intramuscular;Minimum;sed ante;Yearly;14;false;false;ACT;system;2016-06-19 02:13:05;;2016-12-08 09:26:49;false
+540;Waterless Anti-Bacterial Hand Cleanser;Oral;Minimum;erat;Often;7;true;false;ACT;system;2016-01-12 03:43:56;;2016-04-08 21:23:50;false
+541;Citalopram Hydrobromide;Intravenous;Minimum;non;Weekly;8;true;false;ACT;system;2016-03-01 03:59:08;;2016-05-03 12:32:56;false
+542;CENTER-AL - ARTEMISIA TRIDENTATA POLLEN;Intramuscular;Medium;lacinia eget;Weekly;15;false;false;ACT;system;2016-08-07 14:59:33;;2016-02-22 09:23:55;false
+543;risperidone;Oral;Medium;consectetuer;Seldom;10;true;false;ACT;system;2016-03-26 22:26:17;;2016-07-19 06:26:00;false
+544;Prednisone;Intravenous;Minimum;sapien;Yearly;6;false;true;ACT;system;2016-11-17 19:46:28;;2016-05-14 17:56:26;false
+545;HORSE HAIR AND DANDER;Intramuscular;Minimum;sed ante;Daily;8;true;false;ACT;system;2016-09-02 02:33:18;;2016-05-31 06:36:31;false
+546;Atovaquone and Proguanil Hydrochloride;Oral;Minimum;vitae;Monthly;4;false;false;ACT;system;2016-08-06 12:33:00;;2016-06-10 10:06:54;false
+547;POPULUS ALBA POLLEN;Intravenous;Medium;pretium;Yearly;11;false;false;ACT;system;2016-04-14 18:31:31;;2016-01-20 19:56:15;false
+548;Petroleum;Intramuscular;Minimum;cursus urna;Monthly;7;false;false;ACT;system;2016-08-15 18:37:25;;2016-10-02 13:04:13;false
+549;Morning Fresh;Oral;Minimum;aenean lectus;Monthly;1;false;false;ACT;system;2016-10-04 06:06:59;;2016-04-25 08:47:11;false
+550;Walgreens Sunscreen Baby;Intravenous;Maximum;orci;Once;5;false;false;ACT;system;2016-06-07 07:31:14;;2016-07-10 08:09:51;false
+551;Formu Care pain reliever;Intramuscular;Maximum;lacinia;Monthly;5;false;true;ACT;system;2016-03-28 17:27:28;;2016-11-13 20:36:41;false
+552;Ibuprofen;Oral;Minimum;quis;Daily;14;true;false;ACT;system;2016-11-18 14:39:13;;2016-10-25 20:15:08;false
+553;MEDICLEAR DUAL SPOT DAY and NIGHT;Intravenous;Medium;potenti in;Yearly;1;true;true;ACT;system;2016-02-18 06:34:25;;2016-12-10 03:55:24;false
+554;Pollens - Grasses, Bahia Grass Paspalum notatum;Intramuscular;Medium;elit ac;Once;6;true;false;ACT;system;2016-06-10 07:34:03;;2016-04-01 03:28:34;false
+555;METFORMIN HYDROCHLORIDE;Oral;Maximum;parturient montes;Once;2;true;true;ACT;system;2016-11-07 04:34:25;;2016-07-24 22:15:03;false
+556;999 GANMAOLING;Intravenous;Maximum;vulputate luctus;Yearly;8;true;false;ACT;system;2016-04-04 15:57:10;;2016-09-16 07:17:44;false
+557;CD DiorSkin Forever Compact Flawless Perfection Fusion Wear Makeup SPF 25 - 021;Intramuscular;Minimum;nullam;Daily;13;false;false;ACT;system;2016-08-15 22:59:04;;2016-12-23 05:08:18;false
+558;Antibiotic Ear (Neo/Polym/HC);Oral;Maximum;lorem;Weekly;15;false;false;ACT;system;2016-01-15 07:00:52;;2016-07-24 23:40:49;false
+559;Galantamine;Intravenous;Minimum;et;Monthly;10;true;false;ACT;system;2016-04-16 02:58:17;;2016-11-18 07:31:36;false
+560;Baclofen;Intramuscular;Medium;odio;Weekly;8;true;false;ACT;system;2016-11-18 22:16:17;;2016-01-08 00:41:19;false
+561;LANEIGE MYSTIC VEIL FOUNDATION;Oral;Minimum;quam pharetra;Monthly;14;false;true;ACT;system;2016-10-15 23:38:49;;2016-11-17 19:08:45;false
+562;White Potato;Intravenous;Maximum;eu;Seldom;12;true;false;ACT;system;2016-12-19 16:56:57;;2016-02-05 11:18:20;false
+563;elements anti aging vitamin complex;Intramuscular;Maximum;non;Yearly;13;false;true;ACT;system;2016-10-16 14:25:25;;2016-10-01 20:29:54;false
+564;Clorazepate Dipotassium;Oral;Minimum;duis;Often;10;false;true;ACT;system;2016-10-02 11:10:22;;2016-02-12 06:12:25;false
+565;Astragalus Formica;Intravenous;Maximum;duis;Weekly;15;false;true;ACT;system;2016-12-07 04:48:21;;2016-08-21 07:00:14;false
+566;STANDARDIZED MITE D PTERONYSSINUS;Intramuscular;Maximum;vulputate ut;Once;9;true;true;ACT;system;2016-03-20 08:25:06;;2016-08-08 07:21:30;false
+567;ERY-TAB;Oral;Medium;proin;Monthly;9;false;true;ACT;system;2016-03-25 21:40:28;;2016-06-10 02:09:37;false
+568;Trihexyphenidyl Hydrochloride;Intravenous;Minimum;ligula pellentesque;Seldom;2;false;true;ACT;system;2016-02-29 12:22:30;;2016-03-31 21:38:28;false
+569;Asthmaforce;Intramuscular;Minimum;integer;Yearly;12;false;false;ACT;system;2016-04-27 11:23:07;;2016-09-19 10:15:09;false
+570;Antibacterial Soap;Oral;Medium;ac tellus;Weekly;6;false;true;ACT;system;2016-10-22 10:57:23;;2016-08-18 02:21:38;false
+571;NATRUM PHOSPHORICUM;Intravenous;Maximum;risus;Once;1;false;false;ACT;system;2016-01-19 19:10:20;;2016-05-17 09:20:53;false
+572;CLINIMIX E;Intramuscular;Minimum;lectus vestibulum;Once;3;false;false;ACT;system;2016-04-23 23:19:39;;2016-10-22 04:05:29;false
+573;Tramadol Hydrochloride;Oral;Medium;nisl aenean;Seldom;12;false;true;ACT;system;2016-09-08 09:41:53;;2016-12-04 09:50:41;false
+574;Bacitracin;Intravenous;Maximum;auctor sed;Once;14;false;false;ACT;system;2016-12-16 14:52:10;;2016-03-03 07:22:24;false
+575;Acyclovir;Intramuscular;Medium;mauris;Weekly;15;true;true;ACT;system;2016-10-22 21:54:17;;2016-08-13 20:12:40;false
+576;Dextrose and Sodium Chloride;Oral;Maximum;molestie lorem;Never;7;true;true;ACT;system;2016-12-24 14:57:05;;2016-01-16 18:25:52;false
+577;fluticasone propionate;Intravenous;Minimum;posuere metus;Never;12;true;true;ACT;system;2016-10-03 02:49:09;;2016-07-26 12:48:57;false
+578;ORENCIA;Intramuscular;Medium;tortor quis;Daily;14;false;false;ACT;system;2016-04-08 02:58:27;;2016-08-30 17:30:09;false
+579;good sense pain relief;Oral;Medium;odio;Seldom;11;false;false;ACT;system;2016-05-26 12:26:00;;2016-12-17 07:47:25;false
+580;Correway Personal Lubricant;Intravenous;Maximum;orci;Never;8;false;false;ACT;system;2016-05-11 13:44:33;;2016-02-20 05:21:16;false
+581;Atorvastatin Calcium;Intramuscular;Minimum;ultrices erat;Daily;13;false;true;ACT;system;2016-04-12 13:38:06;;2016-01-04 14:44:18;false
+582;NAMICO ANTISEPTIC HAND CLEANER 557;Oral;Maximum;ac leo;Weekly;15;false;true;ACT;system;2016-10-18 06:13:20;;2016-07-12 12:20:26;false
+583;Temazepam;Intravenous;Minimum;diam;Often;4;false;true;ACT;system;2016-02-21 03:17:23;;2016-07-03 09:39:37;false
+584;Zafirlukast;Intramuscular;Minimum;lacus;Daily;6;false;false;ACT;system;2016-08-21 04:49:19;;2016-04-11 10:16:06;false
+585;Hydrocortisone;Oral;Minimum;justo aliquam;Never;1;true;false;ACT;system;2016-02-20 13:19:52;;2016-02-05 03:08:03;false
+586;Dove;Intravenous;Maximum;adipiscing;Daily;9;false;true;ACT;system;2016-02-06 19:36:27;;2016-03-27 14:51:03;false
+587;Atenolol;Intramuscular;Maximum;erat quisque;Never;7;false;false;ACT;system;2016-12-26 08:34:24;;2016-08-05 20:20:17;false
+588;Chlorpromazine Hydrochloride;Oral;Minimum;nec nisi;Once;8;true;false;ACT;system;2016-05-18 20:15:52;;2016-12-16 23:17:15;false
+589;Losartan Potassium;Intravenous;Maximum;primis;Weekly;10;true;false;ACT;system;2016-05-02 07:41:01;;2016-03-18 18:24:38;false
+590;NeutrapHor;Intramuscular;Maximum;velit;Once;14;false;false;ACT;system;2016-02-07 13:29:04;;2016-09-09 10:10:21;false
+591;Hi Vetic;Oral;Maximum;in hac;Once;4;true;false;ACT;system;2016-06-09 06:29:09;;2016-01-03 08:33:02;false
+592;HYDROCODONE BITARTRATE AND ACETAMINOPHEN;Intravenous;Medium;diam;Weekly;15;false;false;ACT;system;2016-06-30 09:33:47;;2016-04-28 05:21:12;false
+593;Number Three Oak Mixture;Intramuscular;Minimum;consequat morbi;Weekly;4;false;false;ACT;system;2016-01-19 02:08:55;;2016-05-10 04:51:41;false
+594;Levothyroxine Sodium;Oral;Minimum;rutrum ac;Weekly;3;false;true;ACT;system;2016-02-14 05:05:06;;2016-09-22 08:09:02;false
+595;Amoxicillin;Intravenous;Medium;convallis;Daily;8;true;true;ACT;system;2016-08-02 01:20:54;;2016-02-23 15:23:38;false
+596;ACTONEL;Intramuscular;Maximum;molestie lorem;Once;5;true;true;ACT;system;2016-01-02 16:30:40;;2016-10-17 16:54:02;false
+597;Heparin Sodium;Oral;Minimum;lectus pellentesque;Once;4;false;false;ACT;system;2016-12-14 02:09:53;;2016-06-07 19:36:59;false
+598;Acetaminophen and Codeine Phosphate;Intravenous;Maximum;metus sapien;Once;15;true;false;ACT;system;2016-07-24 17:40:39;;2016-05-10 10:40:01;false
+599;POPULUS DELTOIDES POLLEN;Intramuscular;Maximum;semper;Never;14;false;false;ACT;system;2016-01-24 23:44:52;;2016-03-30 02:13:44;false
+600;Molds, Rusts and Smuts, Mucor racemosus;Oral;Minimum;justo morbi;Monthly;1;true;false;ACT;system;2016-08-16 17:25:46;;2016-11-08 21:51:10;false
+601;PAXIL;Intravenous;Maximum;est;Seldom;13;true;false;ACT;system;2016-01-28 06:43:11;;2016-09-15 06:57:28;false
+602;Sodium Phosphates;Intramuscular;Minimum;tristique;Yearly;11;false;false;ACT;system;2016-08-03 01:22:16;;2016-06-15 10:05:02;false
+603;Canary Grass Pollen;Oral;Minimum;non;Yearly;6;true;false;ACT;system;2016-01-25 19:00:39;;2016-12-25 15:03:51;false
+604;Aromafields Jasmine Scented Antibacterial Hand Wash;Intravenous;Medium;mauris lacinia;Often;14;true;true;ACT;system;2016-01-11 13:06:04;;2016-10-09 05:30:43;false
+605;Celexa;Intramuscular;Maximum;magna bibendum;Seldom;6;false;true;ACT;system;2016-08-11 09:39:03;;2016-03-11 03:27:39;false
+606;Indigestion Diarrhea;Oral;Medium;rhoncus;Never;4;false;true;ACT;system;2016-12-10 11:56:48;;2016-04-05 16:58:56;false
+607;AZITHROMYCIN;Intravenous;Medium;vivamus;Once;14;false;true;ACT;system;2016-09-25 01:14:00;;2016-11-17 21:15:16;false
+608;Cramergesic;Intramuscular;Minimum;est lacinia;Yearly;13;true;true;ACT;system;2016-09-05 15:32:40;;2016-08-02 16:27:00;false
+609;Losartan Potassium;Oral;Maximum;volutpat in;Once;10;true;false;ACT;system;2016-03-28 10:12:27;;2016-06-17 00:20:33;false
+610;Bloxiverz;Intravenous;Minimum;amet cursus;Seldom;10;false;false;ACT;system;2016-12-23 06:18:08;;2016-06-23 14:56:42;false
+611;Foradil;Intramuscular;Maximum;tortor;Daily;5;true;false;ACT;system;2016-10-30 17:48:32;;2015-12-30 15:08:22;false
+612;DR. BABOR DERMA CELLULAR Detoxifying Vitamin SPF 15;Oral;Minimum;velit;Weekly;13;true;false;ACT;system;2016-10-04 08:42:49;;2016-03-13 10:37:28;false
+613;Hydrocodone Bitartrate and Acetaminophen;Intravenous;Minimum;cras in;Daily;15;true;true;ACT;system;2016-07-09 10:01:24;;2016-08-16 09:29:04;false
+614;Propranolol Hydrochloride;Intramuscular;Maximum;varius ut;Seldom;14;false;false;ACT;system;2016-04-06 12:35:00;;2016-08-19 09:30:55;false
+615;IOPE B.B.;Oral;Medium;volutpat eleifend;Once;7;false;false;ACT;system;2016-10-05 04:10:19;;2016-11-13 13:06:41;false
+616;Gelato Topical Anesthetic;Intravenous;Maximum;non;Once;10;true;true;ACT;system;2016-09-16 21:21:00;;2016-07-26 01:47:54;false
+617;Synthroid;Intramuscular;Minimum;ultrices enim;Daily;8;false;false;ACT;system;2016-03-22 02:34:58;;2016-05-19 19:39:19;false
+618;Icy Hot;Oral;Minimum;vestibulum sagittis;Seldom;15;false;false;ACT;system;2016-03-18 19:51:58;;2016-06-22 08:59:15;false
+619;NAVELBINE;Intravenous;Maximum;nullam;Daily;1;false;true;ACT;system;2016-06-06 01:44:32;;2016-10-22 14:14:18;false
+620;Meijer Daytime Severe Cold and Cough;Intramuscular;Minimum;eget massa;Never;4;false;false;ACT;system;2016-10-24 16:44:01;;2016-06-16 18:22:35;false
+621;BOTANICAL MOIST PACT;Oral;Medium;potenti;Once;5;true;true;ACT;system;2016-10-24 16:31:24;;2016-08-05 20:09:45;false
+622;Banana Boat Sport SPF 60;Intravenous;Maximum;viverra dapibus;Often;5;true;true;ACT;system;2016-10-01 05:12:36;;2016-11-30 01:36:46;false
+623;Imipenem and Cilastatin;Intramuscular;Minimum;morbi;Monthly;7;false;true;ACT;system;2016-03-22 23:48:08;;2016-04-27 12:17:22;false
+624;VITALUMIERE;Oral;Maximum;consequat dui;Yearly;4;true;false;ACT;system;2016-04-29 18:03:17;;2016-10-23 20:33:18;false
+625;TrophAmine;Intravenous;Minimum;sed;Often;4;true;true;ACT;system;2016-01-08 06:50:33;;2016-09-25 11:14:03;false
+626;dg health night time cold and flu relief;Intramuscular;Medium;morbi;Weekly;15;true;false;ACT;system;2016-02-15 13:07:06;;2016-04-30 22:30:48;false
+627;Geodon;Oral;Medium;mauris;Monthly;8;false;false;ACT;system;2015-12-29 23:55:52;;2016-04-25 21:03:53;false
+628;Captopril and Hydrochlorothiazide;Intravenous;Medium;nisl;Once;9;true;false;ACT;system;2016-08-16 21:48:00;;2016-03-24 04:40:55;false
+629;Zicam;Intramuscular;Medium;risus auctor;Daily;4;true;true;ACT;system;2016-06-29 05:07:02;;2016-11-09 13:09:28;false
+630;Antacid;Oral;Medium;luctus rutrum;Never;7;true;true;ACT;system;2016-09-06 13:38:37;;2016-09-22 18:35:05;false
+631;Indomethacin;Intravenous;Maximum;ipsum ac;Yearly;13;false;true;ACT;system;2016-10-30 07:36:56;;2016-02-23 04:48:46;false
+632;Ondansetron Hydrochloride;Intramuscular;Maximum;molestie;Daily;12;false;false;ACT;system;2016-03-03 23:15:25;;2016-07-17 10:14:29;false
+633;Blatrol Bladder Relief;Oral;Minimum;euismod scelerisque;Weekly;9;false;true;ACT;system;2016-07-31 13:02:27;;2016-11-11 07:09:41;false
+634;SHISEIDO THE SKINCARE PROTECTIVE LIP CONDITIONER;Intravenous;Medium;metus sapien;Daily;7;true;false;ACT;system;2016-03-05 14:18:21;;2016-08-31 21:33:17;false
+635;isosorbide mononitrate;Intramuscular;Maximum;neque;Monthly;8;true;true;ACT;system;2016-10-23 05:56:28;;2016-11-21 02:53:34;false
+636;SEPTAFORCE;Oral;Maximum;at lorem;Seldom;8;false;true;ACT;system;2016-05-01 03:47:30;;2016-05-08 23:41:00;false
+637;ACETAMINOPHEN AND CODEINE PHOSPHATE;Intravenous;Minimum;nullam;Monthly;11;true;false;ACT;system;2016-03-13 03:38:25;;2016-12-28 00:28:18;false
+638;DRONABINOL;Intramuscular;Minimum;blandit;Yearly;9;false;false;ACT;system;2016-09-21 15:05:31;;2016-06-08 09:36:05;false
+639;Neomycin Polymyxin B Sulfates and Dexamethasone;Oral;Minimum;ac leo;Monthly;5;false;true;ACT;system;2016-06-16 20:16:04;;2016-12-15 12:40:04;false
+640;Desmopressin Acetate;Intravenous;Minimum;in;Often;6;true;false;ACT;system;2016-01-20 07:24:16;;2016-04-23 09:07:42;false
+641;Bite Beauty SPF 15 Sheer Balm;Intramuscular;Medium;in leo;Daily;6;false;true;ACT;system;2016-04-06 03:28:00;;2016-10-05 09:47:16;false
+642;Homeopathic Trauma Formula;Oral;Minimum;curabitur at;Never;12;true;false;ACT;system;2016-06-02 00:47:15;;2016-03-06 10:30:29;false
+643;De La Cruz Sulfur Acne Medication;Intravenous;Minimum;ac neque;Monthly;11;false;true;ACT;system;2016-05-18 17:54:03;;2016-06-01 22:24:46;false
+644;Omeprazole;Intramuscular;Maximum;eget;Weekly;5;false;true;ACT;system;2016-02-28 03:12:53;;2016-04-17 23:48:22;false
+645;Quetiapine fumarate;Oral;Minimum;in consequat;Weekly;2;false;false;ACT;system;2016-02-10 17:31:30;;2016-11-03 21:41:26;false
+646;CENTER-AL - JUGLANS NIGRA POLLEN;Intravenous;Minimum;eget;Once;11;true;true;ACT;system;2016-11-28 13:18:34;;2016-05-20 02:21:02;false
+647;Gehwol Nail Protection Pen;Intramuscular;Maximum;pulvinar;Monthly;3;false;false;ACT;system;2016-10-07 15:31:31;;2016-07-15 10:27:20;false
+648;Aspirin;Oral;Maximum;ut;Never;7;false;false;ACT;system;2016-03-22 21:38:29;;2016-04-13 08:25:16;false
+649;Childrens Plus Cough and Sore Throat;Intravenous;Minimum;nisi;Daily;8;false;true;ACT;system;2016-08-13 17:02:34;;2016-01-09 08:16:05;false
+650;RITE AID RENEWAL;Intramuscular;Maximum;at nulla;Often;5;true;true;ACT;system;2016-04-01 08:47:14;;2016-05-30 14:02:03;false
+651;St. Ives;Oral;Minimum;primis in;Monthly;2;false;false;ACT;system;2016-05-04 19:19:04;;2016-09-23 07:44:36;false
+652;Venlafaxine;Intravenous;Medium;nec molestie;Yearly;1;true;true;ACT;system;2016-02-29 09:11:23;;2016-08-26 10:57:46;false
+653;Nata Komplete;Intramuscular;Medium;justo;Once;12;false;true;ACT;system;2016-07-15 23:13:11;;2016-01-19 04:08:33;false
+654;Prevantics Swab;Oral;Medium;pede;Monthly;8;true;true;ACT;system;2016-06-24 09:23:47;;2016-07-21 11:11:20;false
+655;Metoprolol Tartrate;Intravenous;Minimum;maecenas;Daily;4;false;false;ACT;system;2016-11-12 19:53:43;;2016-12-01 00:17:42;false
+656;Oxygen;Intramuscular;Minimum;quisque id;Yearly;11;false;false;ACT;system;2016-04-29 19:40:37;;2016-02-23 15:04:49;false
+657;Menopause;Oral;Maximum;ut;Often;1;true;true;ACT;system;2016-06-19 18:26:51;;2016-06-07 18:52:56;false
+658;meloxicam;Intravenous;Minimum;metus;Yearly;15;true;true;ACT;system;2016-02-20 14:53:07;;2016-03-26 06:15:38;false
+659;Emergency Eye Wash, PW, Sterile;Intramuscular;Minimum;congue diam;Monthly;7;false;true;ACT;system;2016-12-22 13:16:09;;2016-07-30 18:02:22;false
+660;Cortisonum 30 Special Order;Oral;Maximum;integer;Monthly;9;true;true;ACT;system;2016-04-03 11:28:08;;2016-06-28 12:21:05;false
+661;GNP Caldyphen;Intravenous;Minimum;tempus;Never;15;true;false;ACT;system;2016-10-18 08:56:18;;2016-12-20 18:18:30;false
+662;Antibacterial Hand - Aloe Vera;Intramuscular;Minimum;sed;Often;5;false;false;ACT;system;2016-06-30 02:42:53;;2016-06-07 00:44:13;false
+663;Midazolam Hydrochloride;Oral;Minimum;gravida;Often;13;false;false;ACT;system;2016-05-23 22:04:57;;2016-05-20 08:46:42;false
+664;Amlodipine Besylate and Benazepril Hydrochloride;Intravenous;Medium;feugiat;Once;9;true;true;ACT;system;2016-06-29 02:53:05;;2016-07-24 08:58:11;false
+665;Lidocaine Hydrochloride;Intramuscular;Minimum;viverra;Yearly;5;false;true;ACT;system;2016-08-22 05:55:07;;2016-08-13 13:32:40;false
+666;Nitrous Oxide;Oral;Minimum;quam pharetra;Weekly;12;true;false;ACT;system;2016-06-12 00:31:21;;2016-01-05 07:59:59;false
+667;Q-Tapp DM Elixir;Intravenous;Medium;justo maecenas;Seldom;4;false;false;ACT;system;2016-12-04 23:00:49;;2016-10-31 02:18:24;false
+668;Junior Acetaminophen;Intramuscular;Maximum;nulla;Yearly;5;true;true;ACT;system;2016-02-19 22:54:50;;2016-12-03 11:07:32;false
+669;FNG;Oral;Minimum;blandit nam;Often;12;false;true;ACT;system;2016-03-21 04:58:22;;2016-08-08 07:29:01;false
+670;Hydrocodone Bitartrate and Acetaminophen;Intravenous;Maximum;potenti;Monthly;3;true;true;ACT;system;2016-01-18 23:58:29;;2016-04-06 18:24:30;false
+671;Deb Med Antimicrobial Foaming Hand Wash Fragrance Free Dye Free;Intramuscular;Maximum;nulla ac;Daily;10;true;true;ACT;system;2016-11-20 13:12:14;;2016-07-08 12:50:10;false
+672;Vital-D Rx;Oral;Maximum;ipsum dolor;Often;9;false;false;ACT;system;2016-04-10 01:50:49;;2016-03-13 22:32:46;false
+673;Pain Relief;Intravenous;Minimum;etiam pretium;Never;11;false;true;ACT;system;2016-04-10 21:59:35;;2016-03-19 08:57:32;false
+674;AIL-1;Intramuscular;Maximum;in;Seldom;9;true;false;ACT;system;2016-08-03 09:55:35;;2016-02-11 21:58:01;false
+675;Lamotrigine;Oral;Medium;consectetuer adipiscing;Often;1;true;false;ACT;system;2016-02-14 00:05:53;;2016-03-25 09:15:11;false
+676;REMEDY Calazime Skin Protectant;Intravenous;Minimum;blandit;Often;7;true;false;ACT;system;2016-06-07 21:11:15;;2016-12-13 21:39:59;false
+677;Guinea Pig Epithelium;Intramuscular;Maximum;quis turpis;Seldom;6;true;false;ACT;system;2016-08-18 06:21:23;;2016-05-02 00:16:11;false
+678;Doxycycline;Oral;Medium;vel;Often;12;true;false;ACT;system;2016-11-14 13:37:28;;2016-04-30 15:56:39;false
+679;Dextroamphetamine Saccharate, Amphetamine Aspartate, Dextroamphetamine Sulfate, and Amphetamine Sulfate;Intravenous;Minimum;donec;Yearly;6;true;false;ACT;system;2016-03-02 22:28:00;;2016-05-08 10:25:03;false
+680;Methocarbamol;Intramuscular;Maximum;est;Often;15;false;false;ACT;system;2016-01-19 17:46:55;;2016-10-04 01:26:35;false
+681;Chlordiazepoxide Hydrochloride;Oral;Maximum;pede venenatis;Seldom;15;false;true;ACT;system;2016-11-16 08:05:48;;2016-05-10 07:48:18;false
+682;Mattifying Day Moisture Broad Spectrum SPF 15;Intravenous;Maximum;dapibus;Seldom;3;true;true;ACT;system;2016-04-24 13:43:09;;2016-07-13 08:16:17;false
+683;CALIFORNIA NATUREL LIP BALM;Intramuscular;Maximum;erat volutpat;Often;2;true;false;ACT;system;2016-07-16 12:04:13;;2016-05-25 00:08:38;false
+684;Sinus and Allergy PE;Oral;Medium;a pede;Once;5;true;false;ACT;system;2016-06-02 18:24:37;;2016-07-30 11:29:44;false
+685;Temozolomide;Intravenous;Maximum;elementum;Daily;13;true;true;ACT;system;2016-07-28 06:04:59;;2016-06-05 02:04:06;false
+686;equaline;Intramuscular;Minimum;aliquet;Seldom;1;true;false;ACT;system;2016-10-22 04:16:05;;2016-02-11 00:41:52;false
+687;Comfort;Oral;Minimum;vivamus;Monthly;15;true;true;ACT;system;2016-03-30 19:55:05;;2016-02-22 09:20:00;false
+688;Naproxen;Intravenous;Minimum;rutrum;Seldom;15;true;true;ACT;system;2016-12-03 17:54:07;;2016-08-06 19:15:20;false
+689;Kimchi Vitamin;Intramuscular;Minimum;eros;Seldom;3;false;true;ACT;system;2016-09-07 13:56:23;;2016-01-15 13:57:25;false
+690;Soothix Psoriasis and Seborrheic Dermatitis Formula;Oral;Medium;sit;Never;11;false;true;ACT;system;2016-06-24 16:17:12;;2016-11-28 01:58:31;false
+691;Solbar Fifty SPF50;Intravenous;Medium;et magnis;Never;14;false;true;ACT;system;2016-03-08 08:12:47;;2016-07-14 01:29:01;false
+692;K2 Cold Therapy;Intramuscular;Medium;rutrum;Never;13;false;true;ACT;system;2016-10-08 14:04:59;;2016-09-30 23:21:35;false
+693;Pain Relief;Oral;Medium;ut mauris;Daily;10;true;true;ACT;system;2016-04-23 14:56:52;;2016-03-07 17:01:31;false
+694;PreNexa;Intravenous;Maximum;et commodo;Monthly;3;true;false;ACT;system;2016-03-18 20:33:51;;2016-12-17 00:27:20;false
+695;equaline daytime cold and flu relief;Intramuscular;Maximum;ligula;Monthly;13;false;false;ACT;system;2016-12-08 09:57:37;;2016-08-21 07:03:12;false
+696;TopCare;Oral;Maximum;in;Weekly;6;true;true;ACT;system;2016-12-07 03:44:06;;2016-05-23 01:10:50;false
+697;COUMADIN;Intravenous;Maximum;montes;Monthly;2;true;false;ACT;system;2016-03-03 22:54:41;;2016-01-29 01:43:02;false
+698;Humulin;Intramuscular;Medium;aliquam;Daily;5;true;false;ACT;system;2016-03-17 06:48:17;;2016-07-20 10:32:42;false
+699;Ortho Cyclen;Oral;Maximum;cursus;Weekly;2;true;false;ACT;system;2016-08-03 00:09:38;;2016-08-07 02:22:00;false
+700;Amlodipine Besylate;Intravenous;Medium;purus aliquet;Often;7;true;false;ACT;system;2016-08-29 00:35:45;;2016-02-28 13:48:53;false
+701;Ampicillin;Intramuscular;Minimum;nibh fusce;Once;1;true;true;ACT;system;2016-05-07 15:02:34;;2016-12-13 17:33:42;false
+702;Bone Repair;Oral;Minimum;augue;Often;7;true;true;ACT;system;2016-08-09 17:54:00;;2016-09-18 00:19:25;false
+703;ZOFRAN;Intravenous;Maximum;etiam;Once;11;true;true;ACT;system;2016-07-14 08:28:02;;2016-06-25 00:04:14;false
+704;Strain Pain Relieving Cream;Intramuscular;Maximum;consectetuer adipiscing;Never;4;true;false;ACT;system;2016-06-05 20:35:47;;2016-12-08 13:06:42;false
+705;Ibuprofen;Oral;Medium;congue vivamus;Often;2;false;true;ACT;system;2016-11-14 06:34:14;;2016-08-08 17:32:56;false
+706;carvedilol;Intravenous;Medium;lacus;Monthly;7;true;false;ACT;system;2016-02-04 01:07:51;;2016-11-22 05:47:02;false
+707;Deb Med Antibacterial Foam Hand Wash;Intramuscular;Medium;nulla;Often;3;true;false;ACT;system;2016-06-23 21:46:42;;2016-07-19 20:45:59;false
+708;pain and fever;Oral;Minimum;curae donec;Yearly;14;true;true;ACT;system;2016-07-25 03:07:07;;2016-02-19 02:41:22;false
+709;Glynase;Intravenous;Maximum;lacinia;Monthly;7;true;true;ACT;system;2016-11-28 11:17:59;;2016-03-15 17:08:51;false
+710;good sense allergy and congestion relief;Intramuscular;Minimum;justo pellentesque;Seldom;3;true;true;ACT;system;2016-12-26 18:42:49;;2016-09-16 09:35:06;false
+711;Milrinone Lactate;Oral;Maximum;ut;Yearly;9;true;false;ACT;system;2016-12-05 07:06:14;;2016-07-14 18:50:32;false
+712;Ban;Intravenous;Minimum;sed sagittis;Never;12;false;false;ACT;system;2016-03-11 13:59:38;;2016-11-17 07:28:07;false
+713;Nifediac CC;Intramuscular;Maximum;risus;Yearly;5;true;true;ACT;system;2016-10-04 21:34:06;;2016-11-22 12:22:58;false
+714;Simvastatin;Oral;Minimum;at velit;Yearly;6;true;false;ACT;system;2016-12-24 09:01:08;;2016-01-26 17:27:57;false
+715;Stool Softener plus Stimulant Laxative;Intravenous;Minimum;dapibus duis;Never;14;false;false;ACT;system;2016-05-20 00:53:25;;2016-12-24 20:02:41;false
+716;Isoniazid;Intramuscular;Medium;donec;Monthly;2;false;true;ACT;system;2016-01-21 17:59:44;;2016-10-16 09:02:56;false
+717;ANTIPYRINE AND BENZOCAINE;Oral;Medium;quis orci;Yearly;1;true;false;ACT;system;2016-04-22 17:45:36;;2016-07-05 03:54:43;false
+718;clindamycin hydrochloride;Intravenous;Minimum;pellentesque ultrices;Often;12;false;false;ACT;system;2016-01-03 20:46:00;;2016-12-06 19:39:48;false
+719;Dialyvite with Zinc;Intramuscular;Maximum;sagittis sapien;Daily;13;false;false;ACT;system;2016-11-15 04:34:36;;2016-12-23 05:50:46;false
+720;Vagisil Satin;Oral;Medium;sapien;Never;10;true;true;ACT;system;2016-09-20 15:53:39;;2016-02-10 21:32:46;false
+721;VIRACEPT;Intravenous;Minimum;vestibulum proin;Monthly;3;false;true;ACT;system;2016-07-11 21:33:22;;2016-07-07 17:45:51;false
+722;Kaletra;Intramuscular;Maximum;lacus curabitur;Yearly;9;true;true;ACT;system;2016-01-21 13:44:44;;2016-01-08 10:15:30;false
+723;BYDUREON;Oral;Medium;nunc;Daily;4;false;true;ACT;system;2016-07-17 07:16:38;;2016-02-15 18:03:17;false
+724;Chlorpromazine Hydrochloride;Intravenous;Medium;quam;Monthly;4;false;false;ACT;system;2016-12-23 14:04:35;;2016-07-16 07:49:12;false
+725;HydrALAZINE Hydrochloride;Intramuscular;Maximum;dui;Never;11;true;false;ACT;system;2016-02-15 16:34:35;;2016-08-10 11:56:08;false
+726;Cimetidine;Oral;Minimum;sapien;Yearly;13;true;true;ACT;system;2016-12-05 13:43:36;;2016-12-02 08:08:08;false
+727;Danazol;Intravenous;Medium;ante;Once;6;true;false;ACT;system;2016-12-19 14:51:34;;2016-08-30 00:23:47;false
+728;Divalproex Sodium;Intramuscular;Minimum;ligula sit;Monthly;1;true;false;ACT;system;2016-02-08 09:18:57;;2016-05-19 07:13:59;false
+729;Trandolapril and Verapamil Hydrochloride;Oral;Medium;volutpat erat;Daily;3;true;true;ACT;system;2016-09-25 02:11:21;;2016-11-05 16:33:09;false
+730;Digoxin;Intravenous;Minimum;in;Weekly;3;false;false;ACT;system;2016-06-24 08:35:40;;2016-07-26 13:35:40;false
+731;Doxazosin;Intramuscular;Maximum;at velit;Often;10;true;false;ACT;system;2016-01-28 20:47:24;;2016-09-16 13:14:03;false
+732;Olive-Viate;Oral;Minimum;fusce;Never;10;true;true;ACT;system;2016-04-30 22:00:11;;2016-01-19 01:07:03;false
+733;Ampicillin;Intravenous;Medium;ligula;Seldom;6;true;false;ACT;system;2016-08-05 07:56:19;;2016-05-11 07:54:41;false
+734;CLARINS Broad Spectrum SPF 15 Sunscreen Extra-Firming Foundation Tint 113;Intramuscular;Medium;commodo placerat;Seldom;2;false;false;ACT;system;2016-06-24 11:54:37;;2016-11-16 19:08:31;false
+735;Tandem;Oral;Minimum;nulla;Never;7;true;true;ACT;system;2016-10-03 16:17:06;;2016-01-24 19:37:43;false
+736;LITHIUM CARBONATE;Intravenous;Medium;purus phasellus;Monthly;5;true;false;ACT;system;2016-02-11 12:22:59;;2016-02-12 07:28:48;false
+737;Sucralfate;Intramuscular;Maximum;nunc rhoncus;Weekly;9;true;true;ACT;system;2016-01-23 15:21:19;;2016-08-18 00:01:11;false
+738;sunmark pain reliever;Oral;Maximum;congue risus;Never;15;false;true;ACT;system;2016-02-09 08:24:42;;2016-07-11 03:34:19;false
+739;The Natural Dentist;Intravenous;Maximum;aliquam convallis;Weekly;13;false;false;ACT;system;2016-07-18 00:49:39;;2016-02-16 09:33:52;false
+740;Smart Sense Sleep Aid;Intramuscular;Maximum;platea dictumst;Once;9;true;false;ACT;system;2016-04-03 07:51:41;;2016-01-01 00:17:20;false
+741;Pain reliever PM;Oral;Medium;ligula;Daily;1;false;false;ACT;system;2016-09-14 12:13:15;;2016-04-26 09:22:19;false
+742;Detoxifier;Intravenous;Minimum;nullam;Often;3;true;false;ACT;system;2016-09-11 03:46:31;;2016-04-25 14:17:25;false
+743;Allerforce;Intramuscular;Maximum;euismod scelerisque;Daily;1;false;true;ACT;system;2016-09-01 00:32:53;;2016-03-21 00:27:42;false
+744;Losartan Potassium and Hydrochlorothiazide;Oral;Minimum;tortor;Yearly;12;true;false;ACT;system;2016-04-24 14:21:12;;2016-12-12 05:05:58;false
+745;Mango;Intravenous;Maximum;sem;Yearly;2;false;true;ACT;system;2016-03-19 04:19:16;;2016-11-09 05:16:52;false
+746;TRIPLE;Intramuscular;Minimum;volutpat in;Never;12;true;true;ACT;system;2016-02-11 03:47:26;;2016-09-14 04:01:07;false
+747;Dry Scalp Care;Oral;Minimum;suscipit ligula;Daily;6;true;true;ACT;system;2016-02-05 20:16:41;;2016-11-30 21:08:30;false
+748;Parrot Head Dedicated to Sunshine Tan Enhancer 15;Intravenous;Maximum;nunc;Often;15;true;false;ACT;system;2016-12-18 03:57:15;;2016-10-08 15:45:42;false
+749;LBEL NATURAL FINISH MOISTURIZING FOUNDATION SPF 25;Intramuscular;Minimum;quam pede;Yearly;5;true;true;ACT;system;2016-10-26 12:56:40;;2016-01-11 17:11:59;false
+750;ckone waterfresh face make up SPF 15;Oral;Maximum;donec;Weekly;13;false;false;ACT;system;2016-08-23 16:31:13;;2016-08-20 09:11:03;false
+751;ORCHID BY H E B;Intravenous;Medium;dui;Daily;1;false;true;ACT;system;2016-05-31 09:40:28;;2016-11-10 17:25:51;false
+752;LISINOPRIL AND HYDROCHLOROTHIAZIDE;Intramuscular;Medium;molestie sed;Never;5;true;true;ACT;system;2016-12-26 13:44:59;;2016-02-16 04:33:39;false
+753;Gabapentin;Oral;Maximum;quam sollicitudin;Yearly;1;false;true;ACT;system;2016-12-10 16:43:19;;2016-09-27 13:03:46;false
+754;Divalproex Sodium;Intravenous;Maximum;pulvinar lobortis;Seldom;7;false;true;ACT;system;2016-06-03 23:22:09;;2016-01-17 02:28:06;false
+755;BLATELLA GERMANICA;Intramuscular;Maximum;neque sapien;Seldom;9;true;true;ACT;system;2016-04-18 09:25:45;;2016-11-17 23:31:05;false
+756;DHC;Oral;Minimum;sapien in;Monthly;6;false;false;ACT;system;2016-06-16 11:52:50;;2016-09-14 15:22:53;false
+757;Shopko Original SPF 4 Lip Balm;Intravenous;Medium;aliquet;Seldom;2;true;true;ACT;system;2016-01-19 11:30:10;;2016-07-16 10:29:33;false
+758;Venlafaxine Hydrochloride;Intramuscular;Medium;sollicitudin mi;Daily;7;false;true;ACT;system;2016-12-19 09:10:12;;2016-02-23 23:37:37;false
+759;Triple Antibiotic Plus;Oral;Minimum;parturient;Once;12;true;false;ACT;system;2016-08-30 07:25:08;;2016-11-26 14:46:26;false
+760;Ciprofloxacin;Intravenous;Minimum;massa donec;Seldom;9;false;true;ACT;system;2016-12-20 21:15:47;;2016-07-10 01:59:18;false
+761;12 Hour Original Nasal Decongestant;Intramuscular;Maximum;dictumst morbi;Weekly;10;false;false;ACT;system;2016-07-16 21:12:19;;2016-01-20 20:29:49;false
+762;Fluconazole;Oral;Maximum;duis;Often;10;false;false;ACT;system;2016-05-16 23:59:47;;2016-01-11 00:47:44;false
+763;Sebex;Intravenous;Minimum;sed;Weekly;6;false;true;ACT;system;2016-10-18 15:42:06;;2016-12-25 11:31:30;false
+764;Sertraline Hydrochloride;Intramuscular;Maximum;nisl duis;Daily;7;false;false;ACT;system;2016-12-22 20:42:48;;2016-01-07 00:40:14;false
+765;Doxycycline Hyclate;Oral;Minimum;amet;Seldom;14;false;true;ACT;system;2016-07-27 23:21:15;;2015-12-31 02:52:45;false
+766;Cyzone;Intravenous;Maximum;luctus tincidunt;Weekly;9;false;false;ACT;system;2016-04-19 09:47:47;;2016-12-16 14:26:42;false
+767;Benefect Natural Hand Sanitizer;Intramuscular;Medium;sapien a;Daily;6;false;true;ACT;system;2016-01-06 17:17:14;;2016-08-10 23:25:19;false
+768;Body Repair Balm;Oral;Maximum;elit;Daily;1;false;true;ACT;system;2016-12-10 18:56:51;;2016-01-28 04:17:07;false
+769;promethazine hydrochloride;Intravenous;Maximum;sem duis;Seldom;5;false;true;ACT;system;2016-01-01 08:02:23;;2016-08-13 06:05:55;false
+770;Levetiracetam;Intramuscular;Medium;tempor convallis;Weekly;9;true;true;ACT;system;2016-06-25 18:54:08;;2016-12-07 06:48:57;false
+771;Vanilla Sunscreen Lip Moisturizer;Oral;Maximum;in;Once;6;false;false;ACT;system;2016-08-14 22:47:39;;2016-05-02 00:42:22;false
+772;Pfizerpen;Intravenous;Medium;fringilla rhoncus;Yearly;3;false;false;ACT;system;2015-12-31 21:27:55;;2016-03-16 07:51:24;false
+773;Prochlorperazine Maleate;Intramuscular;Maximum;est lacinia;Daily;8;false;true;ACT;system;2016-01-15 17:39:02;;2016-03-30 16:42:00;false
+774;Plan B One-Step;Oral;Medium;primis;Often;5;false;true;ACT;system;2016-10-30 23:55:59;;2016-07-11 19:17:55;false
+775;Pain Relief PM;Intravenous;Medium;quis;Yearly;6;false;true;ACT;system;2016-03-25 08:15:54;;2016-01-13 07:46:27;false
+776;oxybutynin chloride;Intramuscular;Maximum;tortor;Often;12;true;true;ACT;system;2016-05-03 03:49:42;;2016-08-29 16:13:18;false
+777;rexall bismuth;Oral;Maximum;augue;Daily;1;false;false;ACT;system;2016-04-30 14:19:36;;2016-09-14 14:20:32;false
+778;Walgreens;Intravenous;Maximum;ac;Never;7;true;false;ACT;system;2016-01-24 10:50:14;;2016-05-23 01:04:33;false
+779;UltrasolSunscreen;Intramuscular;Minimum;in lectus;Weekly;11;false;false;ACT;system;2016-10-23 20:57:01;;2016-04-24 04:07:30;false
+780;CD DIORSKIN STAR Studio Makeup Spectacular Brightening with sunscreen Broad Spectrum SPF30 033;Oral;Medium;odio;Often;10;true;false;ACT;system;2016-01-29 12:05:07;;2016-11-12 08:40:18;false
+781;Namenda;Intravenous;Medium;integer;Monthly;5;false;false;ACT;system;2016-06-26 02:31:56;;2016-07-25 01:51:16;false
+782;Metronidazole;Intramuscular;Minimum;primis;Often;7;true;true;ACT;system;2016-11-03 22:35:38;;2016-08-19 16:45:17;false
+783;Sulfamethoxazole and Trimethoprim;Oral;Maximum;molestie sed;Once;5;true;true;ACT;system;2016-05-02 21:37:16;;2016-06-09 16:29:06;false
+784;Paroxetine;Intravenous;Minimum;quis justo;Once;6;true;true;ACT;system;2016-07-22 01:28:37;;2016-07-15 15:52:29;false
+785;Banana Boat Ultra Defense Sheer Protect SPF 50;Intramuscular;Medium;in;Once;12;false;false;ACT;system;2016-12-12 19:34:29;;2016-07-30 21:50:24;false
+786;Diclofenac Sodium;Oral;Minimum;elementum;Often;2;false;false;ACT;system;2016-02-21 22:32:20;;2016-01-26 21:33:23;false
+787;Clonidine Hydrochloride;Intravenous;Medium;vulputate;Often;5;true;false;ACT;system;2016-05-07 22:00:56;;2016-12-25 19:12:35;false
+788;Alert;Intramuscular;Minimum;velit;Once;8;true;true;ACT;system;2016-05-27 23:54:15;;2016-12-12 22:40:17;false
+789;SPF30 EVERYDAY/YEAR-ROUND SUNSCREEN;Oral;Medium;lorem;Weekly;1;false;true;ACT;system;2016-08-25 01:57:53;;2016-11-28 04:06:28;false
+790;Precose;Intravenous;Minimum;libero;Monthly;13;true;true;ACT;system;2016-10-16 03:37:19;;2016-05-10 00:18:34;false
+791;PURELL Advanced Instant Hand Sanitizer Fragrance Free;Intramuscular;Minimum;ultrices aliquet;Daily;1;false;false;ACT;system;2016-07-18 05:56:24;;2016-05-19 05:09:02;false
+792;Glyburide;Oral;Medium;ac tellus;Weekly;15;false;false;ACT;system;2016-06-04 14:42:18;;2016-09-15 15:35:05;false
+793;Methylphenidate Hydrochloride;Intravenous;Medium;sapien quis;Seldom;6;true;true;ACT;system;2016-11-10 15:09:09;;2016-06-20 01:44:05;false
+794;Perphenazine;Intramuscular;Minimum;ligula;Seldom;15;false;false;ACT;system;2016-03-21 23:05:17;;2016-11-02 19:30:02;false
+795;Liver Tonic II;Oral;Minimum;ultrices;Daily;7;false;true;ACT;system;2016-08-30 21:05:42;;2016-08-09 12:23:44;false
+796;Levothyroxine Sodium;Intravenous;Maximum;potenti;Yearly;6;false;false;ACT;system;2016-01-09 19:24:29;;2016-10-07 05:56:03;false
+797;good sense day time;Intramuscular;Medium;felis;Never;7;true;false;ACT;system;2016-09-28 11:58:20;;2016-01-11 13:50:45;false
+798;Phenazopyridine Hydrochloride;Oral;Minimum;nec;Daily;14;true;true;ACT;system;2016-06-13 13:39:36;;2016-10-18 05:10:08;false
+799;Be gone Insomnia;Intravenous;Medium;duis;Weekly;3;false;false;ACT;system;2016-07-19 21:10:34;;2016-06-10 01:04:13;false
+800;Morphine sulfate;Intramuscular;Maximum;phasellus;Monthly;13;true;true;ACT;system;2016-11-17 13:33:13;;2016-03-13 02:23:16;false
+801;Sani Claw Wipes;Oral;Medium;non;Daily;1;true;true;ACT;system;2016-12-03 00:09:28;;2016-07-21 23:08:16;false
+802;Infants Silapap;Intravenous;Maximum;nisl;Once;2;true;false;ACT;system;2016-01-21 22:58:25;;2016-04-22 04:52:57;false
+803;Desmopressin Acetate;Intramuscular;Maximum;elementum eu;Daily;14;true;true;ACT;system;2016-09-22 17:03:34;;2016-10-19 23:14:27;false
+804;Theraplex;Oral;Maximum;in;Weekly;12;true;true;ACT;system;2016-11-09 06:23:41;;2016-07-12 03:45:42;false
+805;Leader Ibuprofen;Intravenous;Maximum;lorem quisque;Often;3;true;true;ACT;system;2016-02-26 23:06:41;;2016-10-07 17:23:34;false
+806;Chlorothiazide;Intramuscular;Maximum;posuere cubilia;Often;12;false;true;ACT;system;2016-07-18 02:08:03;;2016-07-29 20:04:57;false
+807;Xanax;Oral;Medium;lacus morbi;Never;3;true;false;ACT;system;2016-11-16 08:36:14;;2016-09-30 11:15:05;false
+808;Jingle Berry Scented Antibacterial Hand Sanitizer;Intravenous;Minimum;lorem id;Daily;4;true;false;ACT;system;2016-01-03 11:32:24;;2016-03-07 19:23:51;false
+809;Cetirizine Hydrochloride;Intramuscular;Maximum;mattis;Yearly;10;true;false;ACT;system;2016-10-12 00:55:40;;2016-02-23 14:03:34;false
+810;health mart antacid;Oral;Medium;vestibulum sit;Weekly;6;false;false;ACT;system;2016-10-08 02:45:02;;2016-12-01 23:42:09;false
+811;Phentermine Hydrochloride;Intravenous;Minimum;pharetra magna;Seldom;15;true;true;ACT;system;2016-04-13 18:51:40;;2016-02-17 11:02:32;false
+812;PREZISTA;Intramuscular;Minimum;dignissim;Seldom;7;true;true;ACT;system;2016-12-01 22:34:44;;2016-02-11 02:19:40;false
+813;Cytarabine;Oral;Medium;lacinia sapien;Once;10;false;false;ACT;system;2016-08-14 08:20:17;;2016-04-19 18:29:27;false
+814;Triple Antibiotic Plus Pain Relief;Intravenous;Minimum;viverra;Weekly;4;true;true;ACT;system;2016-09-25 11:08:52;;2016-01-24 05:37:30;false
+815;Indium 111 Oxyquinolone;Intramuscular;Maximum;turpis a;Never;9;false;false;ACT;system;2016-06-07 01:33:07;;2016-07-08 11:10:29;false
+816;Degree;Oral;Minimum;in;Often;11;true;false;ACT;system;2016-08-06 09:52:59;;2016-01-23 09:43:47;false
+817;Antibacterial;Intravenous;Minimum;rhoncus sed;Often;5;false;false;ACT;system;2016-11-01 13:45:22;;2016-10-30 11:48:13;false
+818;NICOTINE;Intramuscular;Maximum;aliquet pulvinar;Never;3;true;false;ACT;system;2016-09-26 15:59:03;;2016-01-10 04:23:02;false
+819;HOMATROPINE HYDROBROMIDE;Oral;Maximum;lacinia;Once;3;true;true;ACT;system;2016-01-29 04:53:01;;2016-01-22 13:25:21;false
+820;Diclofenac Sodium D/R;Intravenous;Maximum;ultrices vel;Never;11;true;false;ACT;system;2016-07-31 08:44:42;;2016-01-24 09:20:01;false
+821;Wal Phed;Intramuscular;Minimum;interdum;Once;6;true;true;ACT;system;2016-12-13 16:54:15;;2016-12-25 16:19:12;false
+822;Venlafaxine Hydrochloride;Oral;Minimum;consequat;Seldom;8;true;true;ACT;system;2016-11-20 23:18:34;;2016-08-08 21:58:25;false
+823;citroma;Intravenous;Medium;vel;Weekly;11;false;false;ACT;system;2016-09-11 10:04:54;;2016-03-11 08:00:40;false
+824;Cefprozil;Intramuscular;Medium;libero;Never;13;false;true;ACT;system;2016-01-20 11:27:20;;2016-07-25 04:19:02;false
+825;Oxacillin;Oral;Minimum;sed vel;Monthly;9;false;true;ACT;system;2016-12-18 19:43:47;;2016-09-19 18:26:51;false
+826;Temozolomide;Intravenous;Maximum;augue;Never;1;true;true;ACT;system;2016-02-18 10:44:30;;2016-01-23 03:32:39;false
+827;BAC-D Antibacterial Wound sanitizer;Intramuscular;Minimum;phasellus sit;Never;7;false;false;ACT;system;2016-08-28 13:17:57;;2016-09-20 12:08:28;false
+828;Jardiance;Oral;Medium;id ligula;Once;7;true;false;ACT;system;2016-06-10 08:50:29;;2016-08-08 10:30:45;false
+829;Prep Solution;Intravenous;Minimum;orci luctus;Never;12;true;true;ACT;system;2016-06-19 14:34:14;;2016-03-09 05:37:55;false
+830;Doxycycline;Intramuscular;Maximum;elementum pellentesque;Daily;12;true;false;ACT;system;2016-04-20 04:25:18;;2016-12-24 10:46:41;false
+831;Rheumatism;Oral;Minimum;nulla tempus;Never;14;false;true;ACT;system;2016-01-19 17:17:49;;2016-01-07 02:47:38;false
+832;Pollens - Trees, Ash, White Fraxinus americana;Intravenous;Maximum;sed ante;Yearly;10;true;false;ACT;system;2016-03-12 08:45:40;;2016-10-28 00:07:37;false
+833;Glipizide;Intramuscular;Medium;venenatis;Monthly;3;false;false;ACT;system;2016-05-10 13:19:29;;2016-11-09 17:35:51;false
+834;Anti-Bacterial Hand;Oral;Minimum;in;Once;12;false;false;ACT;system;2016-02-12 20:35:50;;2016-04-10 21:48:58;false
+835;Spinach;Intravenous;Minimum;non mi;Seldom;11;false;true;ACT;system;2016-01-03 03:40:03;;2016-05-20 12:34:59;false
+836;Salonpas pain relieving PATCH HOT;Intramuscular;Minimum;vestibulum quam;Once;14;false;true;ACT;system;2016-10-31 20:05:21;;2016-08-07 12:15:38;false
+837;ARBUTINUM;Oral;Maximum;lorem;Often;14;true;true;ACT;system;2016-08-09 16:00:39;;2016-10-22 19:28:51;false
+838;TERRASIL ANTI-FUNGAL TREATMENT;Intravenous;Maximum;sapien;Once;11;true;true;ACT;system;2016-08-16 13:37:49;;2016-01-27 16:15:55;false
+839;Metoprolol succinate;Intramuscular;Minimum;quam nec;Monthly;12;false;false;ACT;system;2016-04-17 21:39:54;;2016-08-17 04:41:59;false
+840;Gradual Self-tanning sunscreen SPF 20;Oral;Medium;pretium;Often;10;false;true;ACT;system;2016-01-30 05:12:58;;2016-06-16 06:43:27;false
+841;West Sycamore;Intravenous;Minimum;libero;Once;7;false;false;ACT;system;2016-04-25 15:51:44;;2016-04-28 15:45:13;false
+842;Clearasil Daily Clear;Intramuscular;Maximum;varius;Monthly;12;false;false;ACT;system;2016-11-12 12:36:27;;2016-02-25 17:34:25;false
+843;Body Blends Citrus Awakening Anti-bacterial Hand Sanitizer;Oral;Minimum;quis;Monthly;4;true;true;ACT;system;2016-02-29 04:46:25;;2016-03-08 19:10:20;false
+844;Childrens Allergy;Intravenous;Medium;nisi at;Daily;1;true;false;ACT;system;2016-04-19 19:06:18;;2016-05-15 18:29:09;false
+845;Antimicrobial Hand Sanitizer;Intramuscular;Medium;vestibulum sagittis;Yearly;15;true;false;ACT;system;2016-04-02 18:20:48;;2016-12-25 16:34:43;false
+846;Endoplex M;Oral;Medium;in;Monthly;10;false;true;ACT;system;2016-10-15 08:23:26;;2016-02-11 06:23:28;false
+847;Integra F;Intravenous;Maximum;lectus;Weekly;7;true;true;ACT;system;2016-01-10 00:27:42;;2016-01-10 09:19:05;false
+848;Zap APF;Intramuscular;Maximum;nulla eget;Seldom;9;true;true;ACT;system;2016-09-25 15:29:06;;2016-08-08 14:56:19;false
+849;Maprotiline Hydrochloride;Oral;Medium;posuere;Never;6;false;true;ACT;system;2016-01-15 15:12:12;;2016-06-25 07:04:59;false
+850;Nicotine Polacrilex;Intravenous;Medium;mauris;Daily;6;true;false;ACT;system;2016-03-20 18:28:53;;2016-07-21 14:12:57;false
+851;Proctocream;Intramuscular;Medium;ligula;Once;8;true;false;ACT;system;2016-07-02 03:46:45;;2016-11-13 15:02:40;false
+852;Healthy Accents Naproxen Sodium;Oral;Minimum;donec vitae;Never;8;false;true;ACT;system;2016-12-28 13:43:08;;2016-10-19 11:53:08;false
+853;ZOLPIDEM TARTRATE;Intravenous;Medium;mattis;Yearly;15;false;true;ACT;system;2016-10-05 11:28:41;;2016-02-02 23:25:32;false
+854;CLENZIDERM NORMAL TO OILY SKIN;Intramuscular;Maximum;mollis;Daily;15;true;true;ACT;system;2016-10-03 01:06:24;;2016-07-18 11:37:01;false
+855;Loratadine;Oral;Maximum;vulputate nonummy;Seldom;13;false;true;ACT;system;2016-06-05 15:41:42;;2016-10-20 14:03:25;false
+856;Haloperidol;Intravenous;Maximum;nisi at;Yearly;3;false;false;ACT;system;2016-05-22 08:57:02;;2016-08-27 00:34:53;false
+857;Chelidonium Curcuma P;Intramuscular;Minimum;primis in;Daily;5;true;false;ACT;system;2016-08-07 05:10:41;;2016-04-17 17:28:07;false
+858;Propranolol Hydrochloride;Oral;Maximum;justo eu;Seldom;15;true;true;ACT;system;2016-04-14 18:24:09;;2016-01-15 03:58:20;false
+859;PAXIL;Intravenous;Maximum;vel augue;Seldom;8;false;false;ACT;system;2016-05-12 03:49:33;;2016-08-14 04:09:42;false
+860;Desmopressin Acetate;Intramuscular;Maximum;felis eu;Often;14;false;false;ACT;system;2016-08-12 19:00:10;;2016-01-08 13:54:38;false
+861;NIGHT-TIME;Oral;Medium;sollicitudin;Daily;13;false;true;ACT;system;2016-08-14 17:55:10;;2016-11-04 21:00:22;false
+862;Ear Wax Build-Up;Intravenous;Maximum;est;Yearly;10;true;false;ACT;system;2016-09-02 22:49:36;;2016-03-26 17:52:16;false
+863;Aveeno Baby Natural Protection Sunscreen;Intramuscular;Minimum;blandit mi;Never;5;false;false;ACT;system;2016-04-23 10:43:09;;2016-04-28 12:23:00;false
+864;Sotalol Hydrochloride;Oral;Minimum;praesent blandit;Once;8;true;false;ACT;system;2016-07-15 17:50:00;;2016-03-03 09:47:47;false
+865;Orajel;Intravenous;Minimum;non mi;Weekly;9;false;false;ACT;system;2016-07-26 02:40:39;;2016-03-18 13:16:46;false
+866;Secret Clinical Strength;Intramuscular;Medium;at velit;Weekly;14;true;false;ACT;system;2016-08-22 08:09:17;;2016-04-15 21:05:24;false
+867;PreTAB;Oral;Maximum;id;Often;15;false;true;ACT;system;2016-02-26 19:59:51;;2016-12-28 07:01:22;false
+868;Moexipril Hydrochloride and Hydrochlorothiazide;Intravenous;Medium;dui;Yearly;9;true;true;ACT;system;2016-06-28 08:04:05;;2016-07-16 12:46:53;false
+869;Gambil Oak;Intramuscular;Minimum;massa;Once;8;true;true;ACT;system;2016-03-02 00:57:06;;2016-01-12 14:18:39;false
+870;Sulwhasoo SNOWISE BRIGHTENING SERUM BB;Oral;Minimum;erat;Weekly;8;true;false;ACT;system;2016-09-02 16:59:08;;2016-11-11 01:07:52;false
+871;KROGER;Intravenous;Minimum;purus;Often;15;false;false;ACT;system;2016-10-13 23:50:37;;2016-04-30 17:16:18;false
+872;Benztropine Mesylate;Intramuscular;Maximum;porttitor;Monthly;5;true;false;ACT;system;2016-09-06 05:16:45;;2016-08-22 08:32:27;false
+873;JUNIPERUS VIRGINIANA POLLEN;Oral;Minimum;nec dui;Never;11;false;false;ACT;system;2016-12-25 16:17:20;;2016-04-24 12:13:55;false
+874;Bayer Aleve;Intravenous;Medium;eget semper;Monthly;13;false;false;ACT;system;2016-03-13 09:35:03;;2016-03-14 17:38:01;false
+875;LBEL RENOVANCE JOUR Daytime Face SPF 15 All Skin Types;Intramuscular;Minimum;orci;Weekly;11;true;true;ACT;system;2016-08-19 08:36:30;;2016-10-15 17:51:52;false
+876;Illusion Tinted Moisturizer Broad Spectrum Sable;Oral;Medium;pede lobortis;Weekly;9;false;false;ACT;system;2016-08-01 05:45:24;;2016-08-22 18:26:35;false
+877;Australian Gold;Intravenous;Minimum;leo pellentesque;Never;3;false;true;ACT;system;2016-11-01 04:07:32;;2016-07-21 06:58:25;false
+878;Face Protector Broad Spectrum SPF 40;Intramuscular;Medium;ut tellus;Monthly;3;true;false;ACT;system;2016-01-22 13:43:25;;2016-12-12 09:21:59;false
+879;pravastatin sodium;Oral;Maximum;purus;Once;4;false;false;ACT;system;2016-07-14 04:07:22;;2016-04-02 03:26:48;false
+880;Valsartan and Hydrochlorothiazide;Intravenous;Minimum;eget tempus;Monthly;6;true;false;ACT;system;2016-10-07 22:48:48;;2016-03-04 20:25:57;false
+881;SODIUM SULFACETAMIDE;Intramuscular;Maximum;id;Never;8;true;false;ACT;system;2016-04-03 09:17:43;;2016-03-12 02:23:06;false
+882;Cytra-K Cystrals;Oral;Minimum;condimentum;Daily;10;false;true;ACT;system;2016-09-11 09:38:22;;2016-12-14 03:25:34;false
+883;Metformin Hydrochloride;Intravenous;Medium;sit amet;Weekly;14;false;false;ACT;system;2016-09-22 22:33:00;;2016-04-14 05:04:06;false
+884;Total Bromine;Intramuscular;Medium;amet;Weekly;15;false;true;ACT;system;2016-07-11 18:16:37;;2016-04-10 03:57:57;false
+885;Nortriptyline Hydrochloride;Oral;Minimum;ridiculus;Seldom;12;false;true;ACT;system;2016-07-12 15:18:56;;2016-08-10 07:44:21;false
+886;Citalopram;Intravenous;Maximum;amet nulla;Never;10;false;true;ACT;system;2016-05-23 11:30:38;;2016-08-12 15:13:14;false
+887;Piroxicam;Intramuscular;Maximum;ipsum primis;Seldom;9;false;false;ACT;system;2016-05-19 06:05:42;;2016-07-09 00:44:30;false
+888;Rivastigmine Tartrate;Oral;Medium;nunc purus;Often;6;true;false;ACT;system;2016-06-23 02:23:25;;2016-01-21 12:43:16;false
+889;Didanosine;Intravenous;Maximum;ultrices posuere;Never;15;true;false;ACT;system;2016-11-11 23:31:13;;2016-10-05 23:43:05;false
+890;Propranolol Hydrochloride;Intramuscular;Minimum;condimentum neque;Monthly;3;false;true;ACT;system;2016-09-07 10:58:53;;2016-06-27 20:49:34;false
+891;Lidocaine Hydrochloride;Oral;Medium;lobortis convallis;Yearly;5;true;true;ACT;system;2016-07-20 14:03:36;;2016-04-03 18:45:43;false
+892;Minocycline Hydrochloride;Intravenous;Maximum;neque;Once;4;false;false;ACT;system;2016-10-09 17:12:01;;2016-12-17 08:45:55;false
+893;Gas Relief;Intramuscular;Medium;quis;Yearly;5;true;false;ACT;system;2016-11-04 23:28:05;;2016-03-08 18:35:55;false
+894;Sephora Super Lisseur Rides SPF 15 Age Defy Moisture;Oral;Minimum;eros elementum;Daily;14;false;true;ACT;system;2016-05-16 22:12:33;;2016-05-18 18:35:57;false
+895;Allerstat;Intravenous;Maximum;velit id;Monthly;9;true;false;ACT;system;2016-12-06 23:34:07;;2016-02-28 16:35:47;false
+896;Famotidine;Intramuscular;Maximum;neque aenean;Weekly;9;true;true;ACT;system;2016-06-24 02:04:22;;2016-02-13 15:22:55;false
+897;Simvastatin;Oral;Minimum;erat curabitur;Daily;2;true;false;ACT;system;2016-07-28 07:04:48;;2016-11-12 13:01:06;false
+898;Cetirizine Hydrochloride;Intravenous;Maximum;mus;Once;13;true;false;ACT;system;2016-01-03 06:32:18;;2016-02-16 07:34:50;false
+899;THE FIRST AMPOULE ESSENCE;Intramuscular;Minimum;dapibus dolor;Daily;2;true;true;ACT;system;2016-03-25 18:18:02;;2016-03-04 13:34:40;false
+900;Cefadroxil;Oral;Maximum;purus;Yearly;1;true;true;ACT;system;2016-04-11 20:20:52;;2016-05-04 16:47:23;false
+901;Theracodophen-650;Intravenous;Minimum;sagittis;Often;4;false;true;ACT;system;2016-09-30 15:55:07;;2016-01-30 14:30:03;false
+902;Ailanthus;Intramuscular;Minimum;eros;Never;12;false;false;ACT;system;2016-05-13 13:31:37;;2016-10-31 19:37:50;false
+903;VITALUMIERE AQUA;Oral;Medium;nunc;Often;1;true;true;ACT;system;2016-06-07 09:39:53;;2016-06-26 06:28:58;false
+904;Equaline Aspirin;Intravenous;Minimum;at dolor;Yearly;14;true;true;ACT;system;2016-08-29 11:41:02;;2016-02-10 15:03:05;false
+905;GARLIC;Intramuscular;Minimum;integer non;Once;4;false;false;ACT;system;2016-06-11 13:58:54;;2016-11-23 13:29:21;false
+906;Calcipotriene;Oral;Medium;libero convallis;Once;3;false;true;ACT;system;2016-12-22 12:36:24;;2016-03-15 02:21:18;false
+907;Ibuprofen;Intravenous;Medium;blandit;Weekly;6;true;false;ACT;system;2016-07-13 21:30:13;;2016-02-18 14:25:01;false
+908;APAP;Intramuscular;Minimum;urna;Often;12;false;false;ACT;system;2016-11-22 21:51:44;;2016-09-18 21:01:27;false
+909;QUERCUS ALBA POLLEN;Oral;Maximum;cubilia curae;Often;6;false;false;ACT;system;2016-03-01 02:11:29;;2016-05-24 09:19:47;false
+910;Butalbital, Acetaminophen, and Caffeine;Intravenous;Medium;posuere;Never;3;true;false;ACT;system;2016-10-17 13:38:29;;2016-09-08 23:41:50;false
+911;Enteric Coated Asprin 81 mg;Intramuscular;Medium;morbi;Seldom;9;false;false;ACT;system;2016-07-14 00:24:36;;2016-03-12 01:45:07;false
+912;Levetiracetam;Oral;Maximum;hac;Daily;11;true;false;ACT;system;2016-07-31 01:38:25;;2016-11-19 14:34:08;false
+913;Actos;Intravenous;Medium;scelerisque;Yearly;10;true;false;ACT;system;2016-11-23 23:41:43;;2016-11-20 22:51:52;false
+914;Clostridium Difficile Remedy;Intramuscular;Medium;ante;Once;2;false;false;ACT;system;2016-10-04 12:59:58;;2016-04-07 03:26:02;false
+915;CITY BLOCK SHEER;Oral;Minimum;a;Daily;15;false;true;ACT;system;2016-10-28 06:52:30;;2016-09-02 08:08:33;false
+916;MEIJER LUBRICANT EYE DROPS;Intravenous;Maximum;purus eu;Daily;5;true;true;ACT;system;2016-04-30 14:10:04;;2016-12-06 20:29:59;false
+917;PAROXETINE HYDROCHLORIDE;Intramuscular;Minimum;adipiscing lorem;Often;10;true;true;ACT;system;2016-07-27 06:50:17;;2016-11-21 06:08:57;false
+918;Ondansetron;Oral;Maximum;et;Once;10;false;false;ACT;system;2016-11-16 01:56:30;;2016-07-27 10:33:37;false
+919;Paprika;Intravenous;Medium;justo;Monthly;5;true;false;ACT;system;2016-06-18 23:23:28;;2016-07-12 15:22:22;false
+920;ANTI BACTERIAL HAND SANITIZER;Intramuscular;Maximum;sed justo;Monthly;14;false;false;ACT;system;2016-02-27 16:05:44;;2016-04-22 01:08:18;false
+921;Viagra;Oral;Minimum;integer;Seldom;10;true;false;ACT;system;2016-07-16 03:38:25;;2016-10-15 05:16:43;false
+922;QUESTRAN;Intravenous;Minimum;mauris;Seldom;6;true;true;ACT;system;2016-07-16 13:17:25;;2016-03-03 21:49:57;false
+923;Perphenazine;Intramuscular;Medium;libero quis;Daily;3;false;true;ACT;system;2016-12-16 04:10:12;;2016-09-27 19:51:48;false
+924;Denti-Care Denti-Pro;Oral;Minimum;metus sapien;Never;13;false;true;ACT;system;2016-11-16 07:36:28;;2016-03-17 01:52:00;false
+925;Lipitor;Intravenous;Minimum;morbi sem;Monthly;9;true;false;ACT;system;2016-11-07 04:41:23;;2016-11-04 12:24:04;false
+926;diphenhydramine hydrochloride;Intramuscular;Minimum;posuere;Monthly;2;true;true;ACT;system;2016-08-02 14:02:32;;2016-01-22 01:48:10;false
+927;Western Family Hemorrhoidal;Oral;Minimum;non mi;Weekly;12;true;true;ACT;system;2016-11-05 07:26:09;;2016-06-05 06:35:08;false
+928;Montelukast Sodium;Intravenous;Maximum;hac;Never;10;false;true;ACT;system;2016-01-23 21:52:25;;2016-06-28 18:14:40;false
+929;Minitran;Intramuscular;Medium;aenean fermentum;Daily;11;false;true;ACT;system;2016-04-11 16:44:53;;2016-09-20 06:36:07;false
+930;skin elements liquid veil foundation broad spectrum SPF 25;Oral;Medium;metus arcu;Monthly;13;false;true;ACT;system;2016-08-02 01:26:28;;2016-07-15 15:05:04;false
+931;Depo-Medrol;Intravenous;Maximum;accumsan;Once;10;false;true;ACT;system;2016-02-03 23:10:04;;2016-03-08 04:56:03;false
+932;Topamax;Intramuscular;Medium;et;Yearly;6;false;true;ACT;system;2016-08-27 16:24:05;;2016-02-16 16:27:42;false
+933;Fluconazole;Oral;Maximum;lacus morbi;Once;15;false;false;ACT;system;2016-09-24 22:37:24;;2016-08-31 22:34:19;false
+934;Isosorbide;Intravenous;Maximum;congue vivamus;Once;14;true;true;ACT;system;2016-02-05 06:55:15;;2016-08-13 06:30:34;false
+935;All Day Moisture;Intramuscular;Maximum;ligula in;Yearly;15;false;false;ACT;system;2016-08-21 22:47:12;;2016-11-13 23:48:10;false
+936;Bisacodyl;Oral;Medium;molestie sed;Once;12;true;false;ACT;system;2016-09-19 01:13:58;;2016-05-13 19:56:59;false
+937;Quinapril Hydrochloride and Hydrochlorothiazide;Intravenous;Minimum;in;Never;10;true;true;ACT;system;2016-03-31 11:00:17;;2016-07-20 23:31:50;false
+938;Xalatan;Intramuscular;Minimum;ac consequat;Weekly;14;false;false;ACT;system;2016-02-01 09:40:52;;2016-11-24 00:23:24;false
+939;Nabumetone;Oral;Maximum;interdum;Weekly;10;false;false;ACT;system;2016-09-03 20:09:57;;2016-03-03 23:41:43;false
+940;Mepivacaine;Intravenous;Medium;vitae nisl;Yearly;6;true;true;ACT;system;2016-04-14 07:27:48;;2016-08-23 11:20:29;false
+941;Lisinopril;Intramuscular;Minimum;aliquet maecenas;Daily;10;false;false;ACT;system;2016-08-14 13:53:11;;2016-04-29 22:17:53;false
+942;Hydrochlorothiazide;Oral;Maximum;ut ultrices;Yearly;13;false;true;ACT;system;2016-11-06 03:07:37;;2016-06-17 08:53:39;false
+943;Derma Blemish Balm;Intravenous;Medium;ut;Once;9;false;true;ACT;system;2016-09-26 05:22:35;;2016-11-15 05:38:40;false
+944;PHOENIX HEALTHCARE SOLUTIONS, LLC;Intramuscular;Maximum;imperdiet;Often;11;false;false;ACT;system;2016-01-02 21:38:12;;2016-03-30 18:00:45;false
+945;carbidopa, levodopa and entacapone;Oral;Minimum;sed magna;Daily;14;true;false;ACT;system;2016-04-02 20:04:11;;2016-10-22 22:04:48;false
+946;LEVOFLOXACIN;Intravenous;Medium;mi;Seldom;9;false;false;ACT;system;2016-08-11 01:22:33;;2016-12-22 09:40:50;false
+947;OXYGEN;Intramuscular;Minimum;felis sed;Seldom;2;true;false;ACT;system;2016-11-09 05:11:47;;2016-01-09 18:51:06;false
+948;Shunga;Oral;Medium;fusce congue;Never;5;true;true;ACT;system;2016-09-06 01:00:25;;2016-03-17 08:15:49;false
+949;Modafinil;Intravenous;Minimum;molestie;Monthly;10;true;true;ACT;system;2016-12-20 19:10:43;;2016-08-07 17:15:11;false
+950;ALDACTAZIDE;Intramuscular;Maximum;consequat;Daily;10;false;false;ACT;system;2016-12-26 23:20:51;;2016-08-13 10:26:54;false
+951;good sense hair regrowth treatment;Oral;Minimum;vulputate justo;Often;2;false;false;ACT;system;2016-05-31 20:48:42;;2016-12-24 04:29:16;false
+952;Medi-First Burn;Intravenous;Minimum;nulla nunc;Weekly;9;true;false;ACT;system;2016-05-11 03:02:45;;2016-05-15 22:24:36;false
+953;Neomycin and Polymyxin B Sulfates and Dexamethasone;Intramuscular;Medium;eu;Yearly;2;false;false;ACT;system;2016-08-25 20:09:37;;2016-02-08 15:58:02;false
+954;Hydrochlorothiazide;Oral;Minimum;lorem ipsum;Seldom;15;true;true;ACT;system;2016-12-14 06:15:54;;2016-06-07 02:52:26;false
+955;TAMSULOSIN HYDROCHLORIDE;Intravenous;Minimum;ut;Weekly;4;true;false;ACT;system;2016-01-03 06:46:54;;2016-09-12 13:47:48;false
+956;FLURBIPROFEN;Intramuscular;Medium;mi;Daily;9;false;true;ACT;system;2016-05-05 07:09:26;;2016-09-27 11:22:07;false
+957;SohMed Alertness Aid;Oral;Maximum;vitae;Monthly;15;true;true;ACT;system;2016-03-28 18:20:31;;2016-02-19 17:55:05;false
+958;Family wellness hemorrhoidal;Intravenous;Medium;diam cras;Yearly;8;false;false;ACT;system;2016-07-26 08:47:29;;2016-07-31 19:10:32;false
+959;Tinted Moisturizer;Intramuscular;Minimum;in faucibus;Yearly;2;true;false;ACT;system;2016-02-05 18:21:28;;2016-11-18 00:42:10;false
+960;Clonidine Hydrochloride;Oral;Maximum;interdum mauris;Weekly;6;true;true;ACT;system;2016-03-18 07:13:09;;2016-01-31 13:23:39;false
+961;PROMETHAZINE HYDROCHLORIDE AND CODEINE PHOSPHATE;Intravenous;Minimum;vel;Once;2;true;false;ACT;system;2016-04-12 14:57:16;;2016-07-16 06:08:09;false
+962;Metoprolol Tartrate and Hydrochlorothiazide;Intramuscular;Medium;mauris eget;Once;2;true;false;ACT;system;2016-09-27 19:14:24;;2016-11-22 14:47:22;false
+963;Gripp-Heel;Oral;Minimum;luctus;Often;7;true;true;ACT;system;2016-05-06 11:01:30;;2016-08-09 04:43:15;false
+964;DARAPRIM;Intravenous;Medium;dis parturient;Seldom;7;false;true;ACT;system;2016-06-03 10:22:18;;2016-12-27 17:03:18;false
+965;EXTRA;Intramuscular;Minimum;faucibus;Monthly;1;true;false;ACT;system;2016-03-14 07:36:23;;2016-10-07 05:59:59;false
+966;Daytime Sinus Relief;Oral;Medium;donec;Daily;8;true;true;ACT;system;2016-06-16 04:43:15;;2016-05-15 15:40:51;false
+967;Minoxidil;Intravenous;Maximum;posuere;Daily;6;false;true;ACT;system;2016-05-21 18:29:59;;2016-06-08 14:02:12;false
+968;Western Juniper;Intramuscular;Maximum;quam suspendisse;Weekly;5;true;false;ACT;system;2016-04-05 10:50:37;;2016-02-18 18:07:39;false
+969;GDS-Calm;Oral;Medium;sagittis;Once;15;false;true;ACT;system;2016-07-07 01:54:12;;2016-10-31 18:38:58;false
+970;HYDROCORTISONE ACETATE;Intravenous;Minimum;neque duis;Once;10;false;false;ACT;system;2016-12-24 21:04:04;;2016-01-02 04:44:01;false
+971;Rizatriptan Benzoate;Intramuscular;Medium;vestibulum;Weekly;7;false;true;ACT;system;2016-11-16 15:04:24;;2016-07-09 09:11:28;false
+972;Magnesium Sulfate;Oral;Minimum;sed;Monthly;12;true;true;ACT;system;2016-01-13 14:30:40;;2016-06-30 22:25:43;false
+973;Tranylcypromine Sulfate;Intravenous;Medium;id ornare;Weekly;12;false;true;ACT;system;2016-08-22 19:29:28;;2016-09-02 12:13:35;false
+974;Lithium Carbonate;Intramuscular;Maximum;eros;Weekly;8;true;false;ACT;system;2016-07-04 12:18:54;;2016-06-02 01:38:20;false
+975;LITTLE ONES;Oral;Maximum;in tempus;Never;13;false;true;ACT;system;2016-03-05 05:22:29;;2016-08-05 14:40:13;false
+976;RITE AID NICOTINE TRANSDERMAL SYSTEM;Intravenous;Maximum;nulla sed;Never;12;true;false;ACT;system;2016-02-23 18:15:48;;2016-05-12 09:44:56;false
+977;Oxcarbazepine;Intramuscular;Medium;ut;Daily;15;false;true;ACT;system;2016-06-30 15:49:27;;2016-12-10 05:13:36;false
+978;Simvastatin;Oral;Medium;amet nulla;Often;13;true;false;ACT;system;2016-10-05 00:20:59;;2016-12-17 12:20:14;false
+979;Risperidone;Intravenous;Maximum;volutpat;Daily;3;false;false;ACT;system;2016-05-13 07:22:07;;2016-03-28 00:49:41;false
+980;Altoprev;Intramuscular;Minimum;in hac;Yearly;4;false;true;ACT;system;2016-11-02 12:03:36;;2016-06-07 09:11:05;false
+981;Antibacterial Hand Sanitizer;Oral;Medium;facilisi cras;Monthly;10;false;true;ACT;system;2016-04-06 19:52:11;;2016-03-05 04:02:01;false
+982;Hydrocodone Bitartrate and Acetaminophen Tablets;Intravenous;Medium;volutpat erat;Seldom;6;true;true;ACT;system;2016-11-07 01:57:47;;2016-11-03 19:42:26;false
+983;jane Be Beautiful;Intramuscular;Minimum;imperdiet nullam;Never;15;false;true;ACT;system;2016-02-10 20:48:01;;2016-10-10 07:40:35;false
+984;Sulfamethoxazole and Trimethoprim;Oral;Minimum;mauris vulputate;Often;10;true;true;ACT;system;2016-09-12 04:39:56;;2016-06-14 06:19:43;false
+985;Oxcarbazepine;Intravenous;Medium;consectetuer adipiscing;Yearly;10;true;false;ACT;system;2016-01-28 08:06:50;;2016-10-20 10:55:54;false
+986;Headache relief;Intramuscular;Minimum;in faucibus;Often;12;true;true;ACT;system;2016-01-12 14:40:22;;2016-03-09 18:26:18;false
+987;Klor-Con M;Oral;Minimum;fusce consequat;Monthly;5;false;false;ACT;system;2016-02-06 17:46:33;;2016-05-15 04:14:43;false
+988;PERFECTION LUMIERE;Intravenous;Medium;nulla mollis;Weekly;9;false;false;ACT;system;2016-10-30 04:07:44;;2016-11-04 21:48:59;false
+989;Alprazolam;Intramuscular;Maximum;libero;Weekly;1;false;false;ACT;system;2016-07-27 20:13:51;;2016-01-16 17:04:20;false
+990;Hello;Oral;Maximum;amet;Weekly;3;true;true;ACT;system;2016-07-20 08:31:48;;2016-05-21 17:03:57;false
+991;HEADACHE;Intravenous;Minimum;nunc purus;Daily;7;false;true;ACT;system;2016-10-13 10:31:23;;2016-01-17 10:44:09;false
+992;Korlym;Intramuscular;Minimum;tristique tortor;Daily;10;false;false;ACT;system;2016-12-02 10:49:26;;2016-03-21 07:09:05;false
+993;Listerine Advanced with Tartar Protection Antiseptic;Oral;Medium;at;Once;13;true;true;ACT;system;2016-03-28 04:23:22;;2016-01-05 02:33:43;false
+994;Medique Medi-Meclizine;Intravenous;Maximum;risus;Yearly;10;false;false;ACT;system;2016-01-29 07:24:21;;2016-03-23 05:52:37;false
+995;JETREA;Intramuscular;Minimum;cubilia curae;Seldom;3;true;false;ACT;system;2016-09-19 23:23:09;;2016-10-18 21:59:53;false
+996;Peptic Relief Cherry;Oral;Maximum;vestibulum eget;Yearly;6;true;true;ACT;system;2016-01-14 00:01:50;;2016-03-15 08:55:06;false
+997;Lisinopril and Hydrochlorothiazide;Intravenous;Medium;eget;Seldom;6;false;true;ACT;system;2016-10-29 21:34:10;;2016-05-26 05:02:35;false
+998;Oracea;Intramuscular;Medium;congue eget;Yearly;13;false;true;ACT;system;2016-02-07 02:32:02;;2016-08-16 23:56:06;false
+999;NABUMETONE;Oral;Minimum;justo lacinia;Weekly;5;false;true;ACT;system;2016-10-17 18:35:14;;2016-08-15 12:37:49;false
+1000;Reef Safe SPF 30;Intravenous;Medium;donec;Often;15;true;false;ACT;system;2016-02-03 02:09:26;;2016-10-22 20:13:43;false

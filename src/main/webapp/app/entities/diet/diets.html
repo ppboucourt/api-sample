@@ -1,0 +1,26 @@
+<div class="box-header with-border">
+    <div class="navbar-form navbar-left" style="margin-left: -15px;">
+        <button class="btn btn-primary" ng-click="vm.saveDiet()">
+            <i class="fa fa-plus-circle"></i><span> New Diet</span>
+        </button>
+    </div>
+    <div class="navbar-form navbar-right search-control">
+        <div class="text-right">
+            <div class="has-feedback input-group-sm">
+                <input type="text" class="form-control" ng-model="vm.searchQuery" size="80"
+                       id="searchQueryrpt-metadata" placeholder="Query" ng-change="vm.search()">
+                <i class="fa fa-search form-control-feedback"></i>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="box-widget">
+    <div class="row">
+        <div class="box-body">
+            <table datatable="" dt-options="vm.dtOptions" dt-columns="vm.dtColumns"
+                   dt-instance="vm.dtInstance"
+                   class="table table-striped table-bordered">
+            </table>
+        </div>
+    </div>
+</div>

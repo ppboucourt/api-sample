@@ -1,0 +1,53 @@
+.reviews-list {
+    position: relative;
+    padding: 0 15px;
+    .review-item {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid $light-gray;
+        }
+        > .table {
+            width: 100%;
+            margin-bottom: 0;
+            > tbody {
+                tr {
+                    td {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+        .action-buttons {
+             .edit-btn {
+                 margin-bottom: 50px;
+             }
+            a {
+                display: block;
+            }
+        }
+    }
+}
+
+.dash-close-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding: 2px;
+    width: 25px;
+    height: 25px;
+    top: -8px;
+    right: -8px;
+    line-height: 1;
+    color: $white;
+    background-color: $gray;
+    border: 2px solid $white;
+    border-radius: 5px;
+    box-shadow: 1px 1px rgba($black, 0.25);
+    transition: all linear 0.1s;
+    &:hover {
+        background-color: $bg-red;
+        transform: scale(1.1);
+    }
+}

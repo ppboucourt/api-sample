@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span>Evaluation Signature</span> {{vm.evaluationSignature.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Role</span></dt>
+        <dd>
+            <span>{{vm.evaluationSignature.role}}</span>
+        </dd>
+        <dt><span>Evaluation</span></dt>
+        <dd>
+            <a ui-sref="evaluation-detail({id:vm.evaluationSignature.evaluation.id})">{{vm.evaluationSignature.evaluation.id}}</a>
+        </dd>
+        <dt><span>Employee</span></dt>
+        <dd>
+            <a ui-sref="employee-detail({id:vm.evaluationSignature.employee.id})">{{vm.evaluationSignature.employee.id}}</a>
+        </dd>
+        <dt><span>Signature</span></dt>
+        <dd>
+            <a ui-sref="signature-detail({id:vm.evaluationSignature.signature.id})">{{vm.evaluationSignature.signature.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="evaluation-signature-detail.edit({id:vm.evaluationSignature.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

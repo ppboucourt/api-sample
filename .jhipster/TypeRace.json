@@ -1,0 +1,20 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160830211539",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "type_race",
+    "pagination": "no",
+    "enableEntityAudit": true
+}

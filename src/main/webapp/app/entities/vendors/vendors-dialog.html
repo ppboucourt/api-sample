@@ -1,0 +1,116 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myVendorsLabel">Create or edit a Vendors</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.vendors.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.vendors.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.vendors.company_name" for="field_company_name">Company Name</label>
+            <input type="text" class="form-control" name="company_name" id="field_company_name"
+                    ng-model="vm.vendors.company_name"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.vendors.use_this_vendor" for="field_use_this_vendor">Use This Vendor</label>
+            <input type="text" class="form-control" name="use_this_vendor" id="field_use_this_vendor"
+                    ng-model="vm.vendors.use_this_vendor"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.vendors.contact_name" for="field_contact_name">Contact Name</label>
+            <input type="text" class="form-control" name="contact_name" id="field_contact_name"
+                    ng-model="vm.vendors.contact_name"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.vendors.contact_phone" for="field_contact_phone">Contact Phone</label>
+            <input type="text" class="form-control" name="contact_phone" id="field_contact_phone"
+                    ng-model="vm.vendors.contact_phone"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_address">Address</label>
+            <input type="text" class="form-control" name="address" id="field_address"
+                    ng-model="vm.vendors.address"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.vendors.address_two" for="field_address_two">Address Two</label>
+            <input type="text" class="form-control" name="address_two" id="field_address_two"
+                    ng-model="vm.vendors.address_two"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_city">City</label>
+            <input type="text" class="form-control" name="city" id="field_city"
+                    ng-model="vm.vendors.city"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_state">State</label>
+            <input type="text" class="form-control" name="state" id="field_state"
+                    ng-model="vm.vendors.state"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_zip">Zip</label>
+            <input type="text" class="form-control" name="zip" id="field_zip"
+                    ng-model="vm.vendors.zip"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.vendors.company_phone" for="field_company_phone">Company Phone</label>
+            <input type="text" class="form-control" name="company_phone" id="field_company_phone"
+                    ng-model="vm.vendors.company_phone"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.vendors.company_fax" for="field_company_fax">Company Fax</label>
+            <input type="text" class="form-control" name="company_fax" id="field_company_fax"
+                    ng-model="vm.vendors.company_fax"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_notes">Notes</label>
+            <input type="text" class="form-control" name="notes" id="field_notes"
+                    ng-model="vm.vendors.notes"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.vendors.fax_order_number" for="field_fax_order_number">Fax Order Number</label>
+            <input type="text" class="form-control" name="fax_order_number" id="field_fax_order_number"
+                    ng-model="vm.vendors.fax_order_number"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_status">Status</label>
+            <input type="text" class="form-control" name="status" id="field_status"
+                    ng-model="vm.vendors.status"
+                    ng-maxlength="3" />
+            <div ng-show="editForm.status.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.status.$error.maxlength">
+                    This field cannot be longer than 3 characters.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

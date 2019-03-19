@@ -1,0 +1,9 @@
+.care-team {
+    .table {
+        td {
+            &:first-child {
+                width: 45%;
+            }
+        }
+    }
+}

@@ -1,0 +1,60 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "chart",
+            "otherEntityName": "chart",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "mr_no"
+        },
+        {
+            "relationshipName": "glucoseIntervention",
+            "otherEntityName": "glucoseIntervention",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "name",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "glucose"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "date",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "time",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "reading",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "type_check",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "intervention",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "notes",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "typeOfCheck",
+            "fieldType": "TypeOfCheckValues",
+            "fieldValues": "BEFORE_BREAKFAST, BEFORE_LUNCH, BEFORE_DINNER, AT_BEDTIME, FASTING_FOR_8_HOURS, FOLLOW_UP_CHECK, RANDOM_CHECK, OTHER"
+        }
+    ],
+    "changelogDate": "20160829133848",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "glucose",
+    "enableEntityAudit": true,
+    "pagination": "no"
+}

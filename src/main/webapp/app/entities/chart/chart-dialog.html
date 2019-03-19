@@ -1,0 +1,340 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myChartLabel">Create or edit a Chart</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.chart.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.chart.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.chart.ur_loc" for="field_ur_loc">Ur Loc</label>
+            <input type="text" class="form-control" name="ur_loc" id="field_ur_loc"
+                    ng-model="vm.chart.ur_loc"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.chart.admission_date" for="field_admission_date">Admission Date</label>
+                <div class="input-group">
+                    <input id="field_admission_date" type="text" class="form-control" name="admission_date" datetime-picker="{{dateformat}}" ng-model="vm.chart.admission_date" is-open="vm.datePickerOpenStatus.admission_date"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('admission_date')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.chart.discharge_time" for="field_discharge_time">Discharge Time</label>
+                <div class="input-group">
+                    <input id="field_discharge_time" type="text" class="form-control" name="discharge_time" datetime-picker="{{dateformat}}" ng-model="vm.chart.discharge_time" is-open="vm.datePickerOpenStatus.discharge_time"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('discharge_time')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.chart.discharge_to" for="field_discharge_to">Discharge To</label>
+            <input type="text" class="form-control" name="discharge_to" id="field_discharge_to"
+                    ng-model="vm.chart.discharge_to"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.chart.discharge_type" for="field_discharge_type">Discharge Type</label>
+            <input type="text" class="form-control" name="discharge_type" id="field_discharge_type"
+                    ng-model="vm.chart.discharge_type"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_program">Program</label>
+            <input type="text" class="form-control" name="program" id="field_program"
+                    ng-model="vm.chart.program"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.chart.rep_name" for="field_rep_name">Rep Name</label>
+            <input type="text" class="form-control" name="rep_name" id="field_rep_name"
+                    ng-model="vm.chart.rep_name"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_referrer">Referrer</label>
+            <input type="text" class="form-control" name="referrer" id="field_referrer"
+                    ng-model="vm.chart.referrer"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.chart.marital_status" for="field_marital_status">Marital Status</label>
+            <input type="text" class="form-control" name="marital_status" id="field_marital_status"
+                    ng-model="vm.chart.marital_status"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_phone">Phone</label>
+            <input type="text" class="form-control" name="phone" id="field_phone"
+                    ng-model="vm.chart.phone"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_race">Race</label>
+            <input type="text" class="form-control" name="race" id="field_race"
+                    ng-model="vm.chart.race"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_ethnicity">Ethnicity</label>
+            <input type="text" class="form-control" name="ethnicity" id="field_ethnicity"
+                    ng-model="vm.chart.ethnicity"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_address">Address</label>
+            <input type="text" class="form-control" name="address" id="field_address"
+                    ng-model="vm.chart.address"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.chart.address_two" for="field_address_two">Address Two</label>
+            <input type="text" class="form-control" name="address_two" id="field_address_two"
+                    ng-model="vm.chart.address_two"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_city">City</label>
+            <input type="text" class="form-control" name="city" id="field_city"
+                    ng-model="vm.chart.city"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_state">State</label>
+            <input type="text" class="form-control" name="state" id="field_state"
+                    ng-model="vm.chart.state"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_zip">Zip</label>
+            <input type="text" class="form-control" name="zip" id="field_zip"
+                    ng-model="vm.chart.zip"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.chart.payment_method" for="field_payment_method">Payment Method</label>
+            <input type="text" class="form-control" name="payment_method" id="field_payment_method"
+                    ng-model="vm.chart.payment_method"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.chart.date_first_contact" for="field_date_first_contact">Date First Contact</label>
+                <div class="input-group">
+                    <input id="field_date_first_contact" type="text" class="form-control" name="date_first_contact" datetime-picker="{{dateformat}}" ng-model="vm.chart.date_first_contact" is-open="vm.datePickerOpenStatus.date_first_contact"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('date_first_contact')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.chart.first_contact_name" for="field_first_contact_name">First Contact Name</label>
+            <input type="text" class="form-control" name="first_contact_name" id="field_first_contact_name"
+                    ng-model="vm.chart.first_contact_name"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.chart.first_contact_relationship" for="field_first_contact_relationship">First Contact Relationship</label>
+            <input type="text" class="form-control" name="first_contact_relationship" id="field_first_contact_relationship"
+                    ng-model="vm.chart.first_contact_relationship"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_occupancy">Occupancy</label>
+            <input type="text" class="form-control" name="occupancy" id="field_occupancy"
+                    ng-model="vm.chart.occupancy"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_employer">Employer</label>
+            <input type="text" class="form-control" name="employer" id="field_employer"
+                    ng-model="vm.chart.employer"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.chart.employer_phone" for="field_employer_phone">Employer Phone</label>
+            <input type="text" class="form-control" name="employer_phone" id="field_employer_phone"
+                    ng-model="vm.chart.employer_phone"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_status">Status</label>
+            <input type="text" class="form-control" name="status" id="field_status"
+                    ng-model="vm.chart.status"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.chart.mr_no" for="field_mr_no">Mr No</label>
+            <input type="text" class="form-control" name="mr_no" id="field_mr_no"
+                    ng-model="vm.chart.mr_no"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.chart.first_contact_phone" for="field_first_contact_phone">First Contact Phone</label>
+            <input type="text" class="form-control" name="first_contact_phone" id="field_first_contact_phone"
+                    ng-model="vm.chart.first_contact_phone"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.chart.alt_phone" for="field_alt_phone">Alt Phone</label>
+            <input type="text" class="form-control" name="alt_phone" id="field_alt_phone"
+                    ng-model="vm.chart.alt_phone"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_email">Email</label>
+            <input type="text" class="form-control" name="email" id="field_email"
+                    ng-model="vm.chart.email"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.chart.sobriety_date" for="field_sobriety_date">Sobriety Date</label>
+                <div class="input-group">
+                    <input id="field_sobriety_date" type="text" class="form-control" name="sobriety_date" datetime-picker="{{dateformat}}" ng-model="vm.chart.sobriety_date" is-open="vm.datePickerOpenStatus.sobriety_date"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('sobriety_date')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group" ngf-drop ngf-change="vm.setPicture($file, vm.chart)" ngf-pattern="'image/*'">
+            <label class="control-label" for="field_picture">Picture</label>
+            <div>
+                <img data-ng-src="{{'data:' + vm.chart.pictureContentType + ';base64,' + vm.chart.picture}}" style="max-height: 100px;" ng-if="vm.chart.picture"/>
+                <div ng-if="vm.chart.picture" class="help-block clearfix">
+                    <span class="pull-left">{{vm.chart.pictureContentType}}, {{vm.byteSize(vm.chart.picture)}}</span>
+                    <button type="button" ng-click="vm.chart.picture=null;vm.chart.pictureContentType=null;"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="button" ngf-select class="btn btn-default btn-block"
+                        ngf-change="vm.setPicture($file, vm.chart)" accept="image/*">
+                    Add image
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="picture" id="field_picture"
+                    ng-model="vm.chart.picture"
+                     />
+            <input type="hidden" class="form-control" name="pictureContentType" id="field_pictureContentType"
+                    ng-model="vm.chart.pictureContentType" />
+        </div>
+        <div class="form-group" ngf-drop ngf-change="vm.setPatient_license($file, vm.chart)" ngf-pattern="'image/*'">
+            <label class="control-label" data-translate="bluebookApp.chart.patient_license" for="field_patient_license">Patient License</label>
+            <div>
+                <img data-ng-src="{{'data:' + vm.chart.patient_licenseContentType + ';base64,' + vm.chart.patient_license}}" style="max-height: 100px;" ng-if="vm.chart.patient_license"/>
+                <div ng-if="vm.chart.patient_license" class="help-block clearfix">
+                    <span class="pull-left">{{vm.chart.patient_licenseContentType}}, {{vm.byteSize(vm.chart.patient_license)}}</span>
+                    <button type="button" ng-click="vm.chart.patient_license=null;vm.chart.patient_licenseContentType=null;"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="button" ngf-select class="btn btn-default btn-block"
+                        ngf-change="vm.setPatient_license($file, vm.chart)" accept="image/*">
+                    Add image
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="patient_license" id="field_patient_license"
+                    ng-model="vm.chart.patient_license"
+                     />
+            <input type="hidden" class="form-control" name="patient_licenseContentType" id="field_patient_licenseContentType"
+                    ng-model="vm.chart.patient_licenseContentType" />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.chart.one_time_only" for="field_one_time_only">One Time Only</label>
+            <input type="checkbox" class="form-control" name="one_time_only" id="field_one_time_only"
+                    ng-model="vm.chart.one_time_only"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.chart.referrer_required_contact" for="field_referrer_required_contact">Referrer Required Contact</label>
+            <input type="checkbox" class="form-control" name="referrer_required_contact" id="field_referrer_required_contact"
+                    ng-model="vm.chart.referrer_required_contact"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_waitingRoom">Waiting Room</label>
+            <input type="checkbox" class="form-control" name="waitingRoom" id="field_waitingRoom"
+                    ng-model="vm.chart.waitingRoom"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_dischargeDate">Discharge Date</label>
+                <div class="input-group">
+                    <input id="field_dischargeDate" type="text" class="form-control" name="dischargeDate" datetime-picker="{{dateformat}}" ng-model="vm.chart.dischargeDate" is-open="vm.datePickerOpenStatus.dischargeDate"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('dischargeDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+
+        <div class="form-group">
+            <label for="field_patient">Patient</label>
+            <select class="form-control" id="field_patient" name="patient" ng-model="vm.chart.patient" ng-options="patient as patient.id for patient in vm.patients track by patient.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="field_bed">Bed</label>
+            <select class="form-control" id="field_bed" name="bed" ng-model="vm.chart.bed" ng-options="bed as bed.bed_name for bed in vm.beds track by bed.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="field_employees">Employees</label>
+            <select class="form-control" id="field_employees" name="employees" ng-model="vm.chart.employees" ng-options="employee as employee.last_name for employee in vm.employees track by employee.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="field_typePatientPrograms">Type Patient Programs</label>
+            <select class="form-control" id="field_typePatientPrograms" name="typePatientPrograms" ng-model="vm.chart.typePatientPrograms" ng-options="typePatientPrograms as typePatientPrograms.name for typePatientPrograms in vm.typepatientprograms track by typePatientPrograms.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="field_typeLevelCare">Type Level Care</label>
+            <select class="form-control" id="field_typeLevelCare" name="typeLevelCare" ng-model="vm.chart.typeLevelCare" ng-options="typeLevelCare as typeLevelCare.name for typeLevelCare in vm.typelevelcares track by typeLevelCare.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="field_facility">Facility</label>
+            <select class="form-control" id="field_facility" name="facility" ng-model="vm.chart.facility" ng-options="facility as facility.facility_name for facility in vm.facilities track by facility.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="field_typeAdmissionStatus">Type Admission Status</label>
+            <select class="form-control" id="field_typeAdmissionStatus" name="typeAdmissionStatus" ng-model="vm.chart.typeAdmissionStatus" ng-options="typeAdmissionStatus as typeAdmissionStatus.name for typeAdmissionStatus in vm.typeadmissionstatuses track by typeAdmissionStatus.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="field_shifts">Shifts</label>
+            <select class="form-control" id="field_shifts" multiple name="shifts" ng-model="vm.chart.shifts" ng-options="shifts as shifts.id for shifts in vm.shifts track by shifts.id"></select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,73 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "chartConcurrentReviews",
+            "otherEntityName": "chart",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "mr_no"
+        },
+        {
+            "relationshipName": "typeLevelCare",
+            "otherEntityName": "typeLevelCare",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "authorizationDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "numberDates",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "frequency",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "startDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "endDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "lastCoverageDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "authorizationNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nextReviewDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "insuranceCompany",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "notes",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "3"
+        }
+    ],
+    "changelogDate": "20160826220255",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "concurrent_reviews",
+    "pagination": "no"
+}

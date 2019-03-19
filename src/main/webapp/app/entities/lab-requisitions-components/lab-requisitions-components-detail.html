@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span>Lab Requisitions Components</span> {{vm.labRequisitionsComponents.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Status</span></dt>
+        <dd>
+            <span>{{vm.labRequisitionsComponents.status}}</span>
+        </dd>
+        <dt><span>Lab Requisition</span></dt>
+        <dd>
+            <a ui-sref="lab-requisition-detail({id:vm.labRequisitionsComponents.labRequisition.id})">{{vm.labRequisitionsComponents.labRequisition.id}}</a>
+        </dd>
+        <dt><span>Lab Compendium</span></dt>
+        <dd>
+            <a ui-sref="lab-compendium-detail({id:vm.labRequisitionsComponents.labCompendium.id})">{{vm.labRequisitionsComponents.labCompendium.code}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="lab-requisitions-components-detail.edit({id:vm.labRequisitionsComponents.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

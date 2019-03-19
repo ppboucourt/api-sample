@@ -1,0 +1,31 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "chart",
+            "otherEntityName": "chart",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "mr_no"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "status",
+            "fieldType": "FormStatus",
+            "fieldValues": "Pending,InProcess,Finalized,Revoked"
+        },
+        {
+            "fieldName": "jsonData",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160830215957",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "chart_to_form",
+    "pagination": "no"
+}

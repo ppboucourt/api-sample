@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity TypePatientProcess.
+    -->
+    <changeSet id="20161108011925-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="type_page_id"
+                                 baseTableName="type_patient_process"
+                                 constraintName="fk_type_patient_process_type_page_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="type_page"/>
+
+        <addForeignKeyConstraint baseColumnNames="facility_id"
+                                 baseTableName="type_patient_process"
+                                 constraintName="fk_type_patient_process_facility_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="facility"/>
+
+    </changeSet>
+</databaseChangeLog>

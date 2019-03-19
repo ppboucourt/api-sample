@@ -1,0 +1,74 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "reviewBy",
+            "otherEntityName": "employee",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "firtName"
+        },
+        {
+            "relationshipName": "groupSessionDetailsChart",
+            "otherEntityName": "groupSessionDetailsChart",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "groupSessionDetails"
+        },
+        {
+            "relationshipName": "groupSession",
+            "otherEntityName": "groupSession",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "leaderEmployee",
+            "otherEntityName": "employee",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "firstName"
+        },
+        {
+            "relationshipName": "leaderSignature",
+            "otherEntityName": "signature",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "groupSessionDetails"
+        },
+        {
+            "relationshipName": "reviserSignature",
+            "otherEntityName": "signature",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "groupSessionDetails"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "start",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "finalized",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "topic",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "800"
+        },
+        {
+            "fieldName": "progress",
+            "fieldType": "Progress",
+            "fieldValues": "InProcess,PendingReview,Completed"
+        }
+    ],
+    "changelogDate": "20170113162619",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "group_session_details",
+    "pagination": "no",
+    "enableEntityAudit": true
+}

@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span>Building</span> {{vm.building.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="bluebookApp.building.building_name">Building Name</span></dt>
+        <dd>
+            <span>{{vm.building.name}}</span>
+        </dd>
+        <dt><span>Status</span></dt>
+        <dd>
+            <span>{{vm.building.status}}</span>
+        </dd>
+        <dt><span>Facility</span></dt>
+        <dd>
+            <a ui-sref="facility-detail({id:vm.building.facility.id})">{{vm.building.facility.facility_name}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="building-detail.edit({id:vm.building.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,141 @@
+<div class="box box-primary vital-dashboard" data-role="glucose">
+    <div class="box-header with-border">
+        <h3 class="box-title"><i class="fa fa-eyedropper"></i> Glucose </h3>
+        <sup><span class="badge label-success" ng-show="vm.glucoses">{{(vm.glucoses | filter: vm.filterArray).length }}</span></sup>
+        <div class="box-tools pull-right">
+            <button class="btn btn-box-tool" ng-click="vm.viewGlucoseHistory()" ng-class="{'active': vm.viewGlucoseHistoryValue}"
+                    uib-tooltip="View History" data-ng-disabled="vm.glucoses[vm.glucoses.length-1].hidden">
+                <i class="fa fa-dashboard"></i>
+            </button>
+            <button class="btn btn-box-tool" ng-click="vm.addGlucoseMeasurement()" uib-tooltip="Register Glucose">
+                <i class="fa fa-plus-circle"></i>
+            </button>
+            <button class="btn btn-box-tool" ng-click="vm.viewAllGlucoses()" ng-class="{'active': vm.allGlucoses}"
+                    uib-tooltip="All Glucoses" data-ng-disabled="vm.glucoses[vm.glucoses.length-1].hidden">
+                <i class="fa fa-list-ul"></i>
+            </button>
+            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+            </button>
+        </div>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+        <div class="box-body">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="row" ng-if="vm.glucoses && vm.glucoses.length > 0 && vm.showLastMeasure">
+                        <div class="col-xs-12" ng-show="vm.glucoses[0].createdDate">
+                            <b>Previous measurement: </b>
+                            <span class="badge label-info">
+                                <i class="fa fa-clock-o"></i>
+                                {{(vm.glucoses[0].createdDate) ? (vm.glucoses[0].createdDate | date: 'MM/dd/yyyy hh:mm a') : ' N/A'}}
+                            </span>
+                            <hr>
+                        </div>
+                        <div class="col-lg-4 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-teal">
+                                <div class="inner">
+                                    <h4>{{vm.glucoses[0].reading || 'N/A'}}</h4>
+
+                                    <p>Reading</p>
+                                </div>
+
+                                <div class="icon">
+                                    <i class="fa fa-eyedropper"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-aqua">
+                                <div class="inner">
+                                    <h4>{{vm.glucoses[0].typeOfCheck || 'N/A'}}</h4>
+
+                                    <p>Type of Check</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa fa-clock-o"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ./col -->
+                        <div class="col-lg-4 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-light-blue">
+                                <div class="inner">
+                                    <h4>{{vm.captionGlucoseInterventions() || 'N/A'}}</h4>
+
+                                    <p>Interventions</p>
+                                </div>
+
+                                <div class="icon">
+                                    <i class="fa fa-history"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ./col -->
+                    </div>
+                    <div ng-show="vm.allGlucoses">
+                        <div class="box-header with-border search-control">
+                            <div class="navbar-form navbar-right">
+                                <div class="text-right">
+                                    <div class="has-feedback input-group-sm">
+                                        <input type="text" class="form-control" ng-model="vm.searchQuery" size="80"
+                                               placeholder="Query" ng-change="vm.search()">
+                                        <i class="fa fa-search form-control-feedback"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <table datatable="" dt-options="vm.dtOptions" dt-columns="vm.dtColumns"
+                               dt-instance="vm.dtInstance" class="table table-striped table-bordered">
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="row" ng-if="vm.viewGlucoseHistoryValue">
+                <div class="col-xs-12">
+                    <hr>
+                    <div class="col-lg-1 v-center hidden-xs hidden-sm hidden-md" style="margin-top: 15px;">
+                        <h4 class="vertical-text"><i class="fa fa-filter"></i> Filters</h4>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="form-group">
+                            <label class="control-label" for="dateRangeGlucose">Date Range</label>
+                            <div class="input-group">
+                                <input id="dateRangeGlucose" date-range-picker class="form-control" type="text"
+                                       name="date" ng-model="vm.datePickerRange" options="vm.datePickerRangeOptions"
+                                       placeholder="Click to filter by date range" readonly/>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default">
+                                        <i class="glyphicon glyphicon-calendar"></i></button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="input-group">
+                            <div style="margin-top: 25px;">
+                                <button title="Clean Date Filter" type="button" class="btn btn-sm btn-danger"
+                                        data-ng-disabled="!vm.datePickerRange.startDate || !vm.datePickerRange.endDate"
+                                        ng-click="vm.cleanFilterGlucoseDate()"><i class="fa fa-eraser"></i>
+                                    <span class="">Clear Filter</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row" ng-if="vm.viewGlucoseHistoryValue">
+                <div class="col-lg-12">
+                    <hr>
+                    <nvd3 options="vm.optionsGlucose" data="vm.dataGlucose"></nvd3>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

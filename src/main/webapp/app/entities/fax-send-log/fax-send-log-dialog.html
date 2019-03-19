@@ -1,0 +1,81 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myFaxSendLogLabel">Create or edit a Fax Send Log</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.faxSendLog.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.faxSendLog.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_sid">Sid</label>
+            <input type="text" class="form-control" name="sid" id="field_sid"
+                    ng-model="vm.faxSendLog.sid"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_sendDate">Send Date</label>
+                <div class="input-group">
+                    <input id="field_sendDate" type="text" class="form-control" name="sendDate" datetime-picker="{{dateformat}}" ng-model="vm.faxSendLog.sendDate" is-open="vm.datePickerOpenStatus.sendDate"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('sendDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_faxToNumber">Fax To Number</label>
+            <input type="text" class="form-control" name="faxToNumber" id="field_faxToNumber"
+                    ng-model="vm.faxSendLog.faxToNumber"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_faxFromNumber">Fax From Number</label>
+            <input type="text" class="form-control" name="faxFromNumber" id="field_faxFromNumber"
+                    ng-model="vm.faxSendLog.faxFromNumber"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_faxState">Fax State</label>
+            <select class="form-control" name="faxState" ng-model="vm.faxSendLog.faxState" id="field_faxState">
+                <option value="QUEUED">QUEUED</option>
+                <option value="PROCESSING">PROCESSING</option>
+                <option value="SENDING">SENDING</option>
+                <option value="DELIVERED">DELIVERED</option>
+                <option value="RECEIVING">RECEIVING</option>
+                <option value="RECEIVED">RECEIVED</option>
+                <option value="NO_ANSWER" data-translate="bluebookApp.FaxState.NO_ANSWER">NO_ANSWER</option>
+                <option value="BUSY">BUSY</option>
+                <option value="FAILED">FAILED</option>
+                <option value="CANCELED">CANCELED</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_pdfUuid">Pdf Uuid</label>
+            <input type="text" class="form-control" name="pdfUuid" id="field_pdfUuid"
+                    ng-model="vm.faxSendLog.pdfUuid"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_mediaUrl">Media Url</label>
+            <input type="text" class="form-control" name="mediaUrl" id="field_mediaUrl"
+                    ng-model="vm.faxSendLog.mediaUrl"
+                     />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,64 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "patientActionPre",
+            "otherEntityName": "patientActionPre",
+            "otherEntityRelationshipName": "patientAction"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "via",
+            "otherEntityName": "via",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "chart",
+            "otherEntityName": "chart",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "employee",
+            "otherEntityName": "employee",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "signedBy",
+            "otherEntityName": "employee",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "signatureDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "actionStatus",
+            "fieldType": "PatientActionStatus",
+            "fieldValues": "CANCELED,FINISHED,SCHEDULED"
+        },
+        {
+            "fieldName": "signed",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "asNeeded",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "endDate",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "changelogDate": "20170406202714",
+    "entityTableName": "patient_action",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "enableEntityAudit": true
+}

@@ -1,0 +1,12 @@
+id;name;status;created_by;created_date;last_modified_by;last_modified_date;del_status
+1;Brother/Sister;ACT;Avictor Elia;2016-07-11 22:52:36;Georgy Brahm;2016-08-17 10:35:05;false
+2;Child;ACT;Marleen Hasted;2016-10-29 11:26:41;Tybi Ochterlony;2016-05-02 00:28:43;false
+3;Friend;ACT;Lanette Howsan;2016-07-15 13:49:45;Joshua Cornish;2016-11-25 04:52:52;false
+4;Grandparent;ACT;Kandy Shotbolt;2016-03-15 01:15:39;Gill Borzoni;2016-11-27 00:40:24;false
+5;Guarantor;ACT;Lynnell Harby;2016-03-28 21:59:55;Junina Kollach;2016-10-24 21:49:40;false
+6;Guardian;ACT;Inger Alltimes;2016-02-12 20:40:44;Jobey MacKilroe;2016-12-26 08:18:51;false
+7;Parent;ACT;Ransell Lait;2016-07-22 08:06:56;Suzann Verty;2016-04-21 08:55:17;false
+8;Probation Officer;ACT;Jewel Mecchi;2016-02-11 03:50:26;Aloysius Ballam;2016-10-20 04:06:03;false
+9;Sponsor;ACT;Fraser Arnauduc;2016-03-03 12:03:54;Jeana Withrington;2016-06-23 16:49:52;false
+10;Spouse/Partner;ACT;Mikol Cochran;2016-08-20 01:41:32;Brana Rosenbusch;2016-05-18 02:08:54;false
+11;Other;ACT;Faye Curnokk;2016-08-17 11:30:48;Eward Rylstone;2016-09-22 17:03:29;false

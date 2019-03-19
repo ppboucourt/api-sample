@@ -1,0 +1,103 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myGroupSessionDetailsLabel">Create or edit a Group Session Details</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.groupSessionDetails.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.groupSessionDetails.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_start">Start</label>
+                <div class="input-group">
+                    <input id="field_start" type="text" class="form-control" name="start" datetime-picker="{{dateformat}}" ng-model="vm.groupSessionDetails.start" is-open="vm.datePickerOpenStatus.start"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('start')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_finalized">Finalized</label>
+                <div class="input-group">
+                    <input id="field_finalized" type="text" class="form-control" name="finalized" datetime-picker="{{dateformat}}" ng-model="vm.groupSessionDetails.finalized" is-open="vm.datePickerOpenStatus.finalized"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('finalized')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_topic">Topic</label>
+            <input type="text" class="form-control" name="topic" id="field_topic"
+                    ng-model="vm.groupSessionDetails.topic"
+                    ng-maxlength="800" />
+            <div ng-show="editForm.topic.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.topic.$error.maxlength">
+                    This field cannot be longer than 800 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_progress">Progress</label>
+            <select class="form-control" name="progress" ng-model="vm.groupSessionDetails.progress" id="field_progress">
+                <option value="Start">Start</option>
+                <option value="InProgress">InProgress</option>
+                <option value="PendingReview">PendingReview</option>
+                <option value="Completed">Completed</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="field_reviewBy">Review By</label>
+            <select class="form-control" id="field_reviewBy" name="reviewBy" ng-model="vm.groupSessionDetails.reviewBy" ng-options="employee as employee.id for employee in vm.employees track by employee.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="field_groupSession">Group Session</label>
+            <select class="form-control" id="field_groupSession" name="groupSession" ng-model="vm.groupSessionDetails.groupSession" ng-options="groupSession as groupSession.id for groupSession in vm.groupsessions track by groupSession.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="field_leaderEmployee">Leader Employee</label>
+            <select class="form-control" id="field_leaderEmployee" name="leaderEmployee" ng-model="vm.groupSessionDetails.leaderEmployee" ng-options="employee as employee.firstName for employee in vm.employees track by employee.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="field_reviserEmployee">Reviser Employee</label>
+            <select class="form-control" id="field_reviserEmployee" name="reviserEmployee" ng-model="vm.groupSessionDetails.reviserEmployee" ng-options="employee as employee.firtName for employee in vm.employees track by employee.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="field_leaderSignature">Leader Signature</label>
+            <select class="form-control" id="field_leaderSignature" name="leaderSignature" ng-model="vm.groupSessionDetails.leaderSignature" ng-options="signature as signature.id for signature in vm.leadersignatures | orderBy:'id' track by signature.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="field_reviserSignature">Reviser Signature</label>
+            <select class="form-control" id="field_reviserSignature" name="reviserSignature" ng-model="vm.groupSessionDetails.reviserSignature" ng-options="signature as signature.id for signature in vm.revisersignatures | orderBy:'id' track by signature.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

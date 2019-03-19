@@ -1,0 +1,5 @@
+id;name;status;created_by;created_date;last_modified_by;last_modified_date;del_status
+1;Rule1;ACT;system;2016-03-16 12:32:47;;2016-06-11 17:30:19;false
+2;Rule2;ACT;system;2016-01-27 02:16:55;;2016-04-29 08:47:53;false
+3;Rule3;ACT;system;2016-06-26 19:01:48;;2016-06-09 15:06:24;false
+4;Rule4;ACT;system;2016-09-30 13:04:15;;2016-08-11 02:03:32;false

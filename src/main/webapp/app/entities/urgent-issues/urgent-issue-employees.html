@@ -1,0 +1,29 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+            ng-click="vm.clear()">&times;</button>
+    <h4 class="modal-title" id="myVitalsLabel">Employees who Check the Issue</h4>
+</div>
+<div class="modal-body">
+    <jhi-alert-error></jhi-alert-error>
+    <table class="table table-bordered">
+        <tbody>
+        <tr>
+            <th style="width: 10px">#</th>
+            <th>Full Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+        </tr>
+        <tr ng-repeat="item in vm.employees">
+            <td>{{$index + 1}}</td>
+            <td>{{item.firstName + ' ' + item.lastName}}</td>
+            <td>{{item.mobile}}</td>
+            <td>{{item.email}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+        <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Close</span>
+    </button>
+</div>

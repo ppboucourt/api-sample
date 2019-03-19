@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity GroupSessionDetails.
+    -->
+    <changeSet id="20170113162619-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="review_by_id"
+                                 baseTableName="group_session_details"
+                                 constraintName="fk_group_session_details_review_by_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="employee"/>
+
+        <addForeignKeyConstraint baseColumnNames="group_session_id"
+                                 baseTableName="group_session_details"
+                                 constraintName="fk_group_session_details_group_session_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="group_session"/>
+
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,46 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+            ng-click="vm.clear()">&times;</button>
+    <h4 class="modal-title" id="myPatientAccessLabel">Create Order Test</h4>
+</div>
+<div class="modal-body">
+    <jhi-alert-error></jhi-alert-error>
+    <form name="vm.form" role="form" show-validation>
+        <div class="box-body">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label class="control-label">Administer Date</label>
+                        <div class="input-group">
+                            <input id="field_staringDate" type="text" class="form-control" name="staringDate" required
+                                   datetime-picker="MM/dd/yyyy HH:mm" ng-model="vm.date"
+                                   is-open="vm.datePickerOpenStatus.staringDate"/>
+
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="vm.openCalendar('staringDate')">
+                                    <i class="glyphicon glyphicon-calendar"></i></button>
+                            </span>
+                        </div>
+                        <div ng-show="vm.form.staringDate.$invalid">
+                            <p class="help-block"
+                               ng-show="vm.form.staringDate.$error.required">
+                                This field is required.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="modal-footer">
+        <div class="pull-right">
+            <button type="button" class="btn btn-danger" ng-click="vm.clear()">Cancel</button>
+            <button type="button" class="btn btn-success"
+                    ng-disabled="vm.form.$invalid"
+                    ng-click="vm.accept()">Accept
+            </button>
+        </div>
+    </div>
+</div>
+
+

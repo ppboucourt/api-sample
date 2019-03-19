@@ -1,0 +1,41 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Unsigned Forms
+    </h1>
+    <div ncy-breadcrumb></div>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <!-- Info boxes -->
+
+    <!-- Main row -->
+    <div class="row" >
+
+        <div class="col-md-12">
+            <uib-tabset class="nav-tabs-custom" active="vm.activeTab">
+                <uib-tab index="0" select="" heading="Forms">
+                    <fieldset ng-disabled="true">
+                        <ng-include src="'app/dashboard/forms.html'"></ng-include>
+                    </fieldset>
+                </uib-tab>
+                <uib-tab index="1" select="" heading="Evaluations">
+                    <fieldset ng-disabled="true">
+                        <ng-include src="'app/dashboard/evaluations.html'"></ng-include>
+                    </fieldset>
+                </uib-tab>
+
+                <!--</uib-tab>-->
+            </uib-tabset>
+            <div>
+
+                <nvd3></nvd3>
+
+
+
+
+    </div>
+    <!-- /.col -->
+
+</section><!-- /.content -->

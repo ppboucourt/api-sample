@@ -1,0 +1,25 @@
+
+echo ""
+echo "***** New BlueBook Installation will be begin *****"
+echo "The VM should be a clean installation"
+echo "Ctrl+C for Stop. ENTER to continue"
+
+read ok
+
+if [ "$#" -ne 3 ]
+then
+  echo "Usage: ./startNewEnv DOMAINNAME TAG FTPSERVER"
+  exit 1
+fi
+
+ 
+echo "Cleaning old containers..."
+docker rm `docker ps -aq` &>/dev/null
+
+echo "Clean old images"
+bluebook=`docker images | grep itudt/bluebook | awk '{print $3}'`
+docker rmi -f $bluebook &>/dev/null
+
+
+
+./runEnv $1 $2 $3

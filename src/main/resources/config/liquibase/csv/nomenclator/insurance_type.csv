@@ -1,0 +1,11 @@
+id;name;corporation_id;del_status;created_by;created_date;last_modified_by;last_modified_date
+1;Choice Plus;1;false;system;2016-12-05 00:20:31;system;2016-07-31 21:51:35
+2;EPO;1;false;system;2016-05-24 09:55:07;system;2017-02-18 21:39:43
+3;HMO;1;false;system;2016-08-29 15:50:20;system;2016-12-01 04:00:06
+4;Open Access;1;false;system;2016-08-31 19:08:19;system;2017-03-02 08:10:44
+5;Open Access+;1;false;system;2017-04-08 16:06:45;system;2016-07-17 11:57:31
+6;Other;1;false;system;2016-12-11 19:04:29;system;2017-01-23 16:50:37
+7;POS;1;false;system;2017-03-20 16:34:21;system;2016-09-22 22:46:48
+8;POS2;1;false;system;2016-11-04 12:42:10;system;2017-03-12 04:44:41
+9;PPO;1;false;system;2017-05-02 01:16:37;system;2016-05-28 22:06:30
+10;Prescription;1;false;system;2016-07-29 03:54:32;system;2016-06-22 02:10:43

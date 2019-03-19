@@ -1,0 +1,56 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "patientOrderTest",
+            "otherEntityName": "patientOrderTest",
+            "otherEntityRelationshipName": "patientOrder"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "via",
+            "otherEntityName": "via",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "chart",
+            "otherEntityName": "chart",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "employee",
+            "otherEntityName": "employee",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "signedBy",
+            "otherEntityName": "employee",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "signatureDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "orderStatus",
+            "fieldType": "OrderStatus",
+            "fieldValues": "CANCELED,IN_PROCESS,FINISHED,SCHEDULED"
+        },
+        {
+            "fieldName": "signed",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20170102183219",
+    "entityTableName": "patient_order",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "enableEntityAudit": true
+}

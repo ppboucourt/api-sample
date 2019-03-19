@@ -1,0 +1,71 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "charts",
+            "otherEntityName": "chart",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "patient"
+        },
+        {
+            "relationshipName": "typeRace",
+            "otherEntityName": "typeRace",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "social",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "25"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "3"
+        },
+        {
+            "fieldName": "identification",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sex",
+            "fieldType": "Gender",
+            "fieldValues": "M,F"
+        },
+        {
+            "fieldName": "dateBirth",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "preferredName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "firstName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "middleName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lastName",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160825155727",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "patient",
+    "pagination": "no"
+}

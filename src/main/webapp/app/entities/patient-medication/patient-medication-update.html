@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                <h3 class="box-title">Medication {{vm.patientMedication.id}} ({{vm.patientMedication.medicationStatus}})</h3>
+            </div>
+            <jhi-alert-error></jhi-alert-error>
+            <div class="box-body">
+                <form name="vm.form.order" role="form" show-validation>
+                    <table class="table table-condensed table-striped table-bordered">
+                        <tbody>
+                        <tr>
+                            <th>Patient Name</th>
+                            <th>Obtained</th>
+                            <th>Physician</th>
+                        </tr>
+                        <tr>
+                            <td>{{vm.patientMedication.chart.patient.firstName + ' ' +
+                                (vm.patientMedication.chart.patient.middleName ? vm.patientMedication.chart.patient.middleName : '') + ' ' +
+                                vm.patientMedication.chart.patient.lastName}}</td>
+                            <td>{{vm.patientMedication.via.name}}</td>
+                            <td>{{vm.patientMedication.signedBy ? vm.patientMedication.signedBy.firstName + ' ' + vm.patientMedication.signedBy.lastName : ""}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="pull-left" ng-show="vm.patientMedication.medicationStatus == 'SCHEDULED' && vm.canCancel">
+                        <button type="button" class="btn btn-danger" ui-sref="patient-order-update.cancel({oid: vm.patientMedication.id})">Cancel Order</button>
+                    </div>
+                    <div class="pull-right">
+                        <button type="button" ng-show="vm.canSign" class="btn btn-warning" ng-click="vm.signIn()">
+                            <span class="glyphicon glyphicon-pencil"></span> <span>Sign Medication</span></button>
+                        <button type="button" ng-show="vm.canFinish" class="btn btn-danger" ui-sref="patient-order-update.finish({oid: vm.patientMedication.id})">Finish Order</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div ui-view="medications-press"></div>

@@ -1,0 +1,56 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "orders",
+            "otherEntityName": "orders",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "medication"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "medication",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "route",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dose",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "dosage_form",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "frequency",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "duration_in_days",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "prn",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "continue_on_discharge",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160901195620",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "medications",
+    "pagination": "no",
+    "enableEntityAudit": true
+}

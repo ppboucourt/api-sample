@@ -1,0 +1,49 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "icd10",
+            "otherEntityName": "icd10",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "patientMedicationPres"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "patientMedicationTake",
+            "otherEntityName": "patientMedicationTake",
+            "otherEntityRelationshipName": "patientMedicationPres"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "labCompendium",
+            "otherEntityName": "labCompendium",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "patientMedication",
+            "otherEntityName": "patientMedication",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "staringDate",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "endDate",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "changelogDate": "20170310202715",
+    "entityTableName": "patient_medication_pres",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "enableEntityAudit": true
+}

@@ -1,0 +1,60 @@
+<section class="content-header">
+    <h1>User "{{vm.user.login}}"</h1>
+    <div ncy-breadcrumb class="breadcrumb"></div>
+</section>
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <!--<div class="box-header">
+                    <span>Filter (by prefix)</span> <input type="text" ng-model="filter" class="form-control">
+                </div>-->
+                <div class="box-body">
+                    <div class="dataTables_wrapper form-inline dt-bootstrap">
+                        <div class="row">
+                            <div class="col-sm-6"></div>
+                            <div class="col-sm-6"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="table-responsive">
+                                    <dl class="dl-horizontal">
+                                        <dt><span>Login</span></dt>
+                                        <dd><span>{{vm.user.login}}</span></dd>
+                                        <dt><span>First Name</span></dt>
+                                        <dd>{{vm.user.firstName}}</dd>
+                                        <dt><span>Last Name</span></dt>
+                                        <dd>{{vm.user.lastName}}</dd>
+                                        <dt><span>Email</span></dt>
+                                        <dd>{{vm.user.email}}</dd>
+                                        <dt><span>Activated</span></dt>
+                                        <dd>{{vm.user.activated}}</dd>
+                                        <dt><span>Created By</span></dt>
+                                        <dd>{{vm.user.createdBy}}</dd>
+                                        <dt><span>Created Date</span></dt>
+                                        <dd>{{vm.user.createdDate | date:'dd/MM/yy HH:mm' }}</dd>
+                                        <dt><span>Last Modified By</span></dt>
+                                        <dd>{{vm.user.lastModifiedBy}}</dd>
+                                        <dt><span>Last Modified Date</span></dt>
+                                        <dd>{{vm.user.lastModifiedDate | date:'dd/MM/yy HH:mm'}}</dd>
+                                        <dt><span>Profiles</span></dt>
+                                        <dd>
+                                            <ul class="list-unstyled">
+                                                <li ng-repeat="authority in vm.user.authorities"><span>{{authority}}</span></li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                    <button type="submit"
+                                            ui-sref="user-management"
+                                            class="btn btn-info">
+                                        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

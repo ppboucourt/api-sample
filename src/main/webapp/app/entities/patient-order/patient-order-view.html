@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                <h3 class="box-title">Order {{vm.patientOrder.id}} ({{vm.patientOrder.ordStatus}})</h3>
+            </div>
+            <jhi-alert-error></jhi-alert-error>
+            <div class="box-body">
+                <table class="table table-condensed table-striped table-bordered">
+                    <tbody>
+                    <tr>
+                        <th>Patient Name</th>
+                        <th>Order Type</th>
+                        <th>Obtained</th>
+                        <th>Physician</th>
+                    </tr>
+                    <tr>
+                        <td>{{vm.patientOrder.patient.firstName + ' ' +
+                            (vm.patientOrder.patient.middleInitial ? vm.patientOrder.patient.middleInitial : '') + ' ' +
+                            vm.patientOrder.patient.lastName}}</td>
+                        <td>{{vm.patientOrder.orderType}}
+                        <td>{{vm.patientOrder.via.name}}</td>
+                        <td>{{vm.patientOrder.signedBy ? vm.patientOrder.signedBy.name + ' ' + vm.patientOrder.signedBy.lastName : ""}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div ui-view="order-tests"></div>

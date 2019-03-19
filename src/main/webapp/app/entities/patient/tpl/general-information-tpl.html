@@ -1,0 +1,636 @@
+<div class="row general-info">
+
+    <div class="info-block">
+        <a class="btn btn-app" uib-tooltip="Click here to navigate to 'Extra Information'"
+           ng-click="vm.gotoAnchor('extra')">
+            <i class="fa fa-plus-circle"></i> Extra Info
+        </a>
+    </div>
+    <div class="info-block">
+        <a class="btn btn-app" uib-tooltip="Click here to navigate to 'Address Information'"
+           ng-click="vm.gotoAnchor('address')">
+            <i class="fa fa-address-card"></i> Address
+        </a>
+    </div>
+
+    <div class="info-block"
+         ng-if="vm.chart.typePaymentMethods != null && vm.chart.typePaymentMethods.category == 'Insurance'">
+        <a class="btn btn-app" uib-tooltip="Click here to navigate to 'Insurance'"
+           ng-click="vm.gotoAnchor('insurance')">
+            <i class="fa fa-building"></i> Insurance
+        </a>
+    </div>
+    <div class="info-block"
+         ng-if="vm.chart.typePaymentMethods != null && vm.chart.typePaymentMethods.category == 'Insurance'">
+        <a class="btn btn-app" uib-tooltip="Click here to navigate to 'Concurrent Review'"
+           ng-click="vm.gotoAnchor('concurrent_review')">
+        <span class="badge label-info" ng-show="vm.concurrentReviewCount >= 0"
+              ng-bind="vm.concurrentReviewCount"></span>
+            <i class="fa fa-building"></i> Concurrent Review
+        </a>
+    </div>
+    <div class="info-block">
+        <a class="btn btn-app" uib-tooltip="Click here to navigate to 'Contacts'"
+           ng-click="vm.gotoAnchor('contacts')">
+            <span class="badge label-info" ng-show="vm.contactsCount >= 0" ng-bind="vm.contactsCount"></span>
+            <i class="fa fa-users"></i> Contacts
+        </a>
+    </div>
+    <div class="info-block">
+        <a class="btn btn-app" uib-tooltip="Click here to navigate to 'Care Team'"
+           ng-click="vm.gotoAnchor('care_team')">
+            <span class="badge label-info" ng-show="vm.careTeamsCount >= 0" ng-bind="vm.careTeamsCount"></span>
+            <i class="fa fa-hospital-o"></i> Care Team
+        </a>
+    </div>
+    <div class="info-block">
+        <a class="btn btn-app" uib-tooltip="Click here to navigate to 'Allergies'"
+           ng-click="vm.gotoAnchor('allergies')">
+            <span class="badge label-danger" ng-show="vm.allergiesCount >= 0" ng-bind="vm.allergiesCount"></span>
+            <i class="fa fa-medkit"></i> Allergies
+        </a>
+    </div>
+    <div class="info-block">
+        <a class="btn btn-app" uib-tooltip="Click here to navigate to 'Diets'"
+           ng-click="vm.gotoAnchor('diets')">
+            <span class="badge label-info" ng-show="vm.dietsCount >= 0" ng-bind="vm.dietsCount"></span>
+            <i class="fa fa-th-list"></i> Diets
+        </a>
+    </div>
+</div>
+
+<div class="col-xs-12" id="anchor_basic">
+
+    <div class="box box-primary">
+        <div class="box-header with-border">
+            <h3 class="box-title"><i class="fa fa-info-circle"></i> Basic Information</h3>
+
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" ng-click="vm.goToTop()" uib-tooltip="Go to top"><i
+                    class="fa fa-arrow-up"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" ui-sref="patient-edit({id: vm.chart.id})"
+                        uib-tooltip="Edit">
+                    <i class="fa fa-edit"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+            </div>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            <style>
+
+            </style>
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-sm-6 info-detail">
+                        <dl class="dl-horizontal">
+                            <dt>First name:</dt>
+                            <dd>{{vm.chart.patient ? vm.chart.patient.firstName : ''}}</dd>
+                            <dt>Last name:</dt>
+                            <dd>{{vm.chart.patient ? vm.chart.patient.lastName : ''}}</dd>
+                            <dt>Gender:</dt>
+                            <dd>
+                                <span class="pull-left badge"
+                                      ng-class="{'bg-blue': (vm.chart.patient.sex == 'MALE'), 'bg-maroon': (vm.chart.patient.sex == 'FEMALE')}">
+                                    {{vm.chart.patient ? vm.chart.patient.sex : ''}}
+                                </span>
+                            </dd>
+                            <dt>SSN:</dt>
+                            <dd>{{vm.chart.patient ? vm.chart.patient.social : ''}}</dd>
+
+                        </dl>
+                    </div>
+                    <div class="col-sm-6 info-detail">
+                        <dl class="dl-horizontal">
+                            <dt>Middle name:</dt>
+                            <dd>{{vm.chart.patient ? vm.chart.patient.middleName : ''}}</dd>
+                            <dt>Preferred name:</dt>
+                            <dd>{{vm.chart.patient ? vm.chart.patient.preferredName : ''}}</dd>
+                            <dt>Birth date:</dt>
+                            <dd>{{(vm.chart.patient ? vm.chart.patient.dateBirth : '') | date: 'MM/dd/yyyy'
+                                }}
+                            </dd>
+
+                        </dl>
+                    </div>
+                    <!-- -------------------------------------  -->
+                    <div class="clearfix"></div>
+                    <hr>
+                    <div class="col-sm-6 info-detail">
+                        <dl class="dl-horizontal">
+                            <dt>Marital Status:</dt>
+                            <dd>{{vm.chart.typeMaritalStatus ? vm.chart.typeMaritalStatus.name : ''}}</dd>
+                            <dt>Race:</dt>
+                            <dd>{{(vm.chart.patient && vm.chart.patient.typeRace) ? vm.chart.patient.typeRace.name :
+                                ''}}
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="col-sm-6 info-detail">
+                        <dl class="dl-horizontal">
+                            <dt>Ethnicity:</dt>
+                            <dd>{{vm.chart.typeEthnicity ? vm.chart.typeEthnicity.name : ''}}</dd>
+
+                        </dl>
+                    </div>
+                    <!-- -------------------------------------  -->
+                    <div class="clearfix"></div>
+                    <hr>
+                    <div class="col-sm-6 info-detail">
+                        <dl class="dl-horizontal">
+                            <dt>Payment Method:</dt>
+                            <dd>{{vm.chart.typePaymentMethods ? vm.chart.typePaymentMethods.name : ''}}</dd>
+                        </dl>
+                    </div>
+                    <div class="col-sm-6 info-detail">
+                        <dl class="dl-horizontal">
+
+                        </dl>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--Extra Information-->
+<div class="col-xs-12" id="anchor_extra">
+
+    <div class="box box-primary">
+        <div class="box-header with-border">
+            <h3 class="box-title"><i class="fa fa-plus-circle"></i> Extra Information</h3>
+
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" ng-click="vm.goToTop()" uib-tooltip="Go to top"><i
+                    class="fa fa-arrow-up"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" ui-sref="patient-edit({id: vm.chart.id})"
+                        uib-tooltip="Edit">
+                    <i class="fa fa-edit"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+            </div>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            <style>
+
+            </style>
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-sm-6 info-detail">
+                        <dl class="dl-horizontal">
+                            <dt>Rep On Intake:</dt>
+                            <dd>{{vm.chart.repName}}</dd>
+                            <dt>First Contact Name:</dt>
+                            <dd>{{vm.chart.firstContactName}}</dd>
+                            <dt>First Contact Phone:</dt>
+                            <dd>{{(vm.chart.firstContactPhone && !isNaN(vm.chart.firstContactPhone)) ?
+                                vm.chart.firstContactPhone : ''}}
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="col-sm-6 info-detail">
+                        <dl class="dl-horizontal">
+                            <dt>Date First Contact:</dt>
+                            <dd>{{vm.chart.dateFirstContact | date: 'MM/dd/yyyy'}}</dd>
+                            <dt>First Contact Relationship:</dt>
+                            <dd>{{vm.chart.firstContactRelationship}}</dd>
+
+                        </dl>
+                    </div>
+                    <!-- -------------------------------------  -->
+                    <div class="clearfix"></div>
+                    <hr>
+                    <div class="col-sm-6 info-detail">
+                        <dl class="dl-horizontal">
+                            <dt>Level of Care:</dt>
+                            <dd>{{vm.chart.typeLevelCare ? vm.chart.typeLevelCare.name : ''}}
+                                <span class="badge label-info" ng-if="vm.chart.loc.daysLoc">
+                                    {{ vm.chart.loc.daysLoc}} Day(s)
+                                </span>
+                            </dd>
+
+                        </dl>
+                    </div>
+                    <div class="col-sm-6 info-detail">
+                        <dl class="dl-horizontal">
+                            <dt>Diagnosis(ICD10):</dt>
+                            <dd>
+                                <span class="pull-left badge bg-green"
+                                      ng-repeat="item in vm.chart.icd10S track by item.id">
+                                    {{item.code}}
+                                </span>
+                            </dd>
+
+                        </dl>
+                    </div>
+                    <!-- -------------------------------------  -->
+                    <div class="clearfix"></div>
+                    <hr>
+                    <div class="col-sm-6 info-detail">
+                        <dl class="dl-horizontal">
+                            <dt>Admission Date:</dt>
+                            <dd>{{vm.chart.admissionDate | date: 'MM/dd/yyyy'}}</dd>
+                        </dl>
+                    </div>
+                    <div class="col-sm-6 info-detail">
+                        <dl class="dl-horizontal">
+                            <dt>Referrer:</dt>
+                            <dd>{{vm.chart.referrer}}</dd>
+
+                        </dl>
+                    </div>
+                    <!-- -------------------------------------  -->
+                    <div class="clearfix"></div>
+                    <hr>
+                    <div class="col-sm-6 info-detail">
+                        <dl class="dl-horizontal">
+                            <dt>Discharge Date:</dt>
+                            <dd>{{vm.chart.dischargeDate | date: 'MM/dd/yyyy'}}</dd>
+                            <dt>Discharge Type:</dt>
+                            <dd>{{vm.chart.typeDischargeType ? vm.chart.typeDischargeType.name : ''}}</dd>
+                        </dl>
+                    </div>
+                    <div class="col-sm-6 info-detail">
+                        <dl class="dl-horizontal">
+                            <dt>Discharge To:</dt>
+                            <dd>{{vm.chart.dischargeTo}}</dd>
+                            <dt>One time only:</dt>
+                            <dd>
+                                <span class="pull-left badge"
+                                      ng-class="{'bg-red': !vm.chart.oneTimeOnly, 'bg-blue': vm.chart.oneTimeOnly}">
+                                    {{vm.chart.oneTimeOnly ? 'YES' : 'NO'}}
+                                </span>
+                            </dd>
+
+                        </dl>
+                    </div>
+                    <!-- -------------------------------------  -->
+                    <div class="clearfix"></div>
+                    <hr>
+                    <div class="col-sm-6 info-detail">
+                        <dl class="dl-horizontal">
+                            <dt>Occupation:</dt>
+                            <dd>{{vm.chart.occupancy}}</dd>
+                            <dt>Employer Phone:</dt>
+                            <dd>{{(vm.chart.employerPhone && !isNaN(vm.chart.employerPhone)) ? vm.chart.employerPhone :
+                                ''}}
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="col-sm-6 info-detail">
+                        <dl class="dl-horizontal">
+                            <dt>Employer Name:</dt>
+                            <dd>{{vm.chart.employer}}</dd>
+
+                        </dl>
+                    </div>
+                    <!-- -------------------------------------  -->
+                    <div class="clearfix"></div>
+                    <hr>
+                    <div class="col-sm-6 info-detail">
+                        <dl class="dl-horizontal">
+                            <dt>Sobriety Date:</dt>
+                            <dd>{{vm.chart.sobrietyDate | date: 'MM/dd/yyyy'}}</dd>
+                        </dl>
+                    </div>
+                    <div class="col-sm-6 info-detail">
+                        <dl class="dl-horizontal">
+                            <dt>Bed:</dt>
+                            <dd>{{vm.chart.bed ? vm.chart.bed.name : ''}}</dd>
+
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Address box -->
+<div class="col-xs-12" id="anchor_address">
+    <div class="box box-primary">
+        <div class="box-header with-border">
+            <h3 class="box-title"><i class="fa fa-address-card"></i> Address</h3>
+
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" ng-click="vm.goToTop()" uib-tooltip="Go to top"><i
+                    class="fa fa-arrow-up"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" ui-sref="patient-edit({id: vm.chart.id})"
+                        uib-tooltip="Edit"><i class="fa fa-edit"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+            </div>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-sm-6 info-detail">
+                        <dl class="dl-horizontal">
+                            <dt>Street:</dt>
+                            <dd>{{vm.chart.address}}</dd>
+                            <dt>City:</dt>
+                            <dd>{{vm.chart.city}}</dd>
+                            <dt>Zip:</dt>
+                            <dd>{{vm.chart.zip}}</dd>
+                            <dt>Alternative Phone:</dt>
+                            <dd>{{(vm.chart.altPhone && !isNaN(vm.chart.altPhone)) ? vm.chart.altPhone : ''}}</dd>
+
+                        </dl>
+                    </div>
+                    <div class="col-sm-6 info-detail">
+                        <dl class="dl-horizontal">
+                            <dt>Street Two:</dt>
+                            <dd>{{vm.chart.addressTwo || ' - '}}</dd>
+                            <dt>State:</dt>
+                            <dd>{{vm.chart.state}}</dd>
+                            <dt>Phone:</dt>
+                            <dd>{{(vm.chart.phone && !isNaN(vm.chart.phone)) ? vm.chart.phone : ''}}</dd>
+                            <dt>Email:</dt>
+                            <dd>{{vm.chart.email}}</dd>
+
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Insurance box -->
+<div class="col-xs-12" id="anchor_insurance"
+     ng-if="vm.chart.typePaymentMethods != null && vm.chart.typePaymentMethods.category == 'Insurance'">
+    <div class="box box-primary">
+        <div class="box-header with-border">
+            <h3 class="box-title"><i class="fa fa-building"></i> Insurance</h3>
+
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" ng-click="vm.goToTop()" uib-tooltip="Go to top"><i
+                    class="fa fa-arrow-up"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" ui-sref="patient-edit({id: vm.chart.id})"
+                        uib-tooltip="Edit"><i class="fa fa-edit"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+            </div>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            <div class="box-body">
+                <div class="row" ng-repeat="insurance in vm.chart.insurances">
+                    <div class="col-xs-12">
+                        <h3 ng-if="$even" class="box-title">Primary Insurance</h3>
+                        <hr ng-if="$even" style="margin-top: -5px;">
+                        <h3 ng-if="$odd" class="box-title">Secondary Insurance</h3>
+                        <hr ng-if="$odd" style="margin-top: -5px;">
+                    </div>
+                    <div class="col-sm-6 info-detail">
+                        <dl class="dl-horizontal">
+                            <dt>Insurance Carrier:</dt>
+                            <dd>{{insurance.insuranceCarrier.name}}</dd>
+                            <dt>Plan Number:</dt>
+                            <dd>{{insurance.planNumber}}</dd>
+                            <dt>Subscriber First Name:</dt>
+                            <dd>{{insurance.firstName}}</dd>
+                            <dt>Subscriber Gender:</dt>
+                            <dd>{{insurance.gender}}</dd>
+                            <dt>Subscriber Address:</dt>
+                            <dd>{{insurance.address}}</dd>
+                            <dt>Subscriber Phone:</dt>
+                            <dd>{{(insurance.phone && !isNaN(insurance.phone)) ? insurance.phone : ''}}</dd>
+                            <dt>Subscriber State:</dt>
+                            <dd>{{insurance.state}}</dd>
+                            <dt>Insurance Type:</dt>
+                            <dd>{{insurance.insuranceType ? insurance.insuranceType.name : ''}}</dd>
+                            <dt>Relationship:</dt>
+                            <dd>{{insurance.insuranceRelation.name}}</dd>
+                            <dt>Group Number:</dt>
+                            <dd>{{insurance.groupNumber}}</dd>
+                            <dt>Pre-Cert Number:</dt>
+                            <dd>{{(insurance.preCertPhone && !isNaN(insurance.preCertPhone)) ? insurance.preCertPhone :
+                                ''}}
+                            </dd>
+                            <dt>RxBin:</dt>
+                            <dd>{{insurance.rxBin}}</dd>
+                            <dt>Member ID:</dt>
+                            <dd>{{insurance.memberId}}</dd>
+
+                        </dl>
+                    </div>
+                    <div class="col-sm-6 info-detail">
+                        <dl class="dl-horizontal">
+                            <dt>Policy Number:</dt>
+                            <dd>{{insurance.policyNumber || ''}}</dd>
+                            <dt>Subscriber Last Name:</dt>
+                            <dd>{{insurance.lastName}}</dd>
+                            <dt>Middle Initial:</dt>
+                            <dd>{{insurance.middleInitial}}</dd>
+                            <dt>Subscriber SSN:</dt>
+                            <dd>{{insurance.socialSecurity}}</dd>
+                            <dt>Subscriber Address 2:</dt>
+                            <dd>{{insurance.address2}}</dd>
+                            <dt>Subscriber City:</dt>
+                            <dd>{{insurance.city}}</dd>
+                            <dt>Subscriber Zip Code:</dt>
+                            <dd>{{insurance.zipCode}}</dd>
+                            <dt>Insurance Level:</dt>
+                            <dd>{{insurance.insuranceLevel ? insurance.insuranceLevel.name : ''}}</dd>
+                            <dt>Employer:</dt>
+                            <dd>{{insurance.employer}}</dd>
+                            <dt>Group Name:</dt>
+                            <dd>{{insurance.groupName}}</dd>
+                            <dt>PCN:</dt>
+                            <dd>{{insurance.pcn}}</dd>
+
+                        </dl>
+                    </div>
+                    <!-- -------------------------------------  -->
+                    <div class="clearfix"></div>
+                    <div class="col-xs-12">
+                        <hr>
+                    </div>
+                    <style>
+                    </style>
+                    <div class="col-sm-6 info-detail">
+                        <dl class="dl-horizontal">
+                            <dt>Front Picture:</dt>
+                            <dd><a ng-if="insurance.frontPicture && insurance.frontPicture.id"
+                                   ng-click="vm.imageDetail(insurance.frontPicture, 'Front Picture');"
+                                   uib-tooltip="Click to view the image">
+                                <img
+                                    ng-src="data:{{insurance.frontPicture.pictureContentType}};base64,{{insurance.frontPicture.picture}}"
+                                    class="preview-insurance"/></a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="col-sm-6 info-detail">
+                        <dl class="dl-horizontal">
+                            <dt>Back Picture:</dt>
+                            <dd><a ng-if="insurance.backPicture && insurance.backPicture.id"
+                                   ng-click="vm.imageDetail(insurance.backPicture, 'Back Picture');"
+                                   uib-tooltip="Click to view the image">
+                                <img
+                                    ng-src="data:{{insurance.backPicture.pictureContentType}};base64,{{insurance.backPicture.picture}}"
+                                    class="preview-insurance"/></a>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Concurrent Review box -->
+<div class="col-xs-12" id="anchor_concurrent_review"
+     ng-if="vm.chart.typePaymentMethods != null && vm.chart.typePaymentMethods.category == 'Insurance'">
+    <div class="box box-primary">
+        <div class="box-header with-border">
+            <h3 class="box-title"><i class="fa fa-building"></i> Concurrent Review</h3>
+
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" ng-click="vm.goToTop()" uib-tooltip="Go to top"><i
+                    class="fa fa-arrow-up"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+            </div>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            <div class="box-body">
+                <div class="row">
+                    <div ui-view="concurrent-reviews"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Contact box -->
+<div class="col-xs-12" id="anchor_contacts">
+    <div class="box box-primary">
+        <div class="box-header with-border">
+            <h3 class="box-title"><i class="fa fa-users"></i> Contacts</h3>
+
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" ng-click="vm.goToTop()" uib-tooltip="Go to top"><i
+                    class="fa fa-arrow-up"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+            </div>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            <div class="box-body">
+                <div class="row">
+                    <div ui-view="contact"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Chart Care Team box -->
+<div class="col-xs-12" id="anchor_care_team">
+    <div class="box box-primary">
+        <div class="box-header with-border">
+            <h3 class="box-title"><i class="fa fa-hospital-o"></i> Care Team</h3>
+
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" ng-click="vm.goToTop()" uib-tooltip="Go to top"><i
+                    class="fa fa-arrow-up"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+            </div>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            <div class="box-body">
+                <div class="row">
+                    <div ui-view="chartcareteam"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Allergies box -->
+<div class="col-xs-12" id="anchor_allergies">
+    <div class="box box-primary">
+        <div class="box-header with-border">
+            <h3 class="box-title"><i class="fa fa-medkit"></i> Allergies </h3>
+
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" ng-click="vm.goToTop()" uib-tooltip="Go to top"><i
+                    class="fa fa-arrow-up"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+            </div>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            <div class="box-body">
+                <div class="row">
+                    <div ui-view="allergies"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Diets box -->
+<div class="col-xs-12" id="anchor_diets">
+    <div class="box box-primary">
+        <div class="box-header with-border">
+            <h3 class="box-title"><i class="fa fa-th"></i> Diets </h3>
+
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" ng-click="vm.goToTop()" uib-tooltip="Go to top"><i
+                    class="fa fa-arrow-up"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+            </div>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            <div class="box-body">
+                <div class="row">
+                    <div ui-view="diets"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="col-xs-12">
+    <div class="pull-right">
+        <button type="button" class="btn btn-info" ui-sref="patient-edit({id: vm.chart.id})">
+            <i class="fa fa-edit"></i> Update Information
+        </button>
+    </div>
+</div>

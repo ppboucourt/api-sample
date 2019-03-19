@@ -1,0 +1,215 @@
+<section class="content-header">
+    <h1>Occupancy</h1>
+    <div ncy-breadcrumb class="breadcrumb"></div>
+</section>
+<section class="content-header">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box-body">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-12 block-mb15">
+                            <form class="form-inline">
+                                <div class="form-group col-xs-12 col-sm-4 col-md-6 col-lg-4">
+                                    <div class="input-group input-group-sm col-lg-12">
+                                        <input type="text" class="form-control" ng-model="vm.filters.query"
+                                               placeholder="Query">
+                                        <i class="fa fa-search form-control-feedback"></i>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-xs-12 col-sm-8 col-md-6 col-lg-8">
+                                    <div class="pull-right">
+                                        <div class="btn-group block-mr15">
+                                            <button type="button" class="btn btn-sm btn-default"
+                                                    ng-click="vm.filters.sex = '*'"
+                                                    ng-class="{'active': vm.filters.sex === '*'}">
+                                                <i class="fa fa-asterisk"></i> <span
+                                                class="hidden-xs">All</span>
+                                            </button>
+                                            <button type="button" class="btn btn-sm btn-default btn-flat"
+                                                    ng-click="vm.filters.sex = 'MALE'"
+                                                    ng-class="{'active': vm.filters.sex === 'MALE', 'bg-blue': vm.filters.sex === 'MALE'}">
+                                                <i class="fa fa-male"></i> <span class="hidden-xs">Male</span>
+                                            </button>
+                                            <button type="button" class="btn btn-sm btn-default"
+                                                    ng-click="vm.filters.sex = 'FEMALE'"
+                                                    ng-class="{'active': vm.filters.sex === 'FEMALE', 'bg-maroon': vm.filters.sex === 'FEMALE'}">
+                                                <i class="fa fa-female"></i> <span
+                                                class="hidden-xs">Female</span>
+                                            </button>
+                                        </div>
+                                        <div class="input-group input-group-sm" style="display: inline-grid">
+                                            <select class="form-control" name="room" ng-model="vm.filters.building"
+                                                    ng-options="item as item.name for item in vm.buildings track by item.id"
+                                                    ng-change="vm.changeBuilding()">
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <script type="text/ng-template" id="bedWithPatientPopover.html">
+                        <div class="input-group input-group-sm">
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-sm btn-warning"
+                                        ng-click="vm.unassignedPatientAction()">
+                                    <i class="fa fa-arrow-circle-o-up"></i> Unassigned
+                                </button>
+                                <button type="button" class="btn btn-sm btn-info"
+                                        ng-click="vm.movePatientTo(vm.unassigned_Bed)">
+                                    <i class="fa fa-arrow-circle-right"></i> Move to
+                                </button>
+                            </div>
+                            <!-- /btn-group -->
+                            <select class="form-control" name="bed" ng-model="vm.unassigned_Bed"
+                                    ng-options="unBed as unBed.name for unBed in vm.unassignedBeds | filter:vm.filterBedBySex() ">
+                            </select>
+                        </div>
+
+                    </script>
+
+                    <script type="text/ng-template" id="bedWithoutPatientPopover.html">
+                        <div class="input-group input-group-sm">
+                            <select class="form-control" name="room" ng-model="vm.unassignedPatient"
+                                    ng-options="item as (item.patient.fullName + ' (' + item.mrNo + ')') for item in vm.unassignedPatients | filter:vm.filterPatientByRoom() track by item.id">
+                            </select>
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-sm btn-flat btn-success"
+                                        ng-click="vm.assignPatient(vm.unassignedPatient)">
+                                    <i class="fa fa-arrow-circle-o-down"></i> Assign
+                                </button>
+                            </span>
+                        </div>
+
+                    </script>
+                    <div class="col-md-12">
+                        <!-- The time line -->
+                        <ul class="timeline">
+                            <!-- timeline time label -->
+                            <li class="time-label">
+                                <span class="bg-green"> <i class="fa fa-building-o"></i> Rooms </span>
+                            </li>
+                            <!-- /.timeline-label -->
+                            <!-- timeline item -->
+                            <li ng-repeat="(key, room) in vm.bedsByRoom | filter: vm.applyFiltersRoom as filterResults">
+                                <i class="fa fa-th"
+                                   ng-class="{'bg-blue': room[0].room.sex == 'MALE', 'bg-maroon': room[0].room.sex != 'MALE'}"></i>
+                                <div class="timeline-item">
+                                    <h3 class="timeline-header"><i class="fa fa-bed"></i>
+                                        <b>Beds</b>
+                                        <sup><span class="badge label-success">{{(room) ? room.length : 0}}</span></sup>
+                                        <span class="pull-right">
+                                            <b>Room:</b> <span class="">{{room[0].room.name}}</span>
+                                            <span class="block-ml15 hidden-xs">
+                                                <b>Sex:</b> <span class="label "
+                                                                  ng-class="{'bg-blue': room[0].room.sex == 'MALE', 'bg-maroon': room[0].room.sex != 'MALE'}">
+                                                {{room[0].room.sex | capitalize}}</span>
+                                            </span>
+                                        </span>
+                                    </h3>
+                                    <div class="timeline-body">
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3"
+                                                     ng-repeat="(index, bed) in room | filter: vm.applyFiltersBed"
+                                                     dnd-list="room"
+                                                     dnd-allowed-types="['patient']"
+                                                     dnd-horizontal-list="true"
+                                                     dnd-external-sources="true"
+                                                     dnd-effect-allowed="move"
+                                                     dnd-dragover="vm.dragOverCallback($index, key, external, type)"
+                                                     dnd-drop="vm.dropCallback($index, key, item, external, type)"
+                                                     dnd-inserted="vm.logListEvent('inserted at', index, external, type)"
+                                                >
+                                                    <div class="box-x" id="bed_{{index+key}}"
+                                                         ng-class="{'box-x-default': !bed.chartId, 'box-x-success': bed.chartId}">
+                                                        <div class="shape" ng-if="bed.chartId">
+                                                            <div class="shape-text">
+                                                                <span class="glyphicon glyphicon-user"></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="box-x-content">
+                                                            <h4 class="lead">
+                                                                Bed {{bed.name}}
+                                                            </h4>
+                                                            <p ng-class="{'box-x-without-user': !bed.chartId, 'box-x-user': bed.chartId,
+                                                                            'selected': vm.selectedBed.selected === bed}"
+                                                               dnd-draggable="bed"
+                                                               dnd-type="'patient'"
+                                                               dnd-effect-allowed="move"
+                                                               dnd-dragstart="vm.dragStartItem = bed"
+                                                               dnd-dragend="vm.dragEnd = true"
+                                                               dnd-moved="room.splice($index, 1)"
+                                                               dnd-selected="vm.selectedBed.selected = bed"
+                                                               uib-popover-template="vm.getTemplate(bed)"
+                                                               popover-trigger="outsideClick"
+                                                               popover-is-open="vm.isOpenPopover[key][index]"
+                                                            >
+                                                                <img ng-if="bed.chartId"
+                                                                     data-ng-src="{{'data:' + bed.patientPictureContentType + ';base64,' + bed.patientPicture}}"
+                                                                     class="img-circle"
+                                                                     style="height: 50px; max-height: 50px; width: 50px;max-width: 50px;"/>
+                                                                <span class="block-ml5" ng-if="bed.chartId">
+                                                                    {{(bed.chartId) ? bed.patientFullName : ''}}
+                                                                    <span class="badge label-info"> {{(bed.chartId) ? bed.patientMrNo : ''}}</span>
+                                                                </span>
+                                                                <span class="load-mask-panel">
+                                                                    <span ng-if="!bed.chartId" class="loading-wrapper"
+                                                                          style="padding-top:13px; color: #a4a4a4">
+                                                                        Click to assign a patient
+                                                                    </span>
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li ng-if="filterResults.length === 0 && !vm.loadingBeds">
+                                <i class="fa fa-search bg-orange"></i>
+                                <div class="timeline-item">
+                                    <h3 class="timeline-header"><i class="fa fa-search-minus"></i> Search result: </h3>
+                                    <div class="timeline-body">
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <div class="col-xs-12">
+                                                    <div class="callout callout-info">
+                                                        <h4>No results found that matches the given criteria:</h4>
+                                                        <ul class="">
+                                                            <li><b>Sex:</b>
+                                                                <span
+                                                                    ng-bind="(vm.filters.sex !== '*') ? vm.filters.sex : 'ALL'"></span>
+                                                            </li>
+                                                            <li><b>Query keyword:</b>
+                                                                <span ng-bind="vm.filters.query"></span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- END timeline item -->
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </div>
+        </div>
+    </div>
+</section>
+

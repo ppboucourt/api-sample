@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity LabRequisition.
+    -->
+    <changeSet id="20160831140719-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="lab_compendium_id"
+                                 baseTableName="lab_requisition"
+                                 constraintName="fk_lab_requisition_lab_compendium_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="lab_compendium"/>
+
+        <addForeignKeyConstraint baseColumnNames="chart_id"
+                                 baseTableName="lab_requisition"
+                                 constraintName="fk_lab_requisition_chart_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="chart"/>
+
+    </changeSet>
+</databaseChangeLog>

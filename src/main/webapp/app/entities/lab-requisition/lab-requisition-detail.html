@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span>Lab Requisition</span> {{vm.labRequisition.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="bluebookApp.labRequisition.patient_signature">Patient Signature</span></dt>
+        <dd>
+            <span>{{vm.labRequisition.patient_signature}}</span>
+        </dd>
+        <dt><span>Status</span></dt>
+        <dd>
+            <span>{{vm.labRequisition.status}}</span>
+        </dd>
+        <dt><span>Barcode</span></dt>
+        <dd>
+            <span>{{vm.labRequisition.barcode}}</span>
+        </dd>
+        <dt><span>Lab Compendium</span></dt>
+        <dd>
+            <a ui-sref="lab-compendium-detail({id:vm.labRequisition.labCompendium.id})">{{vm.labRequisition.labCompendium.code}}</a>
+        </dd>
+        <dt><span>Chart</span></dt>
+        <dd>
+            <a ui-sref="chart-detail({id:vm.labRequisition.chart.id})">{{vm.labRequisition.chart.mr_no}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="lab-requisition-detail.edit({id:vm.labRequisition.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

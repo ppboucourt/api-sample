@@ -1,0 +1,27 @@
+
+<div>
+    <h2><span data-translate="bluebookApp.order_type.detail.title">Order Type</span> {{vm.order_type.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="bluebookApp.order_type.order_type_name">Order Type Name</span></dt>
+        <dd>
+            <span>{{vm.order_type.order_type_name}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.order_type.status">Status</span></dt>
+        <dd>
+            <span>{{vm.order_type.status}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="order-type-detail.edit({id:vm.order_type.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

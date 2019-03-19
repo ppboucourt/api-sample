@@ -1,0 +1,36 @@
+<section>
+    <div class="row">
+        <div class="col-md-12">
+            <uib-tabset class="nav-tabs-custom" active="vm.activeTab">
+                <!--<uib-tab index="0" heading="Back" ng-click="vm.backDetailsBasic()" heading="Back">-->
+                    <!--<uib-tab-heading>-->
+                        <!--<i class="fa fa-reply"></i>-->
+                    <!--</uib-tab-heading>-->
+                <!--</uib-tab>-->
+                <uib-tab index="1" select="" heading="Vitals">
+                    <ng-include src="'app/entities/mars/mars-information-tpl.html'"></ng-include>
+                </uib-tab>
+                <uib-tab index="2" select="" heading="Medications">
+                    <uib-tab-heading>
+                        Medications
+                        <span class="label label-primary">{{vm.medications}}</span>
+                    </uib-tab-heading>
+                    <div ui-view="medications"></div>
+                </uib-tab>
+                <uib-tab index="3" select="" heading="Actions">
+                    <uib-tab-heading>
+                        Actions
+                        <span class="label label-primary">{{vm.actions}}</span>
+                    </uib-tab-heading>
+                    <div ui-view="actions"></div>
+                </uib-tab>
+                <!--<uib-tab index="4" select="" heading="Actions">-->
+                    <!--<uib-tab-heading>-->
+                        <!--Lab Results-->
+                    <!--</uib-tab-heading>-->
+                    <!--<div ui-view="result"></div>-->
+                <!--</uib-tab>-->
+            </uib-tabset>
+        </div>
+    </div>
+</section>

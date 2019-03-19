@@ -1,0 +1,60 @@
+<form name="actionForm" ng-submit="vm.confirmSendFax()">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;
+        </button>
+        <h4 class="modal-title">{{vm.takeTitle + ' Medication' }}</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+
+
+
+        <div class="row" >
+            <div class="col-xs-12 col-sm-12  col-md-12 col-lg-12">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6  col-md-6 col-lg-6">
+                        <div class="form-group">
+                            <label for="field_notes">Notes</label>
+                            <textarea class="form-control"  id="field_notes" rows="4"   name="notes" required
+                                   ng-model="vm.patientMedicationTake.notes"></textarea>
+                        </div>
+                        <div ng-show="actionForm.notes.$invalid">
+                            <p class="help-block"
+                               ng-show="actionForm.notes.$error.required">
+                                This field is required.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6  col-md-6 col-lg-6" ng-if="vm.takeStatus=='ADMINISTERED' || vm.takeStatus=='OBSERVED'">
+                        <div class="form-group">
+                            <label for="field_first_reactions">First Reactions</label>
+                            <textarea class="form-control"   type="text" id="field_first_reactions"   rows="4"  required name="reactions"
+                                   ng-model="vm.patientMedicationTake.firstPatientResponse"></textarea>
+                            <div ng-show="actionForm.reactions.$invalid">
+                                <p class="help-block"
+                                   ng-show="actionForm.reactions.$error.required">
+                                    This field is required.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-12 col-lg-12">
+                <j-signature sig="vm.customSignature" bg-color="#EEEEEE" color="#00008B"></j-signature>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="actionForm.$invalid || vm.saving" class="btn btn-success"  ng-click="vm.saveTake()">
+            <span class="glyphicon glyphicon-send"></span>&nbsp;<span>{{vm.takeTitle}}</span>
+        </button>
+    </div>
+</form>

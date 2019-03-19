@@ -1,0 +1,41 @@
+<section class="content-header">
+    <h1>Case Load</h1>
+    <div ncy-breadcrumb class="breadcrumb"></div>
+</section>
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <div class="col-xs-4 no-padding-left">
+                        <!--<button class="btn btn-primary" ui-sref="contacts-facility.new">-->
+                        <!--<span class="glyphicon glyphicon-flash"></span> <span>New Contacts Facility</span>-->
+                        <!--</button>-->
+                    </div>
+                    <div class="col-xs-8 no-padding-right">
+
+                            <ui-select ng-model="vm.searchQuery" theme="bootstrap" ng-change="vm.search()">
+                                <ui-select-match placeholder="Select or search a therapist in the list..." allow-clear="true">
+                                    {{$select.selected.valueToShow}}</ui-select-match>
+                                <ui-select-choices repeat="item in vm.therapists | filter: $select.search">
+                                    {{item.valueToShow}}
+                                </ui-select-choices>
+                            </ui-select>
+
+                            <!--<span  class="input-group-btn width-min" >-->
+                                <!--<button class="btn btn-info" ng-click="vm.search()">-->
+                                    <!--<span class="glyphicon glyphicon-filter"></span>-->
+                                <!--</button>-->
+                            <!--</span>-->
+                    </div>
+                </div>
+                <div class="box-body">
+                    <table datatable="" dt-options="vm.dtOptions" dt-columns="vm.dtColumns"
+                           dt-instance="vm.dtInstance"
+                           class="table table-striped table-bordered">
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

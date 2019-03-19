@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                <h3 class="box-title">Action {{vm.patientAction.id}} ({{vm.patientAction.actionStatus}})</h3>
+            </div>
+            <jhi-alert-error></jhi-alert-error>
+            <div class="box-body">
+                <form name="vm.form.order" role="form" show-validation>
+                    <table class="table table-condensed table-striped table-bordered">
+                        <tbody>
+                        <tr>
+                            <th>Patient Name</th>
+                            <th>Obtained</th>
+                            <th>Physician</th>
+                        </tr>
+                        <tr>
+                            <td>{{vm.patientAction.chart.patient.firstName + ' ' +
+                                (vm.patientAction.chart.patient.middleName ? vm.patientAction.chart.patient.middleName : '') + ' ' +
+                                vm.patientAction.chart.patient.lastName}}</td>
+                            <td>{{vm.patientAction.via.name}}</td>
+                            <td>{{vm.patientAction.signedBy ? vm.patientAction.signedBy.firstName + ' ' + vm.patientAction.signedBy.lastName : ""}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="pull-left" ng-show="vm.patientAction.medicationStatus == 'SCHEDULED' && vm.canCancel">
+                        <button type="button" class="btn btn-danger" ui-sref="patient-order-update.cancel({oid: vm.patientAction.id})">Cancel Order</button>
+                    </div>
+                    <div class="pull-right">
+                        <button type="button" ng-show="vm.canSign" class="btn btn-warning" ng-click="vm.signIn()">
+                            <span class="glyphicon glyphicon-pencil"></span> <span>Sign Action</span></button>
+                        <button type="button" ng-show="vm.canFinish" class="btn btn-danger" ui-sref="patient-order-update.finish({oid: vm.patientAction.id})">Finish Order</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div ui-view="action-pre"></div>

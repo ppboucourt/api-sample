@@ -1,0 +1,17 @@
+<uib-tabset class="nav-tabs-custom" active="vm.activeTab">
+    <!--<uib-tab index="0" heading="Back" ng-click="vm.backDetailsBasic()"-->
+             <!--heading="Back">-->
+        <!--<uib-tab-heading>-->
+            <!--<i class="fa fa-reply"></i>-->
+        <!--</uib-tab-heading>-->
+    <!--</uib-tab>-->
+    <uib-tab index="1" select="vm.keepActiveTab(0)" heading="Lab Orders">
+        <div ui-view="lab"></div>
+    </uib-tab>
+    <uib-tab index="2" select="vm.keepActiveTab(1)" heading="Medications">
+        <div ui-view="medication"></div>
+    </uib-tab>
+    <uib-tab index="3" select="vm.keepActiveTab(2)" heading="Actions">
+        <div ui-view="action"></div>
+    </uib-tab>
+</uib-tabset>

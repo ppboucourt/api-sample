@@ -1,0 +1,241 @@
+.dash-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    &.charts {
+        padding: {
+            top: 80px;
+            bottom: 30px;
+        };
+    }
+}
+
+.dash-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    width: calc(25% - 22px);
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    background-color: $white;
+    border-radius: 3px;
+    box-shadow: 0 1px 5px rgba($black, 0.1);
+    @media (max-width: 1260px) {
+        width: calc(50% - 15px);
+        align-items: center;
+    }
+    @media (max-width: 560px) {
+        width: 100%;
+    }
+}
+
+.icon-box {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid $white;
+    box-shadow: 0 3px 10px rgba($black, 0.15);
+    transform: translateY(-35%);
+    @media (max-width: 1399px) {
+        width: 60px;
+        height: 60px;
+    }
+    .fa {
+        font-size: 40px;
+        line-height: 80px;
+        vertical-align: middle;
+        @media (max-width: 1399px) {
+            font-size: 36px;
+            line-height: 60px;
+        }
+    }
+}
+
+.content-info {
+    width: calc(100% - 85px);
+    text-align: right;
+    @media (max-width: 1399px) {
+        width: calc(100% - 65px);
+    }
+    > p {
+        margin-bottom: 0;
+    }
+    .small-text {
+        color: $light-gray;
+    }
+}
+
+.jumbo-number {
+    font-size: 46px;
+    line-height: 1;
+}
+
+.card-footer {
+    width: 100%;
+    padding: 10px 10px 0;
+    text-align: center;
+    border-top: 1px solid rgba($black, 0.1);
+    > a {
+        display: inline-block;
+        width: 100%;
+        font-size: 16px;
+        text-align: center;
+        color: $gray;
+        transition: all linear 0.2s;
+        &:hover {
+            color: $light-gray;
+        }
+    }
+}
+
+.dash-patients-card {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 15px);
+    margin-bottom: 30px;
+    border-radius: 3px;
+    background-color: $white;
+    box-shadow: 0 1px 3px rgba($black, 0.1);
+    @media (max-width: 991px) {
+        width: 100%;
+    }
+}
+
+.dash-patients-header {
+    display: flex;
+    padding: 10px 15px;
+    border-bottom: 1px solid rgba($black, 0.1);
+    .header-text {
+        margin: 0 auto;
+        font-size: 18px;
+        line-height: inherit;
+    }
+    .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -25px;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        color: $white;
+        border-radius: 3px;
+        border: 2px solid $white;
+        box-shadow: 0 3px 10px rgba($black, 0.15);
+        .fa {
+            font-size: 28px;
+            line-height: 1;
+        }
+    }
+}
+
+.dash-patients-footer {
+    margin-top: auto;
+    padding: 10px 15px;
+    border-top: 1px solid rgba($black, 0.1);
+    a {
+        display: inline-block;
+        width: 100%;
+        font-size: 16px;
+        text-align: center;
+        color: $gray;
+        transition: all linear 0.2s;
+        &:hover {
+            color: $light-gray;
+        }
+    }
+}
+
+.dash-patients-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 30px 15px;
+}
+
+.dash-patient {
+    margin: 0 5px 20px;
+    width: calc(25% - 20px);
+    min-width: 110px;
+    text-align: center;
+    &:hover {
+        .patient-name {
+            color: $light-gray;
+        }
+    }
+    img {
+        margin-bottom: 10px;
+        width: 128px;
+        border-radius: 3px;
+        border: 3px solid $white;
+        box-shadow: 0 3px 10px rgba($black, 0.15);
+    }
+    > a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &.blank {
+        width: 30%;
+        align-self: center;
+        @media (max-width: 560px) {
+            width: 100%;
+            align-self: center;
+        }
+        .message {
+            line-height: 1;
+            font-size: 1.3vw;
+            font-weight: lighter;
+            @media (max-width: 767px) {
+                font-size: 16px;
+            }
+            span {
+                font-size: 2.6vw;
+                @media (max-width: 767px) {
+                    font-size: 32px;
+                }
+            }
+            strong {
+                font-size: 8.5vw;
+                font-weight: lighter;
+                text-transform: uppercase;
+                @media (max-width: 767px) {
+                    font-size: 100px;
+                }
+            }
+        }
+    }
+    &.new-patient {
+        width: 30%;
+        align-self: center;
+        &:hover {
+            span {
+                color: $light-gray;
+            }
+        }
+        img {
+            background-color: $ligther-gray;
+        }
+        span {
+            transition: all linear 0.2s;
+            color: $gray;
+        }
+    }
+    .patient-name {
+        color: $gray;
+        font-weight: bold;
+        transition: all linear 0.2s;
+    }
+    .patient-date {
+        color: $light-gray;
+        font-size: 12px;
+    }
+}

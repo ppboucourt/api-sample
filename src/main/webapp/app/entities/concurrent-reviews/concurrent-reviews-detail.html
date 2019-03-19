@@ -1,0 +1,69 @@
+
+<div>
+    <h2><span>Concurrent Reviews</span> {{vm.concurrentReviews.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="bluebookApp.concurrentReviews.authorizationDate">Authorization Date</span></dt>
+        <dd>
+            <span>{{vm.concurrentReviews.authorizationDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.concurrentReviews.numberDates">Number Dates</span></dt>
+        <dd>
+            <span>{{vm.concurrentReviews.numberDates}}</span>
+        </dd>
+        <dt><span>Frequency</span></dt>
+        <dd>
+            <span>{{vm.concurrentReviews.frequency}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.concurrentReviews.levelCare">Level Care</span></dt>
+        <dd>
+            <span>{{vm.concurrentReviews.typeLevelCare.name}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.concurrentReviews.startDate">Start Date</span></dt>
+        <dd>
+            <span>{{vm.concurrentReviews.startDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.concurrentReviews.endDate">End Date</span></dt>
+        <dd>
+            <span>{{vm.concurrentReviews.endDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.concurrentReviews.lastCoverageDate">Last Coverage Date</span></dt>
+        <dd>
+            <span>{{vm.concurrentReviews.lastCoverageDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.concurrentReviews.authorizationNumber">Authorization Number</span></dt>
+        <dd>
+            <span>{{vm.concurrentReviews.authorizationNumber}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.concurrentReviews.nextReviewDate">Next Review Date</span></dt>
+        <dd>
+            <span>{{vm.concurrentReviews.nextReviewDate | date:'medium' }}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.concurrentReviews.insuranceCompany">Insurance Company</span></dt>
+        <dd>
+            <span>{{vm.concurrentReviews.insuranceCompany}}</span>
+        </dd>
+        <dt><span>Notes</span></dt>
+        <dd>
+            <span>{{vm.concurrentReviews.notes}}</span>
+        </dd>
+
+
+        <!--dt><span>Chart Concurrent Reviews</span></--dt>
+        <dd>
+            <a ui-sref="chart-detail({id:vm.concurrentReviews.chartConcurrentReviews.id})">{{vm.concurrentReviews.chartConcurrentReviews.mr_no}}</a>
+        </dd-->
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="concurrent-reviews-detail.edit({id:vm.concurrentReviews.crid})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

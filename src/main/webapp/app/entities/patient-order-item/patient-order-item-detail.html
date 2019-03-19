@@ -1,0 +1,59 @@
+
+<div>
+    <h2><span>Patient Order Item</span> {{vm.patientOrderItem.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Group Number Id</span></dt>
+        <dd>
+            <span>{{vm.patientOrderItem.groupNumberId}}</span>
+        </dd>
+        <dt><span>Collected</span></dt>
+        <dd>
+            <span>{{vm.patientOrderItem.collected}}</span>
+        </dd>
+        <dt><span>Collected Date</span></dt>
+        <dd>
+            <span>{{vm.patientOrderItem.collectedDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span>Schedule Date</span></dt>
+        <dd>
+            <span>{{vm.patientOrderItem.scheduleDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span>Sent</span></dt>
+        <dd>
+            <span>{{vm.patientOrderItem.sent}}</span>
+        </dd>
+        <dt><span>Sent Date</span></dt>
+        <dd>
+            <span>{{vm.patientOrderItem.sentDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span>Ready Status</span></dt>
+        <dd>
+            <span>{{vm.patientOrderItem.readyStatus}}</span>
+        </dd>
+        <dt><span>Canceled</span></dt>
+        <dd>
+            <span>{{vm.patientOrderItem.canceled}}</span>
+        </dd>
+        <dt><span>Icd 10 Codes</span></dt>
+        <dd>
+            <span>{{vm.patientOrderItem.icd10Codes}}</span>
+        </dd>
+        <dt><span>Patient Order Test</span></dt>
+        <dd>
+            <a ui-sref="patient-order-test-detail({id:vm.patientOrderItem.patientOrderTest.id})">{{vm.patientOrderItem.patientOrderTest.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="patient-order-item-detail.edit({id:vm.patientOrderItem.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

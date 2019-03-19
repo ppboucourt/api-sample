@@ -1,0 +1,86 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "chart",
+            "otherEntityName": "chart",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "mr_no"
+        },
+        {
+            "relationshipName": "labCompendium",
+            "otherEntityName": "labCompendium",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "code"
+        },
+        {
+            "relationshipName": "action",
+            "otherEntityName": "actions",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "action"
+        },
+        {
+            "relationshipName": "medication",
+            "otherEntityName": "medications",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "medication"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "type_order",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "start_date",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "end_date",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "order_by",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "order_via",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "doctor_signature",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "reviewed_by",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "review_date",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "frequency",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "on_admission",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "until_discharge",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160829142943",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "orders",
+    "pagination": "no",
+    "enableEntityAudit": true
+}

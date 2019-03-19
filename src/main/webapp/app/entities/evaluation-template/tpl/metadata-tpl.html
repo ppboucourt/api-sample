@@ -1,0 +1,175 @@
+<form name="vm.form.patient_info_form" role="form" show-validation>
+    <div class="box-body">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label class="control-label" for="field_name">Name *</label>
+                    <input type="text" class="form-control" name="name" id="field_name"
+                           ng-model="vm.evaluationTemplate.name" required/>
+                    <div ng-show="vm.form.patient_info_form.name.$invalid">
+                        <p class="help-block"
+                           ng-show="vm.form.patient_info_form.name.$error.required">
+                            This field is required.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="field_typePatientProcess">Patient Process</label>
+                    <select class="form-control" id="field_typePatientProcess" name="typePatientProcess"
+                            ng-model="vm.evaluationTemplate.typePatientProcess" required
+                            ng-options="typePatientProcess as typePatientProcess.name for typePatientProcess in vm.typepatientprocesses track by typePatientProcess.id">
+                        <option value=""></option>
+                    </select>
+                    <div ng-show="vm.form.patient_info_form.typePatientProcess.$invalid">
+                        <p class="help-block"
+                           ng-show="vm.form.patient_info_form.typePatientProcess.$error.required">
+                            This field is required.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!--<div class="col-lg-4">-->
+            <!--<div class="form-group">-->
+            <!--<label for="field_typePatientProcess">Patient Process</label>-->
+            <!--<select class="form-control" id="field_typePatientProcess" name="typePatientProcess"-->
+            <!--ng-model="vm.evaluationTemplate.typePatientProcess" required-->
+            <!--ng-options="typePatientProcess as typePatientProcess.name for typePatientProcess in vm.typepatientprocesses track by typePatientProcess.id">-->
+            <!--<option value=""></option>-->
+            <!--</select>-->
+            <!--<div ng-show="vm.form.patient_info_form.typePatientProcess.$invalid">-->
+            <!--<p class="help-block"-->
+            <!--ng-show="vm.form.patient_info_form.typePatientProcess.$error.required">-->
+            <!--This field is required.-->
+            <!--</p>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-lg-4">
+                <div class="form-group">
+                    <label for="field_typeEvaluation">Evaluation Type</label>
+                    <select class="form-control" id="field_typeEvaluation" name="typeEvaluation"
+                            ng-model="vm.evaluationTemplate.typeEvaluation" required
+                            ng-options="typeEvaluation as typeEvaluation.name for typeEvaluation in vm.typeevaluations track by typeEvaluation.id">
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label for="field_evaluationContent">Evaluation Content</label>
+                    <select class="form-control" id="field_evaluationContent" name="evaluationContent"
+                            ng-model="vm.evaluationTemplate.evaluationContent" required
+                            ng-options="evaluationContent as evaluationContent.name for evaluationContent in vm.evaluationcontents track by evaluationContent.id">
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div>-->
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="control-label">Enabled</label><br/>
+                    <toggle ng-model="vm.evaluationTemplate.enabled" on="Yes" off="No" id="field_enabled"></toggle>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="control-label">Billable</label><br/>
+                    <toggle ng-model="vm.evaluationTemplate.billable" on="Yes" off="No" id="field_billable"></toggle>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="control-label">Only One</label><br/>
+                    <toggle ng-model="vm.evaluationTemplate.onlyOne" on="Yes" off="No" id="field_only_one"></toggle>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="control-label">Required Patient Signature</label><br/>
+                    <toggle ng-model="vm.evaluationTemplate.patientSignature" on="Yes" off="No" id="field_patient_signature"></toggle>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Level of Care </label>
+                    <ui-select ng-model="vm.evaluationTemplate.typeLevelCares"
+                               name="levelCare"
+                               id="field_levelCare"
+                               ng-required = true
+                               reset-search-input="true"
+                               title="Select level of care" multiple
+                               close-on-select="false">
+                        <ui-select-match placeholder="Enter the name of the Level of Care ...">{{$item.name}}</ui-select-match>
+                        <ui-select-choices repeat="item in vm.levelCares"
+                                           refresh="vm.getLevelCare($select.search)"
+                                           refresh-delay="0">
+                            <div ng-bind-html="item.name | highlight: $select.search"></div>
+                            <!--<small ng-bind-html="item.description | highlight: $select.search"></small>-->
+                        </ui-select-choices>
+                    </ui-select>
+                    <div ng-show="vm.form.patient_info_form.levelCare.$invalid">
+                        <p class="help-block"
+                           ng-show="vm.form.patient_info_form.levelCare.$error.required">
+                            This field is required.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="control-label">Required Staff Signature</label><br/>
+                    <toggle ng-model="vm.evaluationTemplate.forceStaffSignature" on="Yes" off="No" id="field_force_staff_signature"></toggle>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Staff Signature</label>
+                    <ui-select id="field_staff_signature_authorities" name="staffSignatureAuthority" multiple ng-model="vm.evaluationTemplate.staffSignatureAuthority"
+                               close-on-select="false" title="" ng-disabled="!vm.evaluationTemplate.forceStaffSignature">
+                        <ui-select-match placeholder="Roles...">{{$item.name || $item}}</ui-select-match>
+                        <ui-select-choices repeat="day in vm.authorities | filter:$select.search">
+                            {{day}}
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="control-label">Required Staff Review Signature</label><br/>
+                    <toggle ng-model="vm.evaluationTemplate.forceStaffReviewSignature" on="Yes" off="No" id="field_force_staff_review_signature"></toggle>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Staff Review Signature</label>
+                    <ui-select id="field_staff_review_signature_authorities" name="staffReviewSignatureAuthorities"
+                               multiple ng-model="vm.evaluationTemplate.staffReviewSignatureAuthorities"
+                               close-on-select="false" title="Treatment Days" ng-disabled="!vm.evaluationTemplate.forceStaffReviewSignature">
+                        <ui-select-match placeholder="Roles...">{{$item.name || $item}}</ui-select-match>
+                        <ui-select-choices repeat="day in vm.authorities | filter:$select.search">
+                            {{day}}
+                        </ui-select-choices>
+                    </ui-select>
+                    <div ng-show="vm.form.clinic_info_form.drawDays.$invalid">
+                        <p class="help-block"
+                           ng-show="vm.form.clinic_info_form.drawDays.$error.required">
+                            This field is required.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label class="control-label" for="field_LoadAutomatic">Load Automatic</label><br/>
+                    <toggle ng-model="vm.evaluationTemplate.loadAutomatic" on="Yes" off="No"
+                            id="field_LoadAutomatic"></toggle>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</form>

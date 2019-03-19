@@ -1,0 +1,81 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+            ng-click="vm.clear()">&times;</button>
+    <h4 class="modal-title" id="myPatientAccessLabel">Test {{'"' + vm.patientOrderTest.labCompendium.code + '"'}}</h4>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-lg-12" style="overflow-y: scroll; max-height: 75vh;">
+            <div class="col-lg-12">
+                <table class="table table-condensed table-striped table-bordered">
+                    <tbody>
+                    <tr>
+                        <th>Test Code</th>
+                        <th>Frequency</th>
+                        <th>Staring Date</th>
+                        <th>End Date</th>
+                    </tr>
+                    <tr>
+                        <td>{{vm.patientOrderTest.labCompendium.code}}</td>
+                        <td>{{vm.patientOrderTest.orderFrequency.name}}</td>
+                        <td>{{vm.patientOrderTest.staringDate | amDateFormat:'MM/DD/YYYY'}}</td>
+                        <td>{{vm.patientOrderTest.endDate | amDateFormat:'MM/DD/YYYY'}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-condensed table-striped table-bordered">
+                            <tbody>
+                            <tr>
+                                <th>ICD 10</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr ng-repeat="diagnosis in vm.patientOrderTest.icd10s">
+                                <td>{{diagnosis.code}}</td>
+                                <td>{{diagnosis.description}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="box box-default">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Test "{{vm.patientOrderTest.labCompendium.code}}" schedule</h3>
+                    </div>
+                    <div class="box-body">
+                        <table class="table table-condensed table-striped table-bordered">
+                            <tbody>
+                            <tr>
+                                <th style="width: 10px">#</th>
+                                <th>Scheduled Day</th>
+                                <th>Collected</th>
+                                <th>Collected Day</th>
+                                <th>Sent</th>
+                                <th>Sent Day</th>
+                                <th>Canceled</th>
+                                <!--th ng-show="vm.patientOrder.ordStatus == 'SCHEDULED' && vm.canCancel">Cancel</th-->
+                            </tr>
+                            <tr ng-repeat="item in vm.patientOrderItems">
+                                <td>{{$index}}.</td>
+                                <td>{{item.scheduleDate | amDateFormat:'MM/DD/YYYY'}}</td>
+                                <td><span ng-class="item.collected ? 'label label-success' : 'label label-danger'">{{item.collected ? 'Yes' : 'No'}}</span></td>
+                                <td>{{item.collectedDate | amDateFormat:'MM/DD/YYYY'}}</td>
+                                <td><span ng-class="item.sent ? 'label label-success' : 'label label-danger'">{{item.sent ? 'Yes' : 'No'}}</span></td>
+                                <td>{{item.sentDate | amDateFormat:'MM/DD/YYYY'}}</td>
+                                <td>
+                                    <span ng-class="item.canceled ? 'label label-danger' : 'label label-success'">{{item.canceled ? 'Yes' : 'No'}}</span>
+                                </td>
+                                <!--td ng-show="vm.patientOrder.ordStatus == 'SCHEDULED' && vm.canCancel">
+                                    <nz-toggle ng-model="item.canceled" ng-disabled="item.canceled" ng-click="vm.cancelOrderTestItem(item)"></nz-toggle>
+                                </td-->
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

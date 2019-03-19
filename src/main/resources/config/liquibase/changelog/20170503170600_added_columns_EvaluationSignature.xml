@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <!--
+        Added new Columns to EvaluationSignature.
+    -->
+    <changeSet author="aacosta" id="20170503170600-1">
+        <addColumn schemaName="public" tableName="evaluation_signature">
+            <column name="patient_signature_id" type="bigint"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet author="aacosta" id="20170503170600-2">
+
+        <addForeignKeyConstraint baseColumnNames="patient_signature_id"
+                                 baseTableName="evaluation_signature"
+                                 constraintName="fk_patient_signature_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="signature"/>
+
+    </changeSet>
+
+
+</databaseChangeLog>
+

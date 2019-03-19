@@ -1,0 +1,1440 @@
+
+<section class="patient-dashboard">
+    <!--Basic Info-->
+    <div class="dash-item size-half basic-info">
+        <div class="item-body">
+            <div class="left">
+                <div class="patient-picture">
+                    <img src="../../../../content/images/avatar.png" alt="User Image">
+                    <button type="button" class="photo-action"
+                            ng-click="vm.open('sm')">
+                        <i class="fa fa-camera fa-inverse fa-2x"></i>
+                    </button>
+                    <script type="text/ng-template" id="modal-photo-upload.html">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Change/Upload Photo</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+
+                            </div>
+                        </div>
+                        <div class="modal-footer"></div>
+                    </script>
+                </div>
+                <h4 class="patient-name">Brianna The Tharas</h4>
+
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td class="tab-label">Mr No:</td>
+                            <td><strong>2017-36</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="tab-label">Social No:</td>
+                            <td>12345689</td>
+                        </tr>
+                        <tr>
+                            <td class="tab-label">DOB:</td>
+                            <td>07/13/2017</td>
+                        </tr>
+                        <tr>
+                            <td class="tab-label">Admission:</td>
+                            <td>07/13/2017</td>
+                        </tr>
+                        <tr>
+                            <td class="tab-label">Sobriety Date:</td>
+                            <td>07/13/2017</td>
+                        </tr>
+                        <tr>
+                            <td class="tab-label">Level of Care:</td>
+                            <td><strong>Detox</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="tab-label">Gender:</td>
+                            <td>Female</td>
+                        </tr>
+                        <tr>
+                            <td class="tab-label">Bed:</td>
+                            <td>N22-1</td>
+                        </tr>
+                        <tr>
+                            <td class="tab-label">One Time Only:</td>
+                            <td>No</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> <!-- /left -->
+
+            <div class="right">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td class="tab-label"><i class="fa fa-map-marker" aria-hidden="true"></i>Address:</td>
+                            <td>444 W Boynton Beach Blvd, Boynton Beach. FL 33435</td>
+                        </tr>
+                        <tr>
+                            <td class="tab-label"><i class="fa fa-usd" aria-hidden="true"></i> Payment Method:</td>
+                            <td>Private Pay with Rx Cover</td>
+                        </tr>
+                        <tr>
+                            <td class="tab-label">Marital Status:</td>
+                            <td>Single</td>
+                        </tr>
+                        <tr>
+                            <td class="tab-label">Race:</td>
+                            <td>White</td>
+                        </tr>
+                        <tr>
+                            <td class="tab-label">Ethnicity:</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td class="table-divider"></td>
+                        </tr>
+                        <tr>
+                            <td class="tab-label"><i class="fa fa-user" aria-hidden="true"></i> Rep on Intake:</td>
+                            <td>Brian Ldayman</td>
+                        </tr>
+                        <tr>
+                            <td class="tab-label">Date First Contact:</td>
+                            <td>07/13/2017</td>
+                        </tr>
+                        <tr>
+                            <td class="tab-label">1st contact name:</td>
+                            <td>John Doe Smith</td>
+                        </tr>
+                        <tr>
+                            <td class="tab-label">1st contact Phone:</td>
+                            <td>305 213 7654</td>
+                        </tr>
+                        <tr>
+                            <td class="tab-label">1st contact relationship:</td>
+                            <td>Father</td>
+                        </tr>
+                        <tr>
+                            <td class="table-divider"></td>
+                        </tr>
+                        <tr>
+                            <td class="tab-label"><i class="fa fa-user" aria-hidden="true"></i> Referrer:</td>
+                            <td>Ralph Johnson</td>
+                        </tr>
+                        <tr>
+                            <td class="tab-label">Discharge Date:</td>
+                            <td>09/19/2017</td>
+                        </tr>
+                        <tr>
+                            <td class="tab-label">Discharge to:</td>
+                            <td>The Haven Detox</td>
+                        </tr>
+                        <tr>
+                            <td class="tab-label">Discharge type:</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                        </tr>
+                        <tr>
+                            <td class="table-divider"></td>
+                        </tr>
+                        <tr>
+                            <td class="tab-label">Occupation:</td>
+                            <td>Forniture Sale</td>
+                        </tr>
+                        <tr>
+                            <td class="tab-label">Employer Name:</td>
+                            <td>Home Depot Office</td>
+                        </tr>
+                        <tr>
+                            <td class="tab-label">Employer Phone:</td>
+                            <td>904 432 2345</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> <!-- /left -->
+        </div>
+        <!-- /item-body -->
+
+        <footer class="item-footer">
+            <div class="fleft">
+                <a href="" class="footer-link">View ID <i class="fa fa-id-card" aria-hidden="true"></i></a>
+            </div>
+            <div class="fright">
+                <a href="" class="footer-link">Edit Information <i class="fa fa-edit" aria-hidden="true"></i></a>
+            </div>
+        </footer>
+    </div>
+    <!-- /Basic Info -->
+
+    <!-- Urgent Issues -->
+    <div class="dash-item size-half urgent-issues">
+
+        <button type="button" class="dash-close-btn">
+            <svg id="i-close" viewBox="0 0 32 32" width="15" height="15" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+                <path d="M2 30 L30 2 M30 30 L2 2" />
+            </svg>
+        </button>
+
+        <header class="item-header">
+            <div class="fancy-icon red big"><i class="fa fa-bell fa-inverse" aria-hidden="true"></i></div>
+            <h2 class="head-text">Urgent Issues</h2>
+        </header>
+        <div class="item-body">
+            <ul class="list-unstyled issues-list">
+                <li class="issue">
+                    <div class="count">1</div>
+                    <div class="description-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium at cum, ea et eum excepturi facere ipsa iste magnam molestiae nam nemo neque nostrum obcaecati odit, reiciendis tempore velit.
+                    </div>
+                </li>
+                <li class="issue important">
+                    <div class="count">2</div>
+                    <div class="description-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam amet aperiam assumenda commodi dolore dolorem, est et fugiat illum inventore libero maxime neque obcaecati possimus, provident quaerat quas repellat?
+                    </div>
+                </li>
+                <li class="issue">
+                    <div class="count">3</div>
+                    <div class="description-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam cum eligendi et eum, iusto laudantium minima quisquam quo repellendus, rerum sapiente velit vitae voluptate voluptates! Aut ea ex quas.
+                    </div>
+                </li>
+                <li class="issue important">
+                    <div class="count">4</div>
+                    <div class="description-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad doloribus eius libero officiis vitae! Error eveniet explicabo illo iusto modi possimus quaerat quis reiciendis. Cumque dolores eius exercitationem facilis similique!
+                    </div>
+                </li>
+                <li class="issue">
+                    <div class="count">5</div>
+                    <div class="description-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor esse ipsam possimus unde. A accusantium, aliquam culpa dolores eos esse et ipsa labore magni nobis possimus provident quo tempore voluptas.
+                    </div>
+                </li>
+                <li class="issue">
+                    <div class="count">6</div>
+                    <div class="description-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut culpa nulla numquam officiis perspiciatis. A adipisci aperiam, at commodi dolores natus voluptatum. Incidunt iusto, nostrum! Eos eum exercitationem recusandae? Illum!
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- /item-body -->
+
+        <footer class="item-footer">
+            <div class="fleft">
+                <a href="" class="footer-link">Add Issue <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+            </div>
+            <div class="fright">
+                <nav aria-label="Page navigation" class="dash-pagination">
+                    <ul class="pagination pagination-sm">
+                        <li class="disabled">
+                            <a href="#" aria-label="Previous">
+                                <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div>
+    <!-- /Urgent Issues -->
+
+    <!-- diagnoses -->
+    <div class="dash-item size-small diagnoses">
+
+        <button type="button" class="dash-close-btn">
+            <svg id="i-close" viewBox="0 0 32 32" width="15" height="15" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+                <path d="M2 30 L30 2 M30 30 L2 2" />
+            </svg>
+        </button>
+
+        <header class="item-header">
+            <div class="fancy-icon green small"><i class="fa fa-bell fa-inverse" aria-hidden="true"></i></div>
+            <h2 class="head-text small">Diagnoses</h2>
+        </header>
+        <div class="item-body">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td><strong>F10.20</strong></td>
+                        <td class="text-left">Alcohol use disorder, severe</td>
+                    </tr>
+                    <tr>
+                        <td><strong>F13.30</strong></td>
+                        <td class="text-left">Sedative, hypnoptic or anxiolytic use disorder, Severe</td>
+                    </tr>
+                    <tr>
+                        <td><strong>F11.45</strong></td>
+                        <td class="text-left">Opiod use disorder, severe</td>
+                    </tr>
+                    <tr>
+                        <td><strong>F15.50</strong></td>
+                        <td class="text-left">Cocaine use disorder, severe</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> <!-- /item-body -->
+
+    </div>
+    <!-- /diagnoses -->
+
+    <!-- care-team -->
+    <div class="dash-item size-small care-team">
+
+        <button type="button" class="dash-close-btn">
+            <svg id="i-close" viewBox="0 0 32 32" width="15" height="15" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+                <path d="M2 30 L30 2 M30 30 L2 2" />
+            </svg>
+        </button>
+
+        <header class="item-header">
+            <div class="fancy-icon blue small"><i class="fa fa-users fa-inverse" aria-hidden="true"></i></div>
+            <h2 class="head-text small">Care Team</h2>
+        </header>
+        <div class="item-body">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td><strong>Primary Physician:</strong></td>
+                        <td class="text-left">Emilio J. Duboy, MD</td>
+                        <td class="action-buttons">
+                            <a href="" class="edit-btn"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                            <br>
+                            <a href="" class="remove-btn"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Primary Therapist:</strong></td>
+                        <td class="text-left">Kathy Maenza, CAP, NCAC II</td>
+                        <td class="action-buttons">
+                            <a href="" class="edit-btn"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                            <br>
+                            <a href="" class="remove-btn"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> <!-- /item-body -->
+
+        <footer class="item-footer">
+            <a href="" class="footer-link">Add Member <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+        </footer>
+    </div>
+    <!-- /care-team -->
+
+    <!-- allergies -->
+    <div class="dash-item size-small allergies">
+
+        <button type="button" class="dash-close-btn">
+            <svg id="i-close" viewBox="0 0 32 32" width="15" height="15" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+                <path d="M2 30 L30 2 M30 30 L2 2" />
+            </svg>
+        </button>
+
+        <header class="item-header">
+            <div class="fancy-icon yellow small"><i class="fa fa-medkit fa-inverse" aria-hidden="true"></i></div>
+            <h2 class="head-text small">Allergies</h2>
+        </header>
+
+        <!-- item-body -->
+        <div class="item-body">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td class="icon"><i class="fa fa-asterisk" aria-hidden="true"></i></td>
+                        <td class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci deleniti, harum.</td>
+                        <td class="action-buttons">
+                            <a href="" class="edit-btn"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                            <br>
+                            <a href="" class="remove-btn"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="icon"><i class="fa fa-asterisk" aria-hidden="true"></i></td>
+                        <td class="text-left">Aut beatae consequatur temporibus ullam veniam.</td>
+                        <td class="action-buttons">
+                            <a href="" class="edit-btn"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                            <br>
+                            <a href="" class="remove-btn"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="icon"><i class="fa fa-asterisk" aria-hidden="true"></i></td>
+                        <td class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et exercitationem id.</td>
+                        <td class="action-buttons">
+                            <a href="" class="edit-btn"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                            <br>
+                            <a href="" class="remove-btn"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="icon"><i class="fa fa-asterisk" aria-hidden="true"></i></td>
+                        <td class="text-left">Ad aspernatur exercitationem facilis ipsum nihil placeat quaerat voluptates.</td>
+                        <td class="action-buttons">
+                            <a href="" class="edit-btn"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                            <br>
+                            <a href="" class="remove-btn"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><!-- /item-body -->
+
+        <footer class="item-footer">
+            <a href="" class="footer-link">Add Allergie <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+        </footer>
+    </div>
+    <!-- /allergies -->
+
+    <!-- diet -->
+    <div class="dash-item size-small diet">
+
+        <button type="button" class="dash-close-btn">
+            <svg id="i-close" viewBox="0 0 32 32" width="15" height="15" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+                <path d="M2 30 L30 2 M30 30 L2 2" />
+            </svg>
+        </button>
+
+        <header class="item-header">
+            <div class="fancy-icon red small"><i class="fa fa-cutlery fa-inverse" aria-hidden="true"></i></div>
+            <h2 class="head-text small">Diet</h2>
+        </header>
+
+        <!-- item-body -->
+        <div class="item-body">
+            <table class="table">
+                <tbody>
+                <tr>
+                    <td class="icon"><i class="fa fa-asterisk" aria-hidden="true"></i></td>
+                    <td class="text-left">Aut beatae consequatur cum ducimus laudantium molestias perspiciatis quo temporibus ullam veniam.</td>
+                    <td class="action-buttons">
+                        <a href="" class="edit-btn"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                        <br>
+                        <a href="" class="remove-btn"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="icon"><i class="fa fa-asterisk" aria-hidden="true"></i></td>
+                    <td class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci deleniti, harum.</td>
+                    <td class="action-buttons">
+                        <a href="" class="edit-btn"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                        <br>
+                        <a href="" class="remove-btn"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="icon"><i class="fa fa-asterisk" aria-hidden="true"></i></td>
+                    <td class="text-left">Ad aspernatur exercitationem facilis ipsum nihil placeat quaerat voluptates.</td>
+                    <td class="action-buttons">
+                        <a href="" class="edit-btn"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                        <br>
+                        <a href="" class="remove-btn"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="icon"><i class="fa fa-asterisk" aria-hidden="true"></i></td>
+                    <td class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et exercitationem id.</td>
+                    <td class="action-buttons">
+                        <a href="" class="edit-btn"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                        <br>
+                        <a href="" class="remove-btn"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div><!-- /item-body -->
+
+        <footer class="item-footer">
+            <a href="" class="footer-link">Add Diet <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+        </footer>
+    </div>
+    <!-- /diet -->
+
+    <div class="dash-item size-half insurance-board">
+
+        <button type="button" class="dash-close-btn">
+            <svg id="i-close" viewBox="0 0 32 32" width="15" height="15" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+                <path d="M2 30 L30 2 M30 30 L2 2" />
+            </svg>
+        </button>
+
+        <header class="item-header blank-border">
+            <div class="fancy-icon red big"><i class="fa fa-id-card fa-inverse" aria-hidden="true"></i></div>
+            <h2 class="head-text">Insurance</h2>
+        </header>
+
+        <!-- item-body -->
+        <div class="item-body">
+            <!-- Insurance Tabs -->
+            <uib-tabset active="0" class="header-tabs">
+                <uib-tab index="0" heading="Primary">
+                    <div class="tab-wrapper">
+                        <div class="insurance-info">
+                            <div class="info">
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Insurance Carrier:</strong></td>
+                                            <td>Anthem BCBS OF OH</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Policy Number:</strong></td>
+                                            <td>EYUAN2343570</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Pre-Cert Number:</strong></td>
+                                            <td>ZTNAN276570</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Group Number:</strong></td>
+                                            <td>X2343570</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Insurance Type:</strong></td>
+                                            <td>ZXNYQW</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Rx Bin:</strong></td>
+                                            <td>ZTNAN276570</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Rx PCN:</strong></td>
+                                            <td>WQX2343570</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Member ID:</strong></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="subscriber-info">
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Subscriber:</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Name:</strong></td>
+                                            <td>Riddley Scott</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>DOB:</strong></td>
+                                            <td>11/08/2017</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>SSN:</strong></td>
+                                            <td>333882222</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Relationship:</strong></td>
+                                            <td>Self</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div> <!-- /subscriber-info -->
+                        </div> <!-- /insurance-info -->
+
+                        <div class="insurance-card">
+                            <div class="front">
+                                <div class="text-center"><strong>Front:</strong></div>
+                                <img src="http://linguistics.ohio.edu/opie/wp-content/uploads/2016/06/Untitled.png" alt="Example Image">
+                            </div>
+                            <div class="back">
+                                <div class="text-center"><strong>Back:</strong></div>
+                                <img class="" src="http://www.womenscareofwi.com/i/insurancecardexample.jpg" alt="Example Image">
+                            </div>
+                        </div>
+                    </div> <!-- /tab-wrapper -->
+                </uib-tab>
+                <uib-tab index="1" heading="Secondary">
+                    <div class="tab-wrapper">
+                        <div class="insurance-info">
+                            <div class="info">
+                                <table class="table">
+                                    <tbody>
+                                    <tr>
+                                        <td><strong>Insurance Carrier:</strong></td>
+                                        <td>Protoss Carrier Mothership</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Policy Number:</strong></td>
+                                        <td>SDFGS2343570</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Pre-Cert Number:</strong></td>
+                                        <td>QWERT276570</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Group Number:</strong></td>
+                                        <td>X2343570</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Insurance Type:</strong></td>
+                                        <td>QWERTY</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Rx Bin:</strong></td>
+                                        <td>ZTNAN276570</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Rx PCN:</strong></td>
+                                        <td>WQX2343570</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Member ID:</strong></td>
+                                        <td></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="subscriber-info">
+                                <table class="table">
+                                    <tbody>
+                                    <tr>
+                                        <td><strong>Subscriber:</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Name:</strong></td>
+                                        <td>Austin Smithsonian</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>DOB:</strong></td>
+                                        <td>07/13/2017</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>SSN:</strong></td>
+                                        <td>666883333</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Relationship:</strong></td>
+                                        <td>Self</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div> <!-- /subscriber-info -->
+                        </div> <!-- /insurance-info -->
+
+                        <div class="insurance-card">
+                            <div class="front">
+                                <div class="text-center"><strong>Front:</strong></div>
+                                <img src="http://linguistics.ohio.edu/opie/wp-content/uploads/2016/06/Untitled.png" alt="Example Image">
+                            </div>
+                            <div class="back">
+                                <div class="text-center"><strong>Back:</strong></div>
+                                <img class="" src="http://www.womenscareofwi.com/i/insurancecardexample.jpg" alt="Example Image">
+                            </div>
+                        </div>
+                    </div> <!-- /tab-wrapper -->
+                </uib-tab>
+            </uib-tabset> <!-- Insurance Tabs -->
+
+        </div><!-- /item-body -->
+
+        <footer class="item-footer">
+            <a href="" class="footer-link">Edit Information <i class="fa fa-edit" aria-hidden="true"></i></a>
+        </footer>
+    </div>
+
+    <div class="dash-item size-half patient-contacts">
+
+        <button type="button" class="dash-close-btn">
+            <svg id="i-close" viewBox="0 0 32 32" width="15" height="15" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+                <path d="M2 30 L30 2 M30 30 L2 2" />
+            </svg>
+        </button>
+
+        <header class="item-header">
+            <div class="fancy-icon light-yellow big"><i class="fa fa-users fa-inverse" aria-hidden="true"></i></div>
+            <h2 class="head-text">Contacts</h2>
+        </header>
+
+        <!-- item-body -->
+        <div class="item-body">
+            <ul class="list-unstyled">
+                <!-- contact-item -->
+                <li class="contact-item">
+                    <div class="type">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td><strong>Type</strong></td>
+                                    <td>Emergency</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Relationship:</strong></td>
+                                    <td>Parent</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="contact-info">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td><strong>Name:</strong></td>
+                                    <td>Scarlett Johansson</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Phone:</strong></td>
+                                    <td>305 1234565</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Address:</strong></td>
+                                    <td>444 W Boynton Beach Blvd, Boynton Beach. FL 33435</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="action-buttons">
+                        <a href="" class="edit-btn"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                        <br>
+                        <a href="" class="remove-btn"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                    </div>
+                </li> <!-- /contact-item -->
+
+                <!-- contact-item -->
+                <li class="contact-item">
+                    <div class="type">
+                        <table class="table">
+                            <tbody>
+                            <tr>
+                                <td><strong>Type</strong></td>
+                                <td>Emergency</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Relationship:</strong></td>
+                                <td>Parent</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="contact-info">
+                        <table class="table">
+                            <tbody>
+                            <tr>
+                                <td><strong>Name:</strong></td>
+                                <td>Penélope Cruz</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Phone:</strong></td>
+                                <td>305 1234565</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Address:</strong></td>
+                                <td>444 W Boynton Beach Blvd, Boynton Beach. FL 33435</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="action-buttons">
+                        <a href="" class="edit-btn"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                        <br>
+                        <a href="" class="remove-btn"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                    </div>
+                </li><!-- /contact-item -->
+
+                <!-- contact-item -->
+                <li class="contact-item">
+                    <div class="type">
+                        <table class="table">
+                            <tbody>
+                            <tr>
+                                <td><strong>Type</strong></td>
+                                <td>Emergency</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Relationship:</strong></td>
+                                <td>Parent</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="contact-info">
+                        <table class="table">
+                            <tbody>
+                            <tr>
+                                <td><strong>Name:</strong></td>
+                                <td>Jennifer Lawrence</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Phone:</strong></td>
+                                <td>305 1234565</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Address:</strong></td>
+                                <td>444 W Boynton Beach Blvd, Boynton Beach. FL 33435</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="action-buttons">
+                        <a href="" class="edit-btn"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                        <br>
+                        <a href="" class="remove-btn"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                    </div>
+                </li><!-- /contact-item -->
+            </ul>
+        </div><!-- /item-body -->
+
+        <footer class="item-footer">
+            <div class="fleft">
+                <a href="" class="footer-link">Add Contact <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+            </div>
+            <div class="fright">
+                <nav aria-label="Page navigation" class="dash-pagination">
+                    <ul class="pagination pagination-sm">
+                        <li class="disabled">
+                            <a href="#" aria-label="Previous">
+                                <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Concurrent Reviews -->
+    <div class="dash-item size-full concurrent-reviews">
+
+        <button type="button" class="dash-close-btn">
+            <svg id="i-close" viewBox="0 0 32 32" width="15" height="15" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+                <path d="M2 30 L30 2 M30 30 L2 2" />
+            </svg>
+        </button>
+
+        <header class="item-header">
+            <div class="fancy-icon green big"><i class="fa fa-building fa-inverse" aria-hidden="true"></i></div>
+            <h2 class="head-text">Concurrent Reviews</h2>
+        </header>
+
+        <div class="item-body">
+            <ul class="list-unstyled reviews-list">
+                <li class="review-item">
+                    <table class="table">
+                        <tr>
+                            <td><strong><i class="fa fa-calendar-check-o" aria-hidden="true"></i> Start Date:</strong></td>
+                            <td><strong><i class="fa fa-calendar-times-o" aria-hidden="true"></i> End Date:</strong></td>
+                            <td><strong><i class="fa fa-hashtag" aria-hidden="true"></i> of days</strong></td>
+                            <td><strong>Frecuency:</strong></td>
+                            <td><strong>Level of Care:</strong></td>
+                            <td><strong>LCD</strong></td>
+                            <td><strong><i class="fa fa-calendar" aria-hidden="true"></i> Auth Date</strong></td>
+                            <td><strong>Auth <i class="fa fa-hashtag" aria-hidden="true"></i></strong></td>
+                            <td rowspan="6" class="action-buttons">
+                                <a href="" class="edit-btn"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                                <br>
+                                <a href="" class="remove-btn"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>02/08/2017</td>
+                            <td>11/09/2017</td>
+                            <td>34</td>
+                            <td>Every three days</td>
+                            <td>Residential</td>
+                            <td>No</td>
+                            <td>09/12/2017</td>
+                            <td>YRKSRT-02</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Next Review</strong></td>
+                            <td><strong>Next Level of Care</strong></td>
+                            <td><strong><i class="fa fa-calendar" aria-hidden="true"></i> Next Level of Care Date</strong></td>
+                            <td colspan="3"><strong>Insurance</strong></td>
+                            <td colspan="2"><strong><i class="fa fa-user" aria-hidden="true"></i> Created by:</strong></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td colspan="3">Harvard Pilgrim Healthcare</td>
+                            <td colspan="2">Dmitri Mendeleev</td>
+                        </tr>
+                        <tr>
+                            <td colspan="8"><strong><i class="fa fa-file-text" aria-hidden="true"></i> Notes:</strong></td>
+                        </tr>
+                        <tr>
+                            <td colspan="8">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium animi at cupiditate ducimus, hic in inventore itaque maiores minima odio odit possimus praesentium rerum saepe, similique temporibus unde vitae voluptates.
+                            </td>
+                        </tr>
+                    </table>
+                </li><!-- /review-item -->
+
+                <li class="review-item">
+                    <table class="table">
+                        <tr>
+                            <td><strong><i class="fa fa-calendar-check-o" aria-hidden="true"></i> Start Date:</strong></td>
+                            <td><strong><i class="fa fa-calendar-times-o" aria-hidden="true"></i> End Date:</strong></td>
+                            <td><strong><i class="fa fa-hashtag" aria-hidden="true"></i> of days</strong></td>
+                            <td><strong>Frecuency:</strong></td>
+                            <td><strong>Level of Care:</strong></td>
+                            <td><strong>LCD</strong></td>
+                            <td><strong><i class="fa fa-calendar" aria-hidden="true"></i> Auth Date</strong></td>
+                            <td><strong>Auth <i class="fa fa-hashtag" aria-hidden="true"></i></strong></td>
+                            <td rowspan="6" class="action-buttons">
+                                <a href="" class="edit-btn"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                                <br>
+                                <a href="" class="remove-btn"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>02/08/2017</td>
+                            <td>11/09/2017</td>
+                            <td>34</td>
+                            <td>Every three days</td>
+                            <td>Residential</td>
+                            <td>No</td>
+                            <td>09/12/2017</td>
+                            <td>YRKSRT-02</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Next Review</strong></td>
+                            <td><strong>Next Level of Care</strong></td>
+                            <td><strong><i class="fa fa-calendar" aria-hidden="true"></i> Next Level of Care Date</strong></td>
+                            <td colspan="3"><strong>Insurance</strong></td>
+                            <td colspan="2"><strong><i class="fa fa-user" aria-hidden="true"></i> Created by:</strong></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td colspan="3">USS Enterprise (CVN-65)</td>
+                            <td colspan="2">Pyotr Ilyich Tchaikovsky</td>
+                        </tr>
+                        <tr>
+                            <td colspan="8"><strong><i class="fa fa-file-text" aria-hidden="true"></i> Notes:</strong></td>
+                        </tr>
+                        <tr>
+                            <td colspan="8">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium animi at cupiditate ducimus, hic in inventore itaque maiores minima odio odit possimus praesentium rerum saepe, similique temporibus unde vitae voluptates.
+                            </td>
+                        </tr>
+                    </table>
+                </li><!-- /review-item -->
+
+                <li class="review-item">
+                    <table class="table">
+                        <tr>
+                            <td><strong><i class="fa fa-calendar-check-o" aria-hidden="true"></i> Start Date:</strong></td>
+                            <td><strong><i class="fa fa-calendar-times-o" aria-hidden="true"></i> End Date:</strong></td>
+                            <td><strong><i class="fa fa-hashtag" aria-hidden="true"></i> of days</strong></td>
+                            <td><strong>Frecuency:</strong></td>
+                            <td><strong>Level of Care:</strong></td>
+                            <td><strong>LCD</strong></td>
+                            <td><strong><i class="fa fa-calendar" aria-hidden="true"></i> Auth Date</strong></td>
+                            <td><strong>Auth <i class="fa fa-hashtag" aria-hidden="true"></i></strong></td>
+                            <td rowspan="6" class="action-buttons">
+                                <a href="" class="edit-btn"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                                <br>
+                                <a href="" class="remove-btn"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>02/08/2017</td>
+                            <td>11/09/2017</td>
+                            <td>34</td>
+                            <td>Every three days</td>
+                            <td>Residential</td>
+                            <td>No</td>
+                            <td>09/12/2017</td>
+                            <td>YRKSRT-02</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Next Review</strong></td>
+                            <td><strong>Next Level of Care</strong></td>
+                            <td><strong><i class="fa fa-calendar" aria-hidden="true"></i> Next Level of Care Date</strong></td>
+                            <td colspan="3"><strong>Insurance</strong></td>
+                            <td colspan="2"><strong><i class="fa fa-user" aria-hidden="true"></i> Created by:</strong></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td colspan="3">Biohazard: Umbrella Corps</td>
+                            <td colspan="2">Lars Ulrich</td>
+                        </tr>
+                        <tr>
+                            <td colspan="8"><strong><i class="fa fa-file-text" aria-hidden="true"></i> Notes:</strong></td>
+                        </tr>
+                        <tr>
+                            <td colspan="8">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium animi at cupiditate ducimus, hic in inventore itaque maiores minima odio odit possimus praesentium rerum saepe, similique temporibus unde vitae voluptates.
+                            </td>
+                        </tr>
+                    </table>
+                </li><!-- /review-item -->
+
+            </ul> <!-- /reviews-list -->
+        </div> <!-- /item-body -->
+
+        <footer class="item-footer">
+            <div class="fleft">
+                <a href="" class="footer-link">Add Concurrent Review <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+            </div>
+            <div class="fright">
+                <nav aria-label="Page navigation" class="dash-pagination">
+                    <ul class="pagination pagination-sm">
+                        <li class="disabled">
+                            <a href="#" aria-label="Previous">
+                                <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div> <!-- /concurrent-reviews -->
+
+    <!--lab-orders-->
+    <div class="dash-item size-half-small patient-orders">
+
+        <button type="button" class="dash-close-btn">
+            <svg id="i-close" viewBox="0 0 32 32" width="15" height="15" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+                <path d="M2 30 L30 2 M30 30 L2 2" />
+            </svg>
+        </button>
+
+        <div class="item-header blank-border">
+            <div class="fancy-icon blue big"><i class="fa fa-wpforms fa-inverse" aria-hidden="true"></i></div>
+            <h2 class="head-text">Orders</h2>
+        </div>
+
+        <div class="item-body has-tabs">
+            <uib-tabset active="0" class="orders-tabs header-tabs">
+                <uib-tab index="0" heading="Lab Orders">
+                    <div class="tab-wrapper">
+                        <table class="table lab-orders">
+                            <thead>
+                                <tr>
+                                    <th class="theader" colspan="2"><strong>Orders</strong></th>
+                                    <th class="theader"><strong>Dates</strong></th>
+                                    <th class="theader" colspan="2"><strong>Status</strong></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="item-order">
+                                    <td class="main-icon"><i class="fa fa-ban" aria-hidden="true"></i></td>
+                                    <td class="order-name">
+                                        <h4 class="name">Haven Detox Male Panel</h4>
+                                        <p class="small">United Clinical Labs</p>
+                                    </td>
+                                    <td class="orders-date">
+                                        <p class="ttext"><span class="tlabel">Stop:</span> <span class="date">08/24/2017 11:13 AM</span></p>
+                                    </td>
+                                    <td class="order-status">
+                                        <p class="ttext"><span class="tlabel">Enter by:</span> Aelius Galenus, MD <span class="date">07/04/2017 03:11 PM</span></p>
+                                        <p class="ttext"><span class="tlabel">Order by:</span> Gregory House, MD</p>
+                                        <p class="ttext"><span class="tlabel">Sign by:</span> Andrea Vesalius, MD <span class="date">07/04/2017 09:27 AM</span></p>
+                                    </td>
+                                    <td class="action-buttons">
+                                        <a href="" title="See Details" class="edit-btn"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                        <br>
+                                        <a href="" title="See Details" class="sign-btn"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                    </td>
+                                </tr> <!-- /item-order -->
+
+                                <tr class="item-order">
+                                    <td class="main-icon"><i class="fa fa-file-text" aria-hidden="true"></i></td>
+                                    <td class="order-name">
+                                        <h4 class="name">Drugs of Abuse</h4>
+                                        <p class="small">United Clinical Labs</p>
+                                    </td>
+                                    <td class="orders-date">
+                                        <p class="ttext"><span class="tlabel">Start:</span> <span class="date">08/24/2017 11:13 AM</span></p>
+                                        <p class="ttext"><span class="tlabel">End:</span> <span class="date">09/10/2017 09:00 AM</span></p>
+                                    </td>
+                                    <td class="order-status">
+                                        <p class="ttext"><span class="tlabel">Enter by:</span> Aelius Galenus, MD <span class="date">07/04/2017 03:11 PM</span></p>
+                                        <p class="ttext"><span class="tlabel">Order by:</span> Gregory House, MD</p>
+                                        <p class="ttext"><span class="tlabel">Sign by:</span> Andrea Vesalius, MD <span class="date">07/04/2017 09:27 AM</span></p>
+                                    </td>
+                                    <td class="action-buttons">
+                                        <a href="" title="See Details" class="edit-btn"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                        <br>
+                                        <a href="" title="See Details" class="sign-btn"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        <br>
+                                        <a href="" title="Discontinue Order" class="remove-btn"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                    </td>
+                                </tr> <!-- /item-order -->
+
+                                <tr class="item-order">
+                                    <td class="main-icon"><i class="fa fa-ban" aria-hidden="true"></i></td>
+                                    <td class="order-name">
+                                        <h4 class="name">Haven Detox Male Panel</h4>
+                                        <p class="small">United Clinical Labs</p>
+                                    </td>
+                                    <td class="orders-date">
+                                        <p class="ttext"><span class="tlabel">Stop:</span> <span class="date">08/24/2017 11:13 AM</span></p>
+                                    </td>
+                                    <td class="order-status">
+                                        <p class="ttext"><span class="tlabel">Enter by:</span> Aelius Galenus, MD <span class="date">07/04/2017 03:11 PM</span></p>
+                                        <p class="ttext"><span class="tlabel">Order by:</span> Gregory House, MD</p>
+                                        <p class="ttext"><span class="tlabel">Sign by:</span> Andrea Vesalius, MD <span class="date">07/04/2017 09:27 AM</span></p>
+                                    </td>
+                                    <td class="action-buttons">
+                                        <a href="" title="See Details" class="edit-btn"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                        <br>
+                                        <a href="" title="See Details" class="sign-btn"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                    </td>
+                                </tr> <!-- /item-order -->
+
+                                <tr class="item-order">
+                                    <td class="main-icon"><i class="fa fa-file-text" aria-hidden="true"></i></td>
+                                    <td class="order-name">
+                                        <h4 class="name">Drugs of Abuse</h4>
+                                        <p class="small">United Clinical Labs</p>
+                                    </td>
+                                    <td class="orders-date">
+                                        <p class="ttext"><span class="tlabel">Start:</span> <span class="date">08/24/2017 11:13 AM</span></p>
+                                        <p class="ttext"><span class="tlabel">End:</span> <span class="date">09/10/2017 09:00 AM</span></p>
+                                    </td>
+                                    <td class="order-status">
+                                        <p class="ttext"><span class="tlabel">Enter by:</span> Aelius Galenus, MD <span class="date">07/04/2017 03:11 PM</span></p>
+                                        <p class="ttext"><span class="tlabel">Order by:</span> Gregory House, MD</p>
+                                        <p class="ttext"><span class="tlabel">Sign by:</span> Andrea Vesalius, MD <span class="date">07/04/2017 09:27 AM</span></p>
+                                    </td>
+                                    <td class="action-buttons">
+                                        <a href="" title="See Details" class="edit-btn"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                        <br>
+                                        <a href="" title="See Details" class="sign-btn"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        <br>
+                                        <a href="" title="Discontinue Order" class="remove-btn"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                    </td>
+                                </tr> <!-- /item-order -->
+                            </tbody>
+                        </table> <!-- /lab-orders -->
+
+                        <footer class="item-footer">
+                            <div class="fleft">
+                                <a href="" class="footer-link">Add Order <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="fright">
+                                <nav aria-label="Page navigation" class="dash-pagination">
+                                    <ul class="pagination pagination-sm">
+                                        <li class="disabled">
+                                            <a href="#" aria-label="Previous">
+                                                <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li class="active"><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li>
+                                            <a href="#" aria-label="Next">
+                                                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </footer>
+                    </div> <!-- /tab-wrapper -->
+                </uib-tab>
+
+                <uib-tab index="1" heading="Medications">
+                    <div class="tab-wrapper">
+                        <table class="table lab-orders">
+                            <thead>
+                            <tr>
+                                <th class="theader" colspan="2"><strong>Orders</strong></th>
+                                <th class="theader"><strong>Dates</strong></th>
+                                <th class="theader" colspan="2"><strong>Status</strong></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="item-order">
+                                <td class="main-icon"><i class="fa fa-ban" aria-hidden="true"></i></td>
+                                <td class="order-name">
+                                    <h4 class="name">Seroquel</h4>
+                                    <p class="small">50 mg, oral once a day</p>
+                                </td>
+                                <td class="orders-date">
+                                    <p class="ttext"><span class="tlabel">Start:</span> <span class="date">08/24/2017 11:13 AM</span></p>
+                                    <p class="ttext"><span class="tlabel">End:</span> <span class="date">08/24/2017 11:13 AM</span></p>
+                                    <p class="ttext"><span class="tlabel">Faxed to:</span> United Pharmacy LLC <span class="date">08/24/2017 11:13 AM</span></p>
+                                </td>
+                                <td class="order-status">
+                                    <p class="ttext"><span class="tlabel">Enter by:</span> Aelius Galenus, MD <span class="date">07/04/2017 03:11 PM</span></p>
+                                    <p class="ttext"><span class="tlabel">Order by:</span> Gregory House, MD</p>
+                                    <p class="ttext"><span class="tlabel">Sign by:</span> Andrea Vesalius, MD <span class="date">07/04/2017 09:27 AM</span></p>
+                                </td>
+                                <td class="action-buttons">
+                                    <a href="" title="See Details" class="edit-btn"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                    <br>
+                                    <a href="" title="See Details" class="sign-btn"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                    <br>
+                                    <a href="" title="See Details" class="fax-btn"><i class="fa fa-fax" aria-hidden="true"></i></a>
+                                </td>
+                            </tr> <!-- /item-order -->
+
+                            <tr class="item-order">
+                                <td class="main-icon"><i class="fa fa-file-text" aria-hidden="true"></i></td>
+                                <td class="order-name">
+                                    <h4 class="name">Drugs of Abuse</h4>
+                                    <p class="small">United Clinical Labs</p>
+                                </td>
+                                <td class="orders-date">
+                                    <p class="ttext"><span class="tlabel">Start:</span> <span class="date">08/24/2017 11:13 AM</span></p>
+                                    <p class="ttext"><span class="tlabel">End:</span> <span class="date">09/10/2017 09:00 AM</span></p>
+                                </td>
+                                <td class="order-status">
+                                    <p class="ttext"><span class="tlabel">Enter by:</span> Aelius Galenus, MD <span class="date">07/04/2017 03:11 PM</span></p>
+                                    <p class="ttext"><span class="tlabel">Order by:</span> Gregory House, MD</p>
+                                    <p class="ttext"><span class="tlabel">Sign by:</span> Andrea Vesalius, MD <span class="date">07/04/2017 09:27 AM</span></p>
+                                </td>
+                                <td class="action-buttons">
+                                    <a href="" title="See Details" class="edit-btn"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                    <br>
+                                    <a href="" title="See Details" class="sign-btn"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                    <br>
+                                    <a href="" title="See Details" class="fax-btn"><i class="fa fa-fax" aria-hidden="true"></i></a>
+                                    <br>
+                                    <a href="" title="Discontinue Order" class="remove-btn"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                </td>
+                            </tr> <!-- /item-order -->
+
+                            <tr class="item-order">
+                                <td class="main-icon"><i class="fa fa-ban" aria-hidden="true"></i></td>
+                                <td class="order-name">
+                                    <h4 class="name">Haven Detox Male Panel</h4>
+                                    <p class="small">United Clinical Labs</p>
+                                </td>
+                                <td class="orders-date">
+                                    <p class="ttext"><span class="tlabel">Stop:</span> <span class="date">08/24/2017 11:13 AM</span></p>
+                                </td>
+                                <td class="order-status">
+                                    <p class="ttext"><span class="tlabel">Enter by:</span> Aelius Galenus, MD <span class="date">07/04/2017 03:11 PM</span></p>
+                                    <p class="ttext"><span class="tlabel">Order by:</span> Gregory House, MD</p>
+                                    <p class="ttext"><span class="tlabel">Sign by:</span> Andrea Vesalius, MD <span class="date">07/04/2017 09:27 AM</span></p>
+                                </td>
+                                <td class="action-buttons">
+                                    <a href="" title="See Details" class="edit-btn"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                    <br>
+                                    <a href="" title="See Details" class="sign-btn"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                    <br>
+                                    <a href="" title="See Details" class="fax-btn"><i class="fa fa-fax" aria-hidden="true"></i></a>
+                                </td>
+                            </tr> <!-- /item-order -->
+
+                            <tr class="item-order">
+                                <td class="main-icon"><i class="fa fa-file-text" aria-hidden="true"></i></td>
+                                <td class="order-name">
+                                    <h4 class="name">Drugs of Abuse</h4>
+                                    <p class="small">United Clinical Labs</p>
+                                </td>
+                                <td class="orders-date">
+                                    <p class="ttext"><span class="tlabel">Start:</span> <span class="date">08/24/2017 11:13 AM</span></p>
+                                    <p class="ttext"><span class="tlabel">End:</span> <span class="date">09/10/2017 09:00 AM</span></p>
+                                </td>
+                                <td class="order-status">
+                                    <p class="ttext"><span class="tlabel">Enter by:</span> Aelius Galenus, MD <span class="date">07/04/2017 03:11 PM</span></p>
+                                    <p class="ttext"><span class="tlabel">Order by:</span> Gregory House, MD</p>
+                                    <p class="ttext"><span class="tlabel">Sign by:</span> Andrea Vesalius, MD <span class="date">07/04/2017 09:27 AM</span></p>
+                                </td>
+                                <td class="action-buttons">
+                                    <a href="" title="See Details" class="edit-btn"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                    <br>
+                                    <a href="" title="See Details" class="sign-btn"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                    <br>
+                                    <a href="" title="See Details" class="fax-btn"><i class="fa fa-fax" aria-hidden="true"></i></a>
+                                    <br>
+                                    <a href="" title="Discontinue Order" class="remove-btn"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                </td>
+                            </tr> <!-- /item-order -->
+                            </tbody>
+                        </table> <!-- /lab-orders -->
+
+                        <footer class="item-footer">
+                            <div class="fleft">
+                                <a href="" class="footer-link">Add Order <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="fright">
+                                <nav aria-label="Page navigation" class="dash-pagination">
+                                    <ul class="pagination pagination-sm">
+                                        <li class="disabled">
+                                            <a href="#" aria-label="Previous">
+                                                <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li class="active"><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li>
+                                            <a href="#" aria-label="Next">
+                                                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </footer>
+                    </div> <!-- /tab-wrapper -->
+                </uib-tab>
+
+                <uib-tab index="2" heading="Actions">
+                    <div class="tab-wrapper">
+                        <table class="table lab-orders">
+                            <thead>
+                            <tr>
+                                <th class="theader" colspan="2"><strong>Orders</strong></th>
+                                <th class="theader"><strong>Dates</strong></th>
+                                <th class="theader" colspan="2"><strong>Status</strong></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="item-order">
+                                <td class="main-icon"><i class="fa fa-ban" aria-hidden="true"></i></td>
+                                <td class="order-name">
+                                    <h4 class="name">Seroquel</h4>
+                                    <p class="small">50 mg, oral once a day</p>
+                                </td>
+                                <td class="orders-date">
+                                    <p class="ttext"><span class="tlabel">Start:</span> <span class="date">08/24/2017 11:13 AM</span></p>
+                                    <p class="ttext"><span class="tlabel">End:</span> <span class="date">08/24/2017 11:13 AM</span></p>
+                                    <p class="ttext"><span class="tlabel">Faxed to:</span> United Pharmacy LLC <span class="date">08/24/2017 11:13 AM</span></p>
+                                </td>
+                                <td class="order-status">
+                                    <p class="ttext"><span class="tlabel">Enter by:</span> Aelius Galenus, MD <span class="date">07/04/2017 03:11 PM</span></p>
+                                    <p class="ttext"><span class="tlabel">Order by:</span> Gregory House, MD</p>
+                                    <p class="ttext"><span class="tlabel">Sign by:</span> Andrea Vesalius, MD <span class="date">07/04/2017 09:27 AM</span></p>
+                                </td>
+                                <td class="action-buttons">
+                                    <a href="" title="See Details" class="edit-btn"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                    <br>
+                                    <a href="" title="See Details" class="sign-btn"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                    <br>
+                                    <a href="" title="See Details" class="fax-btn"><i class="fa fa-fax" aria-hidden="true"></i></a>
+                                </td>
+                            </tr> <!-- /item-order -->
+
+                            <tr class="item-order">
+                                <td class="main-icon"><i class="fa fa-file-text" aria-hidden="true"></i></td>
+                                <td class="order-name">
+                                    <h4 class="name">Drugs of Abuse</h4>
+                                    <p class="small">United Clinical Labs</p>
+                                </td>
+                                <td class="orders-date">
+                                    <p class="ttext"><span class="tlabel">Start:</span> <span class="date">08/24/2017 11:13 AM</span></p>
+                                    <p class="ttext"><span class="tlabel">End:</span> <span class="date">09/10/2017 09:00 AM</span></p>
+                                </td>
+                                <td class="order-status">
+                                    <p class="ttext"><span class="tlabel">Enter by:</span> Aelius Galenus, MD <span class="date">07/04/2017 03:11 PM</span></p>
+                                    <p class="ttext"><span class="tlabel">Order by:</span> Gregory House, MD</p>
+                                    <p class="ttext"><span class="tlabel">Sign by:</span> Andrea Vesalius, MD <span class="date">07/04/2017 09:27 AM</span></p>
+                                </td>
+                                <td class="action-buttons">
+                                    <a href="" title="See Details" class="edit-btn"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                    <br>
+                                    <a href="" title="See Details" class="sign-btn"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                    <br>
+                                    <a href="" title="See Details" class="fax-btn"><i class="fa fa-fax" aria-hidden="true"></i></a>
+                                    <br>
+                                    <a href="" title="Discontinue Order" class="remove-btn"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                </td>
+                            </tr> <!-- /item-order -->
+
+                            <tr class="item-order">
+                                <td class="main-icon"><i class="fa fa-ban" aria-hidden="true"></i></td>
+                                <td class="order-name">
+                                    <h4 class="name">Haven Detox Male Panel</h4>
+                                    <p class="small">United Clinical Labs</p>
+                                </td>
+                                <td class="orders-date">
+                                    <p class="ttext"><span class="tlabel">Stop:</span> <span class="date">08/24/2017 11:13 AM</span></p>
+                                </td>
+                                <td class="order-status">
+                                    <p class="ttext"><span class="tlabel">Enter by:</span> Aelius Galenus, MD <span class="date">07/04/2017 03:11 PM</span></p>
+                                    <p class="ttext"><span class="tlabel">Order by:</span> Gregory House, MD</p>
+                                    <p class="ttext"><span class="tlabel">Sign by:</span> Andrea Vesalius, MD <span class="date">07/04/2017 09:27 AM</span></p>
+                                </td>
+                                <td class="action-buttons">
+                                    <a href="" title="See Details" class="edit-btn"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                    <br>
+                                    <a href="" title="See Details" class="sign-btn"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                    <br>
+                                    <a href="" title="See Details" class="fax-btn"><i class="fa fa-fax" aria-hidden="true"></i></a>
+                                </td>
+                            </tr> <!-- /item-order -->
+
+                            <tr class="item-order">
+                                <td class="main-icon"><i class="fa fa-file-text" aria-hidden="true"></i></td>
+                                <td class="order-name">
+                                    <h4 class="name">Drugs of Abuse</h4>
+                                    <p class="small">United Clinical Labs</p>
+                                </td>
+                                <td class="orders-date">
+                                    <p class="ttext"><span class="tlabel">Start:</span> <span class="date">08/24/2017 11:13 AM</span></p>
+                                    <p class="ttext"><span class="tlabel">End:</span> <span class="date">09/10/2017 09:00 AM</span></p>
+                                </td>
+                                <td class="order-status">
+                                    <p class="ttext"><span class="tlabel">Enter by:</span> Aelius Galenus, MD <span class="date">07/04/2017 03:11 PM</span></p>
+                                    <p class="ttext"><span class="tlabel">Order by:</span> Gregory House, MD</p>
+                                    <p class="ttext"><span class="tlabel">Sign by:</span> Andrea Vesalius, MD <span class="date">07/04/2017 09:27 AM</span></p>
+                                </td>
+                                <td class="action-buttons">
+                                    <a href="" title="See Details" class="edit-btn"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                    <br>
+                                    <a href="" title="See Details" class="sign-btn"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                    <br>
+                                    <a href="" title="See Details" class="fax-btn"><i class="fa fa-fax" aria-hidden="true"></i></a>
+                                    <br>
+                                    <a href="" title="Discontinue Order" class="remove-btn"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                </td>
+                            </tr> <!-- /item-order -->
+                            </tbody>
+                        </table> <!-- /lab-orders -->
+
+                        <footer class="item-footer">
+                            <div class="fleft">
+                                <a href="" class="footer-link">Add Order <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="fright">
+                                <nav aria-label="Page navigation" class="dash-pagination">
+                                    <ul class="pagination pagination-sm">
+                                        <li class="disabled">
+                                            <a href="#" aria-label="Previous">
+                                                <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li class="active"><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li>
+                                            <a href="#" aria-label="Next">
+                                                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </footer>
+                    </div> <!-- /tab-wrapper -->
+                </uib-tab>
+            </uib-tabset>
+        </div> <!-- /item-body -->
+
+    </div>
+    <!--/lab-orders-->
+
+</section>

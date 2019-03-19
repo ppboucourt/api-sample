@@ -1,0 +1,45 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "chart",
+            "otherEntityName": "chart",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "mr_no"
+        },
+        {
+            "relationshipName": "actions",
+            "otherEntityName": "actions",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "action"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "notes",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "archived",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "date_prescription",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "taken",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160830215717",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "chart_to_action",
+    "pagination": "no",
+    "enableEntityAudit": true
+}

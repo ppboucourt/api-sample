@@ -1,0 +1,264 @@
+<!--<section class="content-header">-->
+<!--<h1>Waiting Details</h1>-->
+<!--<div ncy-breadcrumb class="breadcrumb"></div>-->
+<!--</section>-->
+<section class="warning">
+    <div class="pad margin no-print">
+        <div class="callout callout-warning" style="margin-bottom: 0!important;">
+            <h4><i class="fa fa-warning"></i> Warning:</h4>
+            This Patient has been entered into the system but has not yet been admitted.
+        </div>
+    </div>
+</section>
+<section class="content">
+    <div class="row">
+        <div class="col-md-3">
+            <!-- Profile Image -->
+            <div class="box box-primary">
+                <div class="box-body box-profile">
+                    <img class="profile-user-img img-responsive img-circle" src="http://intelligentsystemsmonitoring.com/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" alt="User profile picture">
+
+                    <h3 class="profile-username text-center">Nina Mcintire</h3>
+
+                    <p class="text-muted text-center">Mr No.: 2017-03</p>
+
+                    <ul class="list-group list-group-unbordered">
+                        <li class="list-group-item">
+                            <b>Birthday</b> <a class="pull-right">01-23-2000 (17)</a>
+                        </li>
+                        <li class="list-group-item">
+                            <b>Admission Date</b> <a class="pull-right">03-20-2017</a>
+                        </li>
+                        <li class="list-group-item">
+                            <b>Substance</b> <a class="pull-right">Detox/Alcohol</a>
+                        </li>
+                        <li class="list-group-item">
+                            <b>Allergies</b> <a class="pull-right">NKA (No known allergies) </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#" class="btn btn-primary btn-block"><b>Update Information</b></a>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn btn-primary btn-block"><b>Admit Patients</b></a>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!--/.col3 -->
+        <div class="col-md-9">
+        <!-- basic patient information -->
+        <div class="box">
+            <div class="box-header with-border">
+                <h3 class="box-title">Basic Patient Information</h3>
+
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                    </button>
+
+                </div>
+            </div>
+            <!-- /.box-header -->
+            <form name="vm.form.waiting.insurance" role="form" data-toggle="validator">
+                <div class="box-body">
+
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label class="control-label" for="field_formName">First*</label>
+                                <input type="text" class="form-control" name="contactName" id="field_formName"
+                                       ng-model="vm.forms.form_name" required/>
+                            </div>
+                        </div>
+                        <div class="col-lg-1">
+                            <div class="form-group">
+                                <label class="control-label" for="field_formName">Middle</label>
+                                <input type="text" class="form-control" name="contactName" id="field_formName"
+                                       ng-model="vm.forms.form_name" required/>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label class="control-label" for="field_formName">Last*</label>
+                                <input type="text" class="form-control" name="contactName" id="field_formName"
+                                       ng-model="vm.forms.form_name" required/>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label class="control-label" for="field_formName">Prefer Name</label>
+                                <input type="text" class="form-control" name="contactName" id="field_formName"
+                                       ng-model="vm.forms.form_name" required/>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="form-group">
+                                <label class="control-label" for="field_formName">Mr No</label>
+                                <input type="text" class="form-control" name="contactName" id="field_formName"
+                                       ng-model="vm.forms.form_name" required/>
+                            </div>
+                        </div>
+                        <div class="col-lg-1">
+                            <div class="form-group">
+                                <label class="control-label" for="field_formName">Gender</label>
+                                <select class="form-control" ng-model="vm.forms.typePatientProcess"
+                                        ng-options=""
+                                        id="field_TypePatientProcess" name="typePatientProcess" required>
+                                    <option value=""></option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="form-group">
+                                <label class="control-label" for="field_formName">Marital Status</label>
+                                <select class="form-control" ng-model="vm.forms.typePatientProcess"
+                                        ng-options=""
+                                        id="field_TypePatientProcess" name="typePatientProcess" required>
+                                    <option value=""></option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label class="control-label" for="field_formName">Race</label>
+                                <select class="form-control" ng-model="vm.forms.typePatientProcess"
+                                        ng-options=""
+                                        id="field_TypePatientProcess" name="typePatientProcess" required>
+                                    <option value=""></option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="form-group">
+                                <label class="control-label" for="field_formName">Ethnicity</label>
+                                <select class="form-control" ng-model="vm.forms.typePatientProcess"
+                                        ng-options=""
+                                        id="field_TypePatientProcess" name="typePatientProcess" required>
+                                    <option value=""></option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                        <div class="form-group">
+                            <label class="control-label" for="field_formName">Social*</label>
+                            <input type="text" class="form-control" name="contactName" id="field_formName"
+                                   ng-model="vm.forms.form_name" required/>
+                        </div>
+                    </div>
+                        <div class="col-lg-2">
+                            <div class="form-group">
+                                <label class="control-label" for="field_formName">DOB*</label>
+                                <input type="text" class="form-control" name="contactName" id="field_formName"
+                                       ng-model="vm.forms.form_name" required/>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="form-group">
+                                <label class="control-label" for="field_formName">Sobriety Date*</label>
+                                <input type="text" class="form-control" name="contactName" id="field_formName"
+                                       ng-model="vm.forms.form_name" required/>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="form-group">
+                                <label class="control-label" for="field_formName">Email*</label>
+                                <input type="text" class="form-control" name="contactName" id="field_formName"
+                                       ng-model="vm.forms.form_name" required/>
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="form-group">
+                                <label class="control-label" for="field_formName">street*</label>
+                                <input type="text" class="form-control" name="contactName" id="field_formName"
+                                       ng-model="vm.forms.form_name" required/>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="form-group">
+                                <label class="control-label" for="field_formName">street 2*</label>
+                                <input type="text" class="form-control" name="contactName" id="field_formName"
+                                       ng-model="vm.forms.form_name" required/>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label class="control-label" for="field_formName">City*</label>
+                                <input type="text" class="form-control" name="contactName" id="field_formName"
+                                       ng-model="vm.forms.form_name" required/>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="form-group">
+                                <label class="control-label" for="field_formName">State*</label>
+                                <input type="text" class="form-control" name="contactName" id="field_formName"
+                                       ng-model="vm.forms.form_name" required/>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="form-group">
+                                <label class="control-label" for="field_formName">Zip*</label>
+                                <input type="text" class="form-control" name="contactName" id="field_formName"
+                                       ng-model="vm.forms.form_name" required/>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label class="control-label" for="field_formName">Phone*</label>
+                                <input type="text" class="form-control" name="contactName" id="field_formName"
+                                       ng-model="vm.forms.form_name" required/>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="form-group">
+                                <label class="control-label" for="field_formName">Alt Phone*</label>
+                                <input type="text" class="form-control" name="contactName" id="field_formName"
+                                       ng-model="vm.forms.form_name" required/>
+                            </div>
+                        </div>
+                        <div class="col-lg-10">
+                            <div class="form-group">
+                                <label class="control-label" for="field_formName">Diagnosis*</label>
+                                <input type="text" class="form-control" name="contactName" id="field_formName"
+                                       ng-model="vm.forms.form_name" required/>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="form-group">
+                                <label class="control-label" for="field_formName">OTO*</label>
+                                <input type="text" class="form-control" name="contactName" id="field_formName"
+                                       ng-model="vm.forms.form_name" required/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <!-- ./box-body -->
+            <!--<div class="box-footer">-->
+            <!--<div class="pull-right">-->
+            <!--<div class="col-lg-12">-->
+            <!--&lt;!&ndash;<div class="margin" ng-show="vm.editing">&ndash;&gt;-->
+            <!--&lt;!&ndash;<button type="button" class="btn btn-danger" ng-click="vm.changeEditingState()">Cancel</button>&ndash;&gt;-->
+            <!--&lt;!&ndash;<button type="button" class="btn btn-success" ng-click="vm.save()"&ndash;&gt;-->
+            <!--&lt;!&ndash;ng-disabled="vm.form.shifts.$invalid">Save</button>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--<button type="button" class="btn btn-info" ng-click="vm.changeEditingState()" ng-show="!vm.editing">Update Information</button>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /.box-footer &ndash;&gt;-->
+        </div>
+        <!-- /.basic information-->
+
+    </div>
+
+    </div>
+    <!-- content -->
+</section>

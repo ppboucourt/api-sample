@@ -1,0 +1,76 @@
+
+<div>
+    <h2><span>Facility</span> {{vm.facility.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="bluebookApp.facility.facility_name">Facility Name</span></dt>
+        <dd>
+            <span>{{vm.facility.facility_name}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.facility.facility_street">Facility Street</span></dt>
+        <dd>
+            <span>{{vm.facility.facility_street}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.facility.facility_street_two">Facility Street Two</span></dt>
+        <dd>
+            <span>{{vm.facility.facility_street_two}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.facility.facility_city">Facility City</span></dt>
+        <dd>
+            <span>{{vm.facility.facility_city}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.facility.facility_state">Facility State</span></dt>
+        <dd>
+            <span>{{vm.facility.facility_state}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.facility.facility_zip">Facility Zip</span></dt>
+        <dd>
+            <span>{{vm.facility.facility_zip}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.facility.facility_county">Facility County</span></dt>
+        <dd>
+            <span>{{vm.facility.facility_county}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.facility.facility_phone">Facility Phone</span></dt>
+        <dd>
+            <span>{{vm.facility.facility_phone}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.facility.facility_fax">Facility Fax</span></dt>
+        <dd>
+            <span>{{vm.facility.facility_fax}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.facility.facility_website">Facility Website</span></dt>
+        <dd>
+            <span>{{vm.facility.facility_website}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.facility.facility_logo">Facility Logo</span></dt>
+        <dd>
+            <div ng-if="vm.facility.facility_logo">
+                <a ng-click="vm.openFile(vm.facility.facility_logoContentType, vm.facility.facility_logo)">
+                    <img data-ng-src="{{'data:' + vm.facility.facility_logoContentType + ';base64,' + vm.facility.facility_logo}}" style="max-width: 100%;"/>
+                </a>
+                {{vm.facility.facility_logoContentType}}, {{vm.byteSize(vm.facility.facility_logo)}}
+            </div>
+        </dd>
+        <dt><span>Status</span></dt>
+        <dd>
+            <span>{{vm.facility.status}}</span>
+        </dd>
+        <dt><span>Corporation</span></dt>
+        <dd>
+            <a ui-sref="corporation-detail({id:vm.facility.corporation.id})">{{vm.facility.corporation.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="facility-detail.edit({id:vm.facility.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

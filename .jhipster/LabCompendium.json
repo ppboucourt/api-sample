@@ -1,0 +1,58 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "labRequisitions",
+            "otherEntityName": "labRequisition",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "labCompendium"
+        },
+        {
+            "relationshipName": "labRequisitionsComponents",
+            "otherEntityName": "labRequisitionsComponents",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "labCompendium"
+        },
+        {
+            "relationshipName": "orders",
+            "otherEntityName": "orders",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "labCompendium"
+        },
+        {
+            "relationshipName": "labProfile",
+            "otherEntityName": "labProfile",
+            "relationshipType": "many-to-many",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "labCompendium"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "code",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "units",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "specimen",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160831172112",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "lab_compendium",
+    "pagination": "no",
+    "enableEntityAudit": true
+}

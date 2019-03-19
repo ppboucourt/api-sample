@@ -1,0 +1,126 @@
+<ng-include src="'app/entities/current-patients/filter.html'"></ng-include>
+<section class="content-header">
+    <h1>Current Patients</h1>
+    <div ncy-breadcrumb class="breadcrumb"></div>
+</section>
+<section class="content-header">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="top-options">
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                            <button class="btn btn-primary btn-block" ng-click="" ui-sref="patient-create">
+                                <i class="fa fa-plus"></i> New Patient
+                            </button>
+                        </div>
+
+                        <div
+                            class="col-xs-12 col-sm-8 col-md-8 col-lg-8 col-md-offset-1 col-lg-offset-2 patient-filters">
+
+                            <form name="searchForm">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="searchQueryChart"
+                                           placeholder="Search..."
+                                           ng-model="vm.filters.query"
+                                           ng-change="vm.search()">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-primary"
+                                                ng-click="vm.popoverFilterEnable()">
+                                            <i class="fa fa-filter" aria-hidden="true"></i>
+                                        </button>
+                                    </span>
+                                </div><!-- /input-group -->
+                                <div popover-class="pop-filters" popover-placement="bottom" popover-trigger="none"
+                                     uib-popover-template="'current-patient-filter.html'"
+                                     popover-is-open="vm.showFilter">
+                                </div>
+                            </form>
+
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default"
+                                        ng-click="vm.filterState('*')"
+                                        ng-class="{'active': vm.filters.state === '*', 'bg-green': vm.filters.state === '*'}">
+                                    <i class="fa fa-asterisk"></i> <span class="hidden-xs">All</span>
+                                </button>
+                                <button type="button" class="btn btn-default btn-flat"
+                                        ng-click="vm.filterState('WAITING')"
+                                        ng-class="{'active': vm.filters.state === 'WAITING', 'bg-orange': vm.filters.state === 'WAITING'}">
+                                    <i class="fa fa-pause-circle-o"></i> <span class="hidden-xs">Waiting</span>
+                                </button>
+                                <button type="button" class="btn btn-default"
+                                        ng-click="vm.filterState('CURRENT')"
+                                        ng-class="{'active': vm.filters.state === 'CURRENT', 'bg-blue': vm.filters.state === 'CURRENT'}">
+                                    <i class="fa fa-arrow-circle-o-down"></i> <span
+                                    class="hidden-xs">Current</span>
+                                </button>
+                                <button type="button" class="btn btn-default"
+                                        ng-click="vm.filterState('ARCHIVE')"
+                                        ng-class="{'active': vm.filters.state === 'ARCHIVE'}">
+                                    <i class="fa fa-archive"></i> <span
+                                    class="hidden-xs">Archive</span>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /row -->
+
+        </div><!-- -/.col -->
+    </div> <!-- /row -->
+
+    <div class="row">
+        <div id="currentChartEmpty" align="center" ng-show="vm.emptyMssg">
+            <span class="description-text">There isn't patients actually...</span>
+        </div>
+
+        <!--<div class="col-lg-2  col-sm-4" ng-repeat="item in vm.currentCharts | startFrom:currentPage*pageSize | limitTo:pageSize">-->
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box-wrapper">
+
+            <div class="box box-widget widget-user"
+                 ng-click="vm.patientDetails(item.id)" title="See Patient Details" style="cursor: pointer"
+                 ng-repeat="item in vm.currentCharts | startFrom:page*vm.pagingParams.size | limitTo:vm.pagingParams.size">
+
+                <div class="widget-user-image">
+                    <img class="img-circle" id="imgPicture" alt="User profile picture"
+                         data-ng-src="{{'data:' + item.pictureContentType + ';base64,' + item.picture}}">
+                </div>
+
+                <div class="widget-user-header " ng-class="{
+                    'bg-aqua-active': vm.checkChartState(item) === 'CURRENT',
+                    'bg-gray-active': vm.checkChartState(item) === 'ARCHIVE',
+                    'bg-orange': vm.checkChartState(item) === 'WAITING',
+                }">
+                    <h3 class="widget-user-username">{{item.fullNameCapital}}</h3>
+                    <h5 class="widget-user-desc">Mr No: {{item.mrNo}}</h5>
+                </div>
+
+                <div class="box-footer">
+                    <div class="description-block">
+                        <h5 class="description-header">{{item.bed?item.bed:'No Bed'}}</h5>
+                        <span class="description-text">Bed</span>
+                    </div>
+                    <div class="description-block">
+                        <h5 class="description-header">{{item.payment.split(' ')[0] +' '+ item.payment.split('
+                            ')[1]}}</h5>
+                        <span class="description-text">Payment</span>
+                    </div>
+                </div>
+
+            </div><!-- /box -->
+
+        </div><!-- /box-wrapper -->
+
+    </div> <!-- /row -->
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+            <pagination last-page="vm.links.last + 1" current-page="vm.page" class="pagination-small"
+                        on-select-page="vm.onSelectPage(page)"></pagination>
+        </div>
+    </div>
+
+</section>
+
+

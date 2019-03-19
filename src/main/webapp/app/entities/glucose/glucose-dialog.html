@@ -1,0 +1,110 @@
+<form name="glucoseForm">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;
+        </button>
+        <h4 class="modal-title" id="myGlucoseLabel">Create or edit a Glucose</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="control-label" for="field_date">Date <code>*</code></label>
+                    <div class="input-group">
+                        <input id="field_date" type="text" class="form-control" name="date"
+                               datetime-picker="{{dateformat}}" ng-model="vm.glucose.date"
+                               is-open="vm.datePickerOpenStatus.date" required validator="required"
+                               message-id="msg-glucose-date"
+                        />
+                        <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('date')"><i
+                            class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </div>
+                    <div id="msg-glucose-date"></p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="control-label" for="field_reading">Reading</label>
+                    <input type="text" class="form-control" name="reading" id="field_reading"
+                           ng-model="vm.glucose.reading"
+                    />
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="control-label" for="field_typeOfCheck">Type Of Check</label>
+                    <select class="form-control" name="typeOfCheck" ng-model="vm.glucose.typeOfCheck"
+                             id="field_typeOfCheck">
+                        <option value="BEFORE_BREAKFAST"
+                                data-translate="bluebookApp.TypeOfCheckValues.BEFORE_BREAKFAST">BEFORE_BREAKFAST
+                        </option>
+                        <option value="BEFORE_LUNCH" data-translate="bluebookApp.TypeOfCheckValues.BEFORE_LUNCH">
+                            BEFORE_LUNCH
+                        </option>
+                        <option value="BEFORE_DINNER" data-translate="bluebookApp.TypeOfCheckValues.BEFORE_DINNER">
+                            BEFORE_DINNER
+                        </option>
+                        <option value="AT_BEDTIME" data-translate="bluebookApp.TypeOfCheckValues.AT_BEDTIME">
+                            AT_BEDTIME
+                        </option>
+                        <option value="FASTING_FOR_8_HOURS"
+                                data-translate="bluebookApp.TypeOfCheckValues.FASTING_FOR_8_HOURS">FASTING_FOR_8_HOURS
+                        </option>
+                        <option value="FOLLOW_UP_CHECK" data-translate="bluebookApp.TypeOfCheckValues.FOLLOW_UP_CHECK">
+                            FOLLOW_UP_CHECK
+                        </option>
+                        <option value="RANDOM_CHECK" data-translate="bluebookApp.TypeOfCheckValues.RANDOM_CHECK">
+                            RANDOM_CHECK
+                        </option>
+                        <option value="OTHER">OTHER</option>
+                    </select>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Glucose Intervention</label>
+                    <ui-select id="glucoseIntervention" name="glucoseIntervention" multiple
+                               ng-model="vm.glucose.glucoseInterventions" title="Interventions" >
+                        <ui-select-match placeholder="Select Interventions...">{{$item.name}}</ui-select-match>
+                        <ui-select-choices repeat="glucoseIntervention in vm.glucoseinterventions | filter:$select.search">
+                            {{glucoseIntervention.name}}
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="control-label" for="field_notes">Notes</label>
+                    <input type="text" class="form-control" name="notes" id="field_notes"
+                           ng-model="vm.glucose.notes"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <!--<button type="submit" ng-disabled="vm.form.$invalid || vm.isSaving" class="btn btn-primary btn-success">-->
+            <!--<span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>-->
+        <!--</button>-->
+        <button type="submit" class="btn btn-primary btn-success" validation-submit="glucoseForm"
+            ng-click="vm.save()">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

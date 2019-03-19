@@ -1,0 +1,68 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "chartToGroupSessions",
+            "otherEntityName": "chartToGroupSession",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "groupSession"
+        },
+        {
+            "relationshipName": "groupType",
+            "otherEntityName": "groupType",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "facility",
+            "otherEntityName": "facility",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "groupSessionDetails",
+            "otherEntityName": "groupSessionDetails",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "groupSession"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "status",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "3"
+        },
+        {
+            "fieldName": "enabled",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "billable",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dayWeek",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "startTime",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "endTime",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "changelogDate": "20160829135702",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "group_session",
+    "pagination": "no"
+}

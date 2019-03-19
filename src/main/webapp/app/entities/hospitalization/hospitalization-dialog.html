@@ -1,0 +1,108 @@
+
+<form name="vm.form" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myHospitalizationLabel">Create or edit a Hospitalization</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group" ng-show="vm.hospitalization.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                           ng-model="vm.hospitalization.id" readonly />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label" for="field_admissionDiagnosis">Admission Diagnosis</label>
+                    <input type="text" class="form-control" name="admissionDiagnosis" id="field_admissionDiagnosis"
+                           ng-model="vm.hospitalization.admissionDiagnosis" required/>
+                    <div ng-show="vm.form.admissionDiagnosis.$invalid">
+                        <p class="help-block"
+                           ng-show="vm.form.admissionDiagnosis.$error.required">
+                            This field is required.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label" for="field_admissionDate">Admission Date</label>
+                    <div class="input-group">
+                        <input id="field_admissionDate" type="text" class="form-control" name="admissionDate"
+                               datetime-picker="{{dateformat}}"
+                               ng-model="vm.hospitalization.admissionDate" is-open="vm.datePickerOpenStatus.admissionDate" required/>
+                        <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="vm.openCalendar('admissionDate')">
+                        <i class="glyphicon glyphicon-calendar"></i>
+                    </button>
+                </span>
+                    </div>
+                    <div ng-show="vm.form.admissionDate.$invalid">
+                        <p class="help-block"
+                           ng-show="vm.form.admissionDate.$error.required">
+                            This field is required.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label" for="field_hospital">Hospital</label>
+                    <input type="text" class="form-control" name="hospital" id="field_hospital"
+                           ng-model="vm.hospitalization.hospital" required/>
+                    <div ng-show="vm.form.hospital.$invalid">
+                        <p class="help-block"
+                           ng-show="vm.form.hospital.$error.required">
+                            This field is required.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label" for="field_admittingPhysician">Admitting Physician</label>
+                    <input type="text" class="form-control" name="admittingPhysician" id="field_admittingPhysician"
+                           ng-model="vm.hospitalization.admittingPhysician"/>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label" for="field_dischargeDate">Discharge Date</label>
+                    <div class="input-group">
+                        <input id="field_dischargeDate" type="text" class="form-control" name="dischargeDate" datetime-picker="{{dateformat}}" ng-model="vm.hospitalization.dischargeDate" is-open="vm.datePickerOpenStatus.dischargeDate"
+                        />
+                        <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('dischargeDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label" for="field_dischargeTo">Discharge To</label>
+                    <input type="text" class="form-control" name="dischargeTo" id="field_dischargeTo"
+                           ng-model="vm.hospitalization.dischargeTo"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="vm.form.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

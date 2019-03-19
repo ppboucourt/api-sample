@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span>Actions</span> {{vm.actions.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Action</span></dt>
+        <dd>
+            <span>{{vm.actions.action}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.actions.show_in_mars">Show In Mars</span></dt>
+        <dd>
+            <span>{{vm.actions.show_in_mars}}</span>
+        </dd>
+        <dt><span>Prn</span></dt>
+        <dd>
+            <span>{{vm.actions.prn}}</span>
+        </dd>
+        <dt><span>Status</span></dt>
+        <dd>
+            <span>{{vm.actions.status}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="actions-detail.edit({id:vm.actions.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

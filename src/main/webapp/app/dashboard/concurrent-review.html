@@ -1,0 +1,60 @@
+<section class="content-header">
+    <h1>
+        Concurrents Review by Date
+    </h1>
+    <div ncy-breadcrumb></div>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <!-- Info boxes -->
+
+    <!-- Main row -->
+    <div class="row">
+
+        <div class="col-md-9">
+
+            <div class="box-body">
+                <div class="box box-danger">
+
+                    <div class="box-body no-padding">
+
+                        <ul class="users-list clearfix">
+
+                            <li style="width: 10%;!important;"
+                                ng-repeat="cr in vm.concurrentReviewsDateVO track by $index">
+
+                                <a class="users-list-name"
+                                   href="#/patient/{{cr.id}}/details">
+                                    <img height="128px" width="128px"
+                                         data-ng-src="{{'data:' +cr.pictureContentType + ';base64,' +cr.picture}}"
+                                         alt="User Image">
+                                    <a class="users-list-name"
+                                       href="#/patient/{{cr.id}}/details">{{cr.firstName
+                                        + ' ' + cr.lastName.charAt(0).toUpperCase()}}</a>
+                                    <span class="users-list-date">{{cr.admissionDate | date:'mediumDate'}}</span>
+                                </a>
+                            </li>
+
+
+                            <div ng-if="vm.concurrentReviewsDateVO.length ==0">
+                                <hr/>
+                                <h3>
+                                    <div style="padding-left: 2%">Not Concurrent Reviews for this Date!</div>
+                                </h3>
+                            </div>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div rm-datepicker ng-model="vm.calendarDate" rm-config="vm.rmConfig"
+                 ng-click="vm.changeCalendar()"></div>
+        </div>
+
+    </div>
+
+</section>

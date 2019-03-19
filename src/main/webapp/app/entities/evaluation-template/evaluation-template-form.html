@@ -1,0 +1,55 @@
+<section class="content-header">
+    <h1>Evaluations</h1>
+    <div ncy-breadcrumb class="breadcrumb"></div>
+</section>
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Template</h3>
+                </div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="box-body">
+                    <uib-tabset class="nav-tabs-custom" active="vm.activeTab">
+                        <uib-tab index="0" heading="Configuration">
+                            <fieldset>
+                                <ng-include src="'app/entities/evaluation-template/tpl/metadata-tpl.html'"></ng-include>
+                            </fieldset>
+                        </uib-tab>
+                        <uib-tab index="1" heading="Build Form">
+                            <form class="form-horizontal" name="myForm" id="target-form">
+                                <div fg-edit
+                                     fg-schema="vm.evaluationTemplate.jsonTemplate"
+                                     class="flex-patch">
+                                </div>
+                            </form>
+                        </uib-tab>
+                        <uib-tab index="2" heading="Preview Form">
+                            <form novalidate class="form-horizontal" name="previewForm">
+                                <fieldset>
+                                    <legend>
+                                        <div class="row">
+                                            <div class="col-sm-offset-3 col-sm-3">{{vm.evaluationTemplate.name}}</div>
+                                        </div>
+                                    </legend>
+                                    <div fg-form
+                                         fg-form-data="vm.evaluationTemplate.data"
+                                         fg-schema="vm.evaluationTemplate.jsonTemplate">
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </uib-tab>
+                    </uib-tabset>
+                    <div class="row pull-right">
+                        <div class="col-lg-12">
+                            <button type="button" class="btn btn-success" ng-disabled="vm.form.patient_info_form.$invalid || (vm.evaluationTemplate.forceStaffSignature && vm.evaluationTemplate.staffSignatureAuthority.length==0) ||
+                            (vm.evaluationTemplate.forceStaffReviewSignature && vm.evaluationTemplate.staffReviewSignatureAuthorities.length==0)"
+                                    ng-click="vm.save()" ng-show="!vm.edit">Save Information</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

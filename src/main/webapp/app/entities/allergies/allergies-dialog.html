@@ -1,0 +1,62 @@
+<form name="allergyForm" role="form" novalidate>
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;
+        </button>
+        <h4 class="modal-title" id="myAllergiesLabel">Create or Edit an Allergies</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label" for="field_allergen">Allergen <code>*</code></label>
+                        <input type="text" class="form-control" name="allergen" id="field_allergen"
+                               ng-model="vm.allergies.allergen" required validator="required"/>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label" for="field_allergenType">Allergen Type <code>*</code></label><br/>
+                        <select class="form-control" ng-model="vm.allergies.allergenType"
+                                id="field_allergenType" name="gender" required validator="required">
+                            <option value="Food">Food</option>
+                            <option value="Medicine">Medicine</option>
+                            <option value="Dust">Dust</option>
+                            <option value="Whether">Whether</option>
+                            <option value="Drink">Drink</option>
+                            <option value="Creta">Creta</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label" for="field_reaction">Reaction</label>
+                        <input type="text" class="form-control" name="reaction" id="field_reaction"
+                               ng-model="vm.allergies.reaction"/>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label" for="field_treatment">Treatment</label>
+                        <input type="text" class="form-control" name="treatment" id="field_treatment"
+                               ng-model="vm.allergies.treatment"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-click="vm.save()" validation-submit="allergyForm" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

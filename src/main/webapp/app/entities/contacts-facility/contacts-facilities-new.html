@@ -1,0 +1,210 @@
+<section class="content-header">
+    <h1>New Contact Facility</h1>
+    <div ncy-breadcrumb class="breadcrumb"></div>
+</section>
+<!-- - state( drop down)-->
+<!-- - zip (req)-->
+<!-- - Phone(req)-->
+<section class="invoice">
+    <div class="row">
+        <div class="col-lg-12">
+            <fieldset>
+                <form name="contactsFacilityForm" novalidate role="form" ng-submit="vm.save()" show-validation>
+                    <div class="box-body">
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="contactName">Contact Name(Full Name) *</label>
+                                    <input type="text" class="form-control" name="contactName" id="contactName"
+                                           ng-model="vm.contactsFacility.name" required/>
+                                    <div ng-show="contactsFacilityForm.contactName.$invalid">
+                                        <p class="help-block"
+                                           ng-show="contactsFacilityForm.contactName.$error.required">
+                                            This field is required.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="contactType">Contact Type *</label>
+                                    <select class="form-control"
+                                            ng-model="vm.contactsFacility.typeContactFacilityType"
+                                            ng-options="item as item.name for item in vm.contactTypes track by item.name"
+                                            id="contactType" name="contactType" required>
+                                        <option value=""></option>
+                                    </select>
+                                    <div ng-show="contactsFacilityForm.contactType.$invalid">
+                                        <p class="help-block"
+                                           ng-show="contactsFacilityForm.contactType.$error.required">
+                                            This field is required.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="street">Street *</label>
+                                    <input type="text" class="form-control" id="street" required
+                                           ng-model="vm.contactsFacility.street" name="street">
+                                     <div ng-show="contactsFacilityForm.street.$invalid">
+                                        <p class="help-block"
+                                           ng-show="contactsFacilityForm.street.$error.required">
+                                            This field is required.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="field_street_two">Street Two</label>
+                                    <input type="text" class="form-control" ng-model="vm.contactsFacility.streetTwo"
+                                           id="field_street_two" name="streetTwo">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="city">City *</label>
+                                    <input type="text" class="form-control" ng-model="vm.contactsFacility.city"
+                                           id="city" name="city" required>
+                                    <div ng-show="contactsFacilityForm.city.$invalid">
+                                        <p class="help-block"
+                                           ng-show="contactsFacilityForm.city.$error.required">
+                                            This field is required.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="field_state">State *</label>
+                                    <select class="form-control" ng-model="vm.contactsFacility.countryState"
+                                            ng-options="item as item.state for item in vm.countryStates track by item.stateCode"
+                                            id="field_state" name="state" required>
+                                        <option value=""></option>
+                                    </select>
+                                    <div ng-show="contactsFacilityForm.state.$invalid">
+                                        <p class="help-block"
+                                           ng-show="contactsFacilityForm.state.$error.required">
+                                            This field is required.
+                                        </p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="zip">Zip *</label>
+                                    <input type="text" class="form-control" ng-model="vm.contactsFacility.zip"
+                                           ui-mask="99999" required
+                                           id="zip" name="zip">
+                                    <div ng-show="contactsFacilityForm.zip.$invalid">
+                                        <p class="help-block"
+                                           ng-show="contactsFacilityForm.zip.$error.required">
+                                            This field is required.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label class="control-label" for="contactPhone">Phone *</label>
+                                        <input type="text" class="form-control" ng-model="vm.contactsFacility.phone"
+                                               ui-mask="999-999-9999"
+                                               id="contactPhone" name="contactPhone" required>
+                                        <div ng-show="contactsFacilityForm.contactPhone.$invalid">
+                                            <p class="help-block"
+                                               ng-show="contactsFacilityForm.contactPhone.$error.required">
+                                                This field is required.
+                                            </p>
+                                        </div>
+                                    </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="form-group" for="field_fax">Fax</label>
+                                    <input type="text" class="form-control" ng-model="vm.contactsFacility.fax"
+                                           id="field_fax" name="fax">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="form-group" for="website">Website</label>
+                                    <input type="text" class="form-control" ng-model="vm.contactsFacility.website"
+                                           id="website" name="website">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="form-group" for="email">Email *</label>
+                                    <input type="email" class="form-control" ng-model="vm.contactsFacility.email"
+                                           id="email" name="email" required>
+                                    <div ng-show="contactsFacilityForm.email.$invalid">
+                                        <p class="help-block"
+                                           ng-show="contactsFacilityForm.email.$error.required">
+                                            This field is required.
+                                        </p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="form-group" for="cellphone">Cellphone *</label>
+                                    <input type="text" class="form-control" ng-model="vm.contactsFacility.cellphone"
+                                           ui-mask="999-999-9999"
+                                           id="cellphone" name="cellphone" required>
+
+                                    <div ng-show="contactsFacilityForm.cellphone.$invalid">
+                                        <p class="help-block"
+                                           ng-show="contactsFacilityForm.cellphone.$error.required">
+                                            This field is required.
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-group" for="field_notes">Notes</label>
+                                    <textarea class="form-control" ng-model="vm.contactsFacility.notes"
+                                              id="field_notes" name="notes"></textarea>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+
+                    </div> <!-- End box-body -->
+
+                    <div class="pull-right">
+                        <div class="col-lg-12">
+                            <button type="submit" class="btn btn-success"
+                                    ng-disabled="contactsFacilityForm.$invalid">Save Information
+                            </button>
+                        </div>
+                    </div>
+        </form>
+        </fieldset>
+    </div>
+    </div>
+</section>

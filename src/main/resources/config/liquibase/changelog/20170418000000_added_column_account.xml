@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <!--
+        Added new Column to Facility.
+    -->
+    <changeSet author="maykel" id="20170418000000-1">
+        <addColumn schemaName="public" tableName="facility">
+            <column name="account" type="varchar">
+                <constraints unique="true"/>
+            </column>
+        </addColumn>
+    </changeSet>
+
+    <!--<changeSet author="maykel" id="20170418000000-2">-->
+        <!--<update schemaName="public" tableName="facility">-->
+            <!--<column name="account" value="0000000000"/>-->
+        <!--</update>-->
+    <!--</changeSet>-->
+</databaseChangeLog>

@@ -1,0 +1,287 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Dashboard
+        <!--<small>version 1.0</small>-->
+    </h1>
+    <div ncy-breadcrumb></div>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <!-- Info boxes -->
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 dash-info">
+
+            <div class="dash-card">
+                <div class="icon-box bg-aqua"><i class="fa fa-stethoscope" aria-hidden="true"></i></div>
+                <div class="content-info">
+                    <p class="small-text">Physician Reviews</p>
+                    <p class="jumbo-number">
+                        {{vm.physicianReview.unsignedOrdersByDoctor ? vm.physicianReview.unsignedOrdersByDoctor:
+                        vm.physicianReview.unsignedOrders}}
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <a href="#/unsigned">More info <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="dash-card">
+                <div class="icon-box bg-green"><i class="fa fa-flask" aria-hidden="true"></i></div>
+                <div class="content-info">
+                    <p class="small-text">Unassigned Lab Result</p>
+                    <p class="jumbo-number">
+                        {{vm.unassignedLabResult.unasignedLabResults}}
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <a ui-sref="unassigned-result">More info <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="dash-card">
+                <div class="icon-box bg-yellow"><i class="fa fa-file-text-o" aria-hidden="true"></i></div>
+                <div class="content-info">
+                    <p class="small-text">Unsigned Forms</p>
+                    <p class="jumbo-number">
+                        {{vm.unsignedFormsCount.chartToFormsUnsigned + vm.unsignedFormsCount.evaluationsUnsigned}}
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <a href="#dashboard">More info <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="dash-card">
+                <div class="icon-box bg-red"><i class="fa fa-users" aria-hidden="true"></i></div>
+                <div class="content-info">
+                    <p class="small-text">Concurrent Reviews</p>
+                    <p class="jumbo-number">
+                        {{vm.concurrentsReviewCount.concurrentsReviewToday}}
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <a href="#dcreview">More info <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+
+        </div><!-- /.col -->
+
+    </div><!-- /.row -->
+
+    <!-- Main row -->
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 dash-info">
+
+            <div class="dash-patients-card">
+                <div class="dash-patients-header">
+                    <div class="icon bg-green">
+                        <i class="fa fa-sign-in" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="header-text">Incoming Patients</h3>
+                </div><!-- /header -->
+
+
+                <div class="dash-patients-list">
+                    <div class="dash-patient"
+                         ng-repeat="chartVO in vm.incomingPatients3DayNext track by $index">
+                        <a href="#/patient/{{chartVO.id}}/details">
+                            <img data-ng-src="{{'data:' +chartVO.pictureContentType + ';base64,' +chartVO.picture}}"
+                                 alt="User Image">
+                            <span class="patient-name">
+                                {{chartVO.firstName+ ' ' + chartVO.lastName.charAt(0).toUpperCase()}}
+                            </span>
+                            <span class="patient-date">
+                                {{chartVO.admissionDate | date:'mediumDate'}}
+                            </span>
+                        </a>
+                    </div><!-- /patient -->
+
+                    <div class="dash-patient blank" ng-if="vm.incomingPatients3DayNext.length === 0">
+                        <div class="text-center">
+                            <span
+                                class="message"><span>There are</span><br><strong>no</strong><br>incoming patients</span>
+                        </div>
+                    </div>
+
+                    <div class="dash-patient new-patient" ng-if="vm.incomingPatients3DayNext.length === 0">
+                        <a href="#/patient-create">
+                            <img src="/content/images/patientplus.png" alt="User Images">
+                            <span><i class="fa fa-user-plus"></i> Create New Patient</span>
+                        </a>
+                    </div>
+                </div><!-- /patients list -->
+
+
+                <div class="dash-patients-footer text-center">
+                    <a href="#">View All <i class="fa fa-arrow-circle-right"></i></a>
+                </div><!-- /footer -->
+            </div><!--/dash-patient-card -->
+
+            <div class="dash-patients-card">
+
+                <div class="dash-patients-header">
+                    <div class="icon bg-red">
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="header-text">Discharging Patients</h3>
+                </div><!-- /header -->
+
+                <div class="dash-patients-list">
+                    <div class="dash-patient"
+                         ng-repeat="chartVO in vm.dischargingPatients3DayNext track by $index">
+                        <a href="#/patient/{{chartVO.id}}/details">
+                            <img data-ng-src="{{'data:' +chartVO.pictureContentType + ';base64,' +chartVO.picture}}"
+                                 alt="User Image">
+                            <span class="patient-name">
+                                {{chartVO.firstName+ ' ' + chartVO.lastName.charAt(0).toUpperCase()}}
+                            </span>
+                            <span class="patient-date">
+                                {{chartVO.dischargeDate | date:'mediumDate'}}
+                            </span>
+                        </a>
+                    </div><!-- /patient -->
+
+                    <div class="dash-patient blank" ng-if="vm.dischargingPatients3DayNext.length === 0">
+                        <div class="text-center">
+                            <span
+                                class="message"><span>There are</span><br><strong>no</strong><br>outgoing patients</span>
+                        </div>
+                    </div>
+
+                </div><!-- /patients list -->
+
+                <div class="dash-patients-footer text-center">
+                    <a href="#">View All <i class="fa fa-arrow-circle-right"></i></a>
+                </div><!-- /footer -->
+            </div><!--/dash-patient-card -->
+
+        </div><!-- /.col-12 -->
+    </div><!-- /.row -->
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 dash-info charts">
+
+            <div class="dash-chart">
+                <nvd3 class="chart-wrapper" options="vm.optionsBeds" data="vm.pieChartDataBeds"></nvd3>
+                <div class="chart-data">
+                    <div class="chart-icon text-center">
+                        <i class="fa fa-bed" aria-hidden="true"></i>
+                    </div>
+                    <h5 class="text-center">Beds<br>Availability</h5>
+                    <div class="beds male">
+                        <div class="icon text-center">
+                            <i class="fa fa-male" aria-hidden="true"></i>
+                        </div>
+                        <div class="text-center">
+                            <span class="beds-count" ng-bind="vm.bashboardData.bedAvailability.male"></span>
+                        </div>
+                    </div>
+                    <div class="beds female">
+                        <div class="icon text-center">
+                            <i class="fa fa-female" aria-hidden="true"></i>
+                        </div>
+                        <div class="text-center">
+                            <span class="beds-count" ng-bind="vm.bashboardData.bedAvailability.female"></span>
+                        </div>
+                    </div>
+                </div><!-- /chart-data -->
+                <div class="chart-footer">
+                    <a ui-sref="occupancy" class="text-center">View beds <i class="fa fa-arrow-circle-right"
+                                                                            aria-hidden="true"></i></a>
+                </div>
+            </div><!-- /dash-chart -->
+
+            <div class="dash-chart">
+                <nvd3 class="chart-wrapper" options="vm.optionsLevelOfCares" data="vm.pieChartDataLevelOfCares"></nvd3>
+                <div class="chart-data">
+                    <div class="chart-icon text-center">
+                        <i class="fa fa-medkit" aria-hidden="true"></i>
+                    </div>
+                    <h5 class="text-center">Patients by<br>Levels of Care</h5>
+                    <div class="levels">
+                        <table class="table table-sm">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Level Of Care</th>
+                                <th class="text-right">Patients</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="(key, levelCare) in vm.bashboardData.typeLevelCare">
+                                <th scope="row">{{$index + 1}}</th>
+                                <td>{{key}}</td>
+                                <td class="text-right">{{levelCare}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div><!-- /levels -->
+                </div><!-- /chart-data -->
+            </div><!-- /dash-chart -->
+
+            <div class="dash-chart">
+                <nvd3 class="chart-wrapper" options="vm.optionsPaymentMethods"
+                      data="vm.pieChartDataPaymentMethods"></nvd3>
+                <div class="chart-data">
+                    <div class="chart-icon text-center">
+                        <i class="fa fa-money" aria-hidden="true"></i>
+                    </div>
+                    <h5 class="text-center">Patients by<br>Payment Method</h5>
+                    <div class="payments">
+                        <table class="table table-sm">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Payment Method</th>
+                                <th class="text-right">Patients</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="(key, paymentMethod) in vm.bashboardData.typePaymentMethod">
+                                <th scope="row">{{$index + 1}}</th>
+                                <td>{{key}}</td>
+                                <td class="text-right">{{paymentMethod}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div><!-- /payments -->
+                </div><!-- /chart-data -->
+            </div><!-- /dash-chart -->
+
+            <div class="dash-chart">
+                <nvd3 class="chart-wrapper" options="vm.optionsPatientsMissingAuth"
+                      data="vm.pieChartDataPatientsMissingAuth"></nvd3>
+                <div class="chart-data">
+                    <div class="chart-icon text-center">
+                        <i class="fa fa-vcard-o" aria-hidden="true"></i>
+                    </div>
+                    <h5 class="text-center">Patients missing<br>authorization</h5>
+                    <div class="patients-total">
+                        <div class="icon text-center">
+                            <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="text-center">
+                            <span class="count">{{vm.bashboardData.concurrentReviews.concurrent_review || 0}}</span>
+                        </div>
+                    </div>
+                    <div class="patients-missing">
+                        <div class="icon text-center">
+                            <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="text-center">
+                            <span class="count">{{vm.bashboardData.concurrentReviews.no_concurrent_review || 0}}</span>
+                        </div>
+                    </div>
+                </div><!-- /chart-data -->
+                <div class="chart-footer">
+                    <a ui-sref="occupancy" class="text-center">View Missings <i class="fa fa-arrow-circle-right"
+                                                                                aria-hidden="true"></i></a>
+                </div>
+            </div><!-- /dash-chart -->
+
+        </div>
+    </div> <!-- /row -->
+
+</section><!-- /.content -->

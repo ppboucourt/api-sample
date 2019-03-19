@@ -1,0 +1,6 @@
+id;name;del_status;created_by;created_date;last_modified_by;last_modified_date
+1;Paper;false;system;now();system;now()
+2;Fax;false;system;now();system;now()
+3;Email;false;system;now();system;now()
+4;Phone;false;system;now();system;now()
+10;Per protocol;false;system;now();system;now()

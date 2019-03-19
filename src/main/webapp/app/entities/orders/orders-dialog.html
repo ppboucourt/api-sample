@@ -1,0 +1,134 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myOrdersLabel">Create or edit a Orders</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.orders.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.orders.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.orders.type_order" for="field_type_order">Type Order</label>
+            <input type="text" class="form-control" name="type_order" id="field_type_order"
+                    ng-model="vm.orders.type_order"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_status">Status</label>
+            <input type="text" class="form-control" name="status" id="field_status"
+                    ng-model="vm.orders.status"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.orders.start_date" for="field_start_date">Start Date</label>
+                <div class="input-group">
+                    <input id="field_start_date" type="text" class="form-control" name="start_date" datetime-picker="{{dateformat}}" ng-model="vm.orders.start_date" is-open="vm.datePickerOpenStatus.start_date"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('start_date')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.orders.end_date" for="field_end_date">End Date</label>
+                <div class="input-group">
+                    <input id="field_end_date" type="text" class="form-control" name="end_date" datetime-picker="{{dateformat}}" ng-model="vm.orders.end_date" is-open="vm.datePickerOpenStatus.end_date"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('end_date')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.orders.order_by" for="field_order_by">Order By</label>
+            <input type="text" class="form-control" name="order_by" id="field_order_by"
+                    ng-model="vm.orders.order_by"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.orders.order_via" for="field_order_via">Order Via</label>
+            <input type="text" class="form-control" name="order_via" id="field_order_via"
+                    ng-model="vm.orders.order_via"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.orders.doctor_signature" for="field_doctor_signature">Doctor Signature</label>
+            <input type="text" class="form-control" name="doctor_signature" id="field_doctor_signature"
+                    ng-model="vm.orders.doctor_signature"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.orders.reviewed_by" for="field_reviewed_by">Reviewed By</label>
+            <input type="text" class="form-control" name="reviewed_by" id="field_reviewed_by"
+                    ng-model="vm.orders.reviewed_by"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.orders.review_date" for="field_review_date">Review Date</label>
+                <div class="input-group">
+                    <input id="field_review_date" type="text" class="form-control" name="review_date" datetime-picker="{{dateformat}}" ng-model="vm.orders.review_date" is-open="vm.datePickerOpenStatus.review_date"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('review_date')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_frequency">Frequency</label>
+            <input type="text" class="form-control" name="frequency" id="field_frequency"
+                    ng-model="vm.orders.frequency"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.orders.on_admission" for="field_on_admission">On Admission</label>
+            <input type="text" class="form-control" name="on_admission" id="field_on_admission"
+                    ng-model="vm.orders.on_admission"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.orders.until_discharge" for="field_until_discharge">Until Discharge</label>
+            <input type="text" class="form-control" name="until_discharge" id="field_until_discharge"
+                    ng-model="vm.orders.until_discharge"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label for="field_chart">Chart</label>
+            <select class="form-control" id="field_chart" name="chart" ng-model="vm.orders.chart" ng-options="chart as chart.mr_no for chart in vm.charts track by chart.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="field_labCompendium">Lab Compendium</label>
+            <select class="form-control" id="field_labCompendium" name="labCompendium" ng-model="vm.orders.labCompendium" ng-options="labCompendium as labCompendium.code for labCompendium in vm.labcompendiums track by labCompendium.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="field_action">Action</label>
+            <select class="form-control" id="field_action" name="action" ng-model="vm.orders.action" ng-options="actions as actions.action for actions in vm.actions track by actions.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="field_medication">Medication</label>
+            <select class="form-control" id="field_medication" name="medication" ng-model="vm.orders.medication" ng-options="medications as medications.medication for medications in vm.medications track by medications.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

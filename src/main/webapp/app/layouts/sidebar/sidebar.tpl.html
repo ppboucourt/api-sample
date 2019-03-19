@@ -1,0 +1,65 @@
+<!-- Left side column. contains the logo and sidebar -->
+<aside class="main-sidebar">
+
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel">
+            <div class="pull-left image">
+                <!--<i class="fa fa-user" aria-hidden="true"></i>-->
+                <img src="content/adminLTE/img/avatar5.png" class="img-circle" alt="User Image">
+            </div>
+            <div class="pull-left info">
+                <p>{{vm.account.firstName}}</p>
+                <!-- Status -->
+                <a href=""><i class="fa fa-circle text-success"></i> Online</a>
+            </div>
+        </div>
+        <form  class="sidebar-form" role="search">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-hospital-o"></i></span>
+                <select class="form-control" ng-model="vm.currentFacility"
+                        ng-change="chageFacility(vm.currentFacility)"
+                        ng-options="facility as facility.name for facility in vm.facilities track by facility.id">
+                </select>
+            </div>
+        </form>
+
+        <!-- Sidebar Menu -->
+        <ul class="sidebar-menu" >
+            <li class="header">MAIN NAVIGATION</li>
+            <!-- Optionally, you can add icons to the links -->
+            <li class="treeview {{menu.state}}" data-ng-repeat="menu in vm.sideBarItems">
+                <a ng-if="menu.url != null" ui-sref="{{menu.url}}" has-any-authority="{{menu.access}}">
+                    <i class="{{menu.icon}}"></i>
+                    <span>{{menu.displayName}}</span>
+                    <span class="pull-right-container" ng-if="menu.items.length > 0">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <a ng-if="menu.url == null" has-any-authority="{{menu.access}}">
+                    <i class="{{menu.icon}}"></i>
+                    <span>{{menu.displayName}}</span>
+                    <span class="pull-right-container" ng-if="menu.items.length > 0">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu {{menu.open}}" style="{{menu.style}}">
+                    <li data-ng-repeat="item in menu.items" class="{{item.state}}">
+                        <a ng-if="item.items == null" ui-sref="{{item.url}}"><i class="{{item.icon}}"></i>{{item.displayName}}</a>
+                        <a href="" ng-if="item.items != null"><i class="{{item.icon}}"></i>{{item.displayName}}
+                            <span class="pull-right-container">
+		                        <i class="fa fa-angle-left pull-right"></i>
+		                    </span>
+                        </a>
+                        <ul class="treeview-menu {{item.open}}" style="{{item.style}}" ng-if="item.items != null">
+                            <li data-ng-repeat="item2 in item.items"><a ui-sref="{{item2.url}}"><i class="{{item2.icon}}"></i>{{item2.displayName}}</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul><!-- /.sidebar-menu -->
+    </section>
+    <!-- /.sidebar -->
+</aside>

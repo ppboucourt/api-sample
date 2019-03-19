@@ -1,0 +1,105 @@
+<aside class="control-sidebar control-sidebar-dark"
+       ng-class="{'control-sidebar': vm.isControlbarCollapsed , 'control-sidebar-open': !vm.isControlbarCollapsed }">
+    <!-- Create the tabs -->
+    <!--<ul class="nav nav-tabs nav-justified control-sidebar-tabs">-->
+        <!--<li class=""><a href="#control-sidebar-theme-demo-options-tab" data-toggle="tab" aria-expanded="false"><i-->
+            <!--class="fa fa-wrench"></i></a></li>-->
+        <!--<li class=""><a href="#control-sidebar-home-tab" data-toggle="tab" aria-expanded="false"><i-->
+            <!--class="fa fa-home"></i></a></li>-->
+        <!--<li class="active"><a href="#control-sidebar-settings-tab" data-toggle="tab" aria-expanded="true"><i-->
+            <!--class="fa fa-gears"></i></a></li>-->
+    <!--</ul>-->
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <!-- Home tab content -->
+        <!-- Settings tab content -->
+        <div class="tab-pane active" id="control-sidebar-settings-tab">
+            <h3 class="control-sidebar-heading">Administration</h3>
+            <ul class="control-sidebar-menu">
+                <li>
+                    <a ui-sref="user-management">
+                        <i class="menu-icon glyphicon glyphicon-user bg-red"></i>
+                        <div class="menu-info">
+                            <h4 class="control-sidebar-subheading">User management</h4>
+                            <p>User management options</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a ui-sref="jhi-metrics">
+                        <i class="menu-icon glyphicon glyphicon-dashboard bg-yellow"></i>
+                        <div class="menu-info">
+                            <h4 class="control-sidebar-subheading">Metrics</h4>
+                            <p>Site metrics options</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a ui-sref="jhi-health">
+                        <i class="menu-icon fa fa-heartbeat bg-light-blue" aria-hidden="true"></i>
+                        <div class="menu-info">
+                            <h4 class="control-sidebar-subheading">Health</h4>
+                            <p>Site health options</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a ui-sref="jhi-configuration">
+                        <i class="menu-icon fa fa-cog bg-green"></i>
+                        <div class="menu-info">
+                            <h4 class="control-sidebar-subheading">Configuration</h4>
+                            <p>Site configuration options</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a ui-sref="audits">
+                        <i class="menu-icon fa fa-history bg-aqua"></i>
+                        <div class="menu-info">
+                            <h4 class="control-sidebar-subheading">Audits</h4>
+                            <p>Stite audits options</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a ui-sref="logs">
+                        <i class="menu-icon glyphicon glyphicon-list-alt bg-danger"></i>
+                        <div class="menu-info">
+                            <h4 class="control-sidebar-subheading">Logs</h4>
+                            <p>Site logs</p>
+                        </div>
+                    </a>
+                </li>
+                <li ng-show="vm.swaggerEnabled">
+                    <a ui-sref="docs">
+                        <i class="menu-icon fa fa-cogs bg-fuchsia"></i>
+                        <div class="menu-info">
+                            <h4 class="control-sidebar-subheading">API</h4>
+                            <p>Site apis</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a ui-sref="entity-audit">
+                        <i class="menu-icon fa fa-search bg-gray"></i>
+                        <div class="menu-info">
+                            <h4 class="control-sidebar-subheading">Entity Audit</h4>
+                            <p>Site entities audit</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a ui-sref="elasticsearch-reindex">
+                        <i class="menu-icon fa fa-search bg-gray"></i>
+                        <div class="menu-info">
+                            <h4 class="control-sidebar-subheading">Reindex Elasticsearch</h4>
+                            <p>Be careful!!!!!!!</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.tab-pane -->
+    </div>
+</aside>
+<div class="control-sidebar-bg" style="position: fixed; height: auto;"></div>

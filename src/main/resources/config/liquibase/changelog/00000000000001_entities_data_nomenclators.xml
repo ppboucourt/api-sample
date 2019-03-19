@@ -1,0 +1,269 @@
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="20161128210610-20" author="jhipster">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/corporation.csv"
+                  separator=";"
+                  tableName="corporation">
+        </loadData>
+    </changeSet>
+    <changeSet id="20161128210610-25" author="jhipster">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/country_state.csv"
+                  separator=";"
+                  tableName="country_state">
+        </loadData>
+    </changeSet>
+    <changeSet id="20161128210610-26" author="jhipster">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/country_state2.csv"
+                  separator=";"
+                  tableName="country_state">
+        </loadData>
+    </changeSet>
+    <changeSet id="20161128210610-27" author="jhipster">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/type_contact_facility_type.csv"
+                  separator=";"
+                  tableName="type_contact_facility_type">
+        </loadData>
+    </changeSet>
+    <changeSet id="20161128210610-23" author="jhipster">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/type_employee.csv"
+                  separator=";"
+                  tableName="type_employee">
+        </loadData>
+    </changeSet>
+    <changeSet id="20161128210610-28" author="jhipster">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/type_page.csv"
+                  separator=";"
+                  tableName="type_page">
+        </loadData>
+    </changeSet>
+    <changeSet id="20161128210610-31" author="jhipster">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/type_form_rules.csv"
+                  separator=";"
+                  tableName="type_form_rules">
+        </loadData>
+    </changeSet>
+    <changeSet id="20161128210610-33" author="jhipster">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/type_dosage.csv"
+                  separator=";"
+                  tableName="type_dosage">
+        </loadData>
+    </changeSet>
+    <changeSet id="20161128210610-34" author="jhipster">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/routes.csv"
+                  separator=";"
+                  tableName="routes">
+        </loadData>
+    </changeSet>
+    <changeSet id="20161128210610-37" author="jhipster">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/group_type.csv"
+                  separator=";"
+                  tableName="group_type">
+        </loadData>
+    </changeSet>
+    <changeSet id="20161128210610-41" author="jhipster">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/type_evaluation.csv"
+                  separator=";"
+                  tableName="type_evaluation">
+        </loadData>
+    </changeSet>
+    <changeSet id="20161128210610-44" author="jhipster">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/type_patient_programs.csv"
+                  separator=";"
+                  tableName="type_patient_programs">
+        </loadData>
+    </changeSet>
+    <changeSet id="20161128210610-45" author="jhipster">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/type_level_care.csv"
+                  separator=";"
+                  tableName="type_level_care">
+        </loadData>
+    </changeSet>
+    <changeSet id="20161128210610-46" author="jhipster">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/type_admission_status.csv"
+                  separator=";"
+                  tableName="type_admission_status">
+        </loadData>
+    </changeSet>
+    <changeSet id="20161128210610-74" author="jhipster">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/icd10.csv"
+                  separator=";"
+                  tableName="icd_10">
+        </loadData>
+    </changeSet>
+    <changeSet id="20161128210610-77" author="jhipster" runInTransaction="false">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/insurance_carrier.csv"
+                  separator=";"
+                  tableName="insurance_carrier">
+        </loadData>
+    </changeSet>
+    <changeSet id="20161128210653-88" author="jhipster">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/via.csv"
+                  separator=";"
+                  tableName="via">
+        </loadData>
+    </changeSet>
+    <changeSet id="20161128210653-89" author="jhipster">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/xml_config.csv"
+                  separator=","
+                  tableName="xml_config">
+        </loadData>
+    </changeSet>
+    <changeSet id="20171128210653-87" author="jhipster">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/type_employee_authorities.csv"
+                  separator=";"
+                  tableName="type_employee_authority">
+        </loadData>
+    </changeSet>
+
+    <changeSet id="20171128210653-90" author="aacosta">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/glucose_intervention.csv"
+                  separator=";"
+                  tableName="glucose_intervention">
+        </loadData>
+    </changeSet>
+    <changeSet id="20171128210653-91" author="maykel">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/order_frequency.csv"
+                  separator=";"
+                  tableName="order_frequency">
+        </loadData>
+    </changeSet>
+    <changeSet id="20171128210653-92" author="maykel">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/lab_compendium.csv"
+                  separator=";"
+                  tableName="lab_compendium">
+        </loadData>
+    </changeSet>
+    <changeSet id="20171128210653-93" author="maykel">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/tube.csv"
+                  separator=";"
+                  tableName="tube">
+        </loadData>
+    </changeSet>
+    <changeSet id="20171128210653-94" author="maykel">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/insurance_relation.csv"
+                  separator=";"
+                  tableName="insurance_relation">
+        </loadData>
+    </changeSet>
+    <changeSet id="20171128210653-96" author="maykel">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/insurance_level.csv"
+                  separator=";"
+                  tableName="insurance_level">
+        </loadData>
+    </changeSet>
+    <changeSet id="20171128210653-96" author="pboucourt">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/type_patient_contacts_relationship.csv"
+                  separator=";"
+                  tableName="type_patient_contacts_relationship">
+        </loadData>
+    </changeSet>
+    <!--New nomenclators-->
+    <changeSet id="20170517150000-1" author="aacosta">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/type_patient_contact_types.csv"
+                  separator=";"
+                  tableName="type_patient_contact_types">
+        </loadData>
+    </changeSet>
+    <changeSet id="20170517150500-1" author="aacosta">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/insurance_type.csv"
+                  separator=";"
+                  tableName="insurance_type">
+        </loadData>
+    </changeSet>
+    <changeSet id="20170517152700-1" author="aacosta">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/type_ethnicity.csv"
+                  separator=";"
+                  tableName="type_ethnicity">
+        </loadData>
+    </changeSet>
+    <changeSet id="20170517153200-1" author="aacosta">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/type_race.csv"
+                  separator=";"
+                  tableName="type_race">
+        </loadData>
+    </changeSet>
+    <changeSet id="20170517153900-1" author="aacosta">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/drugs.csv"
+                  separator=";"
+                  tableName="drugs">
+        </loadData>
+    </changeSet>
+    <changeSet id="20170517155200-1" author="aacosta">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/type_patient_property_condition.csv"
+                  separator=";"
+                  tableName="type_patient_property_condition">
+        </loadData>
+    </changeSet>
+    <changeSet id="20170517155300-1" author="aacosta">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/type_food_diets.csv"
+                  separator=";"
+                  tableName="type_food_diets">
+        </loadData>
+    </changeSet>
+    <changeSet id="20170517160900-1" author="aacosta">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/type_payment_methods.csv"
+                  separator=";"
+                  tableName="type_payment_methods">
+        </loadData>
+    </changeSet>
+    <changeSet id="20170517162200-1" author="aacosta">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/type_marital_status.csv"
+                  separator=";"
+                  tableName="type_marital_status">
+        </loadData>
+    </changeSet>
+    <changeSet id="20170517162400-1" author="aacosta">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/type_discharge_type.csv"
+                  separator=";"
+                  tableName="type_discharge_type">
+        </loadData>
+    </changeSet>
+
+    <changeSet id="20170620163400-2" author="aacosta">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/csv/nomenclator/type_speciality.csv"
+                  separator=";"
+                  tableName="type_speciality">
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>

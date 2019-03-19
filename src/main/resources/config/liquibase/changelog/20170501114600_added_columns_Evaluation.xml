@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+<!--
+    Added new Columns to Evaluation.
+-->
+    <changeSet author="aacosta" id="20170501114600-1">
+        <addColumn schemaName="public" tableName="evaluation">
+            <column name="json_data" type="varchar"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet author="aacosta" id="20170501114600-2">
+        <addColumn schemaName="public" tableName="evaluation">
+            <column name="roles_sign" type="varchar"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet author="aacosta" id="20170501114600-3">
+        <addColumn schemaName="public" tableName="evaluation">
+            <column name="roles_review" type="varchar"/>
+        </addColumn>
+    </changeSet>
+
+
+</databaseChangeLog>
+

@@ -1,0 +1,160 @@
+<section class="content-header">
+    <h1>Group Session Details</span> <b>{{vm.groupSessionDetails.topic}}</b></h1>
+    <div ncy-breadcrumb class="breadcrumb"></div>
+</section>
+<section class="content">
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+
+                <div class="box-body">
+                        <hr>
+
+                        <section>
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label class="control-label" for="field_fullName">Group Leader:</label>
+                                        <input type="text" class="form-control" name="fullName" id="field_fullName"
+                                               ng-model="vm.fullName"
+                                               readonly />
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3">
+
+                                    <div class="form-group">
+                                        <label class="control-label" for="field_fullName">Start:</label>
+                                        <input type="time" class="form-control" name="Start" id="field_Start"
+                                               ng-model="vm.groupSessionDetails.start"
+                                               readonly />
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3">
+                                    <div class="form-group" ng-if="vm.enabledEmployeeSign()">
+                                         <label class="control-label" for="field_finalized">Finalized:</label>
+                                         <input id="field_finalized" type="time" class="form-control"
+                                                name="start" ng-model="vm.groupSessionDetails.finalized "/>
+                                     </div>
+
+                                    <div class="form-group" ng-if="!vm.enabledEmployeeSign()">
+                                        <label class="control-label" for="field_FinalizedR">Finalized:</label>
+                                        <input type="time"  class="form-control" name="Finalized" id="field_FinalizedR"
+                                               ng-model="vm.groupSessionDetails.finalized "
+                                               readonly />
+                                    </div>
+
+                                </div>
+
+                                <div class="col-lg-3">
+
+                                    <div class="form-group" ng-if="vm.enabledEmployeeSign()">
+                                        <label class="control-label" for="field_Topic">Topic:</label>
+                                        <input type="text" class="form-control" name="Start" id="field_Topic"
+                                               ng-model="vm.groupSessionDetails.topic"
+                                                />
+                                    </div>
+
+                                    <div class="form-group" ng-if="!vm.enabledEmployeeSign()">
+                                        <label class="control-label" for="field_TopicRO">Topic:</label>
+                                        <input type="text" class="form-control" name="Start" id="field_TopicRO"
+                                               ng-model="vm.groupSessionDetails.topic" readonly
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label class="control-label" for="field_Progress">Progress:</label>
+                                        <input type="text" class="form-control" name="Progress" id="field_Progress"
+                                               ng-model="vm.groupSessionDetails.progress"
+                                               readonly/>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label class="control-label" for="field_ReviewBy">Review By:</label>
+                                        <input type="text" class="form-control" name="ReviewBy" id="field_ReviewBy"
+                                               ng-model="vm.fullReviewBy"
+                                               readonly/>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label class="control-label" for="field_reviserSignatureDate">Review Date:</label>
+                                        <input type="text" class="form-control" name="Progress" id="field_reviserSignatureDate"
+                                               ng-model="vm.groupSessionDetails.reviserSignatureDateString"
+                                               readonly/>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-lg-3">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="box-body">
+
+                                <table datatable="" dt-options="vm.dtOptions" dt-columns="vm.dtColumns"
+                                       dt-instance="vm.dtInstance"
+                                       class="table table-striped table-bordered">
+                                </table>
+                            </div>
+
+                        </section>
+
+                            <div class="modal-footer" ng-if="vm.isInProgress() || vm.enabledEmployeeSign() || vm.enabledReviewSign()">
+
+
+                                <button type="submit" ng-if="vm.isInProgress()" ng-click="vm.saveEntity()"
+                                        class="btn btn-success">
+                                    <span class="glyphicon"></span>&nbsp;<span> Save</span>
+                                </button>
+
+                                <button type="button" ng-if="vm.isInProgress()" ui-sref="group-session-details-chart-add({id:vm.groupSessionDetails.id})" class="btn btn-primary">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                    <span class="hidden-xs hidden-sm"> Add Patient</span>
+                                </button>
+
+                                <button type="button" ng-if="vm.enabledEmployeeSign() && vm.groupSessionDetails.finalized != null"  title="Sign and Approve" ng-click="vm.employeeSign()" class="btn btn-primary">
+                                    <span class="glyphicon glyphicon-warning-sign"></span>
+                                    <span class="hidden-xs hidden-sm"> Sign</span>
+                                </button>
+
+                                <button  disabled type="button" ng-if="vm.enabledEmployeeSign() && vm.groupSessionDetails.finalized == null"  title="You need set finalized date first!"  ui-sref="group-session-details-sign({id:vm.groupSessionDetails.id})" class="btn btn-primary">
+                                    <span class="glyphicon glyphicon-warning-sign"></span>
+                                    <span class="hidden-xs hidden-sm"> Sign</span>
+                                </button>
+
+                                <button type="button"  ng-if="vm.enabledReviewSign()"    title="Review and Complete"  ui-sref="group-session-details-sign({id:vm.groupSessionDetails.id})" class="btn btn-primary">
+                                    <span class="glyphicon glyphicon-registration-mark"></span>
+                                    <span class="hidden-xs hidden-sm"> Review</span>
+                                </button>
+                            </div>
+
+                            <div ng-if="!vm.enabledEmployeeSign()"><i><b>{{vm.signedMessage}}</b></i></div>
+                            <div ng-if="!vm.enabledReviewSign()"><i><b>{{vm.reviewMessage}}</b></i></div>
+
+
+
+
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+

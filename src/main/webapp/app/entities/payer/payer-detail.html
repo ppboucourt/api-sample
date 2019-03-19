@@ -1,0 +1,51 @@
+
+<div>
+    <h2><span>Payer</span> {{vm.payer.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="bluebookApp.payer.insurance_company">Insurance Company</span></dt>
+        <dd>
+            <span>{{vm.payer.insurance_company}}</span>
+        </dd>
+        <dt><span>Address</span></dt>
+        <dd>
+            <span>{{vm.payer.address}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.payer.address_two">Address Two</span></dt>
+        <dd>
+            <span>{{vm.payer.address_two}}</span>
+        </dd>
+        <dt><span>City</span></dt>
+        <dd>
+            <span>{{vm.payer.city}}</span>
+        </dd>
+        <dt><span>State</span></dt>
+        <dd>
+            <span>{{vm.payer.state}}</span>
+        </dd>
+        <dt><span>Zip</span></dt>
+        <dd>
+            <span>{{vm.payer.zip}}</span>
+        </dd>
+        <dt><span>Phone</span></dt>
+        <dd>
+            <span>{{vm.payer.phone}}</span>
+        </dd>
+        <dt><span>Status</span></dt>
+        <dd>
+            <span>{{vm.payer.status}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="payer-detail.edit({id:vm.payer.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

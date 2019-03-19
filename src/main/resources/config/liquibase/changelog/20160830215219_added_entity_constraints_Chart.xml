@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Chart.
+    -->
+    <changeSet id="20160830215219-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="patient_id"
+                                 baseTableName="chart"
+                                 constraintName="fk_chart_patient_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="patient"/>
+
+        <addForeignKeyConstraint baseColumnNames="bed_id"
+                                 baseTableName="chart"
+                                 constraintName="fk_chart_bed_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="bed"/>
+
+        <addForeignKeyConstraint baseColumnNames="employees_id"
+                                 baseTableName="chart"
+                                 constraintName="fk_chart_employees_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="employee"/>
+
+        <addForeignKeyConstraint baseColumnNames="type_patient_programs_id"
+                                 baseTableName="chart"
+                                 constraintName="fk_chart_type_patient_programs_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="type_patient_programs"/>
+
+        <addForeignKeyConstraint baseColumnNames="type_level_care_id"
+                                 baseTableName="chart"
+                                 constraintName="fk_chart_type_level_care_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="type_level_care"/>
+
+        <addForeignKeyConstraint baseColumnNames="facility_id"
+                                 baseTableName="chart"
+                                 constraintName="fk_chart_facility_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="facility"/>
+
+        <addForeignKeyConstraint baseColumnNames="type_admission_status_id"
+                                 baseTableName="chart"
+                                 constraintName="fk_chart_type_admission_status_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="type_admission_status"/>
+
+        <addForeignKeyConstraint baseColumnNames="charts_id"
+                                 baseTableName="chart_shifts"
+                                 constraintName="fk_chart_shifts_charts_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="chart"/>
+        <addForeignKeyConstraint baseColumnNames="shifts_id"
+                                 baseTableName="chart_shifts"
+                                 constraintName="fk_chart_shifts_shifts_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="shifts"/>
+        
+        <addForeignKeyConstraint baseColumnNames="charts_id"
+                                 baseTableName="chart_icd10"
+                                 constraintName="fk_chart_icd10_charts_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="chart"/>
+        <addForeignKeyConstraint baseColumnNames="icd10s_id"
+                                 baseTableName="chart_icd10"
+                                 constraintName="fk_chart_icd10_icd10s_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="icd_10"/>
+        
+        <addForeignKeyConstraint baseColumnNames="type_discharge_type_id"
+                                 baseTableName="chart"
+                                 constraintName="fk_chart_type_discharge_type_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="type_discharge_type"/>
+
+        <addForeignKeyConstraint baseColumnNames="type_payment_methods_id"
+                                 baseTableName="chart"
+                                 constraintName="fk_chart_type_payment_methods_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="type_payment_methods"/>
+
+        <addForeignKeyConstraint baseColumnNames="charts_id"
+                                 baseTableName="chart_drugs"
+                                 constraintName="fk_chart_drugs_charts_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="chart"/>
+        <addForeignKeyConstraint baseColumnNames="drugs_id"
+                                 baseTableName="chart_drugs"
+                                 constraintName="fk_chart_drugs_drugs_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="drugs"/>
+        
+        <addForeignKeyConstraint baseColumnNames="type_marital_status_id"
+                                 baseTableName="chart"
+                                 constraintName="fk_chart_type_marital_status_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="type_marital_status"/>
+
+        <addForeignKeyConstraint baseColumnNames="type_ethnicity_id"
+                                 baseTableName="chart"
+                                 constraintName="fk_chart_type_ethnicity_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="type_ethnicity"/>
+
+    </changeSet>
+</databaseChangeLog>

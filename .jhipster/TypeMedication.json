@@ -1,0 +1,24 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "chemical_medication",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "trade_name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160830162539",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "type_medication",
+    "pagination": "no",
+    "enableEntityAudit": true
+}

@@ -1,0 +1,25 @@
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+            ng-click="vm.clear()">&times;</button>
+    <h4 class="modal-title">Patient Sign Evaluation</h4>
+</div>
+<div class="box-header">
+    <div class="text-center">
+        <h3>In this step you must sign and then press "Sign".</h3>
+    </div>
+</div>
+<div class="box-body">
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+            <j-signature sig="vm.result.signed" bg-color="#EEEEEE" color="#00008B"></j-signature>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+        <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+    </button>
+    <button type="button" class="btn btn-info pull-right" ng-click="vm.confirmSign()">Sign
+    </button>
+</div>

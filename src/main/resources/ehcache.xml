@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
+         name="CM1"
+         updateCheck="false"
+         maxBytesLocalHeap="16M">
+
+    <!--
+      This is a default configuration, it is re-configured by the CacheConfiguration Spring Bean, using the
+      properties from the resources/config/*.yml files.
+    -->
+
+    <diskStore path="java.io.tmpdir"/>
+
+    <defaultCache
+            eternal="false"
+            overflowToDisk="false"
+            />
+
+    <cache name="co.tmunited.bluebook.domain.User"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Authority"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.User.authorities"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.PersistentToken"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.User.persistentTokens"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.TypeDosage"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Actions"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Actions.chartToActions"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Actions.orders"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Allergies"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.AllOrders"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Bed"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Bed.charts"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Building"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Building.rooms"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.CareManager"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Chart"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Chart.careManagers"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Chart.chartToGroupSessions"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Chart.chartToIcd10s"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Chart.concurrentReviews"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Chart.chartToMedications"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Chart.contacts"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Chart.insurances"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Chart.orders"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Chart.vitals"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Chart.weights"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Chart.labRequisitions"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Chart.glucoses"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Chart.chartToActions"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Chart.patientToShifts"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.ChartToAction"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.ChartToForm"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.ChartToGroupSession"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.ChartToIcd10"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.ChartToMedications"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.ConcurrentReviews"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Contacts"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.ContactsFacility"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Diet"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Employee"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Employee.shifts"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Employee.urgentIssues"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Employee.charts"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Facility"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Facility.buildings"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Facility.contactsFacilitys"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Fields"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Fields.reportDetails"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Forms"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Glucose"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.GroupSession"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.GroupSession.chartToGroupSessions"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Icd10"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Icd10.chartToIcd10s"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Insurance"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.LabCompendium"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.LabCompendium.labRequisitions"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.LabCompendium.labRequisitionsComponents"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.LabCompendium.orders"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Laboratories"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.LabRequisition"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.LabRequisition.labRequisitionsComponents"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.LabRequisitionsComponents"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.LabResults"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Medications"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Medications.orders"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Order_type"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.OrderComponent"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Orders"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Patient"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Patient.charts"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Patient_properties"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.PatientToShift"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Payer"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.ReportDetails"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Reports"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Room"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Room.beds"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Routes"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Shifts"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Tables"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Tables.fields"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.TypeAdmissionStatus"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.TypeAdmissionStatus.charts"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.TypeContactFacilityType"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.TypeDischargeType"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.TypeEthnicity"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.TypeFoodDiets"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.TypeFormRules"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.TypeLevelCare"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.TypeMaritalStatus"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.TypeMedication"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.TypeMedicationRoutes"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.TypePage"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.TypePatientContactsRelationship"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.TypePatientContactTypes"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.TypePatientProcess"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.TypePatientPrograms"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.TypePatientPrograms.charts"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.TypePatientPropertyCondition"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.TypePaymentMethods"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.TypePerson"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.TypePreAdmissionStatus"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.TypeRace"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.TypeTreatmentPlanStatuses"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.UrgentIssues"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Vendors"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Vitals"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Weight"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Corporation"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.CountryState"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.CountryState.patientAddresses"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.CountryState.clinics"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.CountryState.billingClinics"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.CountryState.insurances"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.AllOrders.orderComponents"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.GroupType"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.GroupType.groupSessions"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.LabProfile"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.LabProfile.labCompendiums"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.LabCompendium.labProfiles"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Evaluation"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.TypeEvaluation"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.EvaluationContent"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.EvaluationItems"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Evaluation.evaluationItems"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Chart.shifts"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Shifts.charts"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.GroupSessionDetails"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Employee.groupSessionDetails"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.GroupSessionDetailsChart"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.GroupSessionDetails.groupSessionDetailsCharts"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Chart.groupSessionDetailsCharts"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.GroupSession.groupSessionDetails"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.TypeEmployee"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.TypeEmployee.employees"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Chart.icd10S"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Icd10.charts"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.TreatmentHistory"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Hospitalization"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Chart.treatmentHistories"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Chart.hospitalizations"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.ChartToLevelCare"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.InsuranceType"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.InsuranceType.insurances"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.InsuranceLevel"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.InsuranceLevel.insurances"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.InsuranceCarrier"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.InsuranceCarrier.insurances"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.InsuranceRelation"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.InsuranceRelation.insurances"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Drugs"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Drugs.charts"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Chart.drugs"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Chart.allergies"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Chart.diets"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Chart.chartToLevelCares"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Chart.chartToIcd10S"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.EvaluationTemplate"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.UrgentIssues.employees"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Action"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.MedicationFrequency"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.MedicationFrequency.patientMedicationPrescriptions"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.PatientMedication"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.PatientMedication.patientMedicationPrescriptions"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.PatientMedicationTake"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.PatientMedicationPres"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.PatientMedicationPres.icd10S"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.PatientMedicationPres.patientMedicationTakes"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.PatientMedication.patientMedicationPres"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Via"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.BarCode"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.PatientOrderTest"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.PatientResultDet"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.PatientOrder"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.OrderFrequency"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.PatientOrderItem"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.PatientResult"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.PatientResultFile"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.PatientOrderTest.patientOrderItems"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Via.patientOrders"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.EvaluationTemplate.staffSignatureAuthority"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.PatientMedicationPres.icd10s"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Icd10.patientOrderTests"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Icd10.patientMedicationPress"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.OrderFrequency.patientOrderTests"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.PatientOrderTest.icd10s"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.PatientOrder.patientOrderTests"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.PatientMedication.patientMedicationPress"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.TypeEmployee.authorities"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.PatientResult.patientResultFiles"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.PatientResult.resultDets"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.EvaluationTemplate.staffReviewSignatureAuthorities"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.PatientAction"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.PatientAction.patientActionPres"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.PatientActionPre"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.PatientActionPre.icd10S"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.PatientActionPre.patientActionTakes"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.PatientActionTake"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.GlucoseIntervention"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Glucose.glucoseInterventions"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.GlucoseIntervention.glucoses"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Signature"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.EvaluationSignature"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.File"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.ServiceProvider"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.EmployeeRememberCode"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.EntityAuditEvent"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.ChartCareTeam"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.FaxSendLog"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Picture"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Tube"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.TypeSpeciality"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Icd10.patientActionPres"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Chart.patientMedications"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Chart.chartToForms"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.TypeLevelCare.forms"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Tube.labCompendiums"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Employee.employeeRememberCodes"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.PatientActionPre.icd10s"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.TypeLevelCare.evaluationTemplates"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.LabCompendium.tubes"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.Forms.typeLevelCares"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="co.tmunited.bluebook.domain.EvaluationTemplate.typeLevelCares"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <!-- jhipster-needle-ehcache-add-entry -->
+</ehcache>

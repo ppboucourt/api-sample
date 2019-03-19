@@ -1,0 +1,27 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "patientOrderTest",
+            "otherEntityName": "patientOrderTest",
+            "otherEntityRelationshipName": "orderFrequency"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "days",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20170110202713",
+    "entityTableName": "order_frequency",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "enableEntityAudit": true
+}

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="20170216140822-1" author="maykel">
+        <createTable tableName="evaluation_template_staff_signature_authority">
+            <column name="evaluation_template_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="authority_name" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey columnNames="evaluation_template_id, authority_name" tableName="evaluation_template_staff_signature_authority"/>
+
+        <addForeignKeyConstraint baseColumnNames="authority_name"
+                                 baseTableName="evaluation_template_staff_signature_authority"
+                                 constraintName="fk_authority_name2"
+                                 referencedColumnNames="name"
+                                 referencedTableName="jhi_authority"/>
+
+        <addForeignKeyConstraint baseColumnNames="evaluation_template_id"
+                                 baseTableName="evaluation_template_staff_signature_authority"
+                                 constraintName="fk_evaluation_template_staff_signature_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="evaluation_template"/>
+    </changeSet>
+
+    <changeSet id="20170216140822-2" author="maykel">
+        <createTable tableName="evaluation_template_staff_review_signature_authority">
+            <column name="evaluation_template_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="authority_name" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey columnNames="evaluation_template_id, authority_name" tableName="evaluation_template_staff_review_signature_authority"/>
+
+        <addForeignKeyConstraint baseColumnNames="authority_name"
+                                 baseTableName="evaluation_template_staff_review_signature_authority"
+                                 constraintName="fk_authority_name3"
+                                 referencedColumnNames="name"
+                                 referencedTableName="jhi_authority"/>
+
+        <addForeignKeyConstraint baseColumnNames="evaluation_template_id"
+                                 baseTableName="evaluation_template_staff_review_signature_authority"
+                                 constraintName="fk_evaluation_template_staff_review_signature_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="evaluation_template"/>
+    </changeSet>
+</databaseChangeLog>

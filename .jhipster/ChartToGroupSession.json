@@ -1,0 +1,29 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "chart",
+            "otherEntityName": "chart",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "mr_no"
+        },
+        {
+            "relationshipName": "groupSession",
+            "otherEntityName": "groupSession",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "group_name"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160830220327",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "chart_to_group_session",
+    "pagination": "no",
+    "enableEntityAudit": true
+}

@@ -1,0 +1,66 @@
+echo ""
+
+echo "Making BlueBook Backups..."
+
+printLine(){
+  echo ""
+}
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+domain=`cat $DIR/.domain`
+folderBK=bluebook-backup
+
+rm -rf /tmp/$folderBK
+mkdir -p /tmp/$folderBK
+
+printLine
+echo "Stopping Containers..."
+bluebook_app=`docker ps -a | grep "itudt/bluebook" | awk '{print $1}'`
+bluebook_scheduler=`docker ps -a | grep "itudt/bb-scheduler" | awk '{print $1}'`
+bluebook_appfs=`docker ps -a | grep "itudt/appf" | awk '{print $1}'`
+bluebook_elasticsearch=`docker ps -a | grep "elasticsearch:2.4.1" | awk '{print $1}'`
+bluebook_appfs_mongodb=`docker ps -a | grep "mongo:3" | awk '{print $1}'`
+bluebook_postgresql=`docker ps -a | grep "bluebook_postgresql" | awk '{print $1}'`
+
+docker stop $bluebook_app $bluebook_scheduler $bluebook_appfs $bluebook_elasticsearch $bluebook_appfs_mongodb $bluebook_postgresql
+echo "Containers Stopped"
+printLine
+
+echo "Compacting Postgresql... "
+docker run --rm --volumes-from data-container-bluebook-postgresql -v /tmp/$folderBK/:/backup ubuntu:16.04 tar cvf /backup/bluebook-postgresql-$domain.tar /var/lib/postgresql/data 
+
+printLine
+ 
+echo "Compacting MongoDb... "
+docker run --rm --volumes-from data-container-appfs-mongodb -v /tmp/$folderBK/:/backup ubuntu:16.04 tar cvf /backup/appfs-mongodb-$domain.tar /data/db
+
+printLine
+printLine
+echo "Backup Ready... "
+echo "Starting Containers... "
+
+docker start $bluebook_postgresql $bluebook_appfs_mongodb $bluebook_elasticsearch $bluebook_appfs $bluebook_scheduler $bluebook_app  &
+echo "Containers OK " 
+printLine
+
+nowDate=`date | awk '{print $2$6$3$4}'`
+nowDate="${nowDate/:/}"
+nowDate="${nowDate/:/}"
+nowDate="${nowDate/:/}"
+
+zipFileName=$domain.$nowDate.7z
+md5ZipFileName=$domain.$nowDate.7z.md5
+
+echo "7zip..."
+docker run --rm  -v /tmp/$folderBK/:/backup itudt/ubuntu:16.04 bash -c  "cd /backup && 7z a $zipFileName *  &&  md5sum $zipFileName | awk '{print $1}' > $md5ZipFileName  "
+
+echo "Uploading for Google Drive..."
+cd /tmp/$folderBK && gdrive upload $zipFileName && gdrive upload $md5ZipFileName
+
+echo ""
+rm -f /tmp/$folderBK/*.*
+
+echo "Finish"
+
+exit 0

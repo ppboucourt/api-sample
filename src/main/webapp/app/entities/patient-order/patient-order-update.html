@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="">
+            <div class="col-lg-12">
+                <h4>Order {{vm.patientOrder.id}}
+                    <span class="label"
+                          ng-class="{'label-info' : vm.patientOrder.ordStatus === 'SCHEDULED',
+                                    'label-default' : vm.patientOrder.ordStatus === 'CANCELED'}">
+                        {{(vm.patientOrder.ordStatus !== 'CANCELED') ? (vm.patientOrder.ordStatus | capitalize) : 'Discontinued'}}</span>
+                </h4>
+                <hr style="margin-top: 10px;">
+            </div>
+            <!--<div class="box-header with-border">-->
+            <!--<h3 class="box-title">Order {{vm.patientOrder.id}} ({{vm.patientOrder.ordStatus}})</h3>-->
+            <!--</div>-->
+            <jhi-alert-error></jhi-alert-error>
+            <div class="box-body">
+                <ng-include src="'app/entities/patient-order/tpl/update/patient-order-signed-tpl.html'"></ng-include>
+            </div>
+        </div>
+    </div>
+</div>
+<div ui-view="order-tests"></div>

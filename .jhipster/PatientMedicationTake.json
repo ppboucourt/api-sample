@@ -1,0 +1,42 @@
+ {
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "patientMedicationPres",
+            "otherEntityName": "patientMedicationPres",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "collected",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "collectedDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "scheduleDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "sent",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "sentDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "canceled",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20170110202716",
+    "entityTableName": "patient_medication_take",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl"
+}

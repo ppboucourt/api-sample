@@ -1,0 +1,49 @@
+<section class="content">
+    <div>
+        <h2><span>Fax Send Log</span> {{vm.faxSendLog.id}}</h2>
+        <hr>
+        <jhi-alert-error></jhi-alert-error>
+        <dl class="dl-horizontal jh-entity-details">
+            <dt><span>Sid</span></dt>
+            <dd>
+                <span>{{vm.faxSendLog.sid}}</span>
+            </dd>
+            <dt><span>Send Date</span></dt>
+            <dd>
+                <span>{{vm.faxSendLog.sendDate | date:'medium'}}</span>
+            </dd>
+            <dt><span>Fax To Number</span></dt>
+            <dd>
+                <span>{{vm.faxSendLog.faxToNumber}}</span>
+            </dd>
+            <dt><span>Fax From Number</span></dt>
+            <dd>
+                <span>{{vm.faxSendLog.faxFromNumber}}</span>
+            </dd>
+            <dt><span>Fax State</span></dt>
+            <dd>
+                <span>{{vm.faxSendLog.faxState}}</span>
+            </dd>
+            <dt><span>Pdf Uuid</span></dt>
+            <dd>
+                <span>{{vm.faxSendLog.pdfUuid}}</span>
+            </dd>
+            <!--<dt><span>Media Url</span></dt>-->
+            <!--<dd>-->
+                <!--<span>{{vm.faxSendLog.mediaUrl}}</span>-->
+            <!--</dd>-->
+        </dl>
+
+        <button type="submit"
+                ui-sref="{{ vm.previousState }}"
+                class="btn btn-info">
+            <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+        </button>
+
+        <!--<button type="button" ui-sref="fax-send-log-detail.edit({id:vm.faxSendLog.id})" class="btn btn-primary">-->
+        <!--<span class="glyphicon glyphicon-pencil"></span>-->
+        <!--<span class="hidden-xs hidden-sm"> Edit</span>-->
+        <!--</button>-->
+    </div>
+
+</section>

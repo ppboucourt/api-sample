@@ -1,0 +1,23 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "groupSession",
+            "otherEntityName": "groupSession",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "groupType"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170103153853",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "group_type",
+    "pagination": "no",
+    "enableEntityAudit": true
+}

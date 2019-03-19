@@ -1,0 +1,26 @@
+<section class="content-header">
+    <h1>Signature Wizard</h1>
+    <div ncy-breadcrumb class="breadcrumb"></div>
+</section>
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box box-success">
+                <div class="row">
+                    <div class="col-lg-1">
+                    </div>
+                    <div class="col-lg-10">
+                        <jhi-alert-error></jhi-alert-error>
+                    </div>
+                    <div class="col-lg-1">
+                    </div>
+                </div>
+                <!-- use ng-submit to catch the form submission and use our Angular function -->
+                <form id="signup-form" ng-submit="processForm()">
+                    <!-- our nested state views will be injected here -->
+                    <div id="form-views" ui-view></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,10 @@
+<script type="text/ng-template" id="warning-dialog.html">
+    <div class="modal-header">
+        <h3>You're Idle. Do Something!</h3>
+    </div>
+    <div idle-countdown="vm.countdown" class="modal-body">
+        <p>You'll be logged out in <span class="label label-warning">{{vm.countdown}}</span>
+            <span ng-pluralize="" count="vm.countdown" when="{'one': 'second', 'other': 'seconds' }"></span>.</p>
+        <uib-progressbar max="30" value="vm.countdown" animate="true" class="progress-striped active"></uib-progressbar>
+    </div>
+</script>

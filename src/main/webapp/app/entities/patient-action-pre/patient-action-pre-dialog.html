@@ -1,0 +1,77 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+            ng-click="vm.clear()">&times;</button>
+    <h4 class="modal-title" id="myPatientAccessLabel">Action {{'"' + vm.patientActionPre.action + '"'}}</h4>
+</div>
+<div class="modal-body">
+    <table class="table table-condensed table-striped table-bordered">
+        <tbody>
+        <tr>
+            <th>Action</th>
+            <th>Frequency in hours</th>
+            <th>Staring Date</th>
+            <th>End Date</th>
+            <th>As Needed</th>
+        </tr>
+        <tr>
+            <td>{{vm.patientActionPre.action}}</td>
+            <td>{{vm.patientActionPre.hours}}</td>
+            <td>{{vm.patientActionPre.staringDate | amDateFormat:'MM/DD/YYYY'}}</td>
+            <td>{{vm.patientActionPre.endDate | amDateFormat:'MM/DD/YYYY'}}</td>
+            <td>{{vm.patientActionPre.asNeeded ? 'Yes' : 'No'}}</td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-condensed table-striped table-bordered">
+                <tbody>
+                <tr>
+                    <th>ICD 10</th>
+                    <th>Description</th>
+                </tr>
+                <tr ng-repeat="diagnosis in vm.patientActionPre.icd10s">
+                    <td>{{diagnosis.code}}</td>
+                    <td>{{diagnosis.description}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="box box-primary" ng-show="vm.patientActionPre.patientActionTakes.length > 0">
+        <div class="box-header with-border">
+            <h3 class="box-title">"{{vm.patientActionPre.action}}" schedule</h3>
+        </div>
+        <div class="box-body">
+            <table class="table table-condensed table-striped table-bordered">
+                <tbody>
+                <tr>
+                    <th style="width: 10px">#</th>
+                    <th>Scheduled Day</th>
+                    <th>Collected</th>
+                    <th>Collected Day</th>
+                    <th>Sent</th>
+                    <th>Sent Day</th>
+                    <th>Canceled</th>
+                    <th ng-show="vm.patientOrder.ordStatus == 'SCHEDULED' && vm.canCancel">Cancel</th>
+                </tr>
+                <tr ng-repeat="item in vm.patientActionPre.patientActionTakes">
+                    <td>{{$index}}.</td>
+                    <td>{{item.scheduleDate | amDateFormat:'MM/DD/YYYY HH:mm'}}</td>
+                    <td><span ng-class="item.collected ? 'label label-success' : 'label label-danger'">{{item.collected ? 'Yes' : 'No'}}</span></td>
+                    <td>{{item.collectedDate | amDateFormat:'MM/DD/YYYY HH:mm'}}</td>
+                    <td><span ng-class="item.sent ? 'label label-danger' : 'label label-success'">{{item.sent ? 'Yes' : 'No'}}</span></td>
+                    <td>{{item.sentDate | amDateFormat:'MM/DD/YYYY HH:mm'}}</td>
+                    <td>
+                        <span ng-class="item.canceled ? 'label label-danger' : 'label label-success'">{{item.canceled ? 'Yes' : 'No'}}</span>
+                    </td>
+                    <td ng-show="vm.patientAction.actionStatus == 'SCHEDULED' && vm.canCancel">
+                        <nz-toggle ng-model="item.canceled" ng-disabled="item.canceled" ng-click="vm.cancelActionTake(item)"></nz-toggle>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

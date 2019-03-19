@@ -1,0 +1,8 @@
+id;name;status;created_by;created_date;last_modified_by;last_modified_date;del_status
+1;Broken/cracked body;ACT;system;2016-01-09 09:27:53;system;2016-09-02 18:39:30;false
+2;Broken screen;ACT;system;2016-12-03 02:34:48;system;2016-09-10 01:45:45;false
+3;Fair;ACT;system;2016-04-17 12:04:10;system;2016-07-10 10:29:17;false
+4;Good;ACT;system;2016-10-29 09:06:58;system;2016-04-22 04:32:13;false
+5;Old in appearance;ACT;system;2016-05-20 08:43:45;system;2016-12-15 13:25:41;false
+6;Unopened;ACT;system;2016-07-01 20:21:55;system;2016-05-17 18:44:07;false
+7;Visible scratches/bumps/dents;ACT;system;2016-10-18 23:06:43;system;2016-09-08 07:19:56;false

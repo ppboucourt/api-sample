@@ -1,0 +1,50 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "icd10",
+            "otherEntityName": "icd10",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "patientActionPre"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "patientActionTake",
+            "otherEntityName": "patientActionTake",
+            "otherEntityRelationshipName": "patientActionPre"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "patientAction",
+            "otherEntityName": "patientAction",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "staringDate",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "endDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "action",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20170406202715",
+    "entityTableName": "patient_action_pre",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "enableEntityAudit": true
+}

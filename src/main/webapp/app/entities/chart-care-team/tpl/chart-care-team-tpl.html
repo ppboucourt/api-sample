@@ -1,0 +1,66 @@
+<form name="vm.form.care_form" role="form" show-validation>
+    <div class="row" ng-show="vm.editingCareTeamMember">
+
+        <div class="col-lg-4">
+            <div class="form-group">
+                <label class="control-label" for="field_care_form_patient">Patient</label>
+                <input type="text" class="form-control" name="field_care_form_patient" readonly
+                       id="field_care_form_patient"
+                       ng-model="vm.chartCareTeamMemberFullName"
+                       required/>
+
+
+            </div>
+        </div>
+
+
+        <div class="col-lg-4">
+            <div class="form-group">
+                <label for="field_care_form_careTeamEmployee">Care Team Employee</label>
+                <select class="form-control" id="field_care_form_careTeamEmployee" name="care_form_Employee"
+                        ng-model="vm.chartCareTeamMember.employee"
+                        ng-options="employee as (employee.firstName +  ' ' + employee.lastName) for employee in vm.employees track by employee.id"
+                        required>
+                    <option value="">--Select--</option>
+                </select>
+                <div ng-show="vm.form.care_form.care_form_employee.$invalid">
+                    <p class="help-block"
+                       ng-show="vm.form.care_form.care_form_employee.$error.required">
+                        This field is required.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-lg-4">
+            <div class="form-group">
+                <label for="field_care_form_careTeamSpeciality">Care Team Speciality</label>
+                <select class="form-control" id="field_care_form_careTeamSpeciality" name="care_form_careTeamSpeciality"
+                        ng-model="vm.chartCareTeamMember.typeSpeciality"
+                        ng-options="typeSpeciality as typeSpeciality.name for typeSpeciality in vm.typeSpecialities track by typeSpeciality.id"
+                        required>
+                    <option value="">--Select--</option>
+                </select>
+                <div ng-show="vm.form.care_form.care_form_careTeamSpecialty.$invalid">
+                    <p class="help-block"
+                       ng-show="vm.form.care_form.care_form_careTeamSpecialty.$error.required">
+                        This field is required.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="pull-right" ng-if="vm.editingCareTeamMember">
+        <button type="button" class="btn btn-danger"
+                ng-click="vm.changeEditingCareTeamState()">Cancel
+        </button>
+        <button type="submit" class="btn btn-success"
+                ng-disabled="vm.form.care_form.$invalid"
+                ng-click="vm.saveCareTeamMember()">Save
+        </button>
+    </div>
+</form>

@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                <h3 class="box-title">History Orders</h3>
+            </div>
+            <jhi-alert-error></jhi-alert-error>
+            <div class="box-body">
+                <uib-tabset class="nav-tabs-custom" active="vm.activeTab">
+                    <uib-tab index="0" select="vm.keepActiveTab(0)" heading="One Time Requisitions">
+                        <div ui-view="onetime"></div>
+                    </uib-tab>
+                    <uib-tab index="1" select="vm.keepActiveTab(1)" heading="Recurring Order">
+                        <div ui-view="recurring"></div>
+                    </uib-tab>
+                    <uib-tab index="2" select="vm.keepActiveTab(2)" heading="Standing Order">
+                        <div ui-view="standing"></div>
+                    </uib-tab>
+                </uib-tabset>
+            </div>
+        </div>
+    </div>
+</div>

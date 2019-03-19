@@ -1,0 +1,71 @@
+html,
+body {
+    background-color: #d2d6de;
+}
+
+.ui-grid-style {
+    height: 700px;
+}
+
+.ui-grid-cell-align {
+    text-align: center;
+}
+
+.btn-success {
+    color: #fff;
+}
+
+.btn-primary {
+    color: #fff;
+}
+
+.tab-content {
+    /*border: 1px solid #ddd;*/
+    border-width: 0 1px 1px;
+    padding: 15px;
+}
+
+.box-header-grid {
+    padding-top: 0px;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+/*
+Style of sign wizard
+ */
+pre.prettyprint {
+    background: white;
+    font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
+    font-size: 12px;
+    line-height: 1.5;
+    border: 1px solid #dedede !important;
+    padding: 10px;
+    max-height: 450px;
+    width: auto;
+    overflow: auto !important;
+}
+
+.jSignature {
+    cursor: pointer;
+    border: 1px solid #d2d2d2 !important;
+}
+
+.btn-warning-waiting {
+    background-color: rgb(34, 45, 50);
+    color: white;
+}
+
+.pagination-forms {
+    margin: 0px !important;
+}
+
+.test-class {
+    background: black;
+}
+
+/*
+End Style of sign wizard
+ */

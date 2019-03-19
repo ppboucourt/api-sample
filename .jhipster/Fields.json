@@ -1,0 +1,38 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "table",
+            "otherEntityName": "tables",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "table_name"
+        },
+        {
+            "relationshipName": "reportDetails",
+            "otherEntityName": "reportDetails",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "field"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "status",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "3"
+        },
+        {
+            "fieldName": "field_name",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160826221652",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "fields",
+    "pagination": "no",
+    "enableEntityAudit": true
+}

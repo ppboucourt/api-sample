@@ -1,0 +1,57 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "labRequisition",
+            "otherEntityName": "labRequisition",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "labCompendium",
+            "otherEntityName": "labCompendium",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "code"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "test",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "result",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cutoff",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "units",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "flag",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "comments",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "3"
+        }
+    ],
+    "changelogDate": "20160829142435",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "lab_results",
+    "pagination": "no",
+    "enableEntityAudit": true
+}

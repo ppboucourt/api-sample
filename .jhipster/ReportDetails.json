@@ -1,0 +1,43 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "report",
+            "otherEntityName": "reports",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "report_name"
+        },
+        {
+            "relationshipName": "table",
+            "otherEntityName": "tables",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "table_name"
+        },
+        {
+            "relationshipName": "field",
+            "otherEntityName": "fields",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "field_name"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "sorting",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "3"
+        }
+    ],
+    "changelogDate": "20160829202151",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "report_details",
+    "pagination": "no",
+    "enableEntityAudit": true
+}

@@ -1,0 +1,68 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "typePatientProcess",
+            "otherEntityName": "typePatientProcess",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "typeEvaluation",
+            "otherEntityName": "typeEvaluation",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "evaluationContent",
+            "otherEntityName": "evaluationContent",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "facility",
+            "otherEntityName": "facility",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "enabled",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "patientSignature",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "onlyOne",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "billable",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "forceStaffSignature",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "forceStaffReviewSignature",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "jsonTemplate",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170104212419",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "evaluation_template",
+    "pagination": "no"
+}

@@ -1,0 +1,94 @@
+<!--Form Consent Section-->
+<section class="invoice" style="margin: 0px;" id="formData">
+    <div class="row">
+        <div class="col-xs-12">
+            <button type="button" class="btn btn-danger pull-right" ng-click="vm.backDetailsBasic()">
+                <i class="fa fa-reply"></i>
+            </button>
+            <h2 class="page-header">
+                <i class="fa fa-globe"></i> Evaluation <b>{{vm.evaluation.name}}</b>
+            </h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="col-md-8 col-sm-12">
+                <address>
+                    <strong>{{vm.facility.name}}</strong><br>
+                    {{vm.facility.address1}}<br>
+                    {{vm.facility.address2}}<br>
+                    Phone: {{vm.facility.phone}}<br>
+                    Web Site: {{vm.facility.website}}
+                </address>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <address>
+                    <strong>{{vm.patient.fullName}}</strong><br>
+                    DOB: {{moment(vm.patient.dateBirth).format(MM/dd/yyyy)}}<br>
+                    Mr. No: {{vm.evaluation.chart.mrNo}}
+                </address>
+            </div>
+        </div>
+    </div>
+    <p style="text-align: center"> <b>Please, complete the follow evaluation.</b></p>
+    <hr/>
+    <div class="row">
+        <div class="col-md-12" id="evaluationData">
+            <div class="col-lg-12">
+                <form novalidate class="form-horizontal" name="evaluationForm">
+                    <fieldset>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div fg-form
+                                     fg-form-data="vm.evaluation.jsonData"
+                                     fg-schema="vm.evaluation.jsonTemplate" class="fg-form ng-scope">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+        <div class="row"  id="signarea" style="padding-left: 3.5%;" ng-repeat="item in vm.evaluationSignatures">
+            <!--Electronically signed by  on 'date time' from 'ip address'-->
+            <span
+                style="font-size: 16px;">Electronically {{(item.signType == vm.SIGN_TYPE.REVIEWED) ? 'review': 'signed'}}  by <strong>{{ item.employee.firstName ? item.employee.firstName +' '+ item.employee.lastName: 'Patient ' + item.evaluation.chart.patient.firstName + ' ' + item.evaluation.chart.patient.lastName}}</strong>, date time <strong>{{ item.signature ? (item.signature.date | date: 'MM/dd/yyyy hh:mm:ss a'):  (item.patientSignature.date | date: 'MM/dd/yyyy hh:mm:ss a') }}</strong>
+                    from <strong>{{item.signature ? item.signature.ip: item.patientSignature.ip}}</strong>
+                </span>
+        </div>
+    </div>
+    <div class="row no-print">
+        <udt-attach form-id="{{vm.evaluation.id}}" is-signed="vm.evaluationSignatures.length?true:false"
+                    attach="vm.attachFile" delete="vm.deleteFile" redirect="false"></udt-attach>
+    </div>
+    <div class="row no-print">
+        <div class="modal-footer">
+
+            <button type="button" class="btn btn-success"  data-ng-disabled="vm.isSaving && vm.evaluation.chart"      ng-if=" !(vm.evaluationSignatures && vm.evaluationSignatures.length > 0)"  ng-click="vm.saveEvaluation()"
+                    ng-if="true"> Save
+            </button>
+            <button type="button" class="btn btn-primary" ng-click="vm.patientSign()" title="Patient Sign"
+                        ng-if="vm.evaluation.chart && vm.isAlreadySaved && vm.evaluation.patientSignature && (!vm.patientAlreadySigned)"><i class="fa fa-envira"></i>
+                Patient Sign
+            </button>
+            <button type="button" class="btn btn-primary" ng-click="vm.signEvaluation()" title="Sign"
+                    ng-if="vm.evaluation.chart && vm.patientAlreadySigned && (vm.eSSignRoles.length == 0 && vm.currentSignRoles.length > 0)"><i class="fa fa-envira"></i>
+                Sign
+            </button>
+            <button type="button" title="Review and Sign" class="btn btn-primary" ng-click="vm.reviewAndSign()"
+                    ng-if="vm.evaluation.chart && vm.patientAlreadySigned && (vm.evaluation.status == vm.EVALUETION_STATUS.PENDING_REVIEW) && (vm.currentReviewRoles.length > 0) && (vm.eSReviewRoles.length == 0)" >
+                <i class="fa fa-check"></i>  Review
+            </button>
+
+            <button type="button" class="btn btn-danger pull-right" ng-click="vm.backDetailsBasic()">
+                <i class="fa fa-reply"></i>
+            </button>
+            <!--<button type="button" ngf-select class="btn btn-default"-->
+                    <!--ngf-change="vm.attachFile($file, vm.attachFileData)" accept="image/*,pdf,csv">-->
+                <!--<i class="fa fa-paperclip"></i>-->
+                <!--Attachment-->
+            <!--</button>-->
+        </div>
+    </div>
+</section>

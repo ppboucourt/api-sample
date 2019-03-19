@@ -1,0 +1,43 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "labCompendium",
+            "otherEntityName": "labCompendium",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "code"
+        },
+        {
+            "relationshipName": "labRequisitionsComponents",
+            "otherEntityName": "labRequisitionsComponents",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "labRequisition"
+        },
+        {
+            "relationshipName": "chart",
+            "otherEntityName": "chart",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "mr_no"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "patient_signature",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "barcode",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160831140719",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "lab_requisition",
+    "pagination": "no",
+    "enableEntityAudit": true
+}

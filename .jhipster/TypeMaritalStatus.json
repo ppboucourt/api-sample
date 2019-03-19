@@ -1,0 +1,20 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160830162255",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "type_marital_status",
+    "pagination": "no",
+    "enableEntityAudit": true
+}

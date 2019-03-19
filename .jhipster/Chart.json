@@ -1,0 +1,359 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "patient",
+            "otherEntityName": "patient",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "careManagers",
+            "otherEntityName": "careManager",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "chart"
+        },
+        {
+            "relationshipName": "bed",
+            "otherEntityName": "bed",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "bed_name"
+        },
+        {
+            "relationshipName": "chartToGroupSessions",
+            "otherEntityName": "chartToGroupSession",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "chart"
+        },
+        {
+            "relationshipName": "concurrentReviews",
+            "otherEntityName": "concurrentReviews",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "chartConcurrentReviews"
+        },
+        {
+            "relationshipName": "chartToMedications",
+            "otherEntityName": "chartToMedications",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "chart"
+        },
+        {
+            "relationshipName": "contacts",
+            "otherEntityName": "contacts",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "chart"
+        },
+        {
+            "relationshipName": "insurances",
+            "otherEntityName": "insurance",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "chart"
+        },
+        {
+            "relationshipName": "orders",
+            "otherEntityName": "orders",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "chart"
+        },
+        {
+            "relationshipName": "vitals",
+            "otherEntityName": "vitals",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "chart"
+        },
+        {
+            "relationshipName": "weights",
+            "otherEntityName": "weight",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "chart"
+        },
+        {
+            "relationshipName": "labRequisitions",
+            "otherEntityName": "labRequisition",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "chart"
+        },
+        {
+            "relationshipName": "employees",
+            "otherEntityName": "employee",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "last_name"
+        },
+        {
+            "relationshipName": "typePatientPrograms",
+            "otherEntityName": "typePatientPrograms",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipName": "typeLevelCare",
+            "otherEntityName": "typeLevelCare",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipName": "facility",
+            "otherEntityName": "facility",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "facility_name"
+        },
+        {
+            "relationshipName": "glucoses",
+            "otherEntityName": "glucose",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "chart"
+        },
+        {
+            "relationshipName": "typeAdmissionStatus",
+            "otherEntityName": "typeAdmissionStatus",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipName": "chartToAction",
+            "otherEntityName": "chartToAction",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "chart"
+        },
+        {
+            "relationshipName": "groupSessionDetailsChart",
+            "otherEntityName": "groupSessionDetailsChart",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "chart"
+        },
+        {
+            "relationshipName": "shifts",
+            "otherEntityName": "shifts",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "chart"
+        },
+        {
+            "relationshipName": "icd10",
+            "otherEntityName": "icd10",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "chart"
+        },
+        {
+            "relationshipName": "treatmentHistory",
+            "otherEntityName": "treatmentHistory",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "chart"
+        },
+        {
+            "relationshipName": "hospitalization",
+            "otherEntityName": "hospitalization",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "chart"
+        },
+        {
+            "relationshipName": "typeDischargeType",
+            "otherEntityName": "typeDischargeType",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "typePaymentMethods",
+            "otherEntityName": "typePaymentMethods",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "drugs",
+            "otherEntityName": "drugs",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "chart"
+        },
+        {
+            "relationshipName": "allergies",
+            "otherEntityName": "allergies",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "chart"
+        },
+        {
+            "relationshipName": "diet",
+            "otherEntityName": "diet",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "chart"
+        },
+        {
+            "relationshipName": "typeMaritalStatus",
+            "otherEntityName": "typeMaritalStatus",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "typeEthnicity",
+            "otherEntityName": "typeEthnicity",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "chartToLevelCare",
+            "otherEntityName": "chartToLevelCare",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "chart"
+        },
+        {
+            "relationshipName": "chartToIcd10",
+            "otherEntityName": "chartToIcd10",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "chart"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "program",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "referrer",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "address",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "city",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "state",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "zip",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "occupancy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "employer",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "picture",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "image",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "waitingRoom",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "dischargeDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "reason",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "2000"
+        },
+        {
+            "fieldName": "admissionDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "dischargeTime",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "dischargeTo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "repName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "addressTwo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dateFirstContact",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "firstContactName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "firstContactRelationship",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "employerPhone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "mrNo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "firstContactPhone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "altPhone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sobrietyDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "oneTimeOnly",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "patientLicense",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "image"
+        },
+        {
+            "fieldName": "referrerRequireContact",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "livingArrangement",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "wayLiving",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "800"
+        }
+    ],
+    "changelogDate": "20160830215219",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "chart",
+    "pagination": "no"
+}

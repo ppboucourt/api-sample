@@ -1,0 +1,65 @@
+<form name="weightForm">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;
+        </button>
+        <h4 class="modal-title" id="myWeightLabel">Create or edit a Weight</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <!--div class="form-group" ng-show="vm.weight.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.weight.id" readonly />
+        </div-->
+
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="control-label" for="field_date">Date <code>*</code></label>
+                    <div class="input-group">
+                        <input id="field_date" type="text" class="form-control" name="date" required
+                               datetime-picker="{{dateformat}}" ng-model="vm.weight.date"
+                               is-open="vm.datePickerOpenStatus.date" validator="required" message-id="msg-weight-date"  />
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="vm.openCalendar('date')"><i
+                                class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </div>
+                    <div id="msg-weight-date"></div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="control-label" for="field_weight">Weight (Kgs)</label>
+                    <input type="text" class="form-control" name="weight" id="field_weight"
+                           ng-model="vm.weight.weight"
+                    />
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="control-label" for="field_height">Height (Cms)</label>
+                    <input type="number" step="0.01" onkeypress="return (event.charCode >= 48 && event.charCode <= 57) ||
+                           (event.charCode == 44 || event.charCode == 0) " class="form-control" name="height" id="field_height"
+                           ng-model="vm.weight.height"
+                    />
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <!--<button type="submit" ng-disabled="vm.form.$invalid || vm.isSaving" class="btn btn-primary btn-success">-->
+            <!--<span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>-->
+        <!--</button>-->
+        <button type="submit" validation-submit="weightForm" ng-click="vm.save()" class="btn btn-primary btn-success">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

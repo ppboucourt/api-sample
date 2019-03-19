@@ -1,0 +1,112 @@
+version: '2'
+services:
+
+    bluebook-proxy:
+        image: bluebookproxy
+        ports:
+          - 80:80
+        depends_on:
+            - bluebook-app
+            - appfs-app
+
+    bluebook-app:
+        image: itudt/bluebook:dev
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://bluebook-postgresql:5432/bluebook
+            - SPRING_DATASOURCE_USERNAME=bluebook
+            - SPRING_DATASOURCE_PASSWORD=Adv23252!
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+            - SPRING_DATA_ELASTICSEARCH_CLUSTER_NODES=bluebook-elasticsearch:9300
+            - JHIPSTER_FILESTORAGE_REMOTE_BASEPATH=http://appfs-app:8082
+            - APPLICATION_RESULTTYPE_PATIENT=BCODE
+
+        depends_on:
+            - bluebook-postgresql
+            - bluebook-elasticsearch
+            - appfs-app
+
+    bluebook-postgresql:
+        container_name: bluebook-postgresql
+        image: itudt/postgres:9.6
+        volumes_from:
+         - container:data-container-bluebook-postgresql
+        environment:
+            - POSTGRES_USER=bluebook
+            - POSTGRES_PASSWORD=Adv23252!
+            - ANOTHER_POSTGRES_USER=scheduler
+            - ANOTHER_POSTGRES_PASSWORD=Adv23252!
+        ports:
+            - 5432:5432
+
+
+    appfs-app:
+            image: itudt/appfs:stable
+            environment:
+                - SPRING_PROFILES_ACTIVE=prod,swagger
+                - SPRING_DATA_MONGODB_URI=mongodb://appfs-mongodb:27017
+                - SPRING_DATA_MONGODB_DATABASE=appfs
+                - JHIPSTER_SLEEP=1 # gives time for the database to boot before the application
+                - SERVER_PORT=8082
+
+
+    appfs-mongodb:
+        image: mongo:3.2.10
+        volumes_from:
+         - container:data-container-appfs-mongodb
+
+
+    bluebook-elasticsearch:
+        container_name: bluebook-elasticsearch
+        image: elasticsearch:2.4.1
+        volumes_from:
+         - container:data-container-bluebook-elasticsearch
+
+
+    bluebook-scheduler:
+        image:  itudt/bb-scheduler:dev
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://bluebook-postgresql:5432/scheduler
+            - SPRING_DATASOURCE_USERNAME=scheduler
+            - SPRING_DATASOURCE_PASSWORD=Adv23252!
+
+            - APPLICATION_FIXEDDELAY=300000 #in miliseconds
+            - APPLICATION_FILENAMEEXTENSION=.hl7
+
+            - APPLICATION_RESULTTYPE_ENVIRONMENT=E
+            - APPLICATION_RESULTTYPE_PATIENT=BCODE
+
+            - APPLICATION_STORAGEPATH_PROCESSEDPATIENTORDERS=/tmp/processedPatientOrders/
+            - APPLICATION_STORAGEPATH_PROCESSEDPATIENTRESULTS=/tmp/processedPatientResults/
+
+            - APPLICATION_STORAGEPATH_PROCESSEDENVORDERS=/tmp/processedEnvOrders/
+            - APPLICATION_STORAGEPATH_PROCESSEDENVRESULTS=/tmp/processedEnvResults/
+
+            - APPLICATION_TYPE=sftp
+
+            - APPLICATION_SFTP_HOST=SFTP_SERVER_VALUE
+            - APPLICATION_SFTP_USERNAME=bscheduler
+            - APPLICATION_SFTP_USERPASS=BS.Admin09
+            - APPLICATION_SFTP_REMOTEORDERSPATH=home/bscheduler/FTPDIR/
+            - APPLICATION_SFTP_REMOTEORDERSFOLDER=/orders/
+            - APPLICATION_SFTP_REMOTERESULTPATH=home/bscheduler/FTPDIR/results/
+
+            - APPLICATION_FILESYSTEM_REMOTEORDERSPATH=/tmp/
+            - APPLICATION_FILESYSTEM_REMOTEORDERSFOLDER=/orders/
+            - APPLICATION_FILESYSTEM_REMOTERESULTSPATH=/tmp/resultsToProcess/
+
+            - APPLICATION_REST_BASEURL=http://DOMAIN_NAME
+            - APPLICATION_REST_USERNAME=system
+            - APPLICATION_REST_USERAUTHORITIES=ROLE_SYSTEM,ROLE_USER
+            - APPLICATION_REST_URLCHECKTOKEN=/system/check-token
+            - APPLICATION_REST_TOKENVALIDITYINSECONDS=300000
+
+            - APPLICATION_SLEEP=3 # gives time for the database to boot before the application
+        volumes_from:
+            - container:data-container-bluebook-scheduler
+        depends_on:
+            - bluebook-postgresql
+        restart: always
+
+

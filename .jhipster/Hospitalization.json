@@ -1,0 +1,51 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "chart",
+            "otherEntityName": "chart",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "admissionDiagnosis",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "admissionDate",
+            "fieldType": "ZonedDateTime",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "hospital",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "admittingPhysician",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dischargeDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "dischargeTo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "reason",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "800"
+        }
+    ],
+    "changelogDate": "20170125211535",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "hospitalization",
+    "pagination": "no"
+}

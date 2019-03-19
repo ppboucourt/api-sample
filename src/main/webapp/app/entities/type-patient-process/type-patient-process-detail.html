@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span>Type Patient Process</span> {{vm.typePatientProcess.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Name</span></dt>
+        <dd>
+            <span>{{vm.typePatientProcess.name}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.typePatientProcess.allow_ur">Allow Ur</span></dt>
+        <dd>
+            <span>{{vm.typePatientProcess.allow_ur}}</span>
+        </dd>
+        <dt><span>Protect</span></dt>
+        <dd>
+            <span>{{vm.typePatientProcess.protect}}</span>
+        </dd>
+        <dt><span>Status</span></dt>
+        <dd>
+            <span>{{vm.typePatientProcess.status}}</span>
+        </dd>
+        <dt><span>Type Page</span></dt>
+        <dd>
+            <a ui-sref="type-page-detail({id:vm.typePatientProcess.typePage.id})">{{vm.typePatientProcess.typePage.name}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="type-patient-process-detail.edit({id:vm.typePatientProcess.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

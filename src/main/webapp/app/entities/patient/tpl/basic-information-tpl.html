@@ -1,0 +1,276 @@
+<form name="vm.form.basicInfo_form" role="form" show-validation>
+    <div class="box-body">
+        <div class="row">
+            <div class="col-lg-6">
+                <label class="control-label" for="field_repName">Rep On Intake</label><br/>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="field_repName" ng-disabled="true"
+                           ng-model="vm.chart.repName" placeholder="Respond Intake" name="repName"/>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <label class="control-label" for="field_dateFirstContact">Date First Contact</label><br/>
+                <div class="input-group">
+                    <input id="field_dateFirstContact" type="text" class="form-control" name="dateFirstContact"
+                           uib-datepicker-popup="{{inputDateFormat}}" placeholder="Date First Contact" required
+                           ng-model="vm.chart.dateFirstContact" is-open="vm.datePickerOpenStatus.dateFirstContact"/>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('dateFirstContact')"><i
+                            class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <label class="control-label" for="field_firstContactName">First Contact Name</label>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="field_firstContactName"
+                           ng-model="vm.chart.firstContactName" placeholder="First Contact Name" name="firstContactName"/>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <label class="control-label" for="field_firstContactRelationship">First Contact Relationship</label>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="field_firstContactRelationship"
+                           ng-model="vm.chart.firstContactRelationship" placeholder="First Contact Relationship"
+                           name="firstContactRelationship"/>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <label class="control-label" for="field_firstContactPhone">First Contact Phone</label>
+                <input type="text" class="form-control" id="field_firstContactPhone"
+                       ng-model="vm.chart.firstContactPhone" placeholder="First Contact Phone" name="firstContactPhone"
+                       ui-mask="(999) 999-9999" ui-mask-placeholder
+                />
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label class="control-label" for="field_typePatientPrograms">Substance</label><br>
+                    <select class="form-control" ng-model="vm.chart.typePatientPrograms"
+                            ng-options="item as item.name for item in vm.typePatientPrograms track by item.name"
+                            id="field_typePatientPrograms" name="typePatientPrograms" required>
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label class="control-label">Diagnosis(ICD10)</label>
+                    <ui-select ng-model="vm.chart.icd10S" name="diagnosis" id="field_diagnosis"
+                               reset-search-input="true"
+                               ng-required="true"
+                               title="Diagnosis" multiple
+                               close-on-select="false">
+                        <ui-select-match placeholder="Enter the code of ICD10 ...">{{$item.code}}</ui-select-match>
+                        <ui-select-choices repeat="item in vm.icd10s"
+                                           refresh="vm.getIcd10s($select.search)"
+                                           refresh-delay="0">
+                            <div ng-bind-html="item.code | highlight: $select.search"></div>
+                            <small ng-bind-html="item.description | highlight: $select.search"></small>
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+            </div>
+            <!--<div class="col-lg-3">-->
+                <!--<label class="control-label" for="field_drugs">Drugs History</label><br>-->
+                <!--<ui-select ng-model="vm.chart.drugs" name="drugs" id="field_drugs"-->
+                           <!--reset-search-input="true"-->
+                           <!--title="Drugs" multiple-->
+                           <!--close-on-select="false">-->
+                    <!--<ui-select-match placeholder="Enter drugs name ...">{{$item.name.split(' ')[1]}}</ui-select-match>-->
+                    <!--<ui-select-choices repeat="item in vm.drugs | filter:$select.search">-->
+                        <!--{{item.name}}-->
+                    <!--</ui-select-choices>-->
+                <!--</ui-select>-->
+            <!--</div>-->
+            <div class="col-lg-3">
+                <label class="control-label" for="field_levelCare">Level of Care</label><br>
+                <div class="form-group">
+                    <select class="form-control" ng-model="vm.chart.typeLevelCare"
+                            ng-options="item as item.name for item in vm.typeLevelCare track by item.name"
+                            id="field_levelCare" name="typeLevelCare">
+                        <option value=""></option>
+                    </select>
+                    <!--<div ng-show="vm.form.basicInfo_form.typeLevelCare.$invalid">-->
+                        <!--<p class="help-block"-->
+                           <!--ng-show="vm.form.basicInfo_form.typeLevelCare.$error.required">-->
+                            <!--This field is required.-->
+                        <!--</p>-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label class="control-label" for="field_admissionDate">Admission Date</label>
+                    <div class="input-group">
+                        <input id="field_admissionDate" type="text" class="form-control" name="admissionDate"
+                               uib-datepicker-popup="{{inputDateFormat}}" placeholder="Admission Date"
+                               ng-model="vm.chart.admissionDate" is-open="vm.datePickerOpenStatus.admissionDate"/>
+                        <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="vm.openCalendar('admissionDate')"><i
+                                    class="glyphicon glyphicon-calendar"></i></button>
+                            </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label class="control-label" for="field_contactsFacility">Referrer</label><br>
+                    <input type="text" ng-model="vm.chart.referrer" placeholder="Referrer" name="referrer" typeahead-min-length="3"
+                           uib-typeahead="item as item.name for item in vm.getContactsFacility($viewValue)" id="field_contactsFacility"
+                           typeahead-editable="true" typeahead-loading="loadingContacts" typeahead-no-results="noResultsReferrer" class="form-control" />
+                    <i ng-show="loadingContacts" class="glyphicon glyphicon-refresh"></i>
+                    <div ng-show="noResultsReferrer">
+                        <i class="glyphicon glyphicon-remove"></i> No Results Found
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label class="control-label" for="field_dischargeDate">Discharge Date</label><br>
+                    <div class="input-group">
+                        <input id="field_dischargeDate" type="text" class="form-control" name="dischargeDate"
+                               uib-datepicker-popup="{{inputDateFormat}}" placeholder="Discharge Date"
+                               ng-model="vm.chart.dischargeDate" is-open="vm.datePickerOpenStatus.dischargeDate"/>
+                        <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="vm.openCalendar('dischargeDate')"><i
+                        class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label class="control-label" for="field_dischargeTo">Discharge To</label><br>
+                    <input type="text" ng-model="vm.chart.dischargeTo" placeholder="Discharge To" name="firstName" typeahead-min-length="3"
+                           uib-typeahead="item as item.name for item in vm.getContactsFacility($viewValue)" id="field_dischargeTo"
+                           typeahead-editable="true" typeahead-loading="loadingContacts" typeahead-no-results="noResultsDischargeTo" class="form-control" />
+                    <i ng-show="loadingContacts" class="glyphicon glyphicon-refresh"></i>
+                    <div ng-show="noResultsDischargeTo">
+                        <i class="glyphicon glyphicon-remove"></i> No Results Found
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <label class="control-label" for="field_dischargeType">Discharge Type</label><br>
+                <div class="form-group">
+                    <select class="form-control" ng-model="vm.chart.typeDischargeType"
+                            ng-options="item as item.name for item in vm.typeDischargeType track by item.name"
+                            id="field_dischargeType" name="dischargeType" required>
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <label class="control-label" for="field_oneTimeOnly">One time only</label><br/>
+                <toggle ng-model="vm.chart.oneTimeOnly" on="Yes" off="No" id="field_oneTimeOnly"></toggle>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label class="control-label" for="field_occupancy">Occupation</label><br/>
+                    <input type="text" class="form-control" id="field_occupancy"
+                           ng-model="vm.chart.occupancy" placeholder="{{vm.chart.occupancy ? vm.chart.occupancy :'Occupation'}}"
+                           name="occupancy"/>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label class="control-label" for="field_employerName">Employer Name</label><br/>
+                    <input type="text" class="form-control" id="field_employerName"
+                           ng-model="vm.chart.employer" placeholder="{{vm.chart.employer ? vm.chart.employer :'Employer'}}"
+                           name="employer"/>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label class="control-label" for="field_employerPhone">Employer Phone</label><br/>
+                    <input type="text" class="form-control" id="field_employerPhone"
+                           ng-model="vm.chart.employerPhone" placeholder="{{vm.chart.employerPhone ? vm.chart.employerPhone :'Employer Phone'}}" ui-mask="(999) 999-9999" ui-mask-placeholder
+                           name="employerPhone"/>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label class="control-label" for="field_sobrietyDate">Sobriety Date</label>
+                    <input id="field_sobrietyDate" type="text" class="form-control" name="sobrietyDate"
+                           uib-datepicker-popup="{{inputDateFormat}}" ng-model="vm.chart.sobrietyDate"
+                           is-open="vm.datePickerOpenStatus.sobrietyDate"/>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label class="control-label" for="field_bed">Bed</label><br>
+                    <select class="form-control" ng-model="vm.chart.bed"
+                            ng-options="item as item.name for item in vm.beds track by item.name"
+                            id="field_bed" name="bed" required>
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <label class="control-label" for="field_livingArrangement">Living Arrangement</label><br/>
+                <input type="text" class="form-control" id="field_livingArrangement"
+                       ng-model="vm.chart.livingArrangement" placeholder="Living Arrangement" name="livingArrangement"/>
+            </div>
+            <div class="col-lg-3">
+                <label class="control-label" for="field_paymentMethod">Payment Method</label><br>
+                <div class="form-group">
+                    <select class="form-control" ng-model="vm.chart.typePaymentMethods"
+                            ng-options="item as item.name for item in vm.paymentMethod track by item.name"
+                            id="field_paymentMethod" ng-change="checkPaymentMethod()" name="paymentMethod" required>
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label class="control-label" for="field_maritalStatus">Marital Status</label><br>
+                    <select class="form-control" ng-model="vm.chart.typeMaritalStatus"
+                            ng-options="item as item.name for item in vm.maritalStatus track by item.name"
+                            id="field_maritalStatus" name="maritalStatus" required>
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label class="control-label" for="field_ethnicity">Ethnicity</label><br>
+                    <select class="form-control" ng-model="vm.chart.typeEthnicity"
+                            ng-options="item as item.name for item in vm.ethnicity track by item.name"
+                            id="field_ethnicity" name="ethnicity" required>
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label class="control-label" for="field_race">Race</label>
+                    <select class="form-control" ng-model="vm.chart.patient.typeRace"
+                            ng-options="item as item.name for item in vm.race track by item.name"
+                            id="field_race" name="race" ng-disabled="vm.chart.patient.id">
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

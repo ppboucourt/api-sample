@@ -1,0 +1,39 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "chart",
+            "otherEntityName": "chart",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "mr_no"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "weight",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "height",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "bmi",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "date",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "changelogDate": "20160830153445",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "weight",
+    "pagination": "no",
+    "enableEntityAudit": true
+}

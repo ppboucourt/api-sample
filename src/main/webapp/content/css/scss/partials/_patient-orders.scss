@@ -1,0 +1,103 @@
+.patient-orders {
+    .orders-tabs {
+        .tab-content {
+            padding-bottom: 0;
+        }
+        .table {
+            > thead {
+                th {
+                    text-align: center;
+                    font: bold 18px $font-roboto-condensed;
+                }
+            }
+            > tbody {
+                > tr {
+                    td {
+                        padding: 2px 5px;
+                        text-align: left;
+                        vertical-align: middle;
+                        font-size: 16px;
+                        border: 0;
+                        &.big-icon {
+                            width: 2%;
+                            text-align: center;
+                            vertical-align: middle;
+                        }
+                        &.main-icon {
+                            text-align: center;
+                        }
+                        &.theader {
+                            text-align: center;
+                            &:nth-child(2) {
+                                width: 32%;
+                            }
+                            &:nth-child(3) {
+                                width: 20%;
+                            }
+                            &:nth-child(4) {
+                                width: 44%;
+                            }
+                        }
+                        &.action-buttons {
+                            width: 2%;
+                            text-align: center;
+                        }
+                        strong {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .lab-orders {
+        .tlabel {
+            font: 400 16px $font-roboto-condensed;
+        }
+        .jtext {
+            font-size: 18px;
+        }
+        .item-order {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            &:not(:last-child) {
+                border-bottom: 1px solid $ligther-gray;
+            }
+        }
+        .ttext {
+            margin-bottom: 0;
+        }
+        .theader {
+            &:nth-child(1) {
+                width: 25%;
+            }
+            &:nth-child(2) {
+                width: 35%;
+            }
+            &:nth-child(3) {
+                width: 40%;
+            }
+        }
+        small {
+            font-size: 14px;
+        }
+        .action-buttons {
+            .fa {
+                font-size: 16px;
+                line-height: 30px;
+            }
+        }
+    }
+    .main-icon {
+        text-align: center;
+        .fa-ban {
+            color: $bg-red;
+        }
+    }
+    .big-icon {
+        text-align: center;
+        .fa-ban {
+            color: $bg-red;
+        }
+    }
+}

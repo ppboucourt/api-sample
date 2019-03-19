@@ -1,0 +1,57 @@
+<section class="content-header">
+    <h1>Details Group Session</h1>
+    <div ncy-breadcrumb class="breadcrumb"></div>
+</section>
+<section class="invoice">
+    <div class="row">
+        <div class="col-lg-12 border-line-form">
+            <fieldset>
+                <form name="vm.form.formGroupSession_data" role="form" data-toggle="validator">
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="field_name">Name *</label>
+                                    <input type="text" class="form-control" name="name" id="field_name"
+                                           ng-model="vm.labProfile.name" required/>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="field_enabled">Enabled</label><br/>
+                                    <toggle ng-model="vm.labProfile.enabled" on="Yes" off="No" id="field_enabled"></toggle>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="control-label" for="field_Compendium">Compendium *</label>
+                                    <ui-select id="field_Compendium" name="compendium" multiple ng-model="vm.labProfile.labCompendiums"
+                                               close-on-select="false" title="Compendium" required>
+                                        <ui-select-match placeholder="Select Compendiums...">{{$item.code}}</ui-select-match>
+                                        <ui-select-choices repeat="item in vm.compendiums | filter:$select.search">
+                                            {{item.code}} - {{item.description}}
+                                        </ui-select-choices>
+                                    </ui-select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </fieldset>
+        </div>
+        <hr>
+        <div class="pull-right">
+            <div class="col-lg-12">
+                <!--<div class="margin" ng-show="vm.editing">-->
+                    <!--<button type="button" class="btn btn-danger" ng-click="vm.changeEditingState()">Cancel</button>-->
+                    <!--<button type="button" class="btn btn-success" ng-click="vm.save()"-->
+                            <!--ng-disabled="vm.form.formGroupSession_data.$invalid">Save</button>-->
+                <!--</div>-->
+                <button type="button" class="btn btn-success" ng-click="vm.save()"
+                        ng-disabled="vm.form.formGroupSession_data.$invalid">Save Information</button>
+            </div>
+        </div>
+    </div>
+</section>

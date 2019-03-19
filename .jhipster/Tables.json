@@ -1,0 +1,31 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "fields",
+            "otherEntityName": "fields",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "table"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "table_name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "3"
+        }
+    ],
+    "changelogDate": "20160830144543",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "tables",
+    "pagination": "no",
+    "enableEntityAudit": true
+}

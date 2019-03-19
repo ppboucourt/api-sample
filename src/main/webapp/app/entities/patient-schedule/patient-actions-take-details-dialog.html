@@ -1,0 +1,41 @@
+<form name="actionForm" ng-submit="vm.confirmSendFax()">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;
+        </button>
+        <h4 class="modal-title">Details Action</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+
+        <section class="content" style="min-height: 150px!important;">
+            <jhi-alert-error></jhi-alert-error>
+
+            <div class="row">
+                <strong>{{ vm.patientActionTake.medication}} {{ vm.patientActionTake.dose}}{{
+                    vm.patientActionTake.route?(', ' + vm.patientActionTake.route): ''}}</strong></div>
+
+
+            <div class="row"><strong>Status: </strong>{{ vm.patientActionTake.actionTakeStatus}}</div>
+            <div class="row"><strong>Collected: </strong>{{ vm.patientActionTake.collected?'Yes':'No'}}</div>
+            <div class="row"><strong>Collected Date: </strong>{{vm.patientActionTake.collectedDateString}}</div>
+
+
+            <div ng-if="vm.patientActionTake.firstPatientResponse" class="row"><p><strong>First Patient
+                Response: </strong>{{
+                vm.patientActionTake.firstPatientResponse}}</p></div>
+            <div ng-if="vm.patientActionTake.notes" class="row"><p><strong>Notes: </strong>{{
+                vm.patientActionTake.notes}}</p></div>
+
+
+        </section>
+    </div>
+
+    <div class="modal-footer">
+        <button type="submit" ng-disabled="actionForm.$invalid || vm.saving" class="btn btn-success"
+                ng-click="vm.save()">
+            <span class="glyphicon glyphicon-ok"></span>&nbsp;<span>Close</span>
+        </button>
+    </div>
+
+</form>

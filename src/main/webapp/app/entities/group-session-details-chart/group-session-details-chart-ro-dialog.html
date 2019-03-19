@@ -1,0 +1,38 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+            ng-click="vm.clear()">&times;
+    </button>
+    <h4 class="modal-title" id="myGroupSessionDetailsChartLabel">Group Session Details Chart</h4>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="block-mt15 block-mb5">
+                <b>Topic:</b> {{vm.groupSessionDetailsChart.topic}}
+            </div>
+
+            <b>Notes:</b>
+            <hr style="margin-top: 10px">
+            <p >{{vm.groupSessionDetailsChart.notes}}</p>
+
+            <hr style="margin-top: 10px" ng-if="vm.groupSessionDetailsChart.signatureLeaderIp">
+            <p ng-if="vm.groupSessionDetailsChart.signatureLeaderIp" style="font-style: italic; font-weight: bold;">
+                Electronically signed by {{vm.groupSessionDetailsChart.employeeName}} on
+                {{vm.groupSessionDetailsChart.signatureLeaderCreatedDate | date: 'MM/dd/yyyy hh:mm:ss a '}}, from ip
+                {{vm.groupSessionDetailsChart.signatureLeaderIp}}
+            </p>
+
+            <hr style="margin-top: 10px" ng-if="vm.groupSessionDetailsChart.signatureReviewerIp">
+            <p ng-if="vm.groupSessionDetailsChart.signatureReviewerIp" style="font-style: italic; font-weight: bold;">
+                Electronically signed by {{vm.groupSessionDetailsChart.employeeName}} on
+                {{vm.groupSessionDetailsChart.signatureReviewerCreatedDate | date: 'MM/dd/yyyy hh:mm:ss a '}}, from ip
+                {{vm.groupSessionDetailsChart.signatureReviewerIp}}
+            </p>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+        <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+    </button>
+</div>

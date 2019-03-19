@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <property name="now" value="now()" dbms="mysql,h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+    <property name="now" value="sysdate" dbms="oracle"/>
+
+    <property name="autoIncrement" value="true" dbms="mysql,h2,postgresql,oracle"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle"/>
+
+    <!--
+        Added new Columns for the insurance entity and create constrains with picture.
+    -->
+
+    <changeSet author="pboucourt" id="201700821152100-01">
+        <addColumn schemaName="public" tableName="patient_properties">
+            <column name="picture_id" type="bigint"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet author="pboucourt" id="201700821152100-02">
+        <addColumn schemaName="public" tableName="chart">
+            <column name="patient_license_id" type="bigint"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet author="pboucourt" id="201700821152100-03">
+        <addColumn schemaName="public" tableName="contacts_facility">
+            <column name="picture_id" type="bigint"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet author="pboucourt" id="201700821152100-04">
+        <addForeignKeyConstraint baseColumnNames="picture_id"
+                                 baseTableName="patient_properties"
+                                 constraintName="fk_patient_properties_to_picture_picture_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="picture"/>
+    </changeSet>
+
+    <changeSet author="pboucourt" id="201700821152100-05">
+        <addForeignKeyConstraint baseColumnNames="patient_license_id"
+                                 baseTableName="chart"
+                                 constraintName="fk_chart_to_picture_patient_license_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="picture"/>
+    </changeSet>
+
+    <changeSet author="pboucourt" id="201700821152100-06">
+        <addForeignKeyConstraint baseColumnNames="picture_id"
+                                 baseTableName="contacts_facility"
+                                 constraintName="fk_contacts_facility_to_picture_patient_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="picture"/>
+    </changeSet>
+
+    <!-- drop columns -->
+    <changeSet author="pboucourt" id="201700821152100-07">
+        <dropColumn columnName="picture"
+                    schemaName="public"
+                    tableName="patient_properties"/>
+
+        <dropColumn columnName="picture_content_type"
+                    schemaName="public"
+                    tableName="patient_properties"/>
+    </changeSet>
+
+    <changeSet author="pboucourt" id="201700821152100-08">
+        <dropColumn columnName="patient_license"
+                    schemaName="public"
+                    tableName="chart"/>
+
+        <dropColumn columnName="patient_license_content_type"
+                    schemaName="public"
+                    tableName="chart"/>
+    </changeSet>
+
+    <changeSet author="pboucourt" id="201700821152100-09">
+        <dropColumn columnName="picture"
+                    schemaName="public"
+                    tableName="contacts_facility"/>
+
+        <dropColumn columnName="picture_content_type"
+                    schemaName="public"
+                    tableName="contacts_facility"/>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,207 @@
+
+<div>
+    <h2><span>Chart</span> {{vm.chart.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="bluebookApp.chart.ur_loc">Ur Loc</span></dt>
+        <dd>
+            <span>{{vm.chart.ur_loc}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.chart.admission_date">Admission Date</span></dt>
+        <dd>
+            <span>{{vm.chart.admission_date | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.chart.discharge_time">Discharge Time</span></dt>
+        <dd>
+            <span>{{vm.chart.discharge_time | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.chart.discharge_to">Discharge To</span></dt>
+        <dd>
+            <span>{{vm.chart.discharge_to}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.chart.discharge_type">Discharge Type</span></dt>
+        <dd>
+            <span>{{vm.chart.discharge_type}}</span>
+        </dd>
+        <dt><span>Program</span></dt>
+        <dd>
+            <span>{{vm.chart.program}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.chart.rep_name">Rep Name</span></dt>
+        <dd>
+            <span>{{vm.chart.rep_name}}</span>
+        </dd>
+        <dt><span>Referrer</span></dt>
+        <dd>
+            <span>{{vm.chart.referrer}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.chart.marital_status">Marital Status</span></dt>
+        <dd>
+            <span>{{vm.chart.marital_status}}</span>
+        </dd>
+        <dt><span>Phone</span></dt>
+        <dd>
+            <span>{{vm.chart.phone}}</span>
+        </dd>
+        <dt><span>Race</span></dt>
+        <dd>
+            <span>{{vm.chart.race}}</span>
+        </dd>
+        <dt><span>Ethnicity</span></dt>
+        <dd>
+            <span>{{vm.chart.ethnicity}}</span>
+        </dd>
+        <dt><span>Address</span></dt>
+        <dd>
+            <span>{{vm.chart.address}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.chart.address_two">Address Two</span></dt>
+        <dd>
+            <span>{{vm.chart.address_two}}</span>
+        </dd>
+        <dt><span>City</span></dt>
+        <dd>
+            <span>{{vm.chart.city}}</span>
+        </dd>
+        <dt><span>State</span></dt>
+        <dd>
+            <span>{{vm.chart.state}}</span>
+        </dd>
+        <dt><span>Zip</span></dt>
+        <dd>
+            <span>{{vm.chart.zip}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.chart.payment_method">Payment Method</span></dt>
+        <dd>
+            <span>{{vm.chart.payment_method}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.chart.date_first_contact">Date First Contact</span></dt>
+        <dd>
+            <span>{{vm.chart.date_first_contact | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.chart.first_contact_name">First Contact Name</span></dt>
+        <dd>
+            <span>{{vm.chart.first_contact_name}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.chart.first_contact_relationship">First Contact Relationship</span></dt>
+        <dd>
+            <span>{{vm.chart.first_contact_relationship}}</span>
+        </dd>
+        <dt><span>Occupancy</span></dt>
+        <dd>
+            <span>{{vm.chart.occupancy}}</span>
+        </dd>
+        <dt><span>Employer</span></dt>
+        <dd>
+            <span>{{vm.chart.employer}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.chart.employer_phone">Employer Phone</span></dt>
+        <dd>
+            <span>{{vm.chart.employer_phone}}</span>
+        </dd>
+        <dt><span>Status</span></dt>
+        <dd>
+            <span>{{vm.chart.status}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.chart.mr_no">Mr No</span></dt>
+        <dd>
+            <span>{{vm.chart.mr_no}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.chart.first_contact_phone">First Contact Phone</span></dt>
+        <dd>
+            <span>{{vm.chart.first_contact_phone}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.chart.alt_phone">Alt Phone</span></dt>
+        <dd>
+            <span>{{vm.chart.alt_phone}}</span>
+        </dd>
+        <dt><span>Email</span></dt>
+        <dd>
+            <span>{{vm.chart.email}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.chart.sobriety_date">Sobriety Date</span></dt>
+        <dd>
+            <span>{{vm.chart.sobriety_date | date:'medium'}}</span>
+        </dd>
+        <dt><span>Picture</span></dt>
+        <dd>
+            <div ng-if="vm.chart.picture">
+                <a ng-click="vm.openFile(vm.chart.pictureContentType, vm.chart.picture)">
+                    <img data-ng-src="{{'data:' + vm.chart.pictureContentType + ';base64,' + vm.chart.picture}}" style="max-width: 100%;"/>
+                </a>
+                {{vm.chart.pictureContentType}}, {{vm.byteSize(vm.chart.picture)}}
+            </div>
+        </dd>
+        <dt><span data-translate="bluebookApp.chart.patient_license">Patient License</span></dt>
+        <dd>
+            <div ng-if="vm.chart.patient_license">
+                <a ng-click="vm.openFile(vm.chart.patient_licenseContentType, vm.chart.patient_license)">
+                    <img data-ng-src="{{'data:' + vm.chart.patient_licenseContentType + ';base64,' + vm.chart.patient_license}}" style="max-width: 100%;"/>
+                </a>
+                {{vm.chart.patient_licenseContentType}}, {{vm.byteSize(vm.chart.patient_license)}}
+            </div>
+        </dd>
+        <dt><span data-translate="bluebookApp.chart.one_time_only">One Time Only</span></dt>
+        <dd>
+            <span>{{vm.chart.one_time_only}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.chart.referrer_required_contact">Referrer Required Contact</span></dt>
+        <dd>
+            <span>{{vm.chart.referrer_required_contact}}</span>
+        </dd>
+        <dt><span>Waiting Room</span></dt>
+        <dd>
+            <span>{{vm.chart.waitingRoom}}</span>
+        </dd>
+        <dt><span>Discharge Date</span></dt>
+        <dd>
+            <span>{{vm.chart.dischargeDate | date:'medium'}}</span>
+        </dd>
+        <dt><span>Patient</span></dt>
+        <dd>
+            <a ui-sref="patient-detail({id:vm.chart.patient.id})">{{vm.chart.patient.id}}</a>
+        </dd>
+        <dt><span>Bed</span></dt>
+        <dd>
+            <a ui-sref="bed-detail({id:vm.chart.bed.id})">{{vm.chart.bed.bed_name}}</a>
+        </dd>
+        <dt><span>Employees</span></dt>
+        <dd>
+            <a ui-sref="employee-detail({id:vm.chart.employees.id})">{{vm.chart.employees.last_name}}</a>
+        </dd>
+        <dt><span>Type Patient Programs</span></dt>
+        <dd>
+            <a ui-sref="type-patient-programs-detail({id:vm.chart.typePatientPrograms.id})">{{vm.chart.typePatientPrograms.name}}</a>
+        </dd>
+        <dt><span>Type Level Care</span></dt>
+        <dd>
+            <a ui-sref="type-level-care-detail({id:vm.chart.typeLevelCare.id})">{{vm.chart.typeLevelCare.name}}</a>
+        </dd>
+        <dt><span>Facility</span></dt>
+        <dd>
+            <a ui-sref="facility-detail({id:vm.chart.facility.id})">{{vm.chart.facility.facility_name}}</a>
+        </dd>
+        <dt><span>Type Admission Status</span></dt>
+        <dd>
+            <a ui-sref="type-admission-status-detail({id:vm.chart.typeAdmissionStatus.id})">{{vm.chart.typeAdmissionStatus.name}}</a>
+        </dd>
+        <dt><span>Shifts</span></dt>
+        <dd>
+            <span ng-repeat="shifts in vm.chart.shifts">
+                <a ui-sref="shifts-detail({id: shifts.id})">{{shifts.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="chart-detail.edit({id:vm.chart.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

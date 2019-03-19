@@ -1,0 +1,83 @@
+
+.basic-info {
+    .left {
+        width: 40%;
+    }
+    .right {
+        width: 60%;
+        padding-left: 30px;
+    }
+    .table {
+        margin: 0;
+        .tab-label {
+            position: relative;
+            width: 45%;
+            text-align: left;
+            font-weight: 700;
+            color: $black;
+            .fa {
+                position: absolute;
+                top: 4px;
+                left: -15px;
+                width: 20px;
+                text-align: center;
+            }
+        }
+        tbody {
+            > tr {
+                > td {
+                    border: 0;
+                }
+            }
+        }
+        td {
+            text-align: right;
+            padding: 2px 5px;
+            font: 300 18px $font-roboto-condensed;
+            color: $gray;
+            vertical-align: top;
+        }
+        .table-divider {
+            padding: 10px 0;
+        }
+    }
+    .patient-name {
+        margin: 0 0 5px;
+        padding-bottom: 5px;
+        color: $gray;
+        border-bottom: 1px solid $light-gray;
+        font: 400 28px $font-roboto-condensed;
+    }
+}
+
+.patient-picture {
+    position: relative;
+    margin: -50px 0 30px;
+    //transform: translateY(-50px);
+    > a {
+        display: block;
+    }
+    img {
+        display: block;
+        width: 100%;
+        background-color: $ligther-gray;
+        border: 3px solid $white;
+        box-shadow: 1px 1px 6px rgba($black, 0.25);
+    }
+    &:hover {
+        .photo-action {
+            opacity: 1;
+        }
+    }
+}
+
+.photo-action {
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+    padding: 5px 10px;
+    background-color: rgba($black, 0.4);
+    border: 0;
+    transition: all linear 0.2s;
+    opacity: 0;
+}

@@ -1,0 +1,50 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myGroupSessionDetailsChartLabel">Create or edit a Group Session Details Chart</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.groupSessionDetailsChart.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.groupSessionDetailsChart.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_notes">Notes</label>
+            <input type="text" class="form-control" name="notes" id="field_notes"
+                    ng-model="vm.groupSessionDetailsChart.notes"
+                    ng-maxlength="800" />
+            <div ng-show="editForm.notes.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.notes.$error.maxlength">
+                    This field cannot be longer than 800 characters.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="field_groupSessionDetails">Group Session Details</label>
+            <select class="form-control" id="field_groupSessionDetails" name="groupSessionDetails" ng-model="vm.groupSessionDetailsChart.groupSessionDetails" ng-options="groupSessionDetails as groupSessionDetails.id for groupSessionDetails in vm.groupsessiondetails track by groupSessionDetails.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="field_chart">Chart</label>
+            <select class="form-control" id="field_chart" name="chart" ng-model="vm.groupSessionDetailsChart.chart" ng-options="chart as chart.id for chart in vm.charts track by chart.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

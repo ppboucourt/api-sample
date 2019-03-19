@@ -1,0 +1,358 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+            ng-click="vm.clear()">&times;
+    </button>
+    <h4 class="modal-title" id="myPatientAccessLabel">Create Medication</h4>
+</div>
+<div class="modal-body">
+    <jhi-alert-error></jhi-alert-error>
+    <form name="vm.form" role="form" show-validation>
+        <div class="box-body">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="control-label">Medication</label>
+                        <ui-select id="field_medications" name="medications" reset-search-input="false"
+                                   ng-change="vm.change()"
+                                   ng-model="vm.patientMedicationPres.medications" title="Medication" ng-required="true">
+                            <ui-select-match placeholder="Select Test...">{{$select.selected.medication}}</ui-select-match>
+                            <ui-select-choices repeat="medications in vm.medications"
+                                               refresh="vm.getMedications($select.search)"
+                                               refresh-delay="0">
+                                <div ng-bind-html="medications.medication | highlight: $select.search"></div>
+                                <small>
+                                    {{medications.description}}
+                                </small>
+                            </ui-select-choices>
+                        </ui-select>
+                        <div ng-show="vm.form.medications.$invalid">
+                            <p class="help-block"
+                               ng-show="vm.form.medications.$error.required">
+                                This field is required.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="field_hours">Frequency in hours</label>
+                        <input type="text" class="form-control" id="field_hours" name="hours" ng-required="!vm.patientMedicationPres.asNeeded"
+                               ng-disabled="vm.patientMedicationPres.asNeeded"
+                               ng-change="vm.change()" ng-model="vm.patientMedicationPres.hours"/>
+                        <div ng-show="vm.form.hours.$invalid">
+                            <p class="help-block" ng-show="vm.form.hours.$error.required">
+                                This field is required.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="control-label">Starting Date</label>
+                        <div class="input-group">
+                            <input id="field_staringDate" type="text" class="form-control" name="staringDate" ng-required="!vm.patientMedicationPres.asNeeded"
+                                   ng-disabled="vm.patientMedicationPres.asNeeded"
+                                   ng-change="vm.change()" datepicker-options="vm.startOptions"
+                                   datetime-picker="MM/dd/yyyy HH:mm" ng-model="vm.patientMedicationPres.staringDate"
+                                   ng-disabled="vm.patientMedicationPres.patientMedicationTake.length > 0"
+                                   is-open="vm.datePickerOpenStatus.staringDate"/>
+                            <!--<input id="field_begin" type="text" class="form-control" name="begin" required-->
+                            <!--datetime-picker="MM/dd/yyyy HH:mm" ng-model="vm.kinetic.beginDate"-->
+                            <!--is-open="vm.datePickerOpenStatus.begin"/>-->
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="vm.openCalendar('staringDate')">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                </button>
+                            </span>
+                        </div>
+                        <div ng-show="vm.form.staringDate.$invalid">
+                            <p class="help-block"
+                               ng-show="vm.form.staringDate.$error.required">
+                                This field is required.
+                            </p>
+                            <p class="help-block"
+                               ng-show="vm.form.staringDate.$error.datetime">
+                                This date is in the past.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="control-label">End Date</label>
+                        <div class="input-group">
+                            <!--<input id="field_endDate" type="text" class="form-control" name="endDate" datepicker-options="vm.endOptions"-->
+                            <!--ng-required="vm.patientOrder.orderType != 'ONE_TIME'" ng-change="vm.change()"-->
+                            <!--uib-datepicker-popup="MM/dd/yyyy" ng-model="vm.patientMedicationPres.endDate"-->
+                            <!--ng-disabled="vm.patientMedicationPres.patientMedicationTake.length > 0"-->
+                            <!--is-open="vm.datePickerOpenStatus.endDate"/>-->
+                            <input id="field_endDate" type="text" class="form-control" name="endDate" ng-required="!vm.patientMedicationPres.asNeeded"
+                                   ng-disabled="vm.patientMedicationPres.asNeeded"
+                                   ng-change="vm.change()" datepicker-options="vm.endOptions"
+                                   datetime-picker="MM/dd/yyyy HH:mm" ng-model="vm.patientMedicationPres.endDate"
+                                   ng-disabled="vm.patientMedicationPres.patientMedicationTake.length > 0"
+                                   is-open="vm.datePickerOpenStatus.endDate"/>
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="vm.openCalendar('endDate')">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                </button>
+                                <button type="button" class="btn btn-default" ng-click="vm.setAsDischargeDate()">
+                                    <i class="glyphicon glyphicon-copy"></i>
+                                </button>
+                            </span>
+                        </div>
+                        <div ng-show="vm.form.endDate.$invalid">
+                            <p class="help-block"
+                               ng-show="vm.form.endDate.$error.required">
+                                This field is required.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-9 col-lg-9">
+                    <div class="form-group">
+                        <form name="vm.formProblem" role="form" show-validation>
+                            <label class="control-label">ICD 10</label>
+                            <ui-select id="field_diagnoses" name="diagnoses" multiple
+                                       ng-model="vm.patientMedicationPres.icd10s" close-on-select="false"
+                                       title="Diagnoses"
+                                       >
+                                <ui-select-match placeholder="Select ICD 10...">{{$item.code}}</ui-select-match>
+                                <ui-select-choices repeat="diagnoses in vm.diagnoses"
+                                                   refresh="vm.getDiagnoses($select.search)"
+                                                   refresh-delay="0">
+                                    <div ng-bind-html="diagnoses.code | highlight: $select.search"></div>
+                                    <small>
+                                        {{diagnoses.description}}
+                                    </small>
+                                </ui-select-choices>
+                            </ui-select>
+                            <div ng-show="vm.formProblem.diagnoses.$invalid">
+                                <p class="help-block" ng-show="vm.formProblem.diagnoses.$error.required">
+                                    This field is required.
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3">
+                    <div class="form-group">
+                        <label class="control-label">As Needed</label><br/>
+                        <toggle ng-model="vm.patientMedicationPres.asNeeded" on="Yes" off="No" id="field_as_needed" ng-change="vm.asneeeded()"></toggle>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="field_employee">Routes</label>
+                        <select class="form-control" id="field_route" name="route" ng-model="vm.patientMedication.route"
+                                required
+                                ng-options="route as route.name for route in vm.routes track by route.id">
+                            <option value=""></option>
+                        </select>
+                        <div ng-show="vm.form.route.$invalid">
+                            <p class="help-block"
+                               ng-show="vm.form.route.$error.required">
+                                This field is required.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="field_hours">Dosage Form</label>
+                        <input type="text" class="form-control" id="field_DosageForm" name="dosageForm"
+                               ng-model="vm.patientMedicationPres.dosegeForm"/>
+                        <div ng-show="vm.form.dosageForm.$invalid">
+                            <p class="help-block" ng-show="vm.form.dosageForm.$error.required">
+                                This field is required.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="field_hours">Dose</label>
+                        <input type="text" class="form-control" id="field_Dose" name="dose"
+                               ng-model="vm.patientMedicationPres.dose"/>
+                        <div ng-show="vm.form.dose.$invalid">
+                            <p class="help-block" ng-show="vm.form.dose.$error.required">
+                                This field is required.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="field_hours">Justification</label>
+                        <input type="text" class="form-control" id="field_Justification" name="justification"
+                               ng-model="vm.patientMedicationPres.justification"/>
+                        <div ng-show="vm.form.justification.$invalid">
+                            <p class="help-block" ng-show="vm.form.justification.$error.required">
+                                This field is required.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="field_hours">Warning</label>
+                        <input type="text" class="form-control" id="field_Warning" name="warning"
+                               ng-model="vm.patientMedicationPres.warning"/>
+                        <div ng-show="vm.form.warning.$invalid">
+                            <p class="help-block" ng-show="vm.form.warning.$error.required">
+                                This field is required.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="field_hours">Amount to Dispense</label>
+                        <input type="text" class="form-control" id="field_AmountToDispense" name="amountToDispense"
+                               ng-model="vm.patientMedicationPres.amountToDispense"/>
+                        <div ng-show="vm.form.amountToDispense.$invalid">
+                            <p class="help-block" ng-show="vm.form.amountToDispense.$error.required">
+                                This field is required.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label class="control-label">Refills</label><br/>
+                        <input type="text" class="form-control" id="refills" name="field_refills"
+                               ng-model="vm.patientMedication.refills"  />
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="field_via">Obtained</label>
+                        <select class="form-control" id="field_via" name="via" ng-model="vm.patientMedication.via"
+                                required
+                                ng-options="via as via.name for via in vm.vias track by via.id">
+                            <option value=""></option>
+                        </select>
+                        <div ng-show="vm.form.via.$invalid">
+                            <p class="help-block"
+                               ng-show="vm.form.via.$error.required">
+                                This field is required.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="field_employee">Physician</label>
+                        <select class="form-control" id="field_employee" name="employee"
+                                ng-model="vm.patientMedication.signedBy"
+                                required ng-disabled="vm.patientMedication.signed"
+                                ng-options="employee as employee.firstName + ' ' + employee.lastName for employee in vm.employees track by employee.id">
+                            <option value=""></option>
+                        </select>
+                        <div ng-show="vm.form.employee.$invalid">
+                            <p class="help-block"
+                               ng-show="vm.form.employee.$error.required">
+                                This field is required.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </form>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <ng-repeat ng-repeat="problemsChk in vm.problemsChk">
+                <div class="col-lg-6">
+                    <div class="checkbox" ng-if="$even">
+                        <label>
+                            <input type="checkbox" ng-change="vm.addProblemDiagnosis($index, problemsChk)" ng-model="problemsChk.in">
+                            <span class="badge bg-green">{{problemsChk.code}}</span> {{problemsChk.description}}</input>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="checkbox" ng-if="$odd">
+                        <label>
+                            <input type="checkbox" ng-change="vm.addProblemDiagnosis($index, problemsChk)" ng-model="problemsChk.in">
+                            <span class="badge bg-green">{{problemsChk.code}}</span> {{problemsChk.description}}</input>
+                        </label>
+                    </div>
+                </div>
+            </ng-repeat>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="pull-right">
+            <button type="button" class="btn btn-danger" ng-click="vm.clear()">Cancel</button>
+            <button type="button" class="btn btn-success"
+                    ng-disabled="vm.formProblem.$invalid || vm.form.$invalid "
+                    ng-click="vm.accept()">Accept
+            </button>
+        </div>
+    </div>
+
+
+    <div class="row">
+     <div class="col-lg-12">
+         <div class="box-body"
+              ng-show="vm.patientMedicationPres.patientMedicationTakes != null && vm.patientMedicationPres.patientMedicationTakes.length > 0">
+             <div class="box box-primary">
+                 <div class="box-header">
+                     <h3 class="box-title">"{{vm.patientMedicationPres.medications.medication}}" schedule (
+                         {{vm.patientMedicationPres.patientMedicationTakes.length}})</h3>
+                     <div class="box-tools pull-right">
+                         <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
+                             class="fa fa-minus"></i></button>
+                     </div>
+                 </div>
+                 <div class="box-body">
+                     <table class="table table-condensed table-striped table-bordered" dt-options="vm.dtOptions">
+                         <thead>
+                         <tr>
+                             <th style="width: 10px">#</th>
+                             <th>Scheduled Day</th>
+                             <th>Collected</th>
+                             <th>Collected Day</th>
+                         </tr>
+                         </thead>
+                         <tbody>
+                         <tr ng-repeat="item in vm.patientMedicationPres.patientMedicationTakes">
+                             <td>{{$index}}.</td>
+                             <td>{{item.scheduleDate | amDateFormat:'MM/DD/YYYY HH:mm'}}
+                             <td><span ng-class="item.collected ? 'label label-success' : 'label label-danger'">{{item.collected ? 'Yes' : 'No'}}</span>
+                             </td>
+                             <td>{{item.collectedDate | amDateFormat:'MM/DD/YYYY HH:mm'}}</td>
+                         </tr>
+                         </tbody>
+                     </table>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+
+</div>

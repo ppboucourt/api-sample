@@ -1,0 +1,82 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "buildings",
+            "otherEntityName": "building",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "facility"
+        },
+        {
+            "relationshipName": "contactsFacilitys",
+            "otherEntityName": "contactsFacility",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "facility"
+        },
+        {
+            "relationshipName": "corporation",
+            "otherEntityName": "corporation",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "street",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "street_two",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "city",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "state",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "zip",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "county",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fax",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "website",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "logo",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "image",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160824182504",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "facility",
+    "pagination": "no",
+    "enableEntityAudit": true
+}

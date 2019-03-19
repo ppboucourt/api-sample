@@ -1,0 +1,14 @@
+.row {
+    &.general-info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        position: relative;
+        margin: 15px 0;
+    }
+}
+
+.info-block {
+    width: 14%;
+}

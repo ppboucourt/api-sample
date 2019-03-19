@@ -1,0 +1,107 @@
+
+<div>
+    <h2><span>Insurance</span> {{vm.insurance.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Address</span></dt>
+        <dd>
+            <span>{{vm.insurance.address}}</span>
+        </dd>
+        <dt><span>Address 2</span></dt>
+        <dd>
+            <span>{{vm.insurance.address2}}</span>
+        </dd>
+        <dt><span>Zip Code</span></dt>
+        <dd>
+            <span>{{vm.insurance.zipCode}}</span>
+        </dd>
+        <dt><span>City</span></dt>
+        <dd>
+            <span>{{vm.insurance.city}}</span>
+        </dd>
+        <dt><span>Policy Number</span></dt>
+        <dd>
+            <span>{{vm.insurance.policyNumber}}</span>
+        </dd>
+        <dt><span>Group Number</span></dt>
+        <dd>
+            <span>{{vm.insurance.groupNumber}}</span>
+        </dd>
+        <dt><span>Group Name</span></dt>
+        <dd>
+            <span>{{vm.insurance.groupName}}</span>
+        </dd>
+        <dt><span>Plan Number</span></dt>
+        <dd>
+            <span>{{vm.insurance.planNumber}}</span>
+        </dd>
+        <dt><span>Last Name</span></dt>
+        <dd>
+            <span>{{vm.insurance.lastName}}</span>
+        </dd>
+        <dt><span>First Name</span></dt>
+        <dd>
+            <span>{{vm.insurance.firstName}}</span>
+        </dd>
+        <dt><span>Middle Initial</span></dt>
+        <dd>
+            <span>{{vm.insurance.middleInitial}}</span>
+        </dd>
+        <dt><span>Dob</span></dt>
+        <dd>
+            <span>{{vm.insurance.dob | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span>Gender</span></dt>
+        <dd>
+            <span>{{vm.insurance.gender}}</span>
+        </dd>
+        <dt><span>Phone</span></dt>
+        <dd>
+            <span>{{vm.insurance.phone}}</span>
+        </dd>
+        <dt><span>Employer</span></dt>
+        <dd>
+            <span>{{vm.insurance.employer}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.insurance.insurance_order">Insurance Order</span></dt>
+        <dd>
+            <span>{{vm.insurance.insurance_order}}</span>
+        </dd>
+        <dt><span>Insurance Carrier</span></dt>
+        <dd>
+            <a ui-sref="insurance-carrier-detail({id:vm.insurance.insuranceCarrier.id})">{{vm.insurance.insuranceCarrier.id}}</a>
+        </dd>
+        <dt><span>Insurance Type</span></dt>
+        <dd>
+            <a ui-sref="insurance-type-detail({id:vm.insurance.insuranceType.id})">{{vm.insurance.insuranceType.id}}</a>
+        </dd>
+        <dt><span>Insurance Level</span></dt>
+        <dd>
+            <a ui-sref="insurance-level-detail({id:vm.insurance.insuranceLevel.id})">{{vm.insurance.insuranceLevel.id}}</a>
+        </dd>
+        <dt><span>Insurance Relation</span></dt>
+        <dd>
+            <a ui-sref="insurance-relation-detail({id:vm.insurance.insuranceRelation.id})">{{vm.insurance.insuranceRelation.id}}</a>
+        </dd>
+        <dt><span>Patient</span></dt>
+        <dd>
+            <a ui-sref="patient-detail({id:vm.insurance.patient.id})">{{vm.insurance.patient.id}}</a>
+        </dd>
+        <dt><span>Country State</span></dt>
+        <dd>
+            <a ui-sref="country-state-detail({id:vm.insurance.countryState.id})">{{vm.insurance.countryState.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="insurance-detail.edit({id:vm.insurance.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

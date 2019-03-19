@@ -1,0 +1,29 @@
+<div class="box-header">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="input-group pull-left">
+                <button class="btn btn-warning" ng-click="vm.signOrders()" ng-show="vm.query=='unsigned'">
+                    <span class="glyphicon glyphicon-pencil"></span> <span>Sign Orders</span>
+                </button>
+            </div>
+        </div>
+        <div class="col-lg-6 col-lg-offset-2">
+            <div class="input-group pull-right">
+                <input type="text" class="form-control" ng-model="vm.searchQuery"
+                       popover-class=""
+                       id="searchQuerypatient" placeholder="Query" ng-change="vm.search()"/>
+                <span class="input-group-btn width-min">
+                    <button class="btn btn-primary" ng-click="vm.search(vm.searchQuery)">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="box-body">
+    <table datatable="" dt-options="vm.dtOptions" dt-columns="vm.dtColumns"
+           dt-instance="vm.dtInstance"
+           class="table table-condensed table-striped table-bordered">
+    </table>
+</div>

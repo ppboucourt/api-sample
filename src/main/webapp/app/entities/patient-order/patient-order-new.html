@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="">
+            <div class="col-lg-12">
+                <h4>New Order</h4>
+                <hr style="margin-top: 10px;">
+            </div>
+            <jhi-alert-error></jhi-alert-error>
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ng-include src="'app/entities/patient-order/tpl/new/patient-order-form-tpl.html'"></ng-include>
+
+                        <div class="col-lg-12">
+                            <hr>
+                            <table datatable="" dt-options="vm.dtOptions" dt-columns="vm.dtColumns"
+                                   dt-instance="vm.dtInstance"
+                                   class="table table-condensed table-striped table-bordered">
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "typePage",
+            "otherEntityName": "typePage",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipName": "facility",
+            "otherEntityName": "facility",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "allow_ur",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "protect",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "5"
+        }
+    ],
+    "changelogDate": "20161108011925",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "type_patient_process",
+    "pagination": "no"
+}

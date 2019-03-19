@@ -1,0 +1,53 @@
+./login
+
+domain=$1
+tag=$2
+ftpserver=$3
+ftpdir="$(cut -d'.' -f1 <<<"$domain")"
+bcode=`echo $ftpdir | tr /a-z/ /A-Z/`
+bcode=`echo $bcode | awk '{print substr($0,0,2)}'`
+
+
+
+echo "Creating Data Containers..."
+
+echo "Creating Postgresql DB Container"
+docker create -v /var/lib/postgresql/data --name data-container-bluebook-postgresql ubuntu:16.04 /bin/true
+
+echo "Creating Postgresql DB Container"
+docker create -v /tmp/ --name data-container-bluebook-scheduler ubuntu:16.04 /bin/true
+
+echo "Creating Mongo DB Container"
+docker create -v /data/db --name data-container-appfs-mongodb ubuntu:16.04 /bin/true
+
+echo "Creating Elasticsearch DB Container"
+docker create -v /usr/share/elasticsearch/data/ --name data-container-bluebook-elasticsearch ubuntu:16.04 /bin/true
+
+echo "Creating BlueBook Log DB Container"
+docker create -v /tmp/ --name data-container-bluebook ubuntu:16.04 /bin/true
+
+echo "Create Data Container for Proxy"
+docker create -v /etc/nginx --name data-container-bluebook-proxy ubuntu:16.04 /bin/true
+
+
+
+echo "Creating new Proxy BlueBook images..."
+cp conf.d/default.conf.template conf.d/default.conf
+cp html/custom_50x.html.template html/custom_50x.html
+cp app-$tag.yml.template app-$tag.yml
+
+sed -i "s/DOMAIN_NAME/${domain}/g" .domain
+sed -i "s/DOMAIN_NAME/${domain}/g" conf.d/default.conf
+sed -i "s/DOMAIN_NAME/${domain}/g" html/custom_50x.html
+sed -i "s/DOMAIN_NAME/${domain}/g" app-$tag.yml
+sed -i "s/SFTP_SERVER_VALUE/${ftpserver}/g" app-$tag.yml
+sed -i "s/FTPDIR/${ftpdir}/g" app-$tag.yml
+sed -i "s/BCODE/${bcode}/g" app-$tag.yml
+
+echo "Starting BlueBook Proxy"
+docker build -f Dockerfile.nginx --no-cache=true  -t bluebookproxy .
+
+echo ""
+echo "Starting Application..."
+docker-compose -f app-$tag.yml up -d
+

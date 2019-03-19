@@ -1,0 +1,11 @@
+id;name;description;del_status;created_by;created_date;last_modified_by;last_modified_date
+1;Marijuana;Drugs;false;system;2017-08-16 14:18:56;;2016-02-17 11:31:17
+2;Ecstasy;Drugs;false;system;2017-06-19 05:48:01;;2016-08-28 07:18:52
+3;Benzodiazepines;Drugs;false;system;2017-03-20 22:08:27;;2016-08-06 19:30:43
+4;Methadone;Drugs;false;system;2017-10-06 05:58:52;;2017-01-17 15:33:53
+5;Amphetamines;Drugs;false;system;2017-08-04 21:36:59;;2016-07-09 00:30:20
+6;Cocaine;Drugs;false;system;2017-02-23 20:31:56;;2016-02-26 01:20:46
+7;Bath Salts;Drugs;false;system;2017-02-16 00:17:37;;2016-10-11 00:18:18
+8;Methamphetamine;Drugs;false;system;2017-07-28 07:04:46;;2016-09-18 05:08:46
+9;Heroin;Drugs;false;system;2017-06-11 04:06:40;;2016-12-15 08:52:36
+10;Crack Cocaine;Drugs;false;system;2018-01-10 13:34:57;;2016-09-09 11:57:35

@@ -1,0 +1,5 @@
+id;login;password_hash;first_name;last_name;email;activated;lang_key;created_by;last_modified_by
+1;admin;$2a$10$gSAhZrxMllrbgj/kkK9UceBPpChGWJA7SYIb1Mqo.n5aNLq1/oRrC;Administrator;Administrator;admin.bluebook@tmunited.co;true;en;admin;admin
+2;jrodriguez;$2a$10$gSAhZrxMllrbgj/kkK9UceBPpChGWJA7SYIb1Mqo.n5aNLq1/oRrC;Jesus;Rodriguez;jrodriguez@tmunited.co;true;en;admin;admin
+3;pboucourt;$2a$10$gSAhZrxMllrbgj/kkK9UceBPpChGWJA7SYIb1Mqo.n5aNLq1/oRrC;Pepe;Boucourt;pboucourt@tmunited.co;true;en;admin;admin
+4;aacosta;$2a$10$gSAhZrxMllrbgj/kkK9UceBPpChGWJA7SYIb1Mqo.n5aNLq1/oRrC;Adriel;Acosta;aacosta@tmunited.co;true;en;admin;admin

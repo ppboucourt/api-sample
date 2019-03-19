@@ -1,0 +1,16 @@
+<header-datatable entity="vm">
+    <button class="btn btn-primary" ng-click="vm.saveTeamCare()">
+        <i class="fa fa-plus-circle"></i><span> New Team Care Member</span>
+    </button>
+</header-datatable>
+
+<div class="box-widget">
+    <div class="row">
+        <div class="box-body">
+            <table datatable="" dt-options="vm.careTeamsDtOptions" dt-columns="vm.careTeamsDtColumns"
+                   dt-instance="vm.careTeamsDtInstance"
+                   class="table table-striped table-bordered">
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,86 @@
+<form name="faxForm" ng-submit="vm.confirmSendFax()">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;
+        </button>
+        <h4 class="modal-title">Send eFax</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+                <div class="form-group">
+                    <div class="form-group">
+                        <label class="control-label">Service Provider</label><br/>
+                        <toggle ng-model="vm.destination" on="Yes" off="No" id="field_destination_type"></toggle>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row" ng-if="vm.destination">
+            <div class="col-xs-6 col-sm-6  col-md-6 col-lg-6" >
+                <div class="form-group">
+                    <label for="field_destination">Service Provider</label>
+                    <select class="form-control" id="field_destination" name="destination"
+                            ng-model="vm.ServiceDestination"
+                            required
+                            ng-options="serviceProvider as serviceProvider.name for serviceProvider in vm.serviceProviders track by serviceProvider.id">
+                    </select>
+                    <div ng-show="faxForm.destination.$invalid">
+                        <p class="help-block"
+                           ng-show="faxForm.destination.$error.required">
+                            This field is required.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row" ng-if="!vm.destination">
+            <div class="col-xs-12 col-sm-12  col-md-12 col-lg-12">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6  col-md-6 col-lg-6">
+                        <div class="form-group">
+                            <label for="field_destination">Name</label>
+                            <input class="form-control"  id="field_name" required name="name"
+                                   ng-model="vm.destinationName"/>
+                        </div>
+                        <div ng-show="faxForm.name.$invalid">
+                            <p class="help-block"
+                               ng-show="faxForm.name.$error.required">
+                                This field is required.
+                            </p>
+                        </div>
+
+
+                    </div>
+                    <div class="col-xs-6 col-sm-6  col-md-6 col-lg-6">
+                        <div class="form-group">
+                            <label for="field_destination">FAX</label>
+                            <input class="form-control"   type="text" id="field_fax" minlength="10"  required  ui-mask="999-999-9999" name="fax"
+                                   ng-model="vm.destinationFax"/>
+                            <div ng-show="faxForm.fax.$invalid">
+                                <p class="help-block"
+                                   ng-show="faxForm.fax.$error.required">
+                                    This field is required.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Dismiss</span>
+        </button>
+        <button type="submit" ng-disabled="faxForm.$invalid || vm.saving" class="btn btn-success">
+            <span class="glyphicon glyphicon-send"></span>&nbsp;<span>Send eFax</span>
+        </button>
+    </div>
+</form>

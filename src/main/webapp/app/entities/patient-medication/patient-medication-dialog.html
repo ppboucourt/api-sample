@@ -1,0 +1,86 @@
+<section>
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;
+        </button>
+        <h4 class="modal-title" id="myPatientMedicationLabel">Details Patient Medication</h4>
+    </div>
+    <div class="modal-body">
+
+        <section class="content">
+            <jhi-alert-error></jhi-alert-error>
+
+            <div class="row"><strong>{{vm.medicationDetails.medication}}
+                {{vm.medicationDetails.dose}}{{vm.medicationDetails.route?(', ' + vm.medicationDetails.route):
+                ''}}{{vm.medicationDetails.frecuency?(', every ' + vm.medicationDetails.frecuency + ' hours'):''}} </strong></div>
+            <div class="row">Duration: Start date - {{vm.CoreService.parseToDateTime(vm.medicationDetails.startDate)}} End date - {{vm.CoreService.parseToDateTime(vm.medicationDetails.endDate)}}
+            </div>
+            <div class="row">Dispense Amount: {{vm.medicationDetails.dispenseAmount?vm.medicationDetails.dispenseAmount:
+                'N/A'}}
+            </div>
+            <div class="row">Number of Refills: {{vm.medicationDetails.numberRefills?vm.medicationDetails.numberRefills:
+                'N/A'}}
+            </div>
+
+            <hr>
+            <div class="row">
+                <div class="table table-responsive" style="border: 1px black!important;">
+                    <table class="table table-bordered table-hover">
+                        <thead class="table-bordered" style="border: 1px black!important;">
+                        <tr>
+                            <th>Medication</th>
+                            <th>Route</th>
+                            <th>Administer Amount</th>
+                            <th>Dosage Form</th>
+                            <th>Dose</th>
+                            <th>Frequency</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th>{{vm.medicationDetails.medication}}</th>
+                            <td>{{vm.medicationDetails.route}}</td>
+                            <td>{{vm.medicationDetails.administerAmount}}</td>
+                            <td>{{vm.medicationDetails.dosageForm}}</td>
+                            <td>{{vm.medicationDetails.dose}}</td>
+                            <td>{{vm.medicationDetails.frecuency}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+
+            <hr>
+            <div class="row"><p>Ordered by {{vm.medicationDetails.orderedBy}}, NPI: {{vm.medicationDetails.npi}}, DEA:
+                {{vm.medicationDetails.dea}}</p>
+            </div>
+
+            <div class="row"><p>Entered by {{vm.medicationDetails.enteredBy}} {{
+                vm.CoreService.parseToDateTime(vm.medicationDetails.startDate)}} via {{vm.medicationDetails.via}}, read
+                back and
+                verified.</p>
+            </div>
+
+            <div class="row"><p> {{vm.medicationDetails.status}}</p></div>
+
+        </section>
+
+    </div>
+
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving || !vm.canSign()"
+                ng-click="vm.sign(vm.patientMedication)" class="btn btn-success">
+            <span class="glyphicon glyphicon-edit"></span>&nbsp;<span>Sign</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-warning"
+                ng-click="vm.eFax()">
+            <span class="glyphicon glyphicon-phone"></span>&nbsp;<span>eFax</span>
+        </button>
+    </div>
+</section>

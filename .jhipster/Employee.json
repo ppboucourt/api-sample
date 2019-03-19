@@ -1,0 +1,107 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "shifts",
+            "otherEntityName": "shifts",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "employee"
+        },
+        {
+            "relationshipName": "charts",
+            "otherEntityName": "chart",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "employees"
+        },
+        {
+            "relationshipName": "user",
+            "otherEntityName": "user",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "employee"
+        },
+        {
+            "relationshipName": "corporation",
+            "otherEntityName": "corporation",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "groupSessionDetails",
+            "otherEntityName": "groupSessionDetails",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "reviewBy"
+        },
+        {
+            "relationshipName": "typeEmployee",
+            "otherEntityName": "typeEmployee",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "urgentIssues",
+            "otherEntityName": "urgentIssues",
+            "relationshipType": "many-to-many",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "employee"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "mobile",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "npiNumber",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "deaNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "3"
+        },
+        {
+            "fieldName": "firstName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lastName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "pin",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "title",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "gender",
+            "fieldType": "Gender",
+            "fieldValues": "M,F"
+        },
+        {
+            "fieldName": "signature",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160825145110",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "employee",
+    "pagination": "no"
+}

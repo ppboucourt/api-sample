@@ -1,0 +1,7 @@
+id;name;description;del_status;created_by;created_date;last_modified_by;last_modified_date
+1;Admin;Admin;FALSE;system;04/29/17 08:52 AM;;04/29/17 08:52 AM
+2;Nurse;Nurse;FALSE;system;04/29/17 08:52 AM;;04/29/17 08:52 AM
+3;Therapist;Therapist;false;system;2017-04-29 08:52:40;;2016-01-31 11:08:14
+4;Physician;Physician;false;system;2016-09-14 13:19:35;;2016-09-04 13:24:42
+5;Technician;Technician;FALSE;system;04/29/17 08:52 AM;;04/29/17 08:52 AM
+6;Laboratory;Laboratory;FALSE;system;04/29/17 08:52 AM;;04/29/17 08:52 AM

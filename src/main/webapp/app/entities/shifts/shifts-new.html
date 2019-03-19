@@ -1,0 +1,99 @@
+<section class="content-header">
+    <h1>Create Shift Report</h1>
+    <div ncy-breadcrumb class="breadcrumb"></div>
+</section>
+<section class="invoice">
+    <div class="row">
+        <div class="col-lg-12 border-line-form">
+            <fieldset>
+                <form name="vm.form.formGroupSession_data" role="form" data-toggle="validator">
+                    <div class="box-body">
+                        <!--<div class="row">-->
+                            <!--<div class="col-lg-12">-->
+                                <!--<div class="form-group">-->
+                                    <!--<label class="control-label">Participating Patients *</label>-->
+                                    <!--<ui-select id="field_patients" name="participatingPatients" multiple ng-model="vm.shifts.charts"-->
+                                               <!--close-on-select="false" title="CurrentPatients" >-->
+                                        <!--<ui-select-match placeholder="Select Patients...">{{$item.patient.last_name}}, {{$item.patient.first_name}}</ui-select-match>-->
+                                        <!--<ui-select-choices repeat="item in vm.currentPatients | filter:$select.search">-->
+                                            <!--{{item.mr_no}} - {{item.patient.last_name}}, {{item.patient.first_name}}-->
+                                        <!--</ui-select-choices>-->
+                                    <!--</ui-select>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <!--<label class="control-label" for="field_Compendium">Report *</label>-->
+                                <textarea ckeditor="vm.options" id="field_Description" ng-model="vm.shifts.description" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </fieldset>
+        </div>
+        <hr>
+        <div class="pull-right">
+            <div class="col-lg-12">
+                <!--<div class="margin" ng-show="vm.editing">-->
+                <!--<button type="button" class="btn btn-danger" ng-click="vm.changeEditingState()">Cancel</button>-->
+                <!--<button type="button" class="btn btn-success" ng-click="vm.save()"-->
+                <!--ng-disabled="vm.form.formGroupSession_data.$invalid">Save</button>-->
+                <!--</div>-->
+                <button type="button" class="btn btn-info" ng-click="vm.save()"
+                        ng-disabled="vm.form.formGroupSession_data.$invalid">Save Information</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<!--
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myShiftsLabel">Create or edit a Shifts</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.shifts.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.shifts.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                    ng-model="vm.shifts.description"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_status">Status</label>
+            <input type="text" class="form-control" name="status" id="field_status"
+                    ng-model="vm.shifts.status"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label for="field_employee">Employee</label>
+            <select class="form-control" id="field_employee" name="employee" ng-model="vm.shifts.employee" ng-options="employee as employee.id for employee in vm.employees track by employee.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>
+-->

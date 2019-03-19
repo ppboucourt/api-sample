@@ -1,0 +1,80 @@
+
+<div>
+    <h2><span>Evaluation</span> {{vm.evaluation.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Name</span></dt>
+        <dd>
+            <span>{{vm.evaluation.name}}</span>
+        </dd>
+        <dt><span>Enabled</span></dt>
+        <dd>
+            <span>{{vm.evaluation.enabled}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.evaluation.alow_tech">Alow Tech</span></dt>
+        <dd>
+            <span>{{vm.evaluation.alow_tech}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.evaluation.patient_signature">Patient Signature</span></dt>
+        <dd>
+            <div ng-if="vm.evaluation.patient_signature">
+                <a ng-click="vm.openFile(vm.evaluation.patient_signatureContentType, vm.evaluation.patient_signature)">
+                    <img data-ng-src="{{'data:' + vm.evaluation.patient_signatureContentType + ';base64,' + vm.evaluation.patient_signature}}" style="max-width: 100%;"/>
+                </a>
+                {{vm.evaluation.patient_signatureContentType}}, {{vm.byteSize(vm.evaluation.patient_signature)}}
+            </div>
+        </dd>
+        <dt><span data-translate="bluebookApp.evaluation.one_perpatient">One Perpatient</span></dt>
+        <dd>
+            <span>{{vm.evaluation.one_perpatient}}</span>
+        </dd>
+        <dt><span>Billable</span></dt>
+        <dd>
+            <span>{{vm.evaluation.billable}}</span>
+        </dd>
+        <dt><span>Recurring</span></dt>
+        <dd>
+            <span>{{vm.evaluation.recurring}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.evaluation.daily_start_time">Daily Start Time</span></dt>
+        <dd>
+            <span>{{vm.evaluation.daily_start_time | date:'medium'}}</span>
+        </dd>
+        <dt><span>Interval</span></dt>
+        <dd>
+            <span>{{vm.evaluation.interval}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.evaluation.show_daily">Show Daily</span></dt>
+        <dd>
+            <span>{{vm.evaluation.show_daily}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.evaluation.force_signature">Force Signature</span></dt>
+        <dd>
+            <span>{{vm.evaluation.force_signature}}</span>
+        </dd>
+        <dt><span>Type Patient Process</span></dt>
+        <dd>
+            <a ui-sref="type-patient-process-detail({id:vm.evaluation.typePatientProcess.id})">{{vm.evaluation.typePatientProcess.id}}</a>
+        </dd>
+        <dt><span>Type Evaluation</span></dt>
+        <dd>
+            <a ui-sref="type-evaluation-detail({id:vm.evaluation.typeEvaluation.id})">{{vm.evaluation.typeEvaluation.id}}</a>
+        </dd>
+        <dt><span>Evaluation Content</span></dt>
+        <dd>
+            <a ui-sref="evaluation-content-detail({id:vm.evaluation.evaluationContent.id})">{{vm.evaluation.evaluationContent.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="evaluation-detail.edit({id:vm.evaluation.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-md-8 col-sm-4">
+        <!--<div class="box-header">-->
+            <!--&lt;!&ndash;<div class="col-xs-4 no-padding-left">&ndash;&gt;-->
+                <!--&lt;!&ndash;<button class="btn btn-primary" ng-click="vm.printLabels()">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span class="glyphicon glyphicon-check"></span> <span>Administeraa</span>&ndash;&gt;-->
+                <!--&lt;!&ndash;</button>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="col-xs-8 no-padding-right">&ndash;&gt;-->
+                <!--&lt;!&ndash;<form name="searchForm" class="form-inline">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div class="input-group pull-right">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<input type="text" class="form-control" ng-model="vm.searchQuery"&ndash;&gt;-->
+                               <!--&lt;!&ndash;id="searchQuerypatient-order-item" placeholder="Query" ng-change="vm.search()">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<span class="input-group-btn width-min">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<button class="btn btn-primary" ng-click="vm.search(vm.searchQuery)">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<span class="glyphicon glyphicon-filter"></span>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</button>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</span>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<span class="input-group-btn width-min" ng-if="vm.currentSearch">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<button class="btn btn-info" ng-click="vm.clear()">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<span class="glyphicon glyphicon-trash"></span>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</button>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;</form>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--</div>-->
+        <table datatable="" dt-options="vm.dtOptions" dt-columns="vm.dtColumns" dt-instance="vm.dtInstance"
+               class="table table-striped table-bordered">
+        </table>
+    </div>
+    <div class="col-md-4 col-sm-4">
+        <div rm-datepicker ng-model="vm.oDate1" rm-config="vm.rmConfig1" ng-click="vm.select()"></div>
+        <table datatable="" dt-options="vm.dtOptionsAsNeeded" dt-columns="vm.dtColumnsAsNeeded" dt-instance="vm.dtInstanceAsNeeded"
+               class="table table-striped table-bordered">
+        </table>
+    </div>
+</div>

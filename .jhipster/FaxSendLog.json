@@ -1,0 +1,40 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "sid",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sendDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "faxToNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "faxFromNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "faxState",
+            "fieldType": "FaxState",
+            "fieldValues": "QUEUED,PROCESSING,SENDING,DELIVERED,RECEIVING,RECEIVED,NO_ANSWER,BUSY,FAILED,CANCELED"
+        },
+        {
+            "fieldName": "pdfUuid",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "mediaUrl",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170801175339",
+    "entityTableName": "fax_send_log",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

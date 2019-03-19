@@ -1,0 +1,14 @@
+<div>
+    <ul class="pagination">
+        <li class="page-item" ng-class="{disabled: noPrevious()}"><a class="page-link" ng-click="selectPrevious()">
+            <i class="fa fa-angle-double-left"></i>
+        </a>
+        </li>
+        <li class="page-item" ng-repeat="page in pages" ng-class="{active: isActive(page)}">
+            <a class="page-link" ng-click="selectPage(page)">{{page}}</a>
+        </li>
+        <li class="page-item" ng-class="{disabled: noNext()}"><a class="page-link" ng-click="selectNext()">
+            <i class="fa fa-angle-double-right"></i></a>
+        </li>
+    </ul>
+</div>

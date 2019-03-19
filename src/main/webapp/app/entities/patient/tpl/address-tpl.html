@@ -1,0 +1,85 @@
+<form name="vm.form.basicInfo_form" role="form" show-validation>
+    <div class="box-body">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="form-group">
+                    <label class="control-label" for="field_street">Street</label><br/>
+                    <input type="text" class="form-control" id="field_street" ng-model="vm.chart.address"
+                           placeholder="{{vm.chartBackUp.address ? vm.chartBackUp.address :'Street'}}" name="street"/>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="control-label" for="field_street2">Street Two</label><br/>
+                    <input type="text" class="form-control" id="field_street2"
+                           ng-model="vm.chart.addressTwo" placeholder="{{vm.chartBackUp.addressTwo ? vm.chartBackUp.addressTwo :'Street Two'}}"
+                           name="street2"/>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="control-label" for="field_city">City</label><br/>
+                    <input type="text" class="form-control" id="field_city"
+                           ng-model="vm.chart.city" placeholder="{{vm.chartBackUp.city ? vm.chartBackUp.city :'City'}}"
+                           name="city"/>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                        <!--<label class="control-label" for="field_state">State</label><br>-->
+                        <!--<select class="form-control" ng-model="vm.chart.state"-->
+                                <!--ng-options="item.stateCode as item.state for item in vm.states track by item.stateCode"-->
+                                <!--id="field_state" name="state" required>-->
+                            <!--<option value="">{{vm.chart.state}}</option>-->
+                        <!--</select>-->
+                    <!--</div>-->
+                    <label class="control-label" for="field_state">State</label><br/>
+                    <!--<select class="form-control" ng-model="vm.chart.state"-->
+                            <!--ng-options="item.stateCode as item.state for item in vm.states track by item.stateCode"-->
+                            <!--id="field_state" name="state" required>-->
+                        <!--<option value=""></option>-->
+                    <!--</select>-->
+                    <select class="form-control" ng-model="vm.chart.state"
+                            ng-options="item.stateCode as item.state for item in vm.states track by item.stateCode"
+                            id="field_state" name="state" required>
+                        <option value="">{{vm.chart.state}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="control-label" for="field_zip">Zip</label><br/>
+                    <input type="text" class="form-control" id="field_zip" ng-model="vm.chart.zip" name="zip"
+                           placeholder="{{vm.chart.zip ? vm.chart.zip :'Zip'}}"/>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="control-label" for="field_phone">Phone</label><br/>
+                    <input type="text" class="form-control" id="field_phone"
+                           ng-model="vm.chart.phone" placeholder="{{vm.chart.phone ? vm.chart.phone :'Phone'}}" name="phone" ui-mask="(999) 999-9999" ui-mask-placeholder/>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="control-label" for="field_phone">Alternative Phone</label><br/>
+                    <input type="text" class="form-control" id="field_altPhone" ui-mask="(999) 999-9999" ui-mask-placeholder
+                           ng-model="vm.chart.altPhone" placeholder="{{vm.chart.altPhone ? vm.chart.altPhone :'Alternative Phone'}}"
+                           name="altPhone"/>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="control-label" for="field_email">Email</label><br/>
+                    <input type="email" class="form-control" id="field_email" ng-model="vm.chart.email"
+                           placeholder="{{vm.chart.email ? vm.chart.email :'Email'}}" name="email"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+

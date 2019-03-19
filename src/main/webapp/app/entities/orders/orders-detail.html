@@ -1,0 +1,83 @@
+
+<div>
+    <h2><span>Orders</span> {{vm.orders.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="bluebookApp.orders.type_order">Type Order</span></dt>
+        <dd>
+            <span>{{vm.orders.type_order}}</span>
+        </dd>
+        <dt><span>Status</span></dt>
+        <dd>
+            <span>{{vm.orders.status}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.orders.start_date">Start Date</span></dt>
+        <dd>
+            <span>{{vm.orders.start_date | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.orders.end_date">End Date</span></dt>
+        <dd>
+            <span>{{vm.orders.end_date | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.orders.order_by">Order By</span></dt>
+        <dd>
+            <span>{{vm.orders.order_by}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.orders.order_via">Order Via</span></dt>
+        <dd>
+            <span>{{vm.orders.order_via}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.orders.doctor_signature">Doctor Signature</span></dt>
+        <dd>
+            <span>{{vm.orders.doctor_signature}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.orders.reviewed_by">Reviewed By</span></dt>
+        <dd>
+            <span>{{vm.orders.reviewed_by}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.orders.review_date">Review Date</span></dt>
+        <dd>
+            <span>{{vm.orders.review_date | date:'medium'}}</span>
+        </dd>
+        <dt><span>Frequency</span></dt>
+        <dd>
+            <span>{{vm.orders.frequency}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.orders.on_admission">On Admission</span></dt>
+        <dd>
+            <span>{{vm.orders.on_admission}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.orders.until_discharge">Until Discharge</span></dt>
+        <dd>
+            <span>{{vm.orders.until_discharge}}</span>
+        </dd>
+        <dt><span>Chart</span></dt>
+        <dd>
+            <a ui-sref="chart-detail({id:vm.orders.chart.id})">{{vm.orders.chart.mr_no}}</a>
+        </dd>
+        <dt><span>Lab Compendium</span></dt>
+        <dd>
+            <a ui-sref="lab-compendium-detail({id:vm.orders.labCompendium.id})">{{vm.orders.labCompendium.code}}</a>
+        </dd>
+        <dt><span>Action</span></dt>
+        <dd>
+            <a ui-sref="actions-detail({id:vm.orders.action.id})">{{vm.orders.action.action}}</a>
+        </dd>
+        <dt><span>Medication</span></dt>
+        <dd>
+            <a ui-sref="medications-detail({id:vm.orders.medication.id})">{{vm.orders.medication.medication}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="orders-detail.edit({id:vm.orders.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

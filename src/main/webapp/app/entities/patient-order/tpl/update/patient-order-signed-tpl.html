@@ -1,0 +1,26 @@
+<form name="vm.form.order" role="form" show-validation>
+    <table class="table table-condensed table-striped table-bordered">
+        <tbody>
+        <tr>
+            <th>Patient Name</th>
+            <th>Obtained</th>
+            <th>Physician</th>
+        </tr>
+        <tr>
+            <td>{{vm.chart.patient.firstName + ' ' +
+                (vm.chart.patient.middleName ? vm.chart.patient.middleName : '') + ' ' +
+                vm.chart.patient.lastName}}</td>
+            <td>{{vm.patientOrder.via.name}}</td>
+            <td>{{ vm.signedBy  ?  vm.signedBy.firstName + ' ' +  vm.signedBy.lastName : ""}}</td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="pull-left" ng-show="vm.patientOrder.ordStatus == 'SCHEDULED' && vm.canCancel">
+        <!--ui-sref="patient-orders-update.cancel({oid: vm.patientOrder.id})"-->
+        <button type="button" class="btn btn-danger" ng-click="vm.cancelOrder()"><i class="fa fa-ban"></i> Discontinue Order</button>
+    </div>
+    <div class="pull-right">
+        <button type="button" ng-show="vm.canSign" class="btn btn-warning" ng-click="vm.signIn()">
+            <span class="glyphicon glyphicon-pencil"></span> <span>Sign Order</span></button>
+    </div>
+</form>

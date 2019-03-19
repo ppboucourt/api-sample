@@ -1,0 +1,67 @@
+<div class="" style="background: transparent/">
+    <div class="login-logo">
+        <a href="../../index2.html"><img src="content/images/bluebook-logo.png"> </a>
+    </div><!-- /.login-logo -->
+    <div class="login-box">
+        <div class="login-box-body">
+            <p class="login-box-msg">Sign in to start your session</p>
+            <!--<div class="form-group has-error">-->
+            <!--<span class="help-block">Help block with error</span>-->
+            <!--</div>-->
+            <form method="post" name="loginForm" ng-submit="vm.login($event)">
+                <div class="form-group has-feedback"
+                     data-ng-class="{'has-error': loginForm.username.$invalid && !loginForm.username.$pristine}">
+                    <input id="username" name="username" type="text" class="form-control" placeholder="Username"
+                           ng-model="vm.username" required="required" maxlength="40">
+                    <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                    <span class="help-block"
+                          data-ng-show="loginForm.username.$invalid && !loginForm.username.$pristine">
+                          Type your username.</span>
+                </div>
+                <div class="form-group has-feedback"
+                     data-ng-class="{'has-error': loginForm.password.$invalid && !loginForm.password.$pristine}">
+                    <input id="password" name="password" type="password" class="form-control" placeholder="Password"
+                           ng-model="vm.password" required="required" maxlength="40">
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                    <span class="help-block"
+                          data-ng-show="loginForm.password.$invalid && !loginForm.password.$pristine">
+                          Type your password.</span>
+                </div>
+                <div class="row">
+                    <div class="col-xs-8">
+                        <!--<checkbox-->
+                            <!--class="angular-bootstrap-checkboxbtn"-->
+                            <!--ng-class="{'btn-primary': checked === true}"-->
+                            <!--ng-model="vm.rememberMe">-->
+                        <!--</checkbox>-->
+                        <!--<span data-translate="login.form.rememberme">Remember me</span>-->
+                    </div><!-- /.col -->
+                    <div class="col-xs-4">
+                        <button type="submit" class="btn btn-primary btn-block btn-flat"
+                                data-ng-disabled="loginForm.$invalid">Sign In
+                        </button>
+                    </div><!-- /.col -->
+
+                </div>
+            </form>
+
+            <p></p>
+            <!--<div class="alert alert-warning">-->
+                <!--<a class="alert-link" href="" ng-click="vm.requestResetPassword()" data-translate="login.password.forgot">Did you forget your password?</a>-->
+            <!--</div>-->
+
+            <!--<div class="social-auth-links text-center">-->
+            <!--<p>- OR -</p>-->
+            <!--<a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign-->
+            <!--in using Facebook</a>-->
+            <!--<a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign-->
+            <!--in using Google+</a>-->
+            <!--</div>&lt;!&ndash; /.social-auth-links &ndash;&gt;-->
+
+
+            <!--<a href="register.html" class="text-center">Register a new membership</a>-->
+
+        </div><!-- /.login-box-body -->
+    </div><!-- /.login-box -->
+
+</div>

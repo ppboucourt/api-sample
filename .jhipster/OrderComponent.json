@@ -1,0 +1,59 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "allOrders",
+            "otherEntityName": "allOrders",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipName": "routes",
+            "otherEntityName": "routes",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "days",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "medication",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dosage_form",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dose",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "administration_time",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "3"
+        },
+        {
+            "fieldName": "frequency",
+            "fieldType": "Frequency",
+            "fieldValues": "Daily,Seldom,Once,Monthly,Yearly,Never,Weekly"
+        }
+    ],
+    "changelogDate": "20161128171950",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "order_component",
+    "pagination": "no",
+    "enableEntityAudit": true
+}

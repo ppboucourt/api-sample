@@ -1,0 +1,38 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "facility",
+            "otherEntityName": "facility",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [],
+            "otherEntityField": "facility_name"
+        },
+        {
+            "relationshipName": "rooms",
+            "otherEntityName": "room",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "building"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "3"
+        }
+    ],
+    "changelogDate": "20160824214647",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "building",
+    "pagination": "no",
+    "enableEntityAudit": true
+}

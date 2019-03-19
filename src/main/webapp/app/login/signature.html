@@ -1,0 +1,21 @@
+<div class="box-header">
+    <div class="text-center">
+        <h3>In this step you must sign and then press "Finish".</h3>
+    </div>
+</div>
+<div class="box-body">
+    <!--<button class="btn btn-danger" ng-click="vm.getData()">Get Data</button>-->
+    <!--<button class="btn btn-danger" ng-click="vm.disable()">Disable</button>-->
+    <!--<button class="btn btn-danger" ng-click="vm.enable()">Enable</button>-->
+    <!--<img src="{{vm.hash}}" alt="signature image" />-->
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+            <j-signature sig="customSignature" bg-color="#EEEEEE" color="#00008B"></j-signature>
+        </div>
+    </div>
+</div>
+<div class="box-footer">
+    <button type="button" class="btn btn-default" ui-sref="consent">Back</button>
+    <button type="button" class="btn btn-info pull-right" ng-disabled="!vm.result.signed" ng-click="vm.save()">Finish
+    </button>
+</div>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity PatientToShift.
+    -->
+    <changeSet id="20160829195026-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="shifts_id"
+                                 baseTableName="patient_to_shift"
+                                 constraintName="fk_patient_to_shift_shifts_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="shifts"/>
+
+        <addForeignKeyConstraint baseColumnNames="chart_id"
+                                 baseTableName="patient_to_shift"
+                                 constraintName="fk_patient_to_shift_chart_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="chart"/>
+
+    </changeSet>
+</databaseChangeLog>

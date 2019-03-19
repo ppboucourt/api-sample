@@ -1,0 +1,21 @@
+<ng-include src="'app/entities/patient-result/tpl/patient-result-by-patient-filter-tpl.html'"></ng-include>
+
+<div class="box-header">
+    <div class="col-xs-8 col-lg-offset-4 no-padding-right">
+
+        <div class="navbar-form navbar-right search-control">
+            <div class="text-right">
+                <div class="has-feedback input-group-sm">
+                    <input type="text" class="form-control"ng-model="vm.searchQuery" size="80"
+                           id="searchQueryrpt-metadata" placeholder="Query" ng-change="vm.search()">
+                    <i class="fa fa-search form-control-feedback"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="box-body">
+    <table datatable="" dt-options="vm.dtOptions" dt-columns="vm.dtColumns"
+           dt-instance="vm.dtInstance" class="table table-striped table-bordered">
+    </table>
+</div>

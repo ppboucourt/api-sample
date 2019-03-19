@@ -1,0 +1,202 @@
+<section class="content-header">
+    <h1>Details Forms</h1>
+    <div ncy-breadcrumb class="breadcrumb"></div>
+</section>
+<section class="invoice">
+    <div class="row">
+        <div class="col-lg-12">
+            <fieldset>
+                <form name="vm.form.data" role="form" data-toggle="validator">
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="name">Form Name *</label>
+                                    <input type="text" class="form-control" name="name" id="name"
+                                           ng-model="vm.forms.name" required/>
+                                    <div ng-show="vm.form.data.name.$invalid">
+                                        <p class="help-block"
+                                           ng-show="vm.form.data.name.$error.required">
+                                            This field is required.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="field_PatientSignature">Patient Signature</label><br/>
+                                    <toggle ng-model="vm.forms.patientSignatureRequired" on="Yes" off="No"
+                                            id="field_PatientSignature"></toggle>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="field_GuarantorSignature">Guarantor Signature</label><br/>
+                                    <toggle ng-model="vm.forms.guarantorSignatureRequired" on="Yes" off="No"
+                                            id="field_GuarantorSignature"></toggle>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="field_AllowAtachment">Allow Attachment</label><br/>
+                                    <toggle ng-model="vm.forms.allowAttachment" on="Yes" off="No"
+                                            id="field_AllowAtachment"></toggle>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="field_AllowRevocation">Allow Revocation</label><br/>
+                                    <toggle ng-model="vm.forms.allowRevocation" on="Yes" off="No"
+                                            id="field_AllowRevocation"></toggle>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="field_Enabled">Enabled</label><br/>
+                                    <toggle ng-model="vm.forms.enabled" on="Yes" off="No"
+                                            id="field_Enabled"></toggle>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="field_OnlyOnePerpatient">Only One</label><br/>
+                                    <toggle ng-model="vm.forms.onlyOnePerpatient" on="Yes" off="No"
+                                            id="field_OnlyOnePerpatient"></toggle>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="field_FormExperies">Form Expires</label><br/>
+                                    <toggle ng-model="vm.forms.formExperies" on="Yes" off="No"
+                                            id="field_FormExperies"></toggle>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3" ng-if="vm.forms.formExperies">
+                                <div class="form-group">
+                                    <label class="control-label" for="expiresDays">Expires Days *</label>
+                                    <input type="number" class="form-control" ng-model="vm.forms.expiresDays"
+                                           id="expiresDays" name="expiresDays" required>
+                                    <div ng-show="vm.form.data.expiresDays.$invalid">
+                                        <p class="help-block"
+                                           ng-show="vm.form.data.expiresDays.$error.required">
+                                            This field is required.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="field_TypePatientProcess">Patient Process *</label>
+                                    <select class="form-control" ng-model="vm.forms.typePatientProcess"
+                                            ng-options="item as item.name for item in vm.typePatientProcess track by item.name"
+                                            id="field_TypePatientProcess" name="typePatientProcess" required>
+                                        <option value=""></option>
+                                    </select>
+                                    <div ng-show="vm.form.data.typePatientProcess.$invalid">
+                                        <p class="help-block"
+                                           ng-show="vm.form.data.typePatientProcess.$error.required">
+                                            This field is required.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label">Level of Care </label>
+                                    <ui-select ng-model="vm.forms.typeLevelCares"
+                                               name="levelCare"
+                                               id="field_levelCare"
+                                               ng-required = true
+                                               reset-search-input="true"
+                                               title="Select level of care" multiple
+                                               close-on-select="false">
+                                        <ui-select-match placeholder="Enter the name of the Level of Care ...">{{$item.name}}</ui-select-match>
+                                        <ui-select-choices repeat="item in vm.levelCares"
+                                                           refresh="vm.getLevelCare($select.search)"
+                                                           refresh-delay="0">
+                                            <div ng-bind-html="item.name | highlight: $select.search"></div>
+                                            <!--<small ng-bind-html="item.description | highlight: $select.search"></small>-->
+                                        </ui-select-choices>
+                                    </ui-select>
+                                    <div ng-show="vm.form.data.levelCare.$invalid">
+                                        <p class="help-block"
+                                           ng-show="vm.form.data.levelCare.$error.required">
+                                            This field is required.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="field_LoadAutomatic">Load Automatic</label><br/>
+                                    <toggle ng-model="vm.forms.loadAutomatic" on="Yes" off="No"
+                                            id="field_LoadAutomatic"></toggle>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-9" style="padding: 15px 0px 0px 0px;">
+                            <textarea ckeditor="editorOptions" ng-model="vm.forms.contentHtml" required></textarea>
+                        </div>
+                        <div class="col-lg-3" style="padding: 15px 0px 0px 0px;" id="formFields">
+                            <span class="col-sm-12">Data Fields:</span>
+                            <div class="col-md-6">
+
+                                <label>{0} - Patient Bed</label>
+                                <label>{1} - Patient Id</label>
+                                <label>{2} - Patient Name</label>
+                                <label>{3} - Patient DOB</label>
+                                <label>{4} - Patient Gender</label>
+                                <label>{5} - Patient Age</label>
+                                <label>{6} - Patient SSN</label>
+                                <label>{7} - Patient Adm. Date</label>
+                                <label>{8} - Patient Address</label>
+                                <label>{9} - Patient Email</label>
+                                <label>{10} - Patient Phone</label>
+                                <label>{11} - Patient Program</label>
+
+                                <label>{12} - Insurance Name</label>
+                                <label>{13} - Insurance Policy</label>
+                                <label>{14} - Insurance Benefits</label>
+
+                            </div>
+                            <div class="col-md-6">
+
+                                <label>{15} - Facility Name</label>
+                                <label>{16} - Facility Address</label>
+                                <label>{17} - Facility Country</label>
+                                <label>{18} - Facility Phone</label>
+                                <label>{19} - Facility Fax</label>
+                                <label>{20} - Check Box</label>
+                                <label>{21} - Text Box</label>
+                                <label>{22} - Patient's Contacts</label>
+                                <label>{23} - Refer/Discharge</label>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </fieldset>
+        </div>
+        <!--<div class="row">
+            <div class="col-lg-12">
+                <div class="margin">
+                    <button type="button" class="btn btn-danger" ng-click="vm.changeEditingState()">Cancel</button>
+                    <button type="button" class="btn btn-success" ng-click="vm.save()"
+                            ng-disabled="vm.form.Forms_info_form.$invalid">Save</button>
+                </div>
+            </div>
+        </div>-->
+        <div class="col-md-12">
+            <div class="pull-right">
+                <div class="col-lg-12">
+                    <button type="button" class="btn btn-success" ng-click="vm.save()"
+                            ng-disabled="vm.form.data.$invalid">Save Information</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,69 @@
+
+
+echo ""
+
+if [ "$#" -ne 3 ]
+then
+  echo "Usage: ./startNewEnv DOMAINNAME TAG FTPSERVER"
+  exit 1
+fi
+
+domain=$1
+tag=$2
+ftpserver=$3
+ftpdir="$(cut -d'.' -f1 <<<"$domain")"
+bcode=`echo $ftpdir | tr /a-z/ /A-Z/`
+bcode=`echo $bcode | awk '{print substr($0,0,2)}'`
+
+
+
+
+cp conf.d/default.conf.template conf.d/default.conf
+cp html/custom_50x.html.template html/custom_50x.html
+cp app-$tag.yml.template app-$tag.yml
+
+sed -i "s/DOMAIN_NAME/${domain}/g" .domain
+sed -i "s/DOMAIN_NAME/${domain}/g" conf.d/default.conf
+sed -i "s/DOMAIN_NAME/${domain}/g" html/custom_50x.html
+sed -i "s/DOMAIN_NAME/${domain}/g" app-$tag.yml
+sed -i "s/SFTP_SERVER_VALUE/${ftpserver}/g" app-$tag.yml
+sed -i "s/FTPDIR/${ftpdir}/g" app-$tag.yml
+sed -i "s/BCODE/${bcode}/g" app-$tag.yml
+
+
+echo "Upgrading BlueBook Application..."
+docker-compose -f app-$tag.yml down
+
+./login
+
+imagesID=`docker images | grep itudt/bluebook | awk '{print $3}'`
+docker rmi $imagesID &>/dev/null
+
+imagesID=`docker images | grep itudt/postgres | awk '{print $3}'`
+docker rmi $imagesID &>/dev/null
+
+imagesID=`docker images | grep scheduler | awk '{print $3}'`
+docker rmi $imagesID &>/dev/null
+
+imagesID=`docker images | grep itudt/appfs | awk '{print $3}'`
+docker rmi $imagesID &>/dev/null
+
+cp conf.d/default.conf.template conf.d/default.conf
+cp html/custom_50x.html.template html/custom_50x.html
+cp app-$tag.yml.template app-$tag.yml
+
+sed -i "s/DOMAIN_NAME/${domain}/g" .domain
+sed -i "s/DOMAIN_NAME/${domain}/g" conf.d/default.conf
+sed -i "s/DOMAIN_NAME/${domain}/g" html/custom_50x.html
+sed -i "s/DOMAIN_NAME/${domain}/g" app-$tag.yml
+sed -i "s/SFTP_SERVER_VALUE/${ftpserver}/g" app-$tag.yml
+sed -i "s/FTPDIR/${ftpdir}/g" app-$tag.yml
+sed -i "s/BCODE/${bcode}/g" app-$tag.yml
+
+
+echo "Starting BlueBook Proxy"
+docker build -f Dockerfile.nginx --no-cache=true  -t bluebookproxy .
+
+
+docker-compose -f app-$tag.yml up -d
+

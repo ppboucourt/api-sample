@@ -1,0 +1,79 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                <h3 class="box-title">New Action</h3>
+            </div>
+            <jhi-alert-error></jhi-alert-error>
+            <form name="vm.form.order" role="form" show-validation>
+                <div class="box-body">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label>Patient Name</label>
+                                <input type="text" class="form-control" readonly
+                                       value="{{vm.patientAction.chart.patient.firstName + ' ' +
+                           (vm.patientAction.chart.patient.middleName ? vm.patientAction.chart.patient.middleName : '') + ' ' +
+                           vm.patientAction.chart.patient.lastName}}">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="field_via">Obtained</label>
+                                <select class="form-control" id="field_via" name="via" ng-model="vm.patientAction.via" required
+                                        ng-options="via as via.name for via in vm.vias track by via.id">
+                                    <option value=""></option>
+                                </select>
+                                <div ng-show="vm.form.order.via.$invalid">
+                                    <p class="help-block"
+                                       ng-show="vm.form.order.via.$error.required">
+                                        This field is required.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="field_employee">Physician</label>
+                                <select class="form-control" id="field_employee" name="employee" ng-model="vm.patientAction.signedBy"
+                                        required ng-disabled="vm.patientAction.signed"
+                                        ng-options="employee as employee.firstName + ' ' + employee.lastName for employee in vm.employees track by employee.id">
+                                    <option value=""></option>
+                                </select>
+                                <div ng-show="vm.form.order.employee.$invalid">
+                                    <p class="help-block"
+                                       ng-show="vm.form.order.employee.$error.required">
+                                        This field is required.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pull-left">
+                        <button type="button" class="btn btn-primary" ng-click="vm.addPatientActionsPre()">Prescribe Action</button>
+                    </div>
+                    <div class="pull-right">
+                        <button type="button" class="btn btn-danger" ui-sref="patient-orders({id: vm.chart.id})">Cancel</button>
+                        <button type="button" class="btn btn-success"
+                                ng-disabled="vm.form.order.$invalid || vm.patientAction.patientActionPres.length == 0"
+                                ng-click="vm.save()">Save</button>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box box-primary">
+            <div class="box-body">
+                <table datatable="" dt-options="vm.dtOptions" dt-columns="vm.dtColumns"
+                       dt-instance="vm.dtInstance"
+                       class="table table-condensed table-striped table-bordered">
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

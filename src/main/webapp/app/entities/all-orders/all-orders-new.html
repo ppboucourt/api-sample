@@ -1,0 +1,187 @@
+<section class="content-header">
+    <h1>Details Orders</h1>
+    <div ncy-breadcrumb class="breadcrumb"></div>
+</section>
+<section class="invoice">
+    <div class="row">
+        <div class="col-lg-12 border-line-form">
+            <fieldset>
+                <form name="vm.form.formAllOrders_data" role="form" data-toggle="validator">
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="field_name">Name *</label>
+                                    <input type="text" class="form-control" name="name" id="field_name"
+                                           ng-model="vm.allOrders.name" required/>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="field_enabled">Enabled *</label><br/>
+                                    <toggle ng-model="vm.allOrders.enabled" on="Yes" off="No" id="field_enabled"></toggle>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="field_prn">PRN *</label><br/>
+                                    <toggle ng-model="vm.allOrders.prn" on="Yes" off="No" id="field_prn"></toggle>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="field_indication">Indication *</label>
+                                    <input type="text" class="form-control" name="indication" id="field_indication"
+                                           ng-model="vm.allOrders.indication" required/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="field_durationDays">Duration Days *</label>
+                                    <input type="number" class="form-control" name="durationDays" id="field_durationDays"
+                                           ng-model="vm.allOrders.duration_days" required/>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="field_TypeDosage">Type Dosage *</label>
+                                    <select class="form-control" ng-model="vm.allOrders.typeDosage"
+                                            ng-options="item as item.name for item in vm.typeDosage track by item.name"
+                                            id="field_TypeDosage" name="typeDosage" required>
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="field_note">Note</label>
+                                    <textarea id="field_note" class="form-control" name="note"
+                                              ng-model="vm.allOrders.note"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </fieldset>
+            <div id="orderComponentItems">
+                <div class="row" ng-show="!vm.showItemForm">
+                    <div class="col-lg-12">
+                        <button class="btn btn-primary" ng-click="vm.showOrderItemForm()">
+                            <span class="glyphicon glyphicon-flash"></span> <span>Add Order Component</span>
+                        </button>
+                    </div>
+                </div>
+                <form name="vm.form.formAllOrdersItems_data" ng-show="vm.showItemForm" role="form" data-toggle="validator">
+                    <div class="box-body">
+                        <div class="row">
+                            <!--<div class="col-lg-3">-->
+                                <!--<div class="form-group">-->
+                                    <!--<label class="control-label" for="field_componentEnabled">Enabled</label><br/>-->
+                                    <!--<toggle ng-model="vm.orderComponents.enabled" on="Yes" off="No" id="field_componentEnabled"></toggle>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="field_componentDays">Days *</label>
+                                    <input type="text" class="form-control" name="componentDays" id="field_componentDays"
+                                           ng-model="vm.orderComponents.days" required/>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="field_componentMedication">Medication *</label>
+                                    <input type="text" class="form-control" name="componentMedication" id="field_componentMedication"
+                                           ng-model="vm.orderComponents.medication" required/>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="field_componentRoutes">Routes</label>
+                                    <select class="form-control" ng-model="vm.orderComponents.routes"
+                                            ng-options="item as item.name for item in vm.routes track by item.name"
+                                            id="field_componentRoutes" name="typeDosage" required>
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="field_componentDose">Dose *</label>
+                                    <input type="text" class="form-control" name="componentDose" id="field_componentDose"
+                                           ng-model="vm.orderComponents.dose" required/>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="field_componentDoseForm">Dose Form *</label>
+                                    <input type="text" class="form-control" name="componentDoseForm" id="field_componentDoseForm"
+                                           ng-model="vm.orderComponents.dosage_form" required/>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="field_componentFrequency">Frequency</label>
+                                    <select class="form-control" ng-model="vm.orderComponents.frequency"
+                                            id="field_componentFrequency" name="frequency" required>
+                                        <option value="Daily">Daily</option>
+                                        <option value="Seldom">Seldom</option>
+                                        <option value="Once">Once</option>
+                                        <option value="Monthly">Monthly</option>
+                                        <option value="Yearly">Yearly</option>
+                                        <option value="Never">Never</option>
+                                        <option value="Weekly">Weekly</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label" for="field_componentAdministrationTime">Administration Time *</label>
+                                    <input type="time" class="form-control" name="componentDoseForm" id="field_componentAdministrationTime"
+                                           ng-model="vm.orderComponents.administration_time" required/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pull-right" ng-show="vm.showItemForm">
+                            <div class="col-lg-12">
+                                <div class="margin">
+                                    <button type="button" class="btn btn-danger" ng-click="vm.showOrderItemForm()">Cancel</button>
+                                    <button type="button" class="btn btn-success" ng-click="vm.saveOrderItems()"
+                                            ng-disabled="vm.form.formAllOrdersItems_data.$invalid">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <section class="content">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div>
+                                <!--<div class="box-header">-->
+                                <!--<div class="col-xs-4 no-padding-left">-->
+                                <!--<button class="btn btn-primary" ng-click="vm.showOrderItemForm()" ng-show="!vm.editing">-->
+                                <!--<span class="glyphicon glyphicon-flash"></span> <span>Add Order Component</span>-->
+                                <!--</button>-->
+                                <!--</div>-->
+                                <!--</div>-->
+                                <div class="box-body">
+                                    <table datatable="" dt-options="vm.dtOrderComponentOptions" dt-columns="vm.dtOrderComponentColumns"
+                                           dt-instance="vm.dtOrderComponentInstance"
+                                           class="table table-striped table-bordered">
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="pull-right">
+            <div class="col-lg-12">
+                <button type="button" class="btn btn-success" ng-click="vm.save()"
+                        ng-show="!vm.editing" ng-disabled="vm.form.formAllOrders_data.$invalid">Save Information</button>
+            </div>
+        </div>
+    </div>
+</section>

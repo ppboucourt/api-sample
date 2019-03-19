@@ -1,0 +1,201 @@
+.patient-dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    position: relative;
+    padding: 45px 15px;
+}
+
+.dash-item {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    margin: 0 15px 60px;
+    padding: 10px 15px;
+    background: $white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px rgba($black, 0.2);
+    transition: all linear 0.2s;
+    &.size-full {
+        width: 100%;
+    }
+    &.size-half-small {
+        width: calc(75% - 30px);
+    }
+    &.size-half {
+        width: calc(50% - 30px);
+    }
+    &.size-small {
+        width: calc(25% - 30px);
+        .item-header {
+            padding: 5px 15px 0 65px;
+        }
+    }
+    &.size-full,
+    &.size-half {
+        .item-header {
+            padding: 15px 15px 0 100px;
+        }
+    }
+}
+
+.item-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    position: relative;
+    width: 100%;
+    padding: 15px 15px 0 100px;
+    border-bottom: 1px solid $border-gray;
+    &.blank-border {
+        border: 0;
+    }
+    .head-text {
+        margin: 0 0 5px;
+        line-height: 0;
+        font: 400 32px $font-roboto-condensed;
+        &.small {
+            font: 400 24px $font-roboto-condensed;
+        }
+    }
+}
+
+.fancy-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    border: 3px solid $white;
+    box-shadow: 0 1px 10px rgba($black, 0.3);
+    &.big {
+        width: 80px;
+        height: 80px;
+        transform: translateY(-15%);
+        .fa {
+            font-size: 46px;
+        }
+    }
+    &.small {
+        width: 50px;
+        height: 50px;
+        transform: translateY(-20%);
+        .fa {
+            font-size: 24px;
+        }
+    }
+    &.red {
+        background-color: $bg-red;
+    }
+    &.green {
+        background-color: $bg-green;
+    }
+    &.blue {
+        background-color: $bg-aqua;
+    }
+    &.yellow {
+        background-color: $bg-yellow;
+    }
+    &.light-yellow {
+        background-color: $bg-light-yellow;
+    }
+    .fa {
+        color: $white;
+    }
+}
+
+.item-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    width: 100%;
+    padding: 15px 0;
+    &.has-tabs {
+        padding: 0;
+    }
+    .table {
+        margin-bottom: 0;
+        tbody {
+            > tr {
+                &:first-child {
+                    > td {
+                        border-top: 0;
+                    }
+                }
+                td {
+                    font: 300 18px $font-roboto-condensed;
+                    &:not(:first-child) {
+                        text-align: right;
+                    }
+                    &.action-buttons {
+                        text-align: center;
+                    }
+                    &.text-left {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.item-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    width: 100%;
+    padding: 10px 0 0;
+    border-top: 1px solid $border-gray;
+    > .fleft,
+    .fright {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        &:first-child {
+            border-right: 1px solid $border-gray;
+        }
+    }
+}
+
+.footer-link {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font: 18px $font-roboto-condensed;
+    color: $gray;
+    transition: all linear 0.2s;
+    &:hover {
+        color: $light-gray;
+    }
+}
+
+.action-buttons {
+    //border-left: 1px solid $ligther-gray;
+    .edit-btn {
+        .fa {
+            color: $bg-yellow;
+        }
+    }
+    .remove-btn {
+        .fa {
+            color: $bg-red;
+        }
+    }
+    .sign-btn {
+        .fa {
+            color: $bg-green;
+        }
+    }
+    .fax-btn {
+        .fa {
+            color: $bg-aqua;
+        }
+    }
+}

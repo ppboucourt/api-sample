@@ -1,0 +1,80 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myMedicationsLabel">Create or edit a Medications</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.medications.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.medications.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_medication">Medication</label>
+            <input type="text" class="form-control" name="medication" id="field_medication"
+                    ng-model="vm.medications.medication"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_route">Route</label>
+            <input type="text" class="form-control" name="route" id="field_route"
+                    ng-model="vm.medications.route"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_dose">Dose</label>
+            <input type="text" class="form-control" name="dose" id="field_dose"
+                    ng-model="vm.medications.dose"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.medications.dosage_form" for="field_dosage_form">Dosage Form</label>
+            <input type="text" class="form-control" name="dosage_form" id="field_dosage_form"
+                    ng-model="vm.medications.dosage_form"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_frequency">Frequency</label>
+            <input type="text" class="form-control" name="frequency" id="field_frequency"
+                    ng-model="vm.medications.frequency"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.medications.duration_in_days" for="field_duration_in_days">Duration In Days</label>
+            <input type="text" class="form-control" name="duration_in_days" id="field_duration_in_days"
+                    ng-model="vm.medications.duration_in_days"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_prn">Prn</label>
+            <input type="text" class="form-control" name="prn" id="field_prn"
+                    ng-model="vm.medications.prn"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bluebookApp.medications.continue_on_discharge" for="field_continue_on_discharge">Continue On Discharge</label>
+            <input type="text" class="form-control" name="continue_on_discharge" id="field_continue_on_discharge"
+                    ng-model="vm.medications.continue_on_discharge"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_status">Status</label>
+            <input type="text" class="form-control" name="status" id="field_status"
+                    ng-model="vm.medications.status"
+                     />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

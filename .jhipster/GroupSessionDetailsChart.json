@@ -1,0 +1,33 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "groupSessionDetails",
+            "otherEntityName": "groupSessionDetails",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "chart",
+            "otherEntityName": "chart",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "notes",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "800"
+        }
+    ],
+    "changelogDate": "20170113163549",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "group_session_details_chart",
+    "pagination": "no",
+    "enableEntityAudit": true
+}

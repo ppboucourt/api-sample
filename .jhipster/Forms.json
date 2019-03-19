@@ -1,0 +1,90 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "typeFormRules",
+            "otherEntityName": "typeFormRules",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipName": "typePatientProcess",
+            "otherEntityName": "typePatientProcess",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipName": "laboratories",
+            "otherEntityName": "laboratories",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipName": "facility",
+            "otherEntityName": "facility",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "facility_name"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "loadManually",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "patientSignatureRequired",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "guarantorSignatureRequired",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "allowAttachment",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "allowRevocation",
+            "fieldType": "Boolean",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "enabled",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "requiredLabRequisitions",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "expiresDays",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "onlyOnePerpatient",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "expires",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "content",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        }
+    ],
+    "changelogDate": "20160831195535",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "forms",
+    "pagination": "no"
+}

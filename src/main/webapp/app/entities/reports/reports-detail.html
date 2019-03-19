@@ -1,0 +1,55 @@
+
+<div>
+    <h2><span>Reports</span> {{vm.reports.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="bluebookApp.reports.report_name">Report Name</span></dt>
+        <dd>
+            <span>{{vm.reports.report_name}}</span>
+        </dd>
+        <dt><span>Template</span></dt>
+        <dd>
+            <span>{{vm.reports.template}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.reports.sort_direction">Sort Direction</span></dt>
+        <dd>
+            <span>{{vm.reports.sort_direction}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.reports.date_range">Date Range</span></dt>
+        <dd>
+            <span>{{vm.reports.date_range}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.reports.start_date">Start Date</span></dt>
+        <dd>
+            <span>{{vm.reports.start_date | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.reports.end_date">End Date</span></dt>
+        <dd>
+            <span>{{vm.reports.end_date | date:'medium'}}</span>
+        </dd>
+        <dt><span>Criteria</span></dt>
+        <dd>
+            <span>{{vm.reports.criteria}}</span>
+        </dd>
+        <dt><span>Selection</span></dt>
+        <dd>
+            <span>{{vm.reports.selection}}</span>
+        </dd>
+        <dt><span>Status</span></dt>
+        <dd>
+            <span>{{vm.reports.status}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="reports-detail.edit({id:vm.reports.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,56 @@
+.patient-contacts {
+    .list-unstyled {
+        width: 100%;
+    }
+}
+
+.contact-item {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    padding: 10px 15px;
+    &:not(:last-child) {
+        border-bottom: 1px solid $ligther-gray;
+    }
+    .type {
+        width: 40%;
+    }
+    .contact-info {
+        width: 55%;
+        padding: 0 10px;
+        //border-right: 1px solid $ligther-gray;
+    }
+    .action-buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 5%;
+        .fa {
+            font-size: 18px;
+        }
+    }
+}
+
+.dash-pagination {
+    display: flex;
+    justify-content: center;
+    > .pagination {
+        margin: 0;
+        > li {
+            &.active {
+                > a {
+                    background-color: $gray;
+                }
+            }
+            > a {
+                background-color: transparent;
+                border: 0;
+                &:hover {
+                    color: $gray;
+                    background-color: $ligther-gray;
+                }
+            }
+        }
+    }
+}

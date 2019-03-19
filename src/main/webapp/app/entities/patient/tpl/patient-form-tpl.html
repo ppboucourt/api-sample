@@ -1,0 +1,45 @@
+<section>
+    <div class="row">
+        <div class="col-md-12">
+            <uib-tabset class="nav-tabs-custom" active="vm.activeTab">
+                <uib-tab index="0" select="vm.keepActiveTab(0)" heading="Basic Information">
+                    <fieldset ng-if="!vm.chart.id">
+                        <ng-include src="'app/entities/patient/tpl/basic-information-create-tpl.html'"></ng-include>
+                    </fieldset>
+                    <fieldset ng-if="vm.chart.id">
+                        <ng-include src="'app/entities/patient/tpl/basic-information-update-tpl.html'"></ng-include>
+                    </fieldset>
+                </uib-tab>
+                <uib-tab index="100" select="vm.keepActiveTab(100)" heading="Address">
+                    <fieldset>
+                        <ng-include src="'app/entities/patient/tpl/address-create-tpl.html'"></ng-include>
+                    </fieldset>
+                </uib-tab>
+                <uib-tab index="1" select="vm.keepActiveTab(1)" heading="Insurance"
+                         ng-show="vm.chart.typePaymentMethods != null && vm.chart.typePaymentMethods.category == 'Insurance'">
+                    <ng-include src="'app/entities/patient/tpl/insurance-tpl.html'"></ng-include>
+                </uib-tab>
+                <!--<uib-tab index="2" select="vm.keepActiveTab(2)" heading="Why">-->
+                    <!--<fieldset>-->
+                        <!--<ng-include src="'app/entities/patient/tpl/why-tpl.html'"></ng-include>-->
+                    <!--</fieldset>-->
+                <!--</uib-tab>-->
+            </uib-tabset>
+            <div>
+                <div class="pull-right">
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" ui-sref="chart-delete"
+                                ng-if="vm.chart.id"><i class="fa fa-trash"></i> Delete Chart</button>
+
+                        <button type="button" ng-if="vm.chart.id" class="btn btn-danger" ng-click="vm.cancelUpdate()">
+                            <i class="fa fa-ban"></i> Cancel</button>
+
+                        <button type="button" class="btn btn-info" ng-click="vm.save()"
+                                ng-disabled="vm.form.basicInfo.$invalid || vm.form.address.$invalid || vm.form.insurance.$invalid">
+                            <i class="fa fa-arrow-circle-right"></i> Continue</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

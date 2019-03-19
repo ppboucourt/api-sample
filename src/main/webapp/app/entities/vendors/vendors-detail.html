@@ -1,0 +1,75 @@
+
+<div>
+    <h2><span>Vendors</span> {{vm.vendors.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="bluebookApp.vendors.company_name">Company Name</span></dt>
+        <dd>
+            <span>{{vm.vendors.company_name}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.vendors.use_this_vendor">Use This Vendor</span></dt>
+        <dd>
+            <span>{{vm.vendors.use_this_vendor}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.vendors.contact_name">Contact Name</span></dt>
+        <dd>
+            <span>{{vm.vendors.contact_name}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.vendors.contact_phone">Contact Phone</span></dt>
+        <dd>
+            <span>{{vm.vendors.contact_phone}}</span>
+        </dd>
+        <dt><span>Address</span></dt>
+        <dd>
+            <span>{{vm.vendors.address}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.vendors.address_two">Address Two</span></dt>
+        <dd>
+            <span>{{vm.vendors.address_two}}</span>
+        </dd>
+        <dt><span>City</span></dt>
+        <dd>
+            <span>{{vm.vendors.city}}</span>
+        </dd>
+        <dt><span>State</span></dt>
+        <dd>
+            <span>{{vm.vendors.state}}</span>
+        </dd>
+        <dt><span>Zip</span></dt>
+        <dd>
+            <span>{{vm.vendors.zip}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.vendors.company_phone">Company Phone</span></dt>
+        <dd>
+            <span>{{vm.vendors.company_phone}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.vendors.company_fax">Company Fax</span></dt>
+        <dd>
+            <span>{{vm.vendors.company_fax}}</span>
+        </dd>
+        <dt><span>Notes</span></dt>
+        <dd>
+            <span>{{vm.vendors.notes}}</span>
+        </dd>
+        <dt><span data-translate="bluebookApp.vendors.fax_order_number">Fax Order Number</span></dt>
+        <dd>
+            <span>{{vm.vendors.fax_order_number}}</span>
+        </dd>
+        <dt><span>Status</span></dt>
+        <dd>
+            <span>{{vm.vendors.status}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="vendors-detail.edit({id:vm.vendors.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

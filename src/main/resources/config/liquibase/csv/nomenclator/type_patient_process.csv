@@ -1,0 +1,7 @@
+id;name;allow_ur;protect;status;type_page_id;facility_id;created_by;created_date;last_modified_by;last_modified_date;del_status
+1;Doctors Orders;true;true;ACT;5;1;system;2016-07-09 05:45:04;;2016-07-01 21:00:51;false
+2;Group Session;true;true;ACT;4;1;system;2016-11-05 22:50:20;;2016-12-20 15:11:11;false
+3;Mars;true;true;ACT;3;1;system;2016-07-17 06:17:43;;2016-02-04 13:15:56;false
+4;Pre-Admission;true;true;ACT;5;1;system;2016-01-25 20:33:07;;2016-02-12 01:17:12;false
+5;Intake;true;true;ACT;1;1;system;2016-05-27 14:50:08;;2016-02-15 12:59:50;false
+6;Nursing;true;true;ACT;2;1;system;2016-02-09 15:10:04;;2016-03-24 12:55:39;false
